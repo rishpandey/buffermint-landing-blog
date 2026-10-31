@@ -1,12 +1,12 @@
 // BM-396: covers carry their headline, so no page may crop one. In headless Chromium at desktop and phone size, each
-// cover on a post, the blog list and the home page shows its full frame, and the post's headline sits clear of the
+// cover on every post, the blog list and the home page shows its full frame, and the post's headline sits clear of the
 // cover. Run through bin/one-chrome (tests/covers.test.mjs does that). Serves build_production/ on a local port.
 import assert from 'node:assert/strict';
 import { createServer } from 'node:http';
-import { readFileSync, existsSync, statSync } from 'node:fs';
+import { readFileSync, readdirSync, existsSync, statSync } from 'node:fs';
 import { join, extname } from 'node:path';
 import { chromium } from 'playwright-core';
-import { build } from '../helpers.mjs';
+import { build, root } from '../helpers.mjs';
 
 const types = { '.html': 'text/html', '.js': 'text/javascript', '.css': 'text/css', '.json': 'application/json', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpeg': 'image/jpeg', '.webp': 'image/webp', '.woff2': 'font/woff2' };
 const server = createServer((req, res) => {
@@ -26,10 +26,12 @@ const sizes = {
 const pages = {
   '/': '.site-post img',
   '/articles': '.feature-cover img, .article-card img.card-img-top',
-  '/articles/merchant-of-record-fees': 'img.post-cover, .article-card img.card-img-top',
-  '/articles/launching-a-saas-product-as-a-non-technical-founder': 'img.post-cover',
-  '/articles/10-micro-saas-ideas-in-2021-copy': 'img.post-cover',
 };
+for (const f of readdirSync(join(root, 'source/_posts'))) {
+  const slug = f.replace(/\.blade\.md$/, '');
+  if (existsSync(join(build, 'articles', slug, 'index.html'))) pages[`/articles/${slug}`] = 'img.post-cover';
+}
+assert.ok(Object.keys(pages).length >= 12, 'found the posts');
 
 const browser = await chromium.launch();
 try {

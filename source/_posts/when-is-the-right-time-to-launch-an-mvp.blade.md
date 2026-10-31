@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/when-is-the-right-time-to-launch-an-mvp-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/when-is-the-right-time-to-launch-an-mvp-cover-600.jpeg
+featured_image: assets/img/uploads/when-is-the-right-time-to-launch-an-mvp-cover-90a320-1200.jpeg
+featured_thumbnail: assets/img/uploads/when-is-the-right-time-to-launch-an-mvp-cover-90a320-600.jpeg
 excerpt: ""
 title: "When to launch an MVP: where Ries, YC and Superhuman disagree"
 seo_description: "Launch in weeks or polish for years? What Eric Ries, Y Combinator, Reid Hoffman and Superhuman actually said about MVP timing, and a test to decide yours."

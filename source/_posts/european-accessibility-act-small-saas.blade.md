@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/european-accessibility-act-small-saas-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/european-accessibility-act-small-saas-cover-600.jpeg
+featured_image: assets/img/uploads/european-accessibility-act-small-saas-cover-b44516-1200.jpeg
+featured_thumbnail: assets/img/uploads/european-accessibility-act-small-saas-cover-b44516-600.jpeg
 title: "Does the European Accessibility Act apply to your small SaaS?"
 seo_description: "A decision tree for small SaaS from the EAA's own text: who is exempt, what counts as e-commerce, and what fixing 76 accessibility issues took us."
 keyword: european accessibility act

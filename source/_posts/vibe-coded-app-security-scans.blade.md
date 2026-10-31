@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/vibe-coded-app-security-scans-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/vibe-coded-app-security-scans-cover-600.jpeg
+featured_image: assets/img/uploads/vibe-coded-app-security-scans-cover-eb81ab-1200.jpeg
+featured_thumbnail: assets/img/uploads/vibe-coded-app-security-scans-cover-eb81ab-600.jpeg
 title: "Vibe-coded app security: the holes every scan keeps finding"
 seo_description: "Four security scans of Lovable, Bolt and Supabase apps, compared by hole type, plus a 15-minute self-check and a row level security trap we reproduced."
 keyword: supabase row level security

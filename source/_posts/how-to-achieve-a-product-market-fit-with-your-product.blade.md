@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/how-to-achieve-a-product-market-fit-with-your-product-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/how-to-achieve-a-product-market-fit-with-your-product-cover-600.jpeg
+featured_image: assets/img/uploads/how-to-achieve-a-product-market-fit-with-your-product-cover-700120-1200.jpeg
+featured_thumbnail: assets/img/uploads/how-to-achieve-a-product-market-fit-with-your-product-cover-700120-600.jpeg
 title: "Product-market fit: four tests and what each one misses"
 seo_description: "Andreessen, Rachleff, Sean Ellis's 40% survey and retention: four ways to tell if you have product-market fit, where they disagree, and when to pivot."
 keyword: product market fit

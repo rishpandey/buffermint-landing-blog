@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/launch-your-micro-saas-product-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/launch-your-micro-saas-product-cover-600.jpeg
+featured_image: assets/img/uploads/launch-your-micro-saas-product-cover-71991f-1200.jpeg
+featured_thumbnail: assets/img/uploads/launch-your-micro-saas-product-cover-71991f-600.jpeg
 title: "How to start a micro-SaaS: what the revenue data says"
 seo_description: "How long micro-SaaS products take to earn, how many customers $5,000 MRR needs at $9, $29 and $99, and what three public examples teach. Updated for 2026."
 keyword: how to start a micro saas

@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-600.jpeg
+featured_image: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-0d844a-1200.jpeg
+featured_thumbnail: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-0d844a-600.jpeg
 excerpt: ""
 featured: true
 title: "Idea validation: what desk research can't prove, and what can"

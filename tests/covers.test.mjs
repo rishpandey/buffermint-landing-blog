@@ -10,7 +10,7 @@ import { built, htmlFiles } from './helpers.mjs';
 
 const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 const posts = join(root, 'source/_posts');
-const field = (text, name) => text.match(new RegExp(`^${name}:\\s*(\\S+)`, 'm'))?.[1];
+const field = (text, name) => text.match(new RegExp(`^${name}:\\s*["']?([^"'\\s]+)`, 'm'))?.[1];
 const jpegSize = (b) => {
   for (let i = 2; i < b.length;) {
     const m = b[i + 1];

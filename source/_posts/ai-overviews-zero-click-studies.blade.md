@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/ai-overviews-zero-click-studies-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/ai-overviews-zero-click-studies-cover-600.jpeg
+featured_image: assets/img/uploads/ai-overviews-zero-click-studies-cover-0750fa-1200.jpeg
+featured_thumbnail: assets/img/uploads/ai-overviews-zero-click-studies-cover-0750fa-600.jpeg
 title: "AI Overviews and zero-click search: why the studies disagree"
 seo_description: "Studies put the AI Overviews click loss at 34% to 58%, and zero-click searches at 68%. We lined up their methods to see why, and what still gets clicks."
 keyword: ai overviews

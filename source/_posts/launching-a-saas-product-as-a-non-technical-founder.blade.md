@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/launching-a-saas-product-as-a-non-technical-founder-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/launching-a-saas-product-as-a-non-technical-founder-cover-600.jpeg
+featured_image: assets/img/uploads/launching-a-saas-product-as-a-non-technical-founder-cover-5cc348-1200.jpeg
+featured_thumbnail: assets/img/uploads/launching-a-saas-product-as-a-non-technical-founder-cover-5cc348-600.jpeg
 featured: true
 title: "Launching a SaaS as a non-technical founder in 2026"
 seo_description: "Three ways a non-technical founder can build a SaaS in 2026: an AI app builder, a freelancer or a partner, with real costs and the security checks each needs."

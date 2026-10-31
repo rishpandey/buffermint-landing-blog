@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/how-to-get-successful-startup-ideas-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/how-to-get-successful-startup-ideas-cover-600.jpeg
+featured_image: assets/img/uploads/how-to-get-successful-startup-ideas-cover-ba5be0-1200.jpeg
+featured_thumbnail: assets/img/uploads/how-to-get-successful-startup-ideas-cover-ba5be0-600.jpeg
 title: "How to get startup ideas worth building in 2026"
 seo_description: "Where good startup ideas come from, the four product types and why one wins, rule changes as an idea source, and a five-question filter before you build."
 keyword: how to get startup ideas

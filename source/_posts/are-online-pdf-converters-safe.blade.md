@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/are-online-pdf-converters-safe-cover-1200.jpeg
-featured_thumbnail: assets/img/uploads/are-online-pdf-converters-safe-cover-600.jpeg
+featured_image: assets/img/uploads/are-online-pdf-converters-safe-cover-95de38-1200.jpeg
+featured_thumbnail: assets/img/uploads/are-online-pdf-converters-safe-cover-95de38-600.jpeg
 title: "Are online PDF converters safe? We watched where the file goes"
 seo_description: "We picked the same PDF on six popular online PDF tools and logged every request. Most uploaded it within a second, before we pressed a button."
 keyword: are online pdf converters safe
