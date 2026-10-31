@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/credit-based-pricing-12-tools-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/credit-based-pricing-12-tools-cover-600.jpeg
 title: "Credits, seats or usage: how 12 SaaS tools define a credit"
 seo_description: "We read 12 AI tools' pricing pages on one day and worked out what a credit buys. Only 6, and Clay in part, let you price a typical task up front."
 keyword: credit based pricing
-featured_image: assets/img/uploads/credit-based-pricing-12-tools-cover.jpeg
-featured_thumbnail: assets/img/uploads/credit-based-pricing-12-tools-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

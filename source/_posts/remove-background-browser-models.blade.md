@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/remove-background-browser-models-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/remove-background-browser-models-cover-600.jpeg
 title: "Remove a background in the browser: 6 open models measured"
 seo_description: "We measured six open background-removal models on 8 ground-truth cut-outs: edge quality, size, speed, memory and the licenses that decide what you can ship."
 keyword: remove background from image
-featured_image: assets/img/uploads/remove-background-browser-models-cover.jpeg
-featured_thumbnail: assets/img/uploads/remove-background-browser-models-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

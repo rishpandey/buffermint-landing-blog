@@ -87,7 +87,7 @@ code, pre { background: var(--bm-bg-alt); color: var(--bm-fg); }
 @media (min-width: 640px) { .site-posts { grid-template-columns: repeat(3, 1fr); } }
 .site-post { display: flex; flex-direction: column; border: 1px solid var(--bm-line); border-radius: var(--bm-radius-md); overflow: hidden; background: var(--bm-panel); color: var(--bm-heading); text-decoration: none !important; }
 .site-post:hover { border-color: var(--bm-accent); color: var(--bm-heading); }
-.site-post img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.site-post img { width: 100%; aspect-ratio: 40 / 21; object-fit: cover; }
 .site-post b { padding: 1rem; font-weight: 600; line-height: 1.35; }
 
 .site-final { text-align: center; }

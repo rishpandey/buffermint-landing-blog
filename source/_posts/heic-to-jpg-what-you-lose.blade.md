@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/heic-to-jpg-what-you-lose-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/heic-to-jpg-what-you-lose-cover-600.jpeg
 title: "HEIC to JPG: when to convert and what you lose, measured"
 seo_description: "We converted five HEIC photos to JPG at five quality settings: file sizes, SSIM, what an HDR iPhone photo drops, and which upload forms still refuse HEIC."
 keyword: heic to jpg
-featured_image: assets/img/uploads/heic-to-jpg-cover.jpeg
-featured_thumbnail: assets/img/uploads/heic-to-jpg-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

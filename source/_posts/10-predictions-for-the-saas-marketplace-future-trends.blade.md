@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/photo-1485939551351-bc1a4ad5ce5a.jpeg
-featured_thumbnail: assets/img/uploads/photo-1485939551351-bc1a4ad5ce5a.jpeg
+featured_image: assets/img/uploads/10-predictions-for-the-saas-marketplace-future-trends-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/10-predictions-for-the-saas-marketplace-future-trends-cover-600.jpeg
 title: "Our 2021 SaaS predictions, graded against 2026 evidence"
 seo_description: "In 2021 we made ten predictions about SaaS. Five years on we graded each against public data: two right, two partly right, and six we can't grade."
 keyword: saas predictions

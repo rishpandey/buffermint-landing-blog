@@ -1,7 +1,7 @@
 ---
+featured_image: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/ultimate-guide-to-get-the-most-out-of-your-idea-validation-process-cover-600.jpeg
 excerpt: ""
-featured_image: assets/img/uploads/image1.jpeg
-featured_thumbnail: assets/img/uploads/image2.jpg
 featured: true
 title: "Idea validation: what desk research can't prove, and what can"
 seo_description: "What free search signals, interviews, landing pages and pre-sales each prove about a startup idea, with our own measurements and the maths of small samples."

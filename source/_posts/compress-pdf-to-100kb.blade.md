@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/compress-pdf-to-100kb-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/compress-pdf-to-100kb-cover-600.jpeg
 title: "Compress a PDF to 100 KB: what fits, measured"
 seo_description: "We measured how many PDF pages fit in 100 KB at each resolution, why text PDFs get stuck near 150 KB, and which settings keep the result readable."
 keyword: compress pdf to 100kb
-featured_image: assets/img/uploads/compress-pdf-to-100kb-dpi-compare.jpeg
-featured_thumbnail: assets/img/uploads/compress-pdf-to-100kb-dpi-compare.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

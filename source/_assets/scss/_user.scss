@@ -53,12 +53,19 @@ a:hover {
     position: absolute;
 }
 
+// covers carry their headline: the full 1200 × 630 frame, never cropped
 .article-card img.card-img-top {
-    height: 200px;
-    object-fit: cover;
+    aspect-ratio: 40 / 21;
+    height: auto;
+}
 
-    @media (max-width: 768px) {
-        height: unset;
+.feature-cover {
+    align-items: center;
+    display: flex;
+    padding: 0;
+
+    picture, img {
+        width: 100%;
     }
 }
 

@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/how-to-leverage-ai-and-build-an-app-without-coding-title.jpeg
-featured_thumbnail: assets/img/uploads/how-to-leverage-ai-and-build-an-app-without-coding-thumbnail.jpeg
+featured_image: assets/img/uploads/how-to-leverage-ai-and-build-an-app-without-coding-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/how-to-leverage-ai-and-build-an-app-without-coding-cover-600.jpeg
 title: "Build an app without coding in 2026: Lovable, Bolt and Replit"
 seo_description: "Lovable, Bolt and Replit compared by plan, credits and what a typical build burns, as of October 2026, plus the security checks every no-code app needs."
 keyword: build an app without coding

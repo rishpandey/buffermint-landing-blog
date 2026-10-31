@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/merchant-of-record-fees-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/merchant-of-record-fees-cover-600.jpeg
 title: "Merchant of record fees at $9, $29 and $99, worked out"
 seo_description: "What Paddle, Lemon Squeezy, Polar, Dodo, Creem and Stripe keep from a $9, $29 or $99 sale, from their own pricing pages as of October 2026."
 keyword: merchant of record
-featured_image: assets/img/uploads/merchant-of-record-fees-cover.jpeg
-featured_thumbnail: assets/img/uploads/merchant-of-record-fees-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

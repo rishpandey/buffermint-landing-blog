@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/eu-ai-act-small-saas-llm-api-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/eu-ai-act-small-saas-llm-api-cover-600.jpeg
 title: "The EU AI Act for a small SaaS that calls an LLM API"
 seo_description: "What the EU AI Act asks of a small SaaS with an AI feature after the 2026 Digital Omnibus: dated duties, what moved, what didn't, and the fine math."
 keyword: eu ai act
-featured_image: assets/img/uploads/eu-ai-act-small-saas-cover.jpeg
-featured_thumbnail: assets/img/uploads/eu-ai-act-small-saas-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

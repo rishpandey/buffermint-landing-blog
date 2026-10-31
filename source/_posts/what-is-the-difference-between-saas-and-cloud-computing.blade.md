@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/difference-between-saas-and-cloud-computing-.jpeg
-featured_thumbnail: assets/img/uploads/difference-between-saas-and-cloud-computing-thubnail-.jpeg
+featured_image: assets/img/uploads/what-is-the-difference-between-saas-and-cloud-computing-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/what-is-the-difference-between-saas-and-cloud-computing-cover-600.jpeg
 title: What Is The Difference Between SaaS and Cloud Computing?
 seo_description: "SaaS vs cloud computing explained: what each term means, how they differ and how to get the most out of both for your business."
 author: "Vivek Dixit "

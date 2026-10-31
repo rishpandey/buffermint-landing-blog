@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/ai-feature-cost-per-user-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/ai-feature-cost-per-user-cover-600.jpeg
 title: "What an AI feature really costs per user, measured in tokens"
 seo_description: "We counted the tokens of three common AI features and priced them on Claude, GPT and Gemini as of October 2026: cost per user against a $19 plan."
 keyword: llm cost calculator
-featured_image: assets/img/uploads/ai-feature-cost-per-user-cover.jpeg
-featured_thumbnail: assets/img/uploads/ai-feature-cost-per-user-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent

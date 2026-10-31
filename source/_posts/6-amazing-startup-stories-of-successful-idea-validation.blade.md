@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/story1.jpeg
-featured_thumbnail: assets/img/uploads/story2.jpeg
+featured_image: assets/img/uploads/6-amazing-startup-stories-of-successful-idea-validation-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/6-amazing-startup-stories-of-successful-idea-validation-cover-600.jpeg
 title: "Six startup validation stories, fact-checked against the sources"
 excerpt: "We checked six famous validation stories against first-hand sources. Some numbers were wrong, two endings were wrong, and the real lessons are better."
 seo_description: "Dropbox, Instagram, Airbnb, WhatsApp, Dollar Shave Club and LinkedIn: six famous validation stories checked against first-hand sources, with corrections."

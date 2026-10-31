@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/10-microsass-.jpeg
-featured_thumbnail: assets/img/uploads/10-micro-saas-ideas.jpeg
+featured_image: assets/img/uploads/10-micro-saas-ideas-in-2021-copy-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/10-micro-saas-ideas-in-2021-copy-cover-600.jpeg
 featured: true
 category: startup_ideas
 title: 10 Micro-SaaS Ideas in 2021

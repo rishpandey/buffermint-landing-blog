@@ -1,6 +1,6 @@
 ---
-featured_image: assets/img/uploads/photo-1507332194683-0ce90ffa318a.jpeg
-featured_thumbnail: assets/img/uploads/photo-1507332194683-0ce90ffa318a-1-.jpeg
+featured_image: assets/img/uploads/how-to-use-lean-methodology-to-innovate-faster-cover-1200.jpeg
+featured_thumbnail: assets/img/uploads/how-to-use-lean-methodology-to-innovate-faster-cover-600.jpeg
 title: How to use Lean Methodology to Innovate Faster?
 seo_description: "How companies use Lean methodology to build the right product with the right features at the right time, with less waste."
 author: Rishabh Pandey

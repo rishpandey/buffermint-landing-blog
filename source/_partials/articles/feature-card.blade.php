@@ -14,24 +14,9 @@ $selectedCollection = $post->category ? $page->categories[$post->category] : nul
             </a>
             @endif
         </div>
-        <a class="col-12 col-md-6 bg-cover {{ $is_left ? 'order-md-2 card-img-end' : 'order-md-1 card-img-start'  }}"
-            style="background-image: url(/{{ $post['featured_image'] }});" href="{{ $post->getUrl() }}" aria-label="{{ $post->title }}">
-
-            <!-- Image (placeholder) -->
-            <img src="/{{ $post->featured_thumbnail ?? $post->featured_image }}" alt="{{ $post->title }}" class="img-fluid d-md-none invisible" loading="lazy" decoding="async">
-
-            @if ($is_left)
-            <div class="shape shape-left shape-fluid-y svg-shim text-white d-none d-md-block">
-                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M0 0h62.759v172C38.62 384 112 517 112 517v173H0V0z" fill="currentColor" /></svg>
-            </div>
-            @else
-            <div class="shape shape-right shape-fluid-y text-white d-none d-md-block">
-                <svg viewBox="0 0 112 690" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M116 0H51v172C76 384 0 517 0 517v173h116V0z" fill="currentColor"></path>
-                </svg> </div>
-            @endif
-
+        {{-- covers carry their headline: the whole image, nothing laid over it --}}
+        <a class="col-12 col-md-6 feature-cover {{ $is_left ? 'order-md-2' : 'order-md-1' }}" href="{{ $post->getUrl() }}" aria-label="{{ $post->title }}">
+            <img src="/{{ $post->featured_image }}" alt="{{ $post->title }}" class="img-fluid" loading="lazy" decoding="async">
         </a>
         <div class="col-12 col-md-6 {{ $is_left ? 'order-md-1' : 'order-md-2'  }}">
 
