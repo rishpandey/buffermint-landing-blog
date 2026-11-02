@@ -1,0 +1,301 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: Convert images to WebP? What it did to LCP on a real site (7 to fix)",
+  "created_at": "2026-11-02T18:12:25.688Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "af5ce6e3da04c1f56a5fb0beae64c449",
+    "checked_at": "2026-11-02T18:12:25.688Z",
+    "blockers": [
+      "Unsupported claim (1.6%, 21.5%, 35.6%, 46.6%, 46.8%, 62.1%, 68.6%): add a source link or put it in the facts sheet: \"| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP \"",
+      "Unsupported claim (41%): add a source link or put it in the facts sheet: \"Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.\"",
+      "Unsupported claim (29.4%, 16.6%): add a source link or put it in the facts sheet: \"WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files sav\"",
+      "Unsupported claim (49.6%, 39.5%): add a source link or put it in the facts sheet: \"AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.\"",
+      "Unsupported claim (41.8%): add a source link or put it in the facts sheet: \"The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.\"",
+      "Unsupported claim (1,467): add a source link or put it in the facts sheet: \"Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 3\"",
+      "Unsupported claim (14 times): add a source link or put it in the facts sheet: \"- Encoding time. At the same effort setting, AVIF took a median 1.8 seconds per megapixel against 0.13 for WebP, about 1\""
+    ],
+    "warnings": [],
+    "links": [
+      {
+        "url": "https://developers.google.com/speed/webp",
+        "text": "Google says",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://blog.cloudflare.com/generate-avif-images-with-image-resizing/",
+        "text": "Cloudflare reported",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/lcp",
+        "text": "2.5-second \"good\" line",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md",
+        "text": "assumes 1.6 Mbps",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/optimize-lcp",
+        "text": "web.dev's LCP guide",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://almanac.httparchive.org/en/2024/media",
+        "text": "The HTTP Archive found",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://caniuse.com/avif",
+        "text": "Can I use",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://caniuse.com/webp",
+        "text": "WebP",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://jakearchibald.com/2020/avif-has-landed/",
+        "text": "Jake Archibald points out",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/photo/resize-image/",
+        "text": "resizing",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/articles/heic-to-jpg-what-you-lose/",
+        "text": "our HEIC to JPG test",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/photo/jpg-to-webp/",
+        "text": "JPG to WebP",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/photo/png-to-webp/",
+        "text": "PNG to WebP",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/photo/image-compress/",
+        "text": "the image compressor",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP 90 | 4.34 MB | −1.6% | 0.987 | 33 of 65 | | WebP 85 | 3.35 MB | 21.5% | 0.981 | 17 | | WebP 80 | 2.75 MB | 35.6% | 0.976 | 10 | | WebP 75 | 2.28 MB | 46.6% | 0.968 | 8 | | AVIF 60 | 2.27 MB | 46.8% | 0.986 | 5 | | AVIF 50 | 1.62 MB | 62.1% | 0.978 | 0 | | AVIF 45 | 1.34 MB | 68.6",
+        "numbers": [
+          "1.6%",
+          "21.5%",
+          "35.6%",
+          "46.6%",
+          "46.8%",
+          "62.1%",
+          "68.6%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.",
+        "numbers": [
+          "41%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Google says lossy WebP is 25 to 34% smaller than JPEG at equal SSIM.",
+        "numbers": [
+          "34%"
+        ],
+        "cues": [],
+        "links": [
+          "https://developers.google.com/speed/webp"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files saved less.",
+        "numbers": [
+          "29.4%",
+          "16.6%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.",
+        "numbers": [
+          "49.6%",
+          "39.5%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.",
+        "numbers": [
+          "41.8%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The HTTP Archive found that 68% of mobile pages have an image as their LCP element.",
+        "numbers": [
+          "68%"
+        ],
+        "cues": [],
+        "links": [
+          "https://almanac.httparchive.org/en/2024/media"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 32 pixels tall.",
+        "numbers": [
+          "1,467"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "- Encoding time. At the same effort setting, AVIF took a median 1.8 seconds per megapixel against 0.13 for WebP, about 14 times longer, on our two-thread setup.",
+        "numbers": [
+          "14 times"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "That's fine at build time and poor for on-demand conversion. - Support. As of November 2026, Can I use puts AVIF at 96.35% of users and WebP at 97.18%.",
+        "numbers": [
+          "96.35%",
+          "97.18%"
+        ],
+        "cues": [],
+        "links": [
+          "https://caniuse.com/avif",
+          "https://caniuse.com/webp"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "And the Web Almanac's 2024 figures show how few sites have switched: WebP at 12% of mobile images and AVIF at 1.0%, against 32.4% for JPEG.",
+        "numbers": [
+          "12%",
+          "1.0%",
+          "32.4%"
+        ],
+        "cues": [],
+        "links": [
+          "https://almanac.httparchive.org/en/2024/media"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      }
+    ],
+    "guard": []
+  }
+}

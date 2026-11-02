@@ -15,4 +15,6 @@ Separate pass after the draft, reading it against the bench files, in the workfl
 - Tightened the closing line; headings kept because each states its finding.
 
 ## Content studio
-See the last section of this file after `content-studio check`.
+First run: score 85, 8 blockers, 1 failed. Fixed: keyword in the title and description, an Almanac link at the sentence that lacked one, "the best source" reworded, two long paragraphs split.
+Seven blockers stay in the last run. All are our own measurements (the quality table, 41%, 29.4/16.6%, 49.6/39.5%, 41.8%, 1,467 px, 14 times), which the tool can't source because it doesn't read claims.md. Each has a row there: 8, 9, 11, 13, 25 and 33.
+The slug warning stays: the slug says what the post found, and the keyword is in the title.

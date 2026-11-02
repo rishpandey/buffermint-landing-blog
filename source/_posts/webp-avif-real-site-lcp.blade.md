@@ -1,6 +1,6 @@
 ---
-title: "WebP on a real site: what it did to LCP, and what it didn't"
-seo_description: "We tested JPEG, WebP and AVIF on our own site: 65 images, 86 Lighthouse runs. WebP saved 0.3 s on a post and nothing on the home page. Here's why."
+title: "Convert images to WebP? What it did to LCP on a real site"
+seo_description: "We tested what happens when you convert images to WebP or AVIF: 65 images, 86 Lighthouse runs. A post gained 0.3 s, our home page nothing. Here's why."
 keyword: convert images to webp
 featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
 featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
@@ -42,7 +42,9 @@ Most guides pick a quality number and move on. Here's what each setting did acro
 
 WebP at quality 90 made our images heavier in total. Half of them grew. Our files had already been compressed as JPEGs, so a high setting spends bytes preserving detail the JPEG had already thrown away. Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.
 
-Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files saved less. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP. That's close to the "half" [Cloudflare reported](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) in 2020.
+Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files saved less. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.
+
+That AVIF figure is close to the "half" [Cloudflare reported](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) in 2020.
 
 One setting also doesn't suit every image. The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter. The median copy scores 0.975, but 4 of the 51 fell below 0.95 and the worst scored 0.886. Even WebP at quality 90 only reached 0.902 on that photo, while AVIF at quality 70 reached 0.951. Spot-check your worst images by eye and not only the total saved.
 
@@ -78,7 +80,9 @@ Lighthouse's request list showed where the weight was. Images came to 556 KB, an
 | Simulated: LCP, score | 4.58 s, 84 | 2.20 s, 98 |
 | DevTools throttling: LCP, score | 2.73 s, 91 | 2.42 s, 94 |
 
-If we'd run only the default mode, we'd have reported that a logo cost us 2.4 seconds. With throttling applied during the load, the saving was 0.3 seconds. Simulated throttling is the default, and it models a load from an unthrottled one. [Lighthouse's own documentation](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) says that makes it fast and repeatable, with "inherent inaccuracy" and edge cases. It says the network side of DevTools throttling "isn't highly accurate" either, so neither number is the truth. We didn't trace why they differ. But when a one-file fix looks too good, run it a second way before you believe it.
+If we'd run only the default mode, we'd have reported that a logo cost us 2.4 seconds. With throttling applied during the load, the saving was 0.3 seconds. Simulated throttling is the default, and it models a load from an unthrottled one. [Lighthouse's own documentation](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) says that makes it fast and repeatable, with "inherent inaccuracy" and edge cases.
+
+It says the network side of DevTools throttling "isn't highly accurate" either, so neither number is the truth. We didn't trace why they differ. But when a one-file fix looks too good, run it a second way before you believe it.
 
 Resizing that logo still took 500 KB off the page, about eight times what WebP took off our test post. It needed someone to notice the file, not a new format.
 
@@ -100,14 +104,14 @@ For a site with a build step, we think so, with two conditions.
 - **Encoding time.** At the same effort setting, AVIF took a median 1.8 seconds per megapixel against 0.13 for WebP, about 14 times longer, on our two-thread setup. A big photo took over 3 seconds. That's fine at build time and poor for on-demand conversion.
 - **Support.** As of November 2026, [Can I use](https://caniuse.com/avif) puts AVIF at 96.35% of users and [WebP](https://caniuse.com/webp) at 97.18%. Keep a fallback in either case. A `<picture>` element offers AVIF, then WebP, then JPEG, and the browser takes the first it supports.
 
-Two further notes. [Jake Archibald points out](https://jakearchibald.com/2020/avif-has-landed/) that AVIF shows nothing until the whole image has arrived, where a JPEG can appear progressively. And the Web Almanac's 2024 figures show how few sites have switched: WebP at 12% of mobile images and AVIF at 1.0%, against 32.4% for JPEG.
+Two further notes. [Jake Archibald points out](https://jakearchibald.com/2020/avif-has-landed/) that AVIF shows nothing until the whole image has arrived, where a JPEG can appear progressively. And the [Web Almanac's 2024 figures](https://almanac.httparchive.org/en/2024/media) show how few sites have switched: WebP at 12% of mobile images and AVIF at 1.0%, against 32.4% for JPEG.
 
 ## How to convert images to WebP without wasting the work
 
 1. **Find your LCP element first.** Run Lighthouse or PageSpeed Insights and read which element it names. If it's text, a format change won't move LCP.
 2. **Sort the page's requests by size.** Fix the largest file before any format work. Ours was a logo, and it needed [resizing](/tools/photo/resize-image/), not converting.
 3. **Don't start at quality 90.** Start at 75 to 80 for photos and compare file sizes. If a copy comes out bigger than the original, keep the original.
-4. **Convert from the best source you have.** Each lossy pass costs quality, as we measured in [our HEIC to JPG test](/articles/heic-to-jpg-what-you-lose/). For a few files, our free [JPG to WebP](/tools/photo/jpg-to-webp/) and [PNG to WebP](/tools/photo/png-to-webp/) converters run in your browser, and [the image compressor](/tools/photo/image-compress/) covers the case where you need to keep the format.
+4. **Convert from your highest-quality original.** Each lossy pass costs quality, as we measured in [our HEIC to JPG test](/articles/heic-to-jpg-what-you-lose/). For a few files, our free [JPG to WebP](/tools/photo/jpg-to-webp/) and [PNG to WebP](/tools/photo/png-to-webp/) converters run in your browser, and [the image compressor](/tools/photo/image-compress/) covers the case where you need to keep the format.
 5. **Keep a fallback** with `<picture>`, and set `width` and `height` so the page doesn't shift.
 6. **Add AVIF at build time** if you can spare the encoding minutes. It was the largest format saving we measured.
 7. **Check the change in two throttling modes**, and compare gaps, not absolute times.
