@@ -181,7 +181,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** our numbers from buffermint.com (STATUS, 2026-10-25): 39 images 3.0 → 1.8 MB with WebP copies; LCP on the home page 10.3 → 7.0 s, on a post 8.5 → 5.0 s (Lighthouse 12.2.1 mobile, median). Show what WebP did and what the other changes did. Add an AVIF comparison on the same images.
 - **Sources:** Google's WebP docs (developers.google.com/speed/webp), web.dev on LCP, caniuse WebP/AVIF, Cloudflare or Jake Archibald on AVIF vs WebP, the HTTP Archive Web Almanac (media chapter).
 - **Internal links:** /tools/photo/jpg-to-webp/, /tools/photo/png-to-webp/, /tools/photo/image-compress/, /tools/photo/resize-image/, topic 14.
-- **Status:** todo
+- **Status:** writing
 
 ### 14. Core Web Vitals on a small marketing site: what actually moved ours · `next`
 - **Keyword:** `core web vitals` (level 4; HN 68).
