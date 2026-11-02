@@ -11,7 +11,6 @@ for (let i = 0; i < Number(runs); i++) for (const page of pages) for (const [v, 
   const net = a['network-requests']?.details?.items ?? [];
   const img = net.filter((x) => x.resourceType === 'Image');
   const lcpEl = (a['largest-contentful-paint-element'] ?? a['lcp-breakdown-insight'])?.details;
-  const lcpUrl = JSON.stringify(a['lcp-discovery-insight']?.details ?? '').slice(0, 0);
   const row = { v, page, i, score: Math.round(j.categories.performance.score * 100), lcp: a['largest-contentful-paint'].numericValue, fcp: a['first-contentful-paint'].numericValue, tbt: a['total-blocking-time'].numericValue, cls: a['cumulative-layout-shift'].numericValue, si: a['speed-index'].numericValue, total: a['total-byte-weight'].numericValue, imgBytes: img.reduce((s, x) => s + (x.transferSize || 0), 0), imgs: img.map((x) => [x.url.replace(/^https?:\/\/[^/]+/, ''), x.transferSize]), lh: j.lighthouseVersion, chrome: j.environment?.hostUserAgent?.match(/Chrome\/[\d.]+/)?.[0], lcpEl: JSON.stringify(lcpEl ?? null).slice(0, 900), benchIndex: j.environment?.benchmarkIndex };
   fs.appendFileSync(out, JSON.stringify(row) + '\n'); console.log(v, page, i, row.score, Math.round(row.lcp), row.total);
 }

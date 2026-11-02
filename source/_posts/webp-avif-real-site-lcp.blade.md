@@ -20,7 +20,7 @@ The largest gain on the home page came from a file our conversion never touched.
 
 We ran three separate tests in November 2026:
 
-- **Encoding.** All 65 JPEGs in our uploads folder, 4.27 MB in total, encoded as WebP at six quality settings and AVIF at six more, with sharp 0.35.5 at effort 4. We scored each copy with FFmpeg's SSIM, a 0-to-1 measure of how close it is to the reference image.
+- **Encoding.** The 65 JPEGs in our uploads folder at the time of the test, 4.27 MB in total, encoded as WebP at six quality settings and AVIF at six more, with sharp 0.35.5 at effort 4. We scored each copy with FFmpeg's SSIM, a 0-to-1 measure of how close it is to the reference image.
 - **Format on one build.** Three copies of today's site, identical except for the format the browser is offered: JPEG, WebP or AVIF. We tested the home page and one post, five runs each, with Lighthouse 13.5.0 on mobile settings.
 - **History.** We rebuilt the site at three old commits and ran the same pages, to split a claim from our own notes.
 
@@ -28,7 +28,7 @@ Two limits apply. The SSIM reference is our JPEG, not an uncompressed original, 
 
 ## The quality setting decides whether you save anything
 
-Most guides pick a quality number and move on. Here's what each setting did across all 65 images:
+Most guides pick a quality number and move on. Here's what every setting we tested did across all 65 images:
 
 | Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger |
 |---|---|---|---|---|
@@ -36,17 +36,22 @@ Most guides pick a quality number and move on. Here's what each setting did acro
 | WebP 85 | 3.35 MB | 21.5% | 0.981 | 17 |
 | WebP 80 | 2.75 MB | 35.6% | 0.976 | 10 |
 | WebP 75 | 2.28 MB | 46.6% | 0.968 | 8 |
+| WebP 70 | 2.16 MB | 49.4% | 0.966 | 4 |
+| WebP 60 | 1.93 MB | 54.7% | 0.961 | 4 |
+| AVIF 70 | 2.91 MB | 31.8% | 0.992 | 8 |
 | AVIF 60 | 2.27 MB | 46.8% | 0.986 | 5 |
+| AVIF 55 | 1.89 MB | 55.6% | 0.982 | 0 |
 | AVIF 50 | 1.62 MB | 62.1% | 0.978 | 0 |
 | AVIF 45 | 1.34 MB | 68.6% | 0.972 | 0 |
+| AVIF 35 | 0.91 MB | 78.7% | 0.958 | 0 |
 
 WebP at quality 90 made our images heavier in total. Half of them grew. Our files had already been compressed as JPEGs, so a high setting spends bytes preserving detail the JPEG had already thrown away. Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.
 
-Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files saved less. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.
+Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 16.6% of total bytes. The median image saved 29.4%, which looks like a match for Google's range but isn't one, because almost nothing landed near it. Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the largest third saved 11%. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.
 
 That AVIF figure is close to the "half" [Cloudflare reported](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) in 2020.
 
-One setting also doesn't suit every image. The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter. The median copy scores 0.975, but 4 of the 51 fell below 0.95 and the worst scored 0.886. Even WebP at quality 90 only reached 0.902 on that photo, while AVIF at quality 70 reached 0.951. Spot-check your worst images by eye and not only the total saved.
+One setting also doesn't suit every image. When we tested, the site shipped 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter. The median copy scores 0.975, but 4 of the 51 fell below 0.95 and the worst scored 0.886. Even WebP at quality 90 only reached 0.902 on that photo, while AVIF at quality 70 reached 0.951. Spot-check your worst images by eye and not only the total saved.
 
 ## On a post, each format took time off LCP
 
@@ -68,9 +73,9 @@ Here are the home page results from the same test, simulated throttling:
 | Home page | JPEG | WebP | AVIF |
 |---|---|---|---|
 | LCP | 4.58 s | 4.58 s | 4.58 s |
-| Page weight | 683 KB | 683 KB | 683 KB |
+| Weight loaded in the test | 683 KB | 683 KB | 683 KB |
 
-The reason is plain once you look. The LCP element on our home page is a paragraph of text, and the page didn't load a single image from the uploads folder during any run, so our format swap changed no file it fetched. [The HTTP Archive found](https://almanac.httparchive.org/en/2024/media) that 68% of mobile pages have an image as their LCP element. That leaves plenty of pages like ours, where a format change has nothing to act on.
+The reason is plain once you look. The LCP element on our home page is a paragraph of text, and the page didn't load a single image from the uploads folder during any run, so our format swap changed no file it fetched. The blog cards further down are WebP, but they're lazy-loaded and Lighthouse doesn't scroll to them. A visitor who scrolls does get the saving; it just can't affect LCP. [The HTTP Archive found](https://almanac.httparchive.org/en/2024/media) that 68% of mobile pages have an image as their LCP element. That leaves plenty of pages like ours, where the format change never reaches what loads first.
 
 Lighthouse's request list showed where the weight was. Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 32 pixels tall. It had been in our repository since 2021. We made a copy of the site with that one file resized to 64 pixels tall, 3.8 KB, and tested again:
 
@@ -108,7 +113,7 @@ Two further notes. [Jake Archibald points out](https://jakearchibald.com/2020/av
 
 ## How to convert images to WebP without wasting the work
 
-1. **Find your LCP element first.** Run Lighthouse or PageSpeed Insights and read which element it names. If it's text, a format change won't move LCP.
+1. **Find your LCP element first.** Run Lighthouse or PageSpeed Insights and read which element it names. If it's an image, every KB you take off it can count. If it's text, converting images won't speed that element up directly, so look at what else loads early.
 2. **Sort the page's requests by size.** Fix the largest file before any format work. Ours was a logo, and it needed [resizing](/tools/photo/resize-image/), not converting.
 3. **Don't start at quality 90.** Start at 75 to 80 for photos and compare file sizes. If a copy comes out bigger than the original, keep the original.
 4. **Convert from your highest-quality original.** Each lossy pass costs quality, as we measured in [our HEIC to JPG test](/articles/heic-to-jpg-what-you-lose/). For a few files, our free [JPG to WebP](/tools/photo/jpg-to-webp/) and [PNG to WebP](/tools/photo/png-to-webp/) converters run in your browser, and [the image compressor](/tools/photo/image-compress/) covers the case where you need to keep the format.
@@ -127,4 +132,4 @@ That logo is next on our own list. Yours may be sitting on a page you haven't op
 - HTTP Archive: [Web Almanac 2024, Media](https://almanac.httparchive.org/en/2024/media) (format shares and LCP images).
 - Jake Archibald: [AVIF has landed](https://jakearchibald.com/2020/avif-has-landed/) (2020).
 - Cloudflare: [Generate AVIF images with Image Resizing](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) (2020).
-- Our measurements: sharp 0.35.5, FFmpeg SSIM, Lighthouse 13.5.0 and Chrome 156 on our server, November 2026. Cover: one NASA public-domain photo (AS11-40-5903) with each strip encoded in the format it names; sizes are for the whole photo.
+- Our measurements: sharp 0.35.5, FFmpeg SSIM, Lighthouse 13.5.0 and Chrome 156 on our server, November 2026. Cover: one NASA public-domain photo (AS11-40-5903) with each strip made from a copy encoded in the format it names, then saved together as one image; sizes are for the whole photo.
