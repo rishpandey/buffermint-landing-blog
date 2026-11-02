@@ -5,8 +5,8 @@ const [cli, chrome, runs, out, ...rest] = process.argv.slice(2);
 const cut = rest.indexOf('--'); const vars = rest.slice(0, cut).map((x) => x.split('=')); const pages = rest.slice(cut + 1);
 for (let i = 0; i < Number(runs); i++) for (const page of pages) for (const [v, port] of vars) {
   const tmp = `/tmp/lp/lh-${process.pid}.json`;
-  const r = spawnSync('node', [cli, `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${tmp}`, '--only-categories=performance', `--chrome-path=${chrome}`, '--chrome-flags=--headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage'], { encoding: 'utf8', timeout: 180000 });
-  if (r.status !== 0) { console.error(v, page, r.stderr.slice(-300)); continue; }
+  const r = spawnSync('node', [cli, `http://127.0.0.1:${port}${page}`, '--quiet', '--output=json', `--output-path=${tmp}`, '--only-categories=performance', ...(process.env.LH_EXTRA ? process.env.LH_EXTRA.split(' ') : []), '--chrome-flags=--headless=new --no-sandbox --disable-gpu --disable-dev-shm-usage'], { encoding: 'utf8', timeout: 180000, env: { ...process.env, CHROME_PATH: chrome } });
+  if (r.status !== 0) { console.error(v, page, r.stderr.slice(0, 500)); continue; }
   const j = JSON.parse(fs.readFileSync(tmp, 'utf8')); const a = j.audits;
   const net = a['network-requests']?.details?.items ?? [];
   const img = net.filter((x) => x.resourceType === 'Image');
