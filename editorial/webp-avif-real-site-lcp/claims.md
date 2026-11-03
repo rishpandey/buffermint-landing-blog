@@ -40,3 +40,5 @@
 | 34 | AVIF 96.35%, WebP 97.18% | https://caniuse.com/avif, https://caniuse.com/webp | read 2026-11-02 |
 | 35 | AVIF shows nothing until fully arrived | https://jakearchibald.com/2020/avif-has-landed/ | no progressive rendering |
 | 36 | WebP 12%, AVIF 1.0%, JPEG 32.4% of mobile images | https://almanac.httparchive.org/en/2024/media | mobile format shares |
+| 37 | Only 3 of the 50 images landed inside Google's 25-34% range | ours: bench/sweep.json, smallest WebP at SSIM >= 0.98 per image (as in analyse-sweep.js) | per-image savings sorted: 3 of 50 between 25% and 34% (29, 29, 34) |
+| 38 | Tested on copies of buffermint.com served from our own server | ours: bench/lh-run.mjs, bench/serve.mjs, bench/make-variants.py | Lighthouse loads http://127.0.0.1:<port> served by serve.mjs from build copies |

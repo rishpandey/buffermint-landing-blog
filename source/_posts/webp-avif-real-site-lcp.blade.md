@@ -12,7 +12,7 @@ date: 2026-11-03
 extends: _layouts.post
 ---
 
-If you convert images to WebP, your page gets lighter. Whether it gets faster depends on one thing: what the browser counts as the largest thing on the page. We tested this on buffermint.com by changing nothing but the image format. On a blog post with a photo at the top, WebP took 0.3 to 0.4 seconds off Largest Contentful Paint (LCP). On our home page it took off nothing.
+If you convert images to WebP, your page gets lighter. Whether it gets faster depends on one thing: what the browser counts as the largest thing on the page. We tested this on copies of buffermint.com, served from our own server, changing nothing but the image format. On a blog post with a photo at the top, WebP took 0.3 to 0.4 seconds off Largest Contentful Paint (LCP). On our home page it took off nothing.
 
 The largest gain on the home page came from a file our conversion never touched. And our two Lighthouse modes disagreed about the size of that gain: 2.4 seconds in one, 0.15 seconds in the other.
 
@@ -48,7 +48,7 @@ Most guides pick a quality number and move on. Here's what every setting we test
 
 WebP at quality 90 made our images heavier in total. Half of them grew. Our files had already been compressed as JPEGs, so a high setting spends bytes preserving detail the JPEG had already thrown away. Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.
 
-Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 16.6% of total bytes. The median image saved 31.5%, which looks like a match for Google's range but isn't one, because almost nothing landed near it. Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the largest third saved 11%. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.
+Compare formats at equal quality and the gap to the published figures gets clearer. [Google says](https://developers.google.com/speed/webp) lossy WebP is 25 to 34% smaller than JPEG at equal SSIM. We took the smallest copy of each image that reached SSIM 0.98, which 50 of the 65 images did in both formats. WebP saved 16.6% of total bytes. The median image saved 31.5%, which looks like a match for Google's range but isn't one, because only 3 of the 50 images landed inside it. Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the largest third saved 11%. AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.
 
 That AVIF figure is close to the "half" [Cloudflare reported](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) in 2020.
 

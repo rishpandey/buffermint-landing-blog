@@ -4,7 +4,7 @@ const [root, port] = process.argv.slice(2);
 const T = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.json': 'application/json', '.xml': 'application/xml', '.jpeg': 'image/jpeg', '.jpg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif' };
 const cache = new Map();
 http.createServer((req, res) => {
-  let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
+  let p; try { p = decodeURIComponent(new URL(req.url, 'http://x').pathname); } catch { res.writeHead(400); return res.end(); }
   const base = path.resolve(root); let f = path.resolve(base, '.' + p);
   const rel = path.relative(base, f); if (rel.startsWith('..') || path.isAbsolute(rel)) { res.writeHead(403); return res.end(); }
   if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, 'index.html');

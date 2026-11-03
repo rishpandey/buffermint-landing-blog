@@ -20,17 +20,17 @@ Why topic 13 and not 12: topic 12 (EXIF) is the top `todo`, but its test needs l
 - https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md : simulated throttling is the default and models a load from an unthrottled one; deterministic, with "inherent inaccuracy" and edge cases. DevTools throttling is applied during the load, and its network side "isn't highly accurate". Slow 4G preset: 150 ms, 1.6 Mbps down.
 
 ## Disagreements
-Google's 25-34% is at equal SSIM on its own corpus. Our shipped copies fell 40% (3.0 to 1.8 MB) but were not made at a matched SSIM, so that number can't be compared with Google's until we score them. Archibald's AVIF is under half of WebP on a hand-tuned image, Cloudflare says "half", and blogs found by search say 20-50% with no method. Search found no controlled AVIF vs WebP benchmark in those blogs, so none of them is cited.
+Google's 25-34% is at equal SSIM on its own corpus. Our shipped copies fell 40% (3.0 to 1.8 MB, the 39 copies STATUS.md recorded on 2026-10-25; the 51 copies shipped at test time went 3.78 to 2.20 MB, 41.8%) but were not made at a matched SSIM, so that number can't be compared with Google's until we score them. Archibald's AVIF is under half of WebP on a hand-tuned image, Cloudflare says "half", and blogs found by search say 20-50% with no method. Search found no controlled AVIF vs WebP benchmark in those blogs, so none of them is cited.
 
 Result, read 2026-11-02: at SSIM 0.98 or better, the smallest tested WebP was 16.6% lighter in total and 31.5% lighter on the median image (29.4% before the median fix of 2026-11-03) (50 of 65 images reached the bar in both formats). Google's 25-34% fits the median image; larger files saved less. AVIF was 39.5% lighter than WebP in total and 47.2% on the median image, close to Cloudflare's "half". The reference is our JPEG, not an uncompressed original, so this is not the same test as Google's.
 
-The two Lighthouse modes also disagree: simulated says the logo fix saves 2.4 s, DevTools throttling 0.3 s. The doc warns about both, so neither is treated as the truth and both are printed.
+The two Lighthouse modes also disagree: simulated says the logo fix saves 2.4 s, DevTools throttling 0.15 s (0.3 s before the same-session rerun of 2026-11-03). The doc warns about both, so neither is treated as the truth and both are printed.
 
 ## New angle
 Three things no source has, all from `bench/` on our own site:
 1. Quality sweep on all 65 JPEGs: WebP q90 is larger than the JPEGs in total (33 of 65 grow); q80 saves 35.6%; AVIF q50 saves 62.1% at a higher median SSIM, and no image grows.
 2. Controlled LCP test on one build, only the image format changed: home page LCP doesn't move at all (text LCP, no upload images); post LCP drops about 0.3-0.4 s for WebP and 0.6 s for AVIF, in both throttling modes.
-3. The biggest gain was not a format: one 504 KB logo shown 32 px high. Simulated, fixing it saves 2.4 s; applied throttling, 0.3 s. That gap is a warning about reading one lab number. The old "10.3 to 7.0 s" claim, split by commit, did not reproduce.
+3. The biggest gain was not a format: one 504 KB logo shown 32 px high. Simulated, fixing it saves 2.4 s; applied throttling, 0.15 s (same-session rerun, 2026-11-03). That gap is a warning about reading one lab number. The old "10.3 to 7.0 s" claim, split by commit, did not reproduce.
 
 ## Outline
 - Opening: the answer. Depends on the LCP element; ours: 0 on home, 0.3-0.4 s on a post.
