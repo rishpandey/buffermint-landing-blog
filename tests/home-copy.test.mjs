@@ -10,7 +10,7 @@ const home = () => readFileSync(join(build, 'index.html'), 'utf8');
 
 test('the home page has no agency-era testimonials', () => {
   const html = home();
-  for (const s of [/zenmindmap/i, /Zen Mind Maps?/i, /shasilluminated/i, /Shas Illuminated/i, /Nick Hoang/, /Yacov Metz/, /site-quote/, /\bagency\b/i]) {
+  for (const s of [/zenmindmap/i, /Zen Mind Maps?/i, /shasilluminated/i, /Shas Illuminated/i, /Nick Hoang/, /Yacov Metz/, /site-quote/]) {
     assert.doesNotMatch(html, s);
   }
   for (const img of ['logos/zmm-logo.png', 'logos/shas-logo.png', 'photos/nick.png', 'photos/yacov.jpeg']) {

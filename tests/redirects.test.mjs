@@ -97,11 +97,24 @@ test('buffermint-pages answers 301 from each merged post to its target', (t) => 
 
 const isPage = (path) => path === '/' ? existsSync(join(build, 'index.html'))
   : existsSync(join(build, path.slice(1), 'index.html')) || existsSync(join(build, `${path.slice(1)}.html`));
-// an href, a <loc>, an Atom <id>/<link> or a JSON url to the path (absolute or root-relative), with or without a slash
-const linksTo = (text, path) => new RegExp(`(?:https?://(?:www\\.)?buffermint\\.com)?${path}/?(?=["'<#?\\s]|$)`, 'm').test(text);
+// A link to the path in HTML, XML or JSON: absolute (buffermint.com), root-relative or relative (our-pricing,
+// ../our-pricing), with or without a trailing slash. JSON's escaped slashes (\/) are read as slashes first.
+const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+export const linksTo = (text, path) => new RegExp(
+  `(?:^|["'>(=\\s])(?:https?://(?:www\\.)?buffermint\\.com/|/|(?:\\.\\.?/)*)${esc(path.slice(1))}/?(?=["'<>#?)\\s]|$)`, 'm',
+).test(text.replaceAll('\\/', '/'));
 
-test('a moved page is gone from the build, the sitemap, the feed and the search index; its new path is built', () => {
-  const files = ['sitemap.xml', 'feed.xml', 'index.json'].map((f) => [f, readFileSync(join(build, f), 'utf8')]);
+test('linksTo finds absolute, root-relative, relative and JSON-escaped links, and nothing else', () => {
+  for (const t of ['<a href="/our-pricing">', '<a href=../our-pricing/>', '<loc>https://buffermint.com/our-pricing</loc>', '{"link":"\\/our-pricing"}', '"https:\\/\\/buffermint.com\\/articles\\/10-micro-saas-ideas-in-2021-copy"']) {
+    assert.ok(linksTo(t, t.includes('articles') ? '/articles/10-micro-saas-ideas-in-2021-copy' : '/our-pricing'), t);
+  }
+  for (const t of ['<a href="/our-pricing-x">', '<a href="https://other.com/our-pricing">', '"assets/img/uploads/10-micro-saas-ideas-in-2021-copy-cover.jpeg"']) {
+    assert.ok(!linksTo(t, t.includes('micro') ? '/articles/10-micro-saas-ideas-in-2021-copy' : '/our-pricing'), t);
+  }
+});
+
+test('a moved page is gone from the build, the sitemap, the feed and the search and featured indexes; its new path is built', () => {
+  const files = ['sitemap.xml', 'feed.xml', 'index.json', 'featured.json'].map((f) => [f, readFileSync(join(build, f), 'utf8')]);
   for (const [from, to] of Object.entries(MOVED)) {
     assert.ok(!isPage(from), `${from} is still built`);
     assert.ok(isPage(to), `${to} (the new home of ${from}) isn't built`);
