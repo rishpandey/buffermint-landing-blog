@@ -32,7 +32,9 @@ export const MOVED = {
 
 const PAGES = join(root, '../buffermint-pages');
 const PAGES_REDIRECTS = join(PAGES, 'static/_redirects');
-const isPost = (slug) => existsSync(join(build, 'articles', slug, 'index.html')) || existsSync(join(build, 'articles', `${slug}.html`));
+const isPage = (path) => path === '/' ? existsSync(join(build, 'index.html'))
+  : existsSync(join(build, path.slice(1), 'index.html')) || existsSync(join(build, `${path.slice(1)}.html`));
+const isPost = (slug) => isPage(`/articles/${slug}`);
 const git = (dir, ...args) => execFileSync('git', ['-C', dir, ...args], { encoding: 'utf8', stdio: ['ignore', 'pipe', 'ignore'] });
 
 // Which pages rules this landing commit will be published with. bin/landing-autopublish publishes landing main once
@@ -95,8 +97,6 @@ test('buffermint-pages answers 301 from each merged post to its target', (t) => 
   }
 });
 
-const isPage = (path) => path === '/' ? existsSync(join(build, 'index.html'))
-  : existsSync(join(build, path.slice(1), 'index.html')) || existsSync(join(build, `${path.slice(1)}.html`));
 // A link to the path in HTML, XML or JSON: absolute (buffermint.com), root-relative or relative (our-pricing,
 // ../our-pricing), with or without a trailing slash. JSON's escaped slashes (\/) are read as slashes first.
 const esc = (x) => x.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');

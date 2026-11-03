@@ -315,13 +315,14 @@ Effort **S**.
 **Decided 2026-11-03 (owner decision D4, "All as recommended"; lane `t-20261103-landing-copy-d4`, BM-42):** the
 `-copy` post moved to `/articles/micro-saas-ideas` (option a's slug; text not refreshed yet) with a 301 in
 `buffermint-pages/static/_redirects`; `/our-pricing` is deleted with a 301 to the home page; the two testimonials
-are removed; "about 45 days" stays. The rest of the copy list below is still open.
+are removed; "about 45 days" stays. The bullets marked **Done (D4)** below are settled; the rest of the copy list is
+still open.
 
 - **All 21 posts are dated 10 Jul to 1 Sep 2021**, including the one added in March 2024
   (`the-ultimate-guide-…`, `date: 2021-09-01`). The home page and the blog show "01 Sep 2021" as the
   newest post.
-- **`/articles/10-micro-saas-ideas-in-2021-copy`** (`source/_posts/10-micro-saas-ideas-in-2021-copy.blade.md`,
-  featured): the "-copy" slug looks like a CMS duplicate, and the original `/articles/10-micro-saas-ideas-in-2021`
+- **Done (D4): moved to `/articles/micro-saas-ideas` with a 301 in `buffermint-pages/static/_redirects`; the
+  refresh is still to do.** Was: **`/articles/10-micro-saas-ideas-in-2021-copy`** (featured): the "-copy" slug looks like a CMS duplicate, and the original `/articles/10-micro-saas-ideas-in-2021`
   is 404. Options:
   - (a) refresh it as "Micro-SaaS ideas for 2026" at a clean slug such as `/articles/micro-saas-ideas`, with
     a 301 from the old URL. The redirect goes in the Caddy file in buffermint-tools;
@@ -331,12 +332,12 @@ are removed; "about 45 days" stays. The rest of the copy list below is still ope
 - **7 posts link to Calendly with `?month=2021-08`.** That opens the calendar on August 2021. The posts are
   `how-to-achieve-…`, `how-ai-and-machine-learning-…`, `how-to-leverage-ai-…`, `10-predictions-…` (twice)
   and `what-is-the-difference-…`. The fix is to strip the parameter; better, use `{{ $page->discovery_call_url }}`.
-- **`/our-pricing`** (`source/_pages/our-pricing.md`) has a title and no body. It is in the sitemap but not
+- **Done (D4): deleted, 301 to the home page.** Was: **`/our-pricing`** (`source/_pages/our-pricing.md`) had a title and no body. It is in the sitemap but not
   linked from anywhere. Write it, or delete it (and its sitemap entry).
 - **Copy to review** (your call, I would not rewrite it unasked):
-  - "Launch your SaaS in 45 days" (`config.php` description, about-us);
+  - "Launch your SaaS in 45 days" (`config.php` description, about-us): **Done (D4): stays**;
   - "In 2019, before the COVID pandemic…" (`source/_pages/about-us.blade.md:22`);
-  - the two testimonials (Zen Mind Maps, Shas Illuminated): are they still current?
+  - the two testimonials (Zen Mind Maps, Shas Illuminated): **Done (D4): removed**;
   - "From us to your inbox weekly" (item 1);
   - the Careers page shows "No positions available" from the Workable embed (account 491143). Fine if
     you are not hiring; otherwise remove the page from the nav;

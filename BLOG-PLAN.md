@@ -474,7 +474,7 @@ None of the old posts has a `## Sources` section or an external citation, except
 |---|---|---|---|
 | launch-your-micro-saas-product | 2,074 | **Keep, refresh** (target `how to start a micro saas`, level 2) | The micro-SaaS pillar. It absorbs `micro-saas-is-the-future`. Update with 2026 evidence: what earns now (one trade, one country, a local rule) with third-party examples and their verified revenue from public sources. |
 | micro-saas-is-the-future | 407 | **Merge** → launch-your-micro-saas-product | Thin opinion piece; same keyword. |
-| 10-micro-saas-ideas-in-2021-copy (now micro-saas-ideas, 301, D4 2026-11-03) | 1,159 | **Leave** the text; the slug moved per PLAN 11 | `-copy` slug and 2021 ideas; don't touch (PLAN 11). Afterwards: refresh as dated ideas with evidence, or merge into the pillar. |
+| 10-micro-saas-ideas-in-2021-copy (now micro-saas-ideas, 301, D4 2026-11-03) | 1,159 | **Leave** the text; the slug moved per PLAN 11 | 2021 ideas; the slug is settled (D4). Next: refresh as dated ideas with evidence, or merge into the pillar. |
 | when-is-the-right-time-to-launch-an-mvp | 952 | **Keep, refresh** (target `mvp development`, level 2; HN 57) | The MVP post. It absorbs the two below. |
 | 5-reasons-why-building-your-mvp-is-a-challenge | 594 | **Merge** → when-is-the-right-time-to-launch-an-mvp | Thin, same topic. |
 | why-speed-to-market-matters-for-your-saas-product-launch | 867 | **Merge** → when-is-the-right-time-to-launch-an-mvp | Same argument ("launch early"); 3 views in the counted week, so keep the URL alive with a 301. |
