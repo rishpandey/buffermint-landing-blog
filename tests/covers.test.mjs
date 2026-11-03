@@ -30,6 +30,11 @@ for (const f of readdirSync(posts).filter((n) => n.endsWith('.blade.md'))) {
       assert.ok(existsSync(join(root, 'source', file.replace(/\.jpeg$/, '.webp'))), `${file} has a WebP copy`);
     }
   });
+  test(`${f}: the text says nothing about a picture cover`, () => {
+    // the cover is a drawn headline now; a photo the text describes belongs in the body, and the Sources say so
+    const body = readFileSync(join(posts, f), 'utf8').replace(/^---\n[\s\S]*?\n---\n/, '');
+    assert.doesNotMatch(body, /\b(?:Cover|cover image|cover photo)\s*:/, `${f} still describes its old cover`);
+  });
 }
 
 test('a post page shows its whole cover through <picture>, and no cropping band is left', () => {
