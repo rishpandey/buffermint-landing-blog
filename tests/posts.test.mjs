@@ -247,6 +247,8 @@ test('the checker: missing Sources, duplicate keyword, scope', () => {
 test('the checker: real link text, code samples and odd URLs are not problems', () => {
   const text = good.body.replace('## Sources', 'Add the [Add page numbers](/tools/pdf/add-page-numbers/) tool to [your own invoice](/tools/everyday/invoice-generator/). The release is coming soon, says the vendor.\n\n```js\n// TODO: not a placeholder, a code sample\n```\n\nA broken link [a](https://) in the text.\n\n## Sources');
   assert.deepEqual(checkPost({ ...good, body: text }, [good]), []);
+  const unquoted = good.body.replace('## Sources', 'See <a href=/tools/dev/notes/?tag=TODO>the notes tool</a>.\n\n## Sources');
+  assert.deepEqual(checkPost({ ...good, body: unquoted }, [good]), [], 'an unquoted href is a link target, not prose');
   assert.ok(checkPost({ ...good, body: good.body + '\n[insert chart here]\n' }, [good]).includes('placeholder text: [insert …] slot'));
   assert.deepEqual(checkPost({ ...good, body: good.body.replace('## Sources', '## Sources\n- [bad](https://)') }, [good]), [], 'a malformed URL is ignored, not a crash');
 });
