@@ -1,0 +1,6219 @@
+{
+ "sharp": {
+  "aom": "3.15.1",
+  "archive": "3.8.9",
+  "cairo": "1.18.6",
+  "cgif": "0.5.4",
+  "exif": "0.6.26",
+  "expat": "2.8.5",
+  "ffi": "3.8.0",
+  "fontconfig": "2.18.3",
+  "freetype": "2.14.3",
+  "fribidi": "1.0.17",
+  "glib": "2.90.0",
+  "harfbuzz": "14.5.0",
+  "heif": "1.23.5",
+  "highway": "1.4.0",
+  "imagequant": "2.4.1",
+  "lcms": "2.19.1",
+  "mozjpeg": "0826579",
+  "pango": "1.58.2",
+  "pixman": "0.46.4",
+  "png": "1.6.58",
+  "proxy-libintl": "0.5",
+  "rsvg": "2.63.2",
+  "tiff": "4.7.2",
+  "uhdr": "2.0.2",
+  "vips": "8.18.7",
+  "webp": "1.6.0",
+  "xml2": "2.15.4",
+  "zlib-ng": "2.3.3",
+  "sharp": "0.35.5"
+ },
+ "rows": [
+  {
+   "file": "10-micro-saas-ideas.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 106747,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 41592,
+     "ms": 177,
+     "ssim": 0.978901
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 46860,
+     "ms": 177,
+     "ssim": 0.98126
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 49630,
+     "ms": 178,
+     "ssim": 0.982485
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 60010,
+     "ms": 188,
+     "ssim": 0.986052
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 73682,
+     "ms": 169,
+     "ssim": 0.98872
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 96612,
+     "ms": 193,
+     "ssim": 0.991887
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 22081,
+     "ms": 2604,
+     "ssim": 0.976618
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 31988,
+     "ms": 2847,
+     "ssim": 0.983989
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 38182,
+     "ms": 3134,
+     "ssim": 0.9867
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 44841,
+     "ms": 3102,
+     "ssim": 0.98851
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 54758,
+     "ms": 3144,
+     "ssim": 0.991326
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 70606,
+     "ms": 3219,
+     "ssim": 0.994531
+    }
+   ],
+   "shipped": {
+    "bytes": 60010,
+    "ssim": 0.986052
+   }
+  },
+  {
+   "file": "10-microsass-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 12990,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 9018,
+     "ms": 33,
+     "ssim": 0.976578
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 9852,
+     "ms": 31,
+     "ssim": 0.979918
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 10398,
+     "ms": 36,
+     "ssim": 0.982411
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 12078,
+     "ms": 32,
+     "ssim": 0.987025
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 14104,
+     "ms": 29,
+     "ssim": 0.991476
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 17078,
+     "ms": 30,
+     "ssim": 0.994108
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4946,
+     "ms": 344,
+     "ssim": 0.965417
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6681,
+     "ms": 282,
+     "ssim": 0.983144
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7530,
+     "ms": 310,
+     "ssim": 0.988826
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8337,
+     "ms": 291,
+     "ssim": 0.992485
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 9212,
+     "ms": 284,
+     "ssim": 0.995508
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 10266,
+     "ms": 259,
+     "ssim": 0.997722
+    }
+   ]
+  },
+  {
+   "file": "4-types-thumbnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 13444,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 9030,
+     "ms": 31,
+     "ssim": 0.961383
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 10038,
+     "ms": 27,
+     "ssim": 0.966269
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 10486,
+     "ms": 29,
+     "ssim": 0.968574
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 12334,
+     "ms": 30,
+     "ssim": 0.973957
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 14648,
+     "ms": 29,
+     "ssim": 0.980765
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 18536,
+     "ms": 33,
+     "ssim": 0.989194
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4914,
+     "ms": 375,
+     "ssim": 0.952836
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6838,
+     "ms": 373,
+     "ssim": 0.974303
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7883,
+     "ms": 382,
+     "ssim": 0.981133
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8766,
+     "ms": 373,
+     "ssim": 0.986657
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 9690,
+     "ms": 379,
+     "ssim": 0.990332
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 11191,
+     "ms": 386,
+     "ssim": 0.993892
+    }
+   ]
+  },
+  {
+   "file": "4-types-title-image-.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 121738,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 48230,
+     "ms": 193,
+     "ssim": 0.955191
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 54610,
+     "ms": 203,
+     "ssim": 0.960435
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 57816,
+     "ms": 192,
+     "ssim": 0.962346
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 71086,
+     "ms": 185,
+     "ssim": 0.968233
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 88690,
+     "ms": 194,
+     "ssim": 0.973443
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 117416,
+     "ms": 205,
+     "ssim": 0.978603
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 22661,
+     "ms": 2918,
+     "ssim": 0.958761
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 34093,
+     "ms": 3247,
+     "ssim": 0.971527
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 42366,
+     "ms": 3439,
+     "ssim": 0.977318
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 50959,
+     "ms": 3689,
+     "ssim": 0.98133
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 61954,
+     "ms": 3618,
+     "ssim": 0.985595
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 80942,
+     "ms": 3706,
+     "ssim": 0.991048
+    }
+   ],
+   "shipped": {
+    "bytes": 71086,
+    "ssim": 0.968233
+   }
+  },
+  {
+   "file": "5-reasons-thumbnail-.jpeg",
+   "width": 487,
+   "height": 324,
+   "jpeg": 11049,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 6942,
+     "ms": 27,
+     "ssim": 0.949826
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7670,
+     "ms": 31,
+     "ssim": 0.957288
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 8134,
+     "ms": 24,
+     "ssim": 0.962331
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9680,
+     "ms": 31,
+     "ssim": 0.968105
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 11424,
+     "ms": 28,
+     "ssim": 0.981484
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 13956,
+     "ms": 34,
+     "ssim": 0.986959
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4529,
+     "ms": 265,
+     "ssim": 0.957812
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6307,
+     "ms": 286,
+     "ssim": 0.980341
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7032,
+     "ms": 306,
+     "ssim": 0.984975
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 7681,
+     "ms": 274,
+     "ssim": 0.988455
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 8267,
+     "ms": 381,
+     "ssim": 0.99085
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 9103,
+     "ms": 280,
+     "ssim": 0.99372
+    }
+   ],
+   "shipped": {
+    "bytes": 9680,
+    "ssim": 0.968105
+   }
+  },
+  {
+   "file": "5-reasons-title-image.jpeg",
+   "width": 1600,
+   "height": 1065,
+   "jpeg": 124306,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 58612,
+     "ms": 193,
+     "ssim": 0.958123
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 66302,
+     "ms": 188,
+     "ssim": 0.963931
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 69992,
+     "ms": 174,
+     "ssim": 0.966045
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 85202,
+     "ms": 203,
+     "ssim": 0.97254
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 106122,
+     "ms": 223,
+     "ssim": 0.978044
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 136108,
+     "ms": 194,
+     "ssim": 0.986029
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 26421,
+     "ms": 2521,
+     "ssim": 0.949584
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 41796,
+     "ms": 2835,
+     "ssim": 0.967855
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 51772,
+     "ms": 2865,
+     "ssim": 0.974922
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 62136,
+     "ms": 2889,
+     "ssim": 0.980058
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 75951,
+     "ms": 2987,
+     "ssim": 0.985102
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 95552,
+     "ms": 2882,
+     "ssim": 0.990709
+    }
+   ],
+   "shipped": {
+    "bytes": 85202,
+    "ssim": 0.97254
+   }
+  },
+  {
+   "file": "ai-feature-cost-per-user-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 34725,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 10294,
+     "ms": 110,
+     "ssim": 0.997519
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 10894,
+     "ms": 107,
+     "ssim": 0.997398
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 11324,
+     "ms": 111,
+     "ssim": 0.997341
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 12790,
+     "ms": 125,
+     "ssim": 0.998006
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 14658,
+     "ms": 106,
+     "ssim": 0.998483
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 17638,
+     "ms": 108,
+     "ssim": 0.998839
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4916,
+     "ms": 821,
+     "ssim": 0.996982
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6096,
+     "ms": 766,
+     "ssim": 0.997897
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 6810,
+     "ms": 658,
+     "ssim": 0.998196
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 7592,
+     "ms": 731,
+     "ssim": 0.998303
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 8657,
+     "ms": 616,
+     "ssim": 0.998554
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 11118,
+     "ms": 771,
+     "ssim": 0.998912
+    }
+   ],
+   "shipped": {
+    "bytes": 12382,
+    "ssim": 0.997247
+   }
+  },
+  {
+   "file": "ai-overviews-zero-click-studies-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 47680,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 14654,
+     "ms": 116,
+     "ssim": 0.996611
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 15704,
+     "ms": 109,
+     "ssim": 0.99659
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 16246,
+     "ms": 119,
+     "ssim": 0.997144
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 19222,
+     "ms": 115,
+     "ssim": 0.997712
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 22146,
+     "ms": 112,
+     "ssim": 0.9981
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 26456,
+     "ms": 130,
+     "ssim": 0.99857
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7082,
+     "ms": 737,
+     "ssim": 0.995574
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 8999,
+     "ms": 857,
+     "ssim": 0.996864
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 10158,
+     "ms": 872,
+     "ssim": 0.997279
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 11248,
+     "ms": 809,
+     "ssim": 0.997474
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 12797,
+     "ms": 794,
+     "ssim": 0.99779
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 16905,
+     "ms": 895,
+     "ssim": 0.998414
+    }
+   ],
+   "shipped": {
+    "bytes": 18068,
+    "ssim": 0.996645
+   }
+  },
+  {
+   "file": "compress-pdf-to-100kb-dpi-compare.jpeg",
+   "width": 1600,
+   "height": 672,
+   "jpeg": 174598,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 70736,
+     "ms": 139,
+     "ssim": 0.96369
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 80674,
+     "ms": 130,
+     "ssim": 0.971093
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 84590,
+     "ms": 140,
+     "ssim": 0.973158
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 102336,
+     "ms": 139,
+     "ssim": 0.979016
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 124610,
+     "ms": 151,
+     "ssim": 0.984593
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 161514,
+     "ms": 162,
+     "ssim": 0.990221
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 32944,
+     "ms": 1758,
+     "ssim": 0.945262
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 47017,
+     "ms": 1970,
+     "ssim": 0.965591
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 55366,
+     "ms": 2079,
+     "ssim": 0.972467
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 64551,
+     "ms": 2311,
+     "ssim": 0.97784
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 78334,
+     "ms": 2535,
+     "ssim": 0.983352
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 107839,
+     "ms": 2580,
+     "ssim": 0.991986
+    }
+   ],
+   "shipped": {
+    "bytes": 93632,
+    "ssim": 0.97475
+   }
+  },
+  {
+   "file": "credit-based-pricing-12-tools-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 41363,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 12196,
+     "ms": 114,
+     "ssim": 0.996911
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 13006,
+     "ms": 107,
+     "ssim": 0.996877
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 13604,
+     "ms": 104,
+     "ssim": 0.996883
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 15476,
+     "ms": 104,
+     "ssim": 0.997615
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 17884,
+     "ms": 105,
+     "ssim": 0.998182
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 21662,
+     "ms": 112,
+     "ssim": 0.998635
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 5984,
+     "ms": 696,
+     "ssim": 0.996338
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7604,
+     "ms": 729,
+     "ssim": 0.99729
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 8611,
+     "ms": 757,
+     "ssim": 0.997688
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 9530,
+     "ms": 794,
+     "ssim": 0.997861
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10817,
+     "ms": 693,
+     "ssim": 0.998137
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 14017,
+     "ms": 750,
+     "ssim": 0.998621
+    }
+   ],
+   "shipped": {
+    "bytes": 14828,
+    "ssim": 0.996714
+   }
+  },
+  {
+   "file": "difference-between-saas-and-cloud-computing-.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 111651,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 47144,
+     "ms": 167,
+     "ssim": 0.963812
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 53888,
+     "ms": 178,
+     "ssim": 0.968769
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 56912,
+     "ms": 180,
+     "ssim": 0.969797
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 71158,
+     "ms": 196,
+     "ssim": 0.976662
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 86994,
+     "ms": 196,
+     "ssim": 0.981623
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 115426,
+     "ms": 195,
+     "ssim": 0.987775
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 23253,
+     "ms": 2934,
+     "ssim": 0.95779
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 36975,
+     "ms": 3295,
+     "ssim": 0.973113
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 45518,
+     "ms": 3563,
+     "ssim": 0.978761
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 54716,
+     "ms": 3791,
+     "ssim": 0.98311
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 65483,
+     "ms": 3862,
+     "ssim": 0.98756
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 82290,
+     "ms": 3472,
+     "ssim": 0.992245
+    }
+   ],
+   "shipped": {
+    "bytes": 71158,
+    "ssim": 0.976662
+   }
+  },
+  {
+   "file": "difference-between-saas-and-cloud-computing-thubnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 11169,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 7202,
+     "ms": 27,
+     "ssim": 0.956434
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7946,
+     "ms": 27,
+     "ssim": 0.96177
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 8356,
+     "ms": 34,
+     "ssim": 0.962636
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9680,
+     "ms": 29,
+     "ssim": 0.972517
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 11552,
+     "ms": 32,
+     "ssim": 0.982104
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 14192,
+     "ms": 32,
+     "ssim": 0.987455
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4540,
+     "ms": 320,
+     "ssim": 0.959462
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6319,
+     "ms": 341,
+     "ssim": 0.982034
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7099,
+     "ms": 366,
+     "ssim": 0.987142
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 7647,
+     "ms": 334,
+     "ssim": 0.989686
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 8188,
+     "ms": 376,
+     "ssim": 0.992039
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 9056,
+     "ms": 390,
+     "ssim": 0.994958
+    }
+   ],
+   "shipped": {
+    "bytes": 9680,
+    "ssim": 0.972517
+   }
+  },
+  {
+   "file": "essential-guide-thumbnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 8431,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 4966,
+     "ms": 24,
+     "ssim": 0.940365
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 5462,
+     "ms": 24,
+     "ssim": 0.942771
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 5764,
+     "ms": 23,
+     "ssim": 0.944619
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 6720,
+     "ms": 25,
+     "ssim": 0.951759
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 7838,
+     "ms": 24,
+     "ssim": 0.954755
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 9826,
+     "ms": 25,
+     "ssim": 0.958338
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4256,
+     "ms": 227,
+     "ssim": 0.94895
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 5354,
+     "ms": 233,
+     "ssim": 0.96277
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 5901,
+     "ms": 288,
+     "ssim": 0.972103
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 6301,
+     "ms": 275,
+     "ssim": 0.97569
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 6705,
+     "ms": 281,
+     "ssim": 0.978092
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 7527,
+     "ms": 306,
+     "ssim": 0.98463
+    }
+   ],
+   "shipped": {
+    "bytes": 6720,
+    "ssim": 0.951759
+   }
+  },
+  {
+   "file": "essential-guide-title-image-.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 56148,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 26870,
+     "ms": 179,
+     "ssim": 0.947637
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 29148,
+     "ms": 156,
+     "ssim": 0.95199
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 30982,
+     "ms": 148,
+     "ssim": 0.957066
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 37500,
+     "ms": 143,
+     "ssim": 0.959168
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 45330,
+     "ms": 157,
+     "ssim": 0.963311
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 58508,
+     "ms": 159,
+     "ssim": 0.968704
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 15896,
+     "ms": 1681,
+     "ssim": 0.961602
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 22428,
+     "ms": 1759,
+     "ssim": 0.971758
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 27040,
+     "ms": 1716,
+     "ssim": 0.978087
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 30616,
+     "ms": 1771,
+     "ssim": 0.981502
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 35484,
+     "ms": 1798,
+     "ssim": 0.984462
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 44710,
+     "ms": 1967,
+     "ssim": 0.988808
+    }
+   ],
+   "shipped": {
+    "bytes": 37500,
+    "ssim": 0.959168
+   }
+  },
+  {
+   "file": "eu-ai-act-small-saas-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 28485,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 8058,
+     "ms": 96,
+     "ssim": 0.99698
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 8354,
+     "ms": 99,
+     "ssim": 0.997122
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 8468,
+     "ms": 88,
+     "ssim": 0.997273
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9730,
+     "ms": 107,
+     "ssim": 0.997485
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 10758,
+     "ms": 95,
+     "ssim": 0.997775
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 12838,
+     "ms": 110,
+     "ssim": 0.997983
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3869,
+     "ms": 674,
+     "ssim": 0.998207
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4752,
+     "ms": 603,
+     "ssim": 0.998652
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 5244,
+     "ms": 613,
+     "ssim": 0.998779
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 5724,
+     "ms": 571,
+     "ssim": 0.998887
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 6359,
+     "ms": 561,
+     "ssim": 0.998988
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 7950,
+     "ms": 682,
+     "ssim": 0.999218
+    }
+   ],
+   "shipped": {
+    "bytes": 9724,
+    "ssim": 0.997784
+   }
+  },
+  {
+   "file": "european-accessibility-act-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 27514,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 7670,
+     "ms": 97,
+     "ssim": 0.997034
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7996,
+     "ms": 90,
+     "ssim": 0.99717
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 8026,
+     "ms": 97,
+     "ssim": 0.997294
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9252,
+     "ms": 98,
+     "ssim": 0.997509
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 10264,
+     "ms": 87,
+     "ssim": 0.997799
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 12216,
+     "ms": 87,
+     "ssim": 0.998005
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3630,
+     "ms": 593,
+     "ssim": 0.99822
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4467,
+     "ms": 647,
+     "ssim": 0.998628
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 4937,
+     "ms": 574,
+     "ssim": 0.998799
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 5487,
+     "ms": 596,
+     "ssim": 0.998899
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 6084,
+     "ms": 578,
+     "ssim": 0.999006
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 7564,
+     "ms": 630,
+     "ssim": 0.999235
+    }
+   ],
+   "shipped": {
+    "bytes": 9242,
+    "ssim": 0.997797
+   }
+  },
+  {
+   "file": "excellent-client-.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 202871,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 100128,
+     "ms": 232,
+     "ssim": 0.949292
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 113084,
+     "ms": 194,
+     "ssim": 0.955533
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 120534,
+     "ms": 209,
+     "ssim": 0.958143
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 145528,
+     "ms": 241,
+     "ssim": 0.96605
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 181736,
+     "ms": 245,
+     "ssim": 0.973852
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 230830,
+     "ms": 226,
+     "ssim": 0.982891
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 44445,
+     "ms": 3164,
+     "ssim": 0.93378
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 67763,
+     "ms": 3435,
+     "ssim": 0.95511
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 83038,
+     "ms": 3660,
+     "ssim": 0.964219
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 99642,
+     "ms": 3949,
+     "ssim": 0.970624
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 123080,
+     "ms": 3726,
+     "ssim": 0.978404
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 159737,
+     "ms": 3627,
+     "ssim": 0.987913
+    }
+   ],
+   "shipped": {
+    "bytes": 145528,
+    "ssim": 0.96605
+   }
+  },
+  {
+   "file": "excellent-client-thumbnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 14573,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 14984,
+     "ms": 32,
+     "ssim": 0.942647
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 16618,
+     "ms": 33,
+     "ssim": 0.950929
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 17402,
+     "ms": 32,
+     "ssim": 0.954003
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 20420,
+     "ms": 38,
+     "ssim": 0.962309
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 24208,
+     "ms": 37,
+     "ssim": 0.971104
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 29602,
+     "ms": 46,
+     "ssim": 0.975597
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 8084,
+     "ms": 417,
+     "ssim": 0.930994
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 11076,
+     "ms": 381,
+     "ssim": 0.960539
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 12412,
+     "ms": 516,
+     "ssim": 0.96827
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 13632,
+     "ms": 389,
+     "ssim": 0.973211
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 15009,
+     "ms": 448,
+     "ssim": 0.97718
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 17891,
+     "ms": 444,
+     "ssim": 0.981986
+    }
+   ]
+  },
+  {
+   "file": "have-a-future-aspect.jpeg",
+   "width": 800,
+   "height": 1200,
+   "jpeg": 201898,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 103086,
+     "ms": 155,
+     "ssim": 0.952899
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 116186,
+     "ms": 153,
+     "ssim": 0.960904
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 122860,
+     "ms": 161,
+     "ssim": 0.963954
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 147586,
+     "ms": 156,
+     "ssim": 0.974176
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 176110,
+     "ms": 172,
+     "ssim": 0.981377
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 221848,
+     "ms": 206,
+     "ssim": 0.988355
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 39628,
+     "ms": 2203,
+     "ssim": 0.902209
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 61151,
+     "ms": 2444,
+     "ssim": 0.940827
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 74169,
+     "ms": 2595,
+     "ssim": 0.954237
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 88915,
+     "ms": 2692,
+     "ssim": 0.965208
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 111631,
+     "ms": 2851,
+     "ssim": 0.97807
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 144545,
+     "ms": 2480,
+     "ssim": 0.989078
+    }
+   ],
+   "shipped": {
+    "bytes": 147586,
+    "ssim": 0.974176
+   }
+  },
+  {
+   "file": "heic-to-jpg-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 151186,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 98466,
+     "ms": 178,
+     "ssim": 0.953545
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 110892,
+     "ms": 178,
+     "ssim": 0.962331
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 116806,
+     "ms": 182,
+     "ssim": 0.965254
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 141776,
+     "ms": 194,
+     "ssim": 0.973444
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 174578,
+     "ms": 205,
+     "ssim": 0.98383
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 219462,
+     "ms": 188,
+     "ssim": 0.990054
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 43473,
+     "ms": 2294,
+     "ssim": 0.930039
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 66404,
+     "ms": 2596,
+     "ssim": 0.960129
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 83278,
+     "ms": 2821,
+     "ssim": 0.97545
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 100382,
+     "ms": 2935,
+     "ssim": 0.986957
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 115444,
+     "ms": 2916,
+     "ssim": 0.99173
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 134655,
+     "ms": 3154,
+     "ssim": 0.994406
+    }
+   ],
+   "shipped": {
+    "bytes": 110820,
+    "ssim": 0.962319
+   }
+  },
+  {
+   "file": "heic-to-jpg-quality-compare.jpeg",
+   "width": 1600,
+   "height": 390,
+   "jpeg": 60078,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 18456,
+     "ms": 71,
+     "ssim": 0.960885
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 21138,
+     "ms": 72,
+     "ssim": 0.964522
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 22468,
+     "ms": 77,
+     "ssim": 0.96608
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 27284,
+     "ms": 78,
+     "ssim": 0.971208
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 34918,
+     "ms": 84,
+     "ssim": 0.977638
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 46812,
+     "ms": 84,
+     "ssim": 0.984589
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 9125,
+     "ms": 873,
+     "ssim": 0.960988
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 13810,
+     "ms": 1082,
+     "ssim": 0.970095
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 17023,
+     "ms": 1083,
+     "ssim": 0.974281
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 20792,
+     "ms": 1234,
+     "ssim": 0.977069
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 25032,
+     "ms": 1269,
+     "ssim": 0.980536
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 35229,
+     "ms": 1426,
+     "ssim": 0.988148
+    }
+   ],
+   "shipped": {
+    "bytes": 35384,
+    "ssim": 0.973274
+   }
+  },
+  {
+   "file": "how-ai-and-machine-learning-is-changing-the-saas-space-thumbnail.jpeg",
+   "width": 487,
+   "height": 365,
+   "jpeg": 8471,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 4948,
+     "ms": 25,
+     "ssim": 0.969511
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 5504,
+     "ms": 25,
+     "ssim": 0.973261
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 5814,
+     "ms": 26,
+     "ssim": 0.975384
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 6848,
+     "ms": 25,
+     "ssim": 0.980866
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 8028,
+     "ms": 30,
+     "ssim": 0.983937
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 9968,
+     "ms": 33,
+     "ssim": 0.990964
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3281,
+     "ms": 236,
+     "ssim": 0.971259
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4364,
+     "ms": 241,
+     "ssim": 0.987381
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 4940,
+     "ms": 237,
+     "ssim": 0.991728
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 5314,
+     "ms": 249,
+     "ssim": 0.993191
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 5693,
+     "ms": 252,
+     "ssim": 0.99484
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 6189,
+     "ms": 298,
+     "ssim": 0.996758
+    }
+   ],
+   "shipped": {
+    "bytes": 6848,
+    "ssim": 0.980866
+   }
+  },
+  {
+   "file": "how-ai-and-ml-can-change-the-saas-space.jpeg",
+   "width": 1600,
+   "height": 1200,
+   "jpeg": 74239,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 32506,
+     "ms": 176,
+     "ssim": 0.977724
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 35884,
+     "ms": 177,
+     "ssim": 0.97953
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 38132,
+     "ms": 184,
+     "ssim": 0.980305
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 46734,
+     "ms": 183,
+     "ssim": 0.983639
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 57068,
+     "ms": 209,
+     "ssim": 0.985735
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 76394,
+     "ms": 225,
+     "ssim": 0.990022
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 18030,
+     "ms": 2154,
+     "ssim": 0.978826
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 25966,
+     "ms": 2267,
+     "ssim": 0.984576
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 31783,
+     "ms": 2482,
+     "ssim": 0.987268
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 36569,
+     "ms": 2695,
+     "ssim": 0.988956
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 43193,
+     "ms": 2736,
+     "ssim": 0.991256
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 55352,
+     "ms": 2809,
+     "ssim": 0.994762
+    }
+   ],
+   "shipped": {
+    "bytes": 46734,
+    "ssim": 0.983639
+   }
+  },
+  {
+   "file": "how-to-achieve-a-product-market-fit-with-your-product-featured-image.jpeg",
+   "width": 1600,
+   "height": 1200,
+   "jpeg": 25355,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 7976,
+     "ms": 172,
+     "ssim": 0.994191
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 8798,
+     "ms": 160,
+     "ssim": 0.994857
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 9398,
+     "ms": 148,
+     "ssim": 0.995113
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 10950,
+     "ms": 152,
+     "ssim": 0.995731
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 14898,
+     "ms": 155,
+     "ssim": 0.996408
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 20118,
+     "ms": 152,
+     "ssim": 0.997259
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3467,
+     "ms": 850,
+     "ssim": 0.995052
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 5651,
+     "ms": 971,
+     "ssim": 0.995826
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7325,
+     "ms": 965,
+     "ssim": 0.9963
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8414,
+     "ms": 956,
+     "ssim": 0.996525
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 9738,
+     "ms": 1068,
+     "ssim": 0.996847
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 13043,
+     "ms": 1139,
+     "ssim": 0.997574
+    }
+   ],
+   "shipped": {
+    "bytes": 10950,
+    "ssim": 0.995731
+   }
+  },
+  {
+   "file": "how-to-achieve-a-product-market-fit-with-your-product-thumbnail.jpeg",
+   "width": 487,
+   "height": 365,
+   "jpeg": 5469,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 1192,
+     "ms": 23,
+     "ssim": 0.993032
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 1330,
+     "ms": 26,
+     "ssim": 0.994156
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 1324,
+     "ms": 23,
+     "ssim": 0.994859
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 1428,
+     "ms": 23,
+     "ssim": 0.995556
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 1708,
+     "ms": 21,
+     "ssim": 0.996365
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 1982,
+     "ms": 24,
+     "ssim": 0.998062
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 976,
+     "ms": 90,
+     "ssim": 0.994244
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 1240,
+     "ms": 94,
+     "ssim": 0.995596
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 1439,
+     "ms": 101,
+     "ssim": 0.996451
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 1541,
+     "ms": 110,
+     "ssim": 0.996784
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 1691,
+     "ms": 124,
+     "ssim": 0.997457
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 1943,
+     "ms": 142,
+     "ssim": 0.998425
+    }
+   ],
+   "shipped": {
+    "bytes": 1428,
+    "ssim": 0.995556
+   }
+  },
+  {
+   "file": "how-to-have-a-successful-startup-idea-featured-image.jpeg",
+   "width": 1600,
+   "height": 1201,
+   "jpeg": 151237,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 62924,
+     "ms": 196,
+     "ssim": 0.909293
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 70178,
+     "ms": 203,
+     "ssim": 0.915967
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 74670,
+     "ms": 201,
+     "ssim": 0.919978
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 90486,
+     "ms": 210,
+     "ssim": 0.930887
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 114170,
+     "ms": 261,
+     "ssim": 0.941855
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 149342,
+     "ms": 236,
+     "ssim": 0.953367
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 34233,
+     "ms": 4244,
+     "ssim": 0.914847
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 51406,
+     "ms": 4398,
+     "ssim": 0.936479
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 63967,
+     "ms": 4907,
+     "ssim": 0.948937
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 75066,
+     "ms": 4630,
+     "ssim": 0.956718
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 89454,
+     "ms": 4681,
+     "ssim": 0.965339
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 113788,
+     "ms": 4662,
+     "ssim": 0.975993
+    }
+   ],
+   "shipped": {
+    "bytes": 90486,
+    "ssim": 0.930887
+   }
+  },
+  {
+   "file": "how-to-have-a-successful-startup-idea-thumbnail.jpeg",
+   "width": 487,
+   "height": 366,
+   "jpeg": 14553,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 12620,
+     "ms": 29,
+     "ssim": 0.89953
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 13870,
+     "ms": 31,
+     "ssim": 0.909327
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 14650,
+     "ms": 39,
+     "ssim": 0.912026
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 17324,
+     "ms": 35,
+     "ssim": 0.926218
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 20384,
+     "ms": 42,
+     "ssim": 0.939078
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 25144,
+     "ms": 47,
+     "ssim": 0.949345
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 8107,
+     "ms": 450,
+     "ssim": 0.901903
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 11230,
+     "ms": 465,
+     "ssim": 0.936226
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 12804,
+     "ms": 524,
+     "ssim": 0.950222
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 14084,
+     "ms": 501,
+     "ssim": 0.959278
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 15538,
+     "ms": 537,
+     "ssim": 0.966899
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 18065,
+     "ms": 557,
+     "ssim": 0.975372
+    }
+   ]
+  },
+  {
+   "file": "how-to-leverage-ai-and-build-an-app-without-coding-thumbnail.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 12975,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 14424,
+     "ms": 29,
+     "ssim": 0.939906
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 15818,
+     "ms": 30,
+     "ssim": 0.948795
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 16586,
+     "ms": 29,
+     "ssim": 0.952875
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 19506,
+     "ms": 32,
+     "ssim": 0.961332
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 23210,
+     "ms": 32,
+     "ssim": 0.966425
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 28770,
+     "ms": 31,
+     "ssim": 0.975101
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7702,
+     "ms": 354,
+     "ssim": 0.910681
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 10409,
+     "ms": 355,
+     "ssim": 0.937764
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 11553,
+     "ms": 421,
+     "ssim": 0.945484
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 12636,
+     "ms": 397,
+     "ssim": 0.950867
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 14090,
+     "ms": 430,
+     "ssim": 0.956564
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 17511,
+     "ms": 517,
+     "ssim": 0.962346
+    }
+   ]
+  },
+  {
+   "file": "how-to-leverage-ai-and-build-an-app-without-coding-title.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 141444,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 72906,
+     "ms": 182,
+     "ssim": 0.95061
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 79006,
+     "ms": 176,
+     "ssim": 0.956157
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 83662,
+     "ms": 174,
+     "ssim": 0.957874
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 98998,
+     "ms": 175,
+     "ssim": 0.963834
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 117726,
+     "ms": 172,
+     "ssim": 0.968995
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 148820,
+     "ms": 197,
+     "ssim": 0.974279
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 35996,
+     "ms": 2328,
+     "ssim": 0.935887
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 49290,
+     "ms": 2562,
+     "ssim": 0.94655
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 57205,
+     "ms": 2718,
+     "ssim": 0.951804
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 66193,
+     "ms": 2821,
+     "ssim": 0.955165
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 79458,
+     "ms": 2904,
+     "ssim": 0.959856
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 104899,
+     "ms": 3059,
+     "ssim": 0.966368
+    }
+   ],
+   "shipped": {
+    "bytes": 98998,
+    "ssim": 0.963834
+   }
+  },
+  {
+   "file": "how-to-start-a-micro-saas-thumbnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 5692,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 1980,
+     "ms": 31,
+     "ssim": 0.979321
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 2164,
+     "ms": 24,
+     "ssim": 0.981971
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 2286,
+     "ms": 27,
+     "ssim": 0.982525
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 2630,
+     "ms": 22,
+     "ssim": 0.984838
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 3106,
+     "ms": 21,
+     "ssim": 0.986462
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 3942,
+     "ms": 24,
+     "ssim": 0.993309
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 1438,
+     "ms": 170,
+     "ssim": 0.983543
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 1883,
+     "ms": 194,
+     "ssim": 0.989494
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 2151,
+     "ms": 258,
+     "ssim": 0.992377
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 2326,
+     "ms": 174,
+     "ssim": 0.99312
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 2548,
+     "ms": 185,
+     "ssim": 0.994092
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 2826,
+     "ms": 202,
+     "ssim": 0.995954
+    }
+   ],
+   "shipped": {
+    "bytes": 2630,
+    "ssim": 0.984838
+   }
+  },
+  {
+   "file": "how-to-start-micro-saas-title-image.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 31034,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 15654,
+     "ms": 160,
+     "ssim": 0.986865
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 17478,
+     "ms": 143,
+     "ssim": 0.988069
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 18690,
+     "ms": 151,
+     "ssim": 0.988794
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 21992,
+     "ms": 153,
+     "ssim": 0.990558
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 26784,
+     "ms": 148,
+     "ssim": 0.991971
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 34578,
+     "ms": 145,
+     "ssim": 0.993896
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7020,
+     "ms": 1142,
+     "ssim": 0.986517
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 10773,
+     "ms": 1105,
+     "ssim": 0.99098
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 13227,
+     "ms": 1230,
+     "ssim": 0.992613
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 15235,
+     "ms": 1185,
+     "ssim": 0.993619
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 17843,
+     "ms": 1234,
+     "ssim": 0.994973
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 22034,
+     "ms": 1276,
+     "ssim": 0.996254
+    }
+   ],
+   "shipped": {
+    "bytes": 21992,
+    "ssim": 0.990558
+   }
+  },
+  {
+   "file": "image1.jpeg",
+   "width": 960,
+   "height": 642,
+   "jpeg": 89313,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 17608,
+     "ms": 76,
+     "ssim": 0.962931
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 20042,
+     "ms": 71,
+     "ssim": 0.966518
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 21512,
+     "ms": 76,
+     "ssim": 0.968007
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 26566,
+     "ms": 73,
+     "ssim": 0.973116
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 34014,
+     "ms": 77,
+     "ssim": 0.977354
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 46922,
+     "ms": 82,
+     "ssim": 0.983071
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 9731,
+     "ms": 918,
+     "ssim": 0.960753
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 14309,
+     "ms": 992,
+     "ssim": 0.970654
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 17407,
+     "ms": 1055,
+     "ssim": 0.974829
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 20429,
+     "ms": 1088,
+     "ssim": 0.976885
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 24220,
+     "ms": 1179,
+     "ssim": 0.98027
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 32351,
+     "ms": 1303,
+     "ssim": 0.985552
+    }
+   ],
+   "shipped": {
+    "bytes": 26566,
+    "ssim": 0.973116
+   }
+  },
+  {
+   "file": "image2.jpg",
+   "width": 507,
+   "height": 340,
+   "jpeg": 37682,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 8800,
+     "ms": 26,
+     "ssim": 0.955492
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 10178,
+     "ms": 28,
+     "ssim": 0.961437
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 10826,
+     "ms": 26,
+     "ssim": 0.964356
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 13368,
+     "ms": 30,
+     "ssim": 0.974465
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 16374,
+     "ms": 34,
+     "ssim": 0.982235
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 19888,
+     "ms": 41,
+     "ssim": 0.985883
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4867,
+     "ms": 324,
+     "ssim": 0.940835
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7113,
+     "ms": 376,
+     "ssim": 0.958569
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 8636,
+     "ms": 397,
+     "ssim": 0.966701
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 10037,
+     "ms": 454,
+     "ssim": 0.970969
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 12065,
+     "ms": 467,
+     "ssim": 0.976762
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 15695,
+     "ms": 530,
+     "ssim": 0.984362
+    }
+   ],
+   "shipped": {
+    "bytes": 13368,
+    "ssim": 0.974465
+   }
+  },
+  {
+   "file": "merchant-of-record-fees-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 29519,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 8368,
+     "ms": 94,
+     "ssim": 0.996963
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 8734,
+     "ms": 101,
+     "ssim": 0.997269
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 8764,
+     "ms": 90,
+     "ssim": 0.997259
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 10150,
+     "ms": 89,
+     "ssim": 0.997491
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 11316,
+     "ms": 93,
+     "ssim": 0.997777
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 13586,
+     "ms": 97,
+     "ssim": 0.997984
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3814,
+     "ms": 625,
+     "ssim": 0.997959
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4698,
+     "ms": 610,
+     "ssim": 0.998462
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 5191,
+     "ms": 638,
+     "ssim": 0.99878
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 5759,
+     "ms": 620,
+     "ssim": 0.998817
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 6384,
+     "ms": 582,
+     "ssim": 0.99895
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 8108,
+     "ms": 711,
+     "ssim": 0.99917
+    }
+   ],
+   "shipped": {
+    "bytes": 10122,
+    "ssim": 0.99778
+   }
+  },
+  {
+   "file": "mika-baumeister-y_lgxwqex2c-unsplash.jpg",
+   "width": 640,
+   "height": 427,
+   "jpeg": 61587,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 18632,
+     "ms": 44,
+     "ssim": 0.951985
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 21046,
+     "ms": 44,
+     "ssim": 0.958322
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 22708,
+     "ms": 49,
+     "ssim": 0.961253
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 26864,
+     "ms": 50,
+     "ssim": 0.968364
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 33386,
+     "ms": 51,
+     "ssim": 0.975607
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 43476,
+     "ms": 72,
+     "ssim": 0.983621
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 8536,
+     "ms": 618,
+     "ssim": 0.933835
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 12206,
+     "ms": 674,
+     "ssim": 0.954317
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 14308,
+     "ms": 743,
+     "ssim": 0.961724
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 17023,
+     "ms": 774,
+     "ssim": 0.967217
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 20439,
+     "ms": 832,
+     "ssim": 0.973311
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 27898,
+     "ms": 899,
+     "ssim": 0.982111
+    }
+   ],
+   "shipped": {
+    "bytes": 26864,
+    "ssim": 0.968364
+   }
+  },
+  {
+   "file": "online-pdf-converters-safe-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 26078,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 7368,
+     "ms": 116,
+     "ssim": 0.997149
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7662,
+     "ms": 114,
+     "ssim": 0.997382
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 7674,
+     "ms": 93,
+     "ssim": 0.997398
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 8878,
+     "ms": 93,
+     "ssim": 0.997591
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 9830,
+     "ms": 98,
+     "ssim": 0.997869
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 11590,
+     "ms": 98,
+     "ssim": 0.998029
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3228,
+     "ms": 629,
+     "ssim": 0.99821
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4019,
+     "ms": 627,
+     "ssim": 0.998689
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 4432,
+     "ms": 610,
+     "ssim": 0.998849
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 4855,
+     "ms": 606,
+     "ssim": 0.998985
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 5366,
+     "ms": 590,
+     "ssim": 0.99911
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 6774,
+     "ms": 637,
+     "ssim": 0.999308
+    }
+   ],
+   "shipped": {
+    "bytes": 8836,
+    "ssim": 0.997887
+   }
+  },
+  {
+   "file": "photo-1485827404703-89b55fcc595e.jpeg",
+   "width": 1350,
+   "height": 900,
+   "jpeg": 102806,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 24470,
+     "ms": 152,
+     "ssim": 0.970797
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 27304,
+     "ms": 137,
+     "ssim": 0.972944
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 28960,
+     "ms": 154,
+     "ssim": 0.974043
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 35090,
+     "ms": 165,
+     "ssim": 0.977666
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 42420,
+     "ms": 147,
+     "ssim": 0.980429
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 58070,
+     "ms": 159,
+     "ssim": 0.983964
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 12197,
+     "ms": 2127,
+     "ssim": 0.977578
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 17120,
+     "ms": 2326,
+     "ssim": 0.981721
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 20244,
+     "ms": 2581,
+     "ssim": 0.983613
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 23036,
+     "ms": 2658,
+     "ssim": 0.984154
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 26675,
+     "ms": 2807,
+     "ssim": 0.985366
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 35252,
+     "ms": 3170,
+     "ssim": 0.987331
+    }
+   ],
+   "shipped": {
+    "bytes": 35090,
+    "ssim": 0.977666
+   }
+  },
+  {
+   "file": "photo-1485939551351-bc1a4ad5ce5a.jpeg",
+   "width": 800,
+   "height": 533,
+   "jpeg": 42612,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 15088,
+     "ms": 65,
+     "ssim": 0.968711
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 16752,
+     "ms": 70,
+     "ssim": 0.97231
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 17552,
+     "ms": 56,
+     "ssim": 0.973599
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 20884,
+     "ms": 57,
+     "ssim": 0.978701
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 25598,
+     "ms": 80,
+     "ssim": 0.981831
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 33664,
+     "ms": 71,
+     "ssim": 0.986318
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 6920,
+     "ms": 679,
+     "ssim": 0.965753
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 9540,
+     "ms": 950,
+     "ssim": 0.976772
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 11142,
+     "ms": 747,
+     "ssim": 0.980256
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 12822,
+     "ms": 820,
+     "ssim": 0.982272
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 15299,
+     "ms": 821,
+     "ssim": 0.985539
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 20298,
+     "ms": 857,
+     "ssim": 0.989043
+    }
+   ],
+   "shipped": {
+    "bytes": 20884,
+    "ssim": 0.978701
+   }
+  },
+  {
+   "file": "photo-1507332194683-0ce90ffa318a-1-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 20328,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 25322,
+     "ms": 36,
+     "ssim": 0.964065
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 27538,
+     "ms": 37,
+     "ssim": 0.968166
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 29138,
+     "ms": 35,
+     "ssim": 0.97095
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 33550,
+     "ms": 43,
+     "ssim": 0.976631
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 38420,
+     "ms": 40,
+     "ssim": 0.979766
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 46842,
+     "ms": 36,
+     "ssim": 0.986773
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 11619,
+     "ms": 409,
+     "ssim": 0.928825
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 15831,
+     "ms": 339,
+     "ssim": 0.961621
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 17646,
+     "ms": 370,
+     "ssim": 0.971054
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 19174,
+     "ms": 351,
+     "ssim": 0.977425
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 20900,
+     "ms": 355,
+     "ssim": 0.983208
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 24699,
+     "ms": 384,
+     "ssim": 0.987786
+    }
+   ]
+  },
+  {
+   "file": "photo-1507332194683-0ce90ffa318a.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 209257,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 103122,
+     "ms": 203,
+     "ssim": 0.957671
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 115364,
+     "ms": 224,
+     "ssim": 0.96127
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 120092,
+     "ms": 222,
+     "ssim": 0.962715
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 145532,
+     "ms": 212,
+     "ssim": 0.967756
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 177382,
+     "ms": 216,
+     "ssim": 0.974198
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 233468,
+     "ms": 234,
+     "ssim": 0.981547
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 44230,
+     "ms": 3825,
+     "ssim": 0.952462
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 60945,
+     "ms": 4265,
+     "ssim": 0.964229
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 72267,
+     "ms": 4488,
+     "ssim": 0.968993
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 84293,
+     "ms": 4518,
+     "ssim": 0.971578
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 103717,
+     "ms": 4649,
+     "ssim": 0.976441
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 146490,
+     "ms": 4804,
+     "ssim": 0.984512
+    }
+   ],
+   "shipped": {
+    "bytes": 145532,
+    "ssim": 0.967756
+   }
+  },
+  {
+   "file": "photo-1546188994-07c34f6e5e1b.jpeg",
+   "width": 1351,
+   "height": 900,
+   "jpeg": 68871,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 15400,
+     "ms": 135,
+     "ssim": 0.947404
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 16744,
+     "ms": 153,
+     "ssim": 0.950221
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 17860,
+     "ms": 134,
+     "ssim": 0.951296
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 21992,
+     "ms": 156,
+     "ssim": 0.955816
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 29304,
+     "ms": 153,
+     "ssim": 0.958932
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 46006,
+     "ms": 163,
+     "ssim": 0.965898
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7058,
+     "ms": 1514,
+     "ssim": 0.943034
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 10781,
+     "ms": 1561,
+     "ssim": 0.953845
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 13503,
+     "ms": 1799,
+     "ssim": 0.957957
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 15743,
+     "ms": 1744,
+     "ssim": 0.958243
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 18870,
+     "ms": 1912,
+     "ssim": 0.961112
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 26429,
+     "ms": 2224,
+     "ssim": 0.964145
+    }
+   ],
+   "shipped": {
+    "bytes": 21992,
+    "ssim": 0.955816
+   }
+  },
+  {
+   "file": "photo-1550418290-a8d86ad674a6.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 83088,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 22826,
+     "ms": 170,
+     "ssim": 0.961211
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 26860,
+     "ms": 192,
+     "ssim": 0.962739
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 29492,
+     "ms": 249,
+     "ssim": 0.963652
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 42222,
+     "ms": 217,
+     "ssim": 0.968048
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 61818,
+     "ms": 193,
+     "ssim": 0.973596
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 94602,
+     "ms": 262,
+     "ssim": 0.981252
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 11923,
+     "ms": 1626,
+     "ssim": 0.961588
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 20953,
+     "ms": 1753,
+     "ssim": 0.965052
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 28763,
+     "ms": 2073,
+     "ssim": 0.968669
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 36570,
+     "ms": 2173,
+     "ssim": 0.971711
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 49649,
+     "ms": 2353,
+     "ssim": 0.979677
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 71413,
+     "ms": 2422,
+     "ssim": 0.992762
+    }
+   ],
+   "shipped": {
+    "bytes": 42222,
+    "ssim": 0.968048
+   }
+  },
+  {
+   "file": "photo-1555580399-49e780f216b7-1-.jpeg",
+   "width": 487,
+   "height": 365,
+   "jpeg": 6421,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 5426,
+     "ms": 24,
+     "ssim": 0.907477
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 5986,
+     "ms": 24,
+     "ssim": 0.920227
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 6314,
+     "ms": 25,
+     "ssim": 0.922027
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 7430,
+     "ms": 26,
+     "ssim": 0.927948
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 8782,
+     "ms": 25,
+     "ssim": 0.942097
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 10792,
+     "ms": 26,
+     "ssim": 0.958094
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 3027,
+     "ms": 242,
+     "ssim": 0.904827
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 4022,
+     "ms": 248,
+     "ssim": 0.926258
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 4608,
+     "ms": 281,
+     "ssim": 0.939493
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 5183,
+     "ms": 284,
+     "ssim": 0.949223
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 5986,
+     "ms": 290,
+     "ssim": 0.955257
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 7489,
+     "ms": 293,
+     "ssim": 0.963167
+    }
+   ]
+  },
+  {
+   "file": "photo-1555580399-49e780f216b7.jpeg",
+   "width": 967,
+   "height": 725,
+   "jpeg": 40675,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 14254,
+     "ms": 85,
+     "ssim": 0.87543
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 15494,
+     "ms": 97,
+     "ssim": 0.878766
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 16378,
+     "ms": 86,
+     "ssim": 0.881238
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 19450,
+     "ms": 78,
+     "ssim": 0.886055
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 23290,
+     "ms": 78,
+     "ssim": 0.891782
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 30266,
+     "ms": 84,
+     "ssim": 0.902133
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 6268,
+     "ms": 843,
+     "ssim": 0.887806
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 8862,
+     "ms": 875,
+     "ssim": 0.922757
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 10489,
+     "ms": 980,
+     "ssim": 0.936331
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 11849,
+     "ms": 933,
+     "ssim": 0.938851
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 14170,
+     "ms": 1145,
+     "ssim": 0.944158
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 18815,
+     "ms": 1213,
+     "ssim": 0.950502
+    }
+   ],
+   "shipped": {
+    "bytes": 19450,
+    "ssim": 0.886055
+   }
+  },
+  {
+   "file": "photo-1581404528764-2d2d2e39db02.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 97250,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 40606,
+     "ms": 164,
+     "ssim": 0.933816
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 44802,
+     "ms": 162,
+     "ssim": 0.940279
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 47892,
+     "ms": 199,
+     "ssim": 0.942481
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 58768,
+     "ms": 176,
+     "ssim": 0.947422
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 71432,
+     "ms": 177,
+     "ssim": 0.953029
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 96348,
+     "ms": 191,
+     "ssim": 0.961155
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 21029,
+     "ms": 2870,
+     "ssim": 0.935657
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 30954,
+     "ms": 3122,
+     "ssim": 0.952645
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 37750,
+     "ms": 3182,
+     "ssim": 0.960838
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 43698,
+     "ms": 3264,
+     "ssim": 0.965295
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 52122,
+     "ms": 3229,
+     "ssim": 0.971092
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 67170,
+     "ms": 3471,
+     "ssim": 0.978642
+    }
+   ],
+   "shipped": {
+    "bytes": 58768,
+    "ssim": 0.947422
+   }
+  },
+  {
+   "file": "photo-1589828994379-7a8869c4f519.jpeg",
+   "width": 1086,
+   "height": 691,
+   "jpeg": 18442,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 5688,
+     "ms": 69,
+     "ssim": 0.992495
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 5988,
+     "ms": 69,
+     "ssim": 0.993133
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 6304,
+     "ms": 81,
+     "ssim": 0.993806
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 7244,
+     "ms": 66,
+     "ssim": 0.995263
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 8442,
+     "ms": 64,
+     "ssim": 0.995686
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 10526,
+     "ms": 75,
+     "ssim": 0.996709
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 2775,
+     "ms": 374,
+     "ssim": 0.993552
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 3667,
+     "ms": 397,
+     "ssim": 0.995179
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 4170,
+     "ms": 430,
+     "ssim": 0.995637
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 4731,
+     "ms": 387,
+     "ssim": 0.995975
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 5367,
+     "ms": 435,
+     "ssim": 0.996304
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 6801,
+     "ms": 406,
+     "ssim": 0.996885
+    }
+   ],
+   "shipped": {
+    "bytes": 7244,
+    "ssim": 0.995263
+   }
+  },
+  {
+   "file": "photo-1592496001020-d31bd830651f.jpeg",
+   "width": 1086,
+   "height": 691,
+   "jpeg": 37301,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 16494,
+     "ms": 82,
+     "ssim": 0.996687
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 17848,
+     "ms": 68,
+     "ssim": 0.99709
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 18732,
+     "ms": 74,
+     "ssim": 0.997337
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 21796,
+     "ms": 86,
+     "ssim": 0.997983
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 25210,
+     "ms": 69,
+     "ssim": 0.998418
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 30234,
+     "ms": 76,
+     "ssim": 0.998923
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7032,
+     "ms": 488,
+     "ssim": 0.992108
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 9822,
+     "ms": 464,
+     "ssim": 0.995441
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 11397,
+     "ms": 682,
+     "ssim": 0.996406
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 12978,
+     "ms": 563,
+     "ssim": 0.996947
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 15310,
+     "ms": 525,
+     "ssim": 0.997709
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 20340,
+     "ms": 509,
+     "ssim": 0.998726
+    }
+   ],
+   "shipped": {
+    "bytes": 21796,
+    "ssim": 0.997983
+   }
+  },
+  {
+   "file": "photo-1611162617213-7d7a39e9b1d7-1-.jpeg",
+   "width": 1600,
+   "height": 1200,
+   "jpeg": 68916,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 27858,
+     "ms": 168,
+     "ssim": 0.971513
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 30272,
+     "ms": 170,
+     "ssim": 0.973426
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 32218,
+     "ms": 159,
+     "ssim": 0.97482
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 37530,
+     "ms": 163,
+     "ssim": 0.977914
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 45826,
+     "ms": 180,
+     "ssim": 0.980684
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 60052,
+     "ms": 184,
+     "ssim": 0.984047
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 13530,
+     "ms": 2141,
+     "ssim": 0.976579
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 18911,
+     "ms": 2335,
+     "ssim": 0.981853
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 22634,
+     "ms": 2532,
+     "ssim": 0.984094
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 26055,
+     "ms": 2645,
+     "ssim": 0.985422
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 30529,
+     "ms": 2524,
+     "ssim": 0.98757
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 39378,
+     "ms": 2958,
+     "ssim": 0.989993
+    }
+   ],
+   "shipped": {
+    "bytes": 37530,
+    "ssim": 0.977914
+   }
+  },
+  {
+   "file": "photo-1611162617213-7d7a39e9b1d7.jpeg",
+   "width": 487,
+   "height": 365,
+   "jpeg": 11355,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 6514,
+     "ms": 40,
+     "ssim": 0.954207
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7200,
+     "ms": 25,
+     "ssim": 0.958061
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 7620,
+     "ms": 27,
+     "ssim": 0.96096
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9104,
+     "ms": 35,
+     "ssim": 0.966524
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 10758,
+     "ms": 26,
+     "ssim": 0.974702
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 13506,
+     "ms": 28,
+     "ssim": 0.981609
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4428,
+     "ms": 366,
+     "ssim": 0.956733
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 5967,
+     "ms": 418,
+     "ssim": 0.970288
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 6916,
+     "ms": 368,
+     "ssim": 0.977057
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 7684,
+     "ms": 354,
+     "ssim": 0.980788
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 8560,
+     "ms": 399,
+     "ssim": 0.984545
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 10010,
+     "ms": 404,
+     "ssim": 0.989057
+    }
+   ],
+   "shipped": {
+    "bytes": 9104,
+    "ssim": 0.966524
+   }
+  },
+  {
+   "file": "product-market-fit-buffermint.jpeg",
+   "width": 1280,
+   "height": 611,
+   "jpeg": 46131,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 17718,
+     "ms": 73,
+     "ssim": 0.99494
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 18738,
+     "ms": 82,
+     "ssim": 0.995262
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 19716,
+     "ms": 71,
+     "ssim": 0.995417
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 22448,
+     "ms": 72,
+     "ssim": 0.995991
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 25858,
+     "ms": 69,
+     "ssim": 0.996586
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 32054,
+     "ms": 69,
+     "ssim": 0.99772
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 10219,
+     "ms": 574,
+     "ssim": 0.993032
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 13262,
+     "ms": 617,
+     "ssim": 0.994661
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 14911,
+     "ms": 582,
+     "ssim": 0.995093
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 16277,
+     "ms": 644,
+     "ssim": 0.995403
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 18206,
+     "ms": 581,
+     "ssim": 0.995898
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 22703,
+     "ms": 634,
+     "ssim": 0.996808
+    }
+   ],
+   "shipped": {
+    "bytes": 22448,
+    "ssim": 0.995991
+   }
+  },
+  {
+   "file": "product-to-market-feature-.jpeg",
+   "width": 1600,
+   "height": 1045,
+   "jpeg": 175499,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 73670,
+     "ms": 205,
+     "ssim": 0.938286
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 85184,
+     "ms": 225,
+     "ssim": 0.943527
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 90992,
+     "ms": 199,
+     "ssim": 0.947072
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 118756,
+     "ms": 210,
+     "ssim": 0.95998
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 149716,
+     "ms": 240,
+     "ssim": 0.969493
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 209144,
+     "ms": 240,
+     "ssim": 0.982982
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 34314,
+     "ms": 2640,
+     "ssim": 0.921944
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 61686,
+     "ms": 3096,
+     "ssim": 0.948817
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 80936,
+     "ms": 3056,
+     "ssim": 0.964412
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 96863,
+     "ms": 3192,
+     "ssim": 0.972042
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 116926,
+     "ms": 3159,
+     "ssim": 0.982166
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 143530,
+     "ms": 2905,
+     "ssim": 0.991029
+    }
+   ],
+   "shipped": {
+    "bytes": 118756,
+    "ssim": 0.95998
+   }
+  },
+  {
+   "file": "product-to-market-fit-feature-image.jpeg",
+   "width": 1600,
+   "height": 1067,
+   "jpeg": 186891,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 83808,
+     "ms": 216,
+     "ssim": 0.951074
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 94286,
+     "ms": 223,
+     "ssim": 0.956397
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 100410,
+     "ms": 231,
+     "ssim": 0.957331
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 124846,
+     "ms": 221,
+     "ssim": 0.967538
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 153986,
+     "ms": 240,
+     "ssim": 0.974682
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 209262,
+     "ms": 269,
+     "ssim": 0.983051
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 39206,
+     "ms": 3211,
+     "ssim": 0.941709
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 59453,
+     "ms": 3461,
+     "ssim": 0.960191
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 73218,
+     "ms": 3698,
+     "ssim": 0.967957
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 87995,
+     "ms": 3817,
+     "ssim": 0.973583
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 109139,
+     "ms": 3654,
+     "ssim": 0.980839
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 144004,
+     "ms": 3630,
+     "ssim": 0.990236
+    }
+   ],
+   "shipped": {
+    "bytes": 124846,
+    "ssim": 0.967538
+   }
+  },
+  {
+   "file": "product-to-market-fit-thubnail.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 15814,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 13492,
+     "ms": 36,
+     "ssim": 0.951627
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 15134,
+     "ms": 39,
+     "ssim": 0.957409
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 16110,
+     "ms": 45,
+     "ssim": 0.962238
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 18468,
+     "ms": 34,
+     "ssim": 0.975513
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 21678,
+     "ms": 38,
+     "ssim": 0.976501
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 26606,
+     "ms": 34,
+     "ssim": 0.989517
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7116,
+     "ms": 350,
+     "ssim": 0.945148
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 9797,
+     "ms": 347,
+     "ssim": 0.976063
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 10872,
+     "ms": 357,
+     "ssim": 0.982935
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 11908,
+     "ms": 332,
+     "ssim": 0.987053
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 12934,
+     "ms": 335,
+     "ssim": 0.9914
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 14261,
+     "ms": 339,
+     "ssim": 0.994727
+    }
+   ]
+  },
+  {
+   "file": "product-to-market-thumbnail.jpeg",
+   "width": 487,
+   "height": 318,
+   "jpeg": 11345,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 10170,
+     "ms": 57,
+     "ssim": 0.963961
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 11308,
+     "ms": 41,
+     "ssim": 0.97039
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 11926,
+     "ms": 28,
+     "ssim": 0.972346
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 13882,
+     "ms": 27,
+     "ssim": 0.979105
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 16372,
+     "ms": 30,
+     "ssim": 0.984153
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 20310,
+     "ms": 31,
+     "ssim": 0.99034
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 5423,
+     "ms": 368,
+     "ssim": 0.95787
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7300,
+     "ms": 342,
+     "ssim": 0.976179
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 8138,
+     "ms": 379,
+     "ssim": 0.982009
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8996,
+     "ms": 398,
+     "ssim": 0.985951
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10043,
+     "ms": 413,
+     "ssim": 0.98913
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 12030,
+     "ms": 428,
+     "ssim": 0.992318
+    }
+   ]
+  },
+  {
+   "file": "remove-background-browser-models-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 47090,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 14186,
+     "ms": 119,
+     "ssim": 0.996606
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 15110,
+     "ms": 112,
+     "ssim": 0.996648
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 15682,
+     "ms": 107,
+     "ssim": 0.99692
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 18054,
+     "ms": 108,
+     "ssim": 0.997618
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 20882,
+     "ms": 118,
+     "ssim": 0.998131
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 25318,
+     "ms": 118,
+     "ssim": 0.998614
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 6995,
+     "ms": 747,
+     "ssim": 0.995729
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 8916,
+     "ms": 753,
+     "ssim": 0.996961
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 9965,
+     "ms": 762,
+     "ssim": 0.997439
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 11009,
+     "ms": 768,
+     "ssim": 0.997561
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 12664,
+     "ms": 693,
+     "ssim": 0.997871
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 16375,
+     "ms": 821,
+     "ssim": 0.998446
+    }
+   ],
+   "shipped": {
+    "bytes": 16994,
+    "ssim": 0.996525
+   }
+  },
+  {
+   "file": "rocket-launch-thumbnail-.jpeg",
+   "width": 487,
+   "height": 274,
+   "jpeg": 15507,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 15624,
+     "ms": 28,
+     "ssim": 0.963096
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 17120,
+     "ms": 34,
+     "ssim": 0.968282
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 18122,
+     "ms": 32,
+     "ssim": 0.971487
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 20890,
+     "ms": 36,
+     "ssim": 0.982772
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 24090,
+     "ms": 31,
+     "ssim": 0.989296
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 28470,
+     "ms": 29,
+     "ssim": 0.992951
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 7562,
+     "ms": 315,
+     "ssim": 0.943003
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 10080,
+     "ms": 288,
+     "ssim": 0.981376
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 10958,
+     "ms": 318,
+     "ssim": 0.987772
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 11666,
+     "ms": 267,
+     "ssim": 0.99167
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 12541,
+     "ms": 284,
+     "ssim": 0.993951
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 13889,
+     "ms": 245,
+     "ssim": 0.996764
+    }
+   ]
+  },
+  {
+   "file": "rocket-launch-title-image-.jpeg",
+   "width": 1600,
+   "height": 898,
+   "jpeg": 313825,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 222972,
+     "ms": 222,
+     "ssim": 0.970225
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 246440,
+     "ms": 222,
+     "ssim": 0.97577
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 258542,
+     "ms": 239,
+     "ssim": 0.977662
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 300956,
+     "ms": 235,
+     "ssim": 0.983887
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 349692,
+     "ms": 238,
+     "ssim": 0.989044
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 430286,
+     "ms": 266,
+     "ssim": 0.993011
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 80687,
+     "ms": 2795,
+     "ssim": 0.902511
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 125535,
+     "ms": 3332,
+     "ssim": 0.949623
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 151259,
+     "ms": 3486,
+     "ssim": 0.964685
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 179336,
+     "ms": 3957,
+     "ssim": 0.975916
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 219260,
+     "ms": 3656,
+     "ssim": 0.986489
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 272908,
+     "ms": 3120,
+     "ssim": 0.99377
+    }
+   ]
+  },
+  {
+   "file": "story1.jpeg",
+   "width": 1600,
+   "height": 1200,
+   "jpeg": 138372,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 53782,
+     "ms": 202,
+     "ssim": 0.912241
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 61286,
+     "ms": 198,
+     "ssim": 0.918677
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 65344,
+     "ms": 210,
+     "ssim": 0.921634
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 81192,
+     "ms": 197,
+     "ssim": 0.935694
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 106066,
+     "ms": 214,
+     "ssim": 0.947023
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 143568,
+     "ms": 251,
+     "ssim": 0.956011
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 26597,
+     "ms": 4125,
+     "ssim": 0.919876
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 44325,
+     "ms": 4433,
+     "ssim": 0.943868
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 56537,
+     "ms": 4937,
+     "ssim": 0.954899
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 67553,
+     "ms": 4926,
+     "ssim": 0.961777
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 80801,
+     "ms": 4834,
+     "ssim": 0.968244
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 103267,
+     "ms": 4883,
+     "ssim": 0.977928
+    }
+   ],
+   "shipped": {
+    "bytes": 81192,
+    "ssim": 0.935694
+   }
+  },
+  {
+   "file": "story2.jpeg",
+   "width": 500,
+   "height": 375,
+   "jpeg": 9075,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 6580,
+     "ms": 40,
+     "ssim": 0.887073
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 7350,
+     "ms": 36,
+     "ssim": 0.890479
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 7766,
+     "ms": 43,
+     "ssim": 0.899249
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 9386,
+     "ms": 29,
+     "ssim": 0.902925
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 11250,
+     "ms": 31,
+     "ssim": 0.915969
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 14368,
+     "ms": 35,
+     "ssim": 0.926149
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4120,
+     "ms": 427,
+     "ssim": 0.901715
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 5812,
+     "ms": 473,
+     "ssim": 0.921421
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 6603,
+     "ms": 453,
+     "ssim": 0.932219
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 7376,
+     "ms": 485,
+     "ssim": 0.938976
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 8127,
+     "ms": 502,
+     "ssim": 0.943018
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 9639,
+     "ms": 562,
+     "ssim": 0.948587
+    }
+   ]
+  },
+  {
+   "file": "tomorrow-world-smaal.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 9796,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 8604,
+     "ms": 33,
+     "ssim": 0.886747
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 9552,
+     "ms": 39,
+     "ssim": 0.887593
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 10112,
+     "ms": 37,
+     "ssim": 0.895692
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 12046,
+     "ms": 31,
+     "ssim": 0.908202
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 14446,
+     "ms": 31,
+     "ssim": 0.921573
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 18066,
+     "ms": 41,
+     "ssim": 0.933289
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 5210,
+     "ms": 390,
+     "ssim": 0.887372
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7360,
+     "ms": 425,
+     "ssim": 0.911282
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 8567,
+     "ms": 452,
+     "ssim": 0.923658
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 9717,
+     "ms": 445,
+     "ssim": 0.929584
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10996,
+     "ms": 547,
+     "ssim": 0.936546
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 13188,
+     "ms": 614,
+     "ssim": 0.944468
+    }
+   ]
+  },
+  {
+   "file": "vibe-coded-app-security-scans-cover.jpeg",
+   "width": 1600,
+   "height": 840,
+   "jpeg": 37619,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 11278,
+     "ms": 102,
+     "ssim": 0.997346
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 11930,
+     "ms": 111,
+     "ssim": 0.997416
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 12432,
+     "ms": 112,
+     "ssim": 0.997719
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 14202,
+     "ms": 107,
+     "ssim": 0.998047
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 16460,
+     "ms": 108,
+     "ssim": 0.998525
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 19548,
+     "ms": 119,
+     "ssim": 0.998796
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 5489,
+     "ms": 649,
+     "ssim": 0.996862
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7032,
+     "ms": 732,
+     "ssim": 0.997788
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7873,
+     "ms": 691,
+     "ssim": 0.998174
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8651,
+     "ms": 744,
+     "ssim": 0.998231
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10010,
+     "ms": 711,
+     "ssim": 0.998422
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 12841,
+     "ms": 772,
+     "ssim": 0.99892
+    }
+   ],
+   "shipped": {
+    "bytes": 13348,
+    "ssim": 0.997118
+   }
+  },
+  {
+   "file": "when-is-the-time-thumbnail-.jpeg",
+   "width": 487,
+   "height": 325,
+   "jpeg": 5525,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 1660,
+     "ms": 28,
+     "ssim": 0.987321
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 1786,
+     "ms": 21,
+     "ssim": 0.988799
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 1830,
+     "ms": 46,
+     "ssim": 0.989539
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 2142,
+     "ms": 28,
+     "ssim": 0.990459
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 2418,
+     "ms": 37,
+     "ssim": 0.992001
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 2878,
+     "ms": 27,
+     "ssim": 0.996946
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 1193,
+     "ms": 86,
+     "ssim": 0.990117
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 1540,
+     "ms": 137,
+     "ssim": 0.992183
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 1814,
+     "ms": 115,
+     "ssim": 0.993218
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 1919,
+     "ms": 138,
+     "ssim": 0.993684
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 2135,
+     "ms": 144,
+     "ssim": 0.994629
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 2537,
+     "ms": 156,
+     "ssim": 0.996123
+    }
+   ],
+   "shipped": {
+    "bytes": 2142,
+    "ssim": 0.990459
+   }
+  },
+  {
+   "file": "when-is-the-time-title-image.jpeg",
+   "width": 1600,
+   "height": 1068,
+   "jpeg": 21948,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 9864,
+     "ms": 164,
+     "ssim": 0.993696
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 11172,
+     "ms": 155,
+     "ssim": 0.994378
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 11674,
+     "ms": 156,
+     "ssim": 0.99484
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 13540,
+     "ms": 144,
+     "ssim": 0.995481
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 16504,
+     "ms": 147,
+     "ssim": 0.996292
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 20652,
+     "ms": 145,
+     "ssim": 0.997699
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 4433,
+     "ms": 810,
+     "ssim": 0.994212
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 6133,
+     "ms": 917,
+     "ssim": 0.995312
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 7674,
+     "ms": 933,
+     "ssim": 0.995562
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 8987,
+     "ms": 880,
+     "ssim": 0.995821
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10521,
+     "ms": 987,
+     "ssim": 0.996375
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 13736,
+     "ms": 1016,
+     "ssim": 0.997208
+    }
+   ],
+   "shipped": {
+    "bytes": 13540,
+    "ssim": 0.995481
+   }
+  },
+  {
+   "file": "why-speed-thumbnail-.jpeg",
+   "width": 487,
+   "height": 280,
+   "jpeg": 15157,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 10612,
+     "ms": 33,
+     "ssim": 0.954395
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 11778,
+     "ms": 33,
+     "ssim": 0.960395
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 12194,
+     "ms": 40,
+     "ssim": 0.964661
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 14182,
+     "ms": 31,
+     "ssim": 0.975806
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 16488,
+     "ms": 28,
+     "ssim": 0.980665
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 20326,
+     "ms": 28,
+     "ssim": 0.987233
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 5379,
+     "ms": 363,
+     "ssim": 0.940324
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 7334,
+     "ms": 316,
+     "ssim": 0.966161
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 8423,
+     "ms": 356,
+     "ssim": 0.976104
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 9358,
+     "ms": 341,
+     "ssim": 0.980985
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 10491,
+     "ms": 368,
+     "ssim": 0.986315
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 12462,
+     "ms": 357,
+     "ssim": 0.991169
+    }
+   ]
+  },
+  {
+   "file": "why-speed-title-image-.jpeg",
+   "width": 1600,
+   "height": 920,
+   "jpeg": 131092,
+   "variants": [
+    {
+     "fmt": "webp",
+     "q": 60,
+     "bytes": 49976,
+     "ms": 175,
+     "ssim": 0.960231
+    },
+    {
+     "fmt": "webp",
+     "q": 70,
+     "bytes": 56364,
+     "ms": 184,
+     "ssim": 0.964099
+    },
+    {
+     "fmt": "webp",
+     "q": 75,
+     "bytes": 58226,
+     "ms": 169,
+     "ssim": 0.965269
+    },
+    {
+     "fmt": "webp",
+     "q": 80,
+     "bytes": 71150,
+     "ms": 193,
+     "ssim": 0.971876
+    },
+    {
+     "fmt": "webp",
+     "q": 85,
+     "bytes": 89404,
+     "ms": 188,
+     "ssim": 0.978458
+    },
+    {
+     "fmt": "webp",
+     "q": 90,
+     "bytes": 116952,
+     "ms": 168,
+     "ssim": 0.984384
+    },
+    {
+     "fmt": "avif",
+     "q": 35,
+     "bytes": 23927,
+     "ms": 3107,
+     "ssim": 0.962185
+    },
+    {
+     "fmt": "avif",
+     "q": 45,
+     "bytes": 33745,
+     "ms": 3235,
+     "ssim": 0.971661
+    },
+    {
+     "fmt": "avif",
+     "q": 50,
+     "bytes": 40083,
+     "ms": 3320,
+     "ssim": 0.97566
+    },
+    {
+     "fmt": "avif",
+     "q": 55,
+     "bytes": 47611,
+     "ms": 3249,
+     "ssim": 0.978495
+    },
+    {
+     "fmt": "avif",
+     "q": 60,
+     "bytes": 58609,
+     "ms": 3311,
+     "ssim": 0.982822
+    },
+    {
+     "fmt": "avif",
+     "q": 70,
+     "bytes": 81619,
+     "ms": 3252,
+     "ssim": 0.988977
+    }
+   ],
+   "shipped": {
+    "bytes": 71150,
+    "ssim": 0.971876
+   }
+  }
+ ]
+}

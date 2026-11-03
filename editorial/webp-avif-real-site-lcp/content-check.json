@@ -1,0 +1,143 @@
+{
+  "type": "content.seo_check",
+  "title": "SEO check: convert images to webp",
+  "created_at": "2026-11-03T04:08:31.478Z",
+  "data": {
+    "score": 94,
+    "items": [
+      {
+        "id": "title.length",
+        "group": "title",
+        "label": "SEO title length",
+        "status": "pass",
+        "detail": "57 characters."
+      },
+      {
+        "id": "title.keyword",
+        "group": "title",
+        "label": "Keyword in the title",
+        "status": "pass",
+        "detail": "Contains \"convert images to webp\"."
+      },
+      {
+        "id": "meta.length",
+        "group": "meta",
+        "label": "Meta description length",
+        "status": "pass",
+        "detail": "159 characters."
+      },
+      {
+        "id": "meta.keyword",
+        "group": "meta",
+        "label": "Keyword in the description",
+        "status": "pass",
+        "detail": "Search engines bold it in results."
+      },
+      {
+        "id": "meta.slug",
+        "group": "meta",
+        "label": "URL slug",
+        "status": "warn",
+        "detail": "Use the keyword in the slug, e.g. convert-images-to-webp."
+      },
+      {
+        "id": "headings.h1",
+        "group": "headings",
+        "label": "One h1",
+        "status": "pass",
+        "detail": "Convert images to WebP? What it did to LCP on a real site"
+      },
+      {
+        "id": "headings.h2",
+        "group": "headings",
+        "label": "Sections (h2)",
+        "status": "pass",
+        "detail": "8 sections."
+      },
+      {
+        "id": "headings.order",
+        "group": "headings",
+        "label": "Heading levels in order",
+        "status": "pass",
+        "detail": "No skipped levels."
+      },
+      {
+        "id": "headings.keyword",
+        "group": "headings",
+        "label": "Keyword in a subheading",
+        "status": "pass",
+        "detail": "Yes."
+      },
+      {
+        "id": "keyword.intro",
+        "group": "keyword",
+        "label": "Keyword in the first paragraph",
+        "status": "pass",
+        "detail": "Readers and search engines see the topic at once."
+      },
+      {
+        "id": "keyword.density",
+        "group": "keyword",
+        "label": "Keyword use",
+        "status": "pass",
+        "detail": "3 times in 1864 words."
+      },
+      {
+        "id": "keyword.length",
+        "group": "keyword",
+        "label": "Length",
+        "status": "pass",
+        "detail": "1864 words."
+      },
+      {
+        "id": "links.internal",
+        "group": "links",
+        "label": "Internal links",
+        "status": "pass",
+        "detail": "5 to your own pages."
+      },
+      {
+        "id": "links.external",
+        "group": "links",
+        "label": "Sources linked",
+        "status": "pass",
+        "detail": "20 outside links; check each one still works."
+      },
+      {
+        "id": "readability.ease",
+        "group": "readability",
+        "label": "Reading ease",
+        "status": "pass",
+        "detail": "Flesch 83 (60+ is plain English; shorter sentences and words raise it)."
+      },
+      {
+        "id": "readability.sentences",
+        "group": "readability",
+        "label": "Sentence length",
+        "status": "pass",
+        "detail": "16 words per sentence on average."
+      },
+      {
+        "id": "readability.paragraphs",
+        "group": "readability",
+        "label": "Paragraph length",
+        "status": "warn",
+        "detail": "3 paragraphs are over 120 words; split them."
+      }
+    ],
+    "stats": {
+      "words": 1864,
+      "sentences": 115,
+      "reading_ease": 83,
+      "reading_minutes": 8,
+      "h1": 1,
+      "h2": 8,
+      "h3": 0,
+      "links": 25,
+      "internal_links": 5,
+      "external_links": 20,
+      "images": 0,
+      "images_without_alt": 0
+    }
+  }
+}
