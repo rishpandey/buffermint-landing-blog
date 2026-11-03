@@ -16,7 +16,9 @@ DIR=/var/www/buffermint-landing
 if [ -z "${ALLOW_DIRTY:-}" ] && [ -n "$(git status --porcelain --ignore-submodules=none)" ]; then
   echo "Uncommitted changes: commit them first (or ALLOW_DIRTY=1 ./deploy.sh)."; exit 1
 fi
-[ -f brand/dist/brand.json ] || git submodule update --init brand
+# build against the brand commit this repo records, also when ALLOW_DIRTY=1 lets a moved pointer through (BM-383)
+case "$(git submodule status brand)" in +*) echo "brand submodule is not at the recorded commit: checking out $(git ls-tree HEAD brand | awk '{print $3}')";; esac
+git submodule update --init brand
 # every deploy, so a lockfile change pulled into an existing checkout is installed (no-ops when nothing changed)
 composer install --no-dev --no-interaction -q
 yarn install --frozen-lockfile --silent
