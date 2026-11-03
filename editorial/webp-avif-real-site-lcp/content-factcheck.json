@@ -1,17 +1,17 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: Convert images to WebP? What it did to LCP on a real site (9 to fix)",
-  "created_at": "2026-11-03T03:56:12.818Z",
+  "created_at": "2026-11-03T04:08:33.539Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "95bc7048231bdda37c7c6ba443daebc2",
-    "checked_at": "2026-11-03T03:56:12.817Z",
+    "content_md5": "b66bf3b75ac9289f3939db371b6e566f",
+    "checked_at": "2026-11-03T04:08:33.539Z",
     "blockers": [
       "Unsupported claim (1.6%, 21.5%, 35.6%, 46.6%, 49.4%, 54.7%, 31.8%, 46.8%, 55.6%, 62.1%, 68.6%, 78.7%): add a source link or put it in the facts sheet: \"| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP \"",
       "Unsupported claim (41%): add a source link or put it in the facts sheet: \"Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.\"",
       "Unsupported claim (16.6%): add a source link or put it in the facts sheet: \"WebP saved 16.6% of total bytes.\"",
-      "Unsupported claim (29.4%): add a source link or put it in the facts sheet: \"The median image saved 29.4%, which looks like a match for Google's range but isn't one, because almost nothing landed n\"",
+      "Unsupported claim (31.5%): add a source link or put it in the facts sheet: \"The median image saved 31.5%, which looks like a match for Google's range but isn't one, because almost nothing landed n\"",
       "Unsupported claim (3%, 69%, 11%): add a source link or put it in the facts sheet: \"Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the lar\"",
       "Unsupported claim (49.6%, 39.5%): add a source link or put it in the facts sheet: \"AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.\"",
       "Unsupported claim (41.8%): add a source link or put it in the facts sheet: \"When we tested, the site shipped 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.\"",
@@ -201,9 +201,9 @@
       },
       {
         "kind": "number",
-        "text": "The median image saved 29.4%, which looks like a match for Google's range but isn't one, because almost nothing landed near it.",
+        "text": "The median image saved 31.5%, which looks like a match for Google's range but isn't one, because almost nothing landed near it.",
         "numbers": [
-          "29.4%"
+          "31.5%"
         ],
         "cues": [],
         "links": [],

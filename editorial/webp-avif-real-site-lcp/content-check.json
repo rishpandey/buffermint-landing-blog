@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: convert images to webp",
-  "created_at": "2026-11-03T03:56:10.744Z",
+  "created_at": "2026-11-03T04:08:31.478Z",
   "data": {
     "score": 94,
     "items": [
@@ -24,7 +24,7 @@
         "group": "meta",
         "label": "Meta description length",
         "status": "pass",
-        "detail": "150 characters."
+        "detail": "159 characters."
       },
       {
         "id": "meta.keyword",
@@ -80,14 +80,14 @@
         "group": "keyword",
         "label": "Keyword use",
         "status": "pass",
-        "detail": "3 times in 1823 words."
+        "detail": "3 times in 1864 words."
       },
       {
         "id": "keyword.length",
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "1823 words."
+        "detail": "1864 words."
       },
       {
         "id": "links.internal",
@@ -122,12 +122,12 @@
         "group": "readability",
         "label": "Paragraph length",
         "status": "warn",
-        "detail": "2 paragraphs are over 120 words; split them."
+        "detail": "3 paragraphs are over 120 words; split them."
       }
     ],
     "stats": {
-      "words": 1823,
-      "sentences": 112,
+      "words": 1864,
+      "sentences": 115,
       "reading_ease": 83,
       "reading_minutes": 8,
       "h1": 1,
