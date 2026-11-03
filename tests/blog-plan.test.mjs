@@ -135,8 +135,9 @@ const postSources = (dir) => readdirSync(dir).filter((f) => f.endsWith('.md')).m
 // A post's code samples and comments aren't links: a post about an API can show `POST /tools/call`. A topic's
 // backticks can be one. A fence opens and closes only at the start of a line, after nothing but indentation or a
 // blockquote's > (a fence in a list item or a quote is still a fence); an unclosed one runs to the end, as it renders.
+// A backtick fence's info string has no backtick, so ```npm i``` at a line start is inline code, not a fence.
 const withoutCode = (text) => text
-  .replace(/^[ \t>]*((`|~)\2{2,})[^\n]*$[\s\S]*?(?:^[ \t>]*\1\2*[ \t]*$|(?![\s\S]))/gm, '')
+  .replace(/^[ \t>]*((`|~)\2{2,})(?:(?<=`)[^`\n]*|(?<=~)[^\n]*)$[\s\S]*?(?:^[ \t>]*\1\2*[ \t]*$|(?![\s\S]))/gm, '')
   .replace(/<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>|<!--[\s\S]*?-->|`[^`\n]*`/g, '');
 // The body of a live post as the site shows it; null for a draft, which answers to this gate once it is published
 const liveText = (text, name) => {
@@ -255,6 +256,8 @@ test('withoutCode: a fence counts only at the start of a line, and an unclosed o
   assert.deepEqual(toolLinks(withoutCode(nested)).map((p) => p.join('/')), ['dev/three', 'dev/four']);
   const inside = '- item\n\n    ```\n    curl /tools/call\n    ```\n\n> ```\n> GET /tools/list\n> ```\n[e](/tools/dev/five/)';
   assert.deepEqual(toolLinks(withoutCode(inside)).map((p) => p.join('/')), ['dev/five'], 'a fence in a list item or a quote');
+  const inline = '```npm i``` installs it, see [f](/tools/dev/six/)\n~~~ `a` ~~~ is a fence\n/tools/in/tilde/\n~~~\n[g](/tools/dev/seven/)';
+  assert.deepEqual(toolLinks(withoutCode(inline)).map((p) => p.join('/')), ['dev/six', 'dev/seven'], 'inline code at a line start is not a fence');
 });
 
 test('toolLinkProblems fails a fixture post and topic with dead links, and passes live ones', () => {
