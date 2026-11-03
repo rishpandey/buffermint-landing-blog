@@ -27,7 +27,7 @@ test('installs come before the build', () => {
 // Scratch-repo git: none of the caller's GIT_* variables (a hook's GIT_DIR would aim at this repo), no global or system config.
 const scratchEnv = () => {
   const env = Object.fromEntries(Object.entries(process.env).filter(([k]) => !k.startsWith('GIT_')));
-  return { ...env, GIT_CONFIG_GLOBAL: '/dev/null', GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'protocol.file.allow', GIT_CONFIG_VALUE_0: 'always' };
+  return { ...env, LC_ALL: 'C', GIT_CONFIG_GLOBAL: '/dev/null', GIT_CONFIG_NOSYSTEM: '1', GIT_CONFIG_COUNT: '1', GIT_CONFIG_KEY_0: 'protocol.file.allow', GIT_CONFIG_VALUE_0: 'always' };
 };
 const sh = (cwd, file, args) => execFileSync(file, args, { cwd, encoding: 'utf8', env: scratchEnv() }).trim();
 const git = (cwd, ...args) => sh(cwd, 'git', ['-c', 'user.name=t', '-c', 'user.email=t@t', '-c', 'init.defaultBranch=main', ...args]);
@@ -56,7 +56,11 @@ function scratch(t) {
   git(join(site, 'brand'), 'checkout', '-q', recorded);
   git(site, 'add', 'brand');
   git(site, 'commit', '-qm', 'record brand one');
-  return { site, recorded, newer, run: () => sh(site, 'bash', ['-euo', 'pipefail', '-c', lines.slice(syncStart, syncEnd + 1).join('\n')]) };
+  return { site, recorded, newer, run: () => {
+    // never run an empty script: missing markers would make the behaviour tests pass on nothing (review)
+    assert.ok(syncStart >= 0 && syncEnd > syncStart, 'sync block markers found in deploy.sh');
+    return sh(site, 'bash', ['-euo', 'pipefail', '-c', lines.slice(syncStart, syncEnd + 1).join('\n')]);
+  } };
 }
 
 test('the brand sync runs after the dirty check and before the build and SEO gate', () => {
