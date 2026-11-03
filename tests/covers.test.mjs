@@ -27,7 +27,9 @@ for (const f of readdirSync(posts).filter((n) => n.endsWith('.blade.md'))) {
       const file = field(text, name);
       assert.ok(file, `${f} has ${name}`);
       assert.deepEqual(jpegSize(readFileSync(join(root, 'source', file))), size, file);
-      assert.ok(existsSync(join(root, 'source', file.replace(/\.jpeg$/, '.webp'))), `${file} has a WebP copy`);
+      const webp = file.replace(/\.jpe?g$/i, '.webp');
+      assert.notEqual(webp, file, `${file} is a JPEG`);
+      assert.ok(existsSync(join(root, 'source', webp)), `${file} has a WebP copy`);
     }
   });
   test(`${f}: the text says nothing about a picture cover`, () => {
