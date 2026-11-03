@@ -174,14 +174,15 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** upload one geotagged test photo to 8 apps and sites (WhatsApp, Telegram as file vs photo, Slack, Gmail, Discord, X, Facebook, Google Drive), download it again, and read the EXIF with our viewer. A dated table nobody keeps current.
 - **Sources:** the platforms' own help pages, the CIPA EXIF spec, EFF on photo metadata, a news case of location leaked through EXIF.
 - **Internal links:** /tools/photo/exif-stripper/, /tools/photo/exif-viewer/, topic 2.
+- **Blocker:** the test needs logged-in accounts on 8 apps, which a lane doesn't have (skipped 2026-11-02). Take the next `todo` until someone can run it.
 - **Status:** todo
 
 ### 13. WebP on a real site: 3.0 → 1.8 MB and what it did to LCP · `next`
 - **Keyword:** `convert images to webp` (level 4; Wikipedia "WebP" 10,119/mo), `image compressor` (level 4; HN 47).
-- **New angle:** our numbers from buffermint.com (STATUS, 2026-10-25): 39 images 3.0 → 1.8 MB with WebP copies; LCP on the home page 10.3 → 7.0 s, on a post 8.5 → 5.0 s (Lighthouse 12.2.1 mobile, median). Show what WebP did and what the other changes did. Add an AVIF comparison on the same images.
+- **New angle:** quality sweep on our 65 JPEGs, then JPEG vs WebP vs AVIF on one build. The old figures (LCP 10.3 → 7.0 s, 8.5 → 5.0 s) did not reproduce when split by commit: don't reuse them, here or in topic 14.
 - **Sources:** Google's WebP docs (developers.google.com/speed/webp), web.dev on LCP, caniuse WebP/AVIF, Cloudflare or Jake Archibald on AVIF vs WebP, the HTTP Archive Web Almanac (media chapter).
 - **Internal links:** /tools/photo/jpg-to-webp/, /tools/photo/png-to-webp/, /tools/photo/image-compress/, /tools/photo/resize-image/, topic 14.
-- **Status:** todo
+- **Status:** published 2026-11-02 → `/articles/webp-avif-real-site-lcp/` (format moved post LCP 0.3-0.6 s, home LCP not at all)
 
 ### 14. Core Web Vitals on a small marketing site: what actually moved ours · `next`
 - **Keyword:** `core web vitals` (level 4; HN 68).
