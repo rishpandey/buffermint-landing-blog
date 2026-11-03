@@ -1,6 +1,6 @@
 ---
 title: "Convert images to WebP? What it did to LCP on a real site"
-seo_description: "We tested what happens when you convert images to WebP or AVIF: 65 images, 86 Lighthouse runs. A post gained 0.3 s, our home page nothing. Here's why."
+seo_description: "We tested what happens when you convert images to WebP or AVIF: 65 images, 95 Lighthouse runs. A post gained 0.3 s, our home page nothing. Here's why."
 keyword: convert images to webp
 featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
 featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
@@ -14,7 +14,7 @@ extends: _layouts.post
 
 If you convert images to WebP, your page gets lighter. Whether it gets faster depends on one thing: what the browser counts as the largest thing on the page. We tested this on buffermint.com by changing nothing but the image format. On a blog post with a photo at the top, WebP took 0.3 to 0.4 seconds off Largest Contentful Paint (LCP). On our home page it took off nothing.
 
-The largest gain on the home page came from a file our conversion never touched. And our two Lighthouse modes disagreed about the size of that gain by about eight times.
+The largest gain on the home page came from a file our conversion never touched. And our two Lighthouse modes disagreed about the size of that gain: 2.4 seconds in one, 0.15 seconds in the other.
 
 ## What we tested
 
@@ -77,15 +77,15 @@ Here are the home page results from the same test, simulated throttling:
 
 The reason is plain once you look. The LCP element on our home page is a paragraph of text, and the page didn't load a single image from the uploads folder during any run, so our format swap changed no file it fetched. The blog cards further down are WebP, but they're lazy-loaded and Lighthouse doesn't scroll to them. A visitor who scrolls does get the saving; it just can't affect LCP. [The HTTP Archive found](https://almanac.httparchive.org/en/2024/media) that 68% of mobile pages have an image as their LCP element. That leaves plenty of pages like ours, where the format change never reaches what loads first.
 
-Lighthouse's request list showed where the weight was. Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 32 pixels tall. It had been in our repository since 2021. We made a copy of the site with that one file resized to 64 pixels tall, 3.8 KB, and tested again:
+Lighthouse's request list showed where the weight was. Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 32 pixels tall. It had been in our repository since 2021. We made a copy of the site with that one file resized to 64 pixels tall, under 4 KB, and tested both copies again in one session, five runs each in each mode:
 
 | Home page | Original logo | Logo resized |
 |---|---|---|
 | Page weight | 683 KB | 183 KB |
-| Simulated: LCP, score | 4.58 s, 84 | 2.20 s, 98 |
-| DevTools throttling: LCP, score | 2.73 s, 91 | 2.42 s, 94 |
+| Simulated: LCP, score | 4.60 s, 84 | 2.16 s, 99 |
+| DevTools throttling: LCP, score | 2.56 s, 93 | 2.41 s, 95 |
 
-If we'd run only the default mode, we'd have reported that a logo cost us 2.4 seconds. With throttling applied during the load, the saving was 0.3 seconds. Simulated throttling is the default, and it models a load from an unthrottled one. [Lighthouse's own documentation](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) says that makes it fast and repeatable, with "inherent inaccuracy" and edge cases.
+If we'd run only the default mode, we'd have reported that a logo cost us 2.4 seconds. With throttling applied during the load, the saving was 0.15 seconds, about a sixteenth as much. Simulated throttling is the default, and it models a load from an unthrottled one. [Lighthouse's own documentation](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) says that makes it fast and repeatable, with "inherent inaccuracy" and edge cases.
 
 It says the network side of DevTools throttling "isn't highly accurate" either, so neither number is the truth. We didn't trace why they differ. But when a one-file fix looks too good, run it a second way before you believe it.
 
