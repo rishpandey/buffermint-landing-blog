@@ -3,11 +3,6 @@
 <link rel="stylesheet" href="{{ mix('css/posts.css', 'assets/build') }}">
 <div id="blog-scroll-position"></div>
 <div class="pb-6 mb-6">
-    @if ($page->featured_image)
-    <section data-jarallax data-speed=".8" class="py-12 py-md-15 bg-cover jarallax"
-        style="background-image: url(/{{ $page->featured_image }});"></section>
-    @endif
-
     <section class="pt-8 pt-md-11 gradient-mint-to-white">
         <div class="container">
             <div class="row justify-content-center">
@@ -80,6 +75,19 @@
             </div> <!-- / .row -->
         </div> <!-- / .container -->
     </section>
+
+    {{-- covers carry the headline, so the whole image shows, away from the page's own title --}}
+    @if ($page->featured_image)
+    <section class="pt-6 pt-md-8">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-10 col-lg-9 col-xl-8">
+                    <img class="post-cover img-fluid rounded w-100" src="/{{ $page->featured_image }}" alt="{{ $page->title }}">
+                </div>
+            </div>
+        </div>
+    </section>
+    @endif
 
     @if ($page->hero_image)
     <section class="pt-6 pt-md-8">

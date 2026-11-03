@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover-7d025c-1200.jpeg
+featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover-7d025c-600.jpeg
 title: "Convert images to WebP? What it did to LCP on a real site"
 seo_description: "We tested what happens when you convert images to WebP or AVIF: 65 images, 95 Lighthouse runs. A post loaded 0.3 s faster, our home page no faster. Here's why."
 keyword: convert images to webp
-featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
-featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent
@@ -26,6 +26,8 @@ We ran four separate tests in November 2026:
 - **History.** We rebuilt the site at three old commits and ran the same pages, to split a claim from our own notes.
 
 Two limits apply. The SSIM reference is our JPEG, not an uncompressed original, so it measures how much of what we already had survived. And all of this is lab data from one server. None of it comes from real visitors, so treat the gaps between formats as more reliable than the absolute times.
+
+![One NASA Apollo 11 photo in three strips, each cut from a copy saved as JPEG (151 KB), WebP at quality 80 (142 KB) or AVIF at quality 50 (83 KB)](/assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg)
 
 ## The quality setting decides whether you save anything
 
@@ -133,4 +135,4 @@ That logo is next on our own list. Yours may be sitting on a page you haven't op
 - HTTP Archive: [Web Almanac 2024, Media](https://almanac.httparchive.org/en/2024/media) (format shares and LCP images).
 - Jake Archibald: [AVIF has landed](https://jakearchibald.com/2020/avif-has-landed/) (2020).
 - Cloudflare: [Generate AVIF images with Image Resizing](https://blog.cloudflare.com/generate-avif-images-with-image-resizing/) (2020).
-- Our measurements: sharp 0.35.5, FFmpeg SSIM, Lighthouse 13.5.0 and Chrome 156 on our server, November 2026. Cover: one NASA public-domain photo (AS11-40-5903) with each strip made from a copy encoded in the format it names, then saved together as one image; sizes are for the whole photo.
+- Our measurements: sharp 0.35.5, FFmpeg SSIM, Lighthouse 13.5.0 and Chrome 156 on our server, November 2026. Comparison photo: one NASA public-domain photo (AS11-40-5903) with each strip made from a copy encoded in the format it names, then saved together as one image; sizes are for the whole photo.
