@@ -14,28 +14,33 @@ const root = join(dirname(fileURLToPath(import.meta.url)), '..');
 // Minimum safe version per package (the advisories' "patched in").
 const MIN = { 'body-parser': '1.20.9', 'follow-redirects': '1.16.2' };
 
-// Semver order for release versions; a prerelease sorts below its release (1.16.2-beta.0 < 1.16.2).
+// Semver order against a release minimum: build metadata (+...) is ignored, a prerelease sorts below its
+// release (1.16.2-beta.0 < 1.16.2), and a version that isn't x.y.z throws instead of reading as 0.
+function parse(v) {
+  const m = /^(\d+)\.(\d+)\.(\d+)(?:-([0-9A-Za-z.-]+))?(?:\+[0-9A-Za-z.-]+)?$/.exec(v);
+  if (!m) throw new Error(`not a semver version: ${v}`);
+  return { nums: [Number(m[1]), Number(m[2]), Number(m[3])], pre: m[4] };
+}
 function cmp(a, b) {
-  const [ra, prea] = a.split(/-(.*)/s);
-  const [rb, preb] = b.split(/-(.*)/s);
-  const pa = ra.split('.').map(Number);
-  const pb = rb.split('.').map(Number);
-  for (let i = 0; i < 3; i++) if ((pa[i] || 0) !== (pb[i] || 0)) return (pa[i] || 0) - (pb[i] || 0);
-  if (!prea !== !preb) return prea ? -1 : 1;
-  return 0;
+  const pa = parse(a);
+  const pb = parse(b);
+  if (pb.pre) throw new Error(`minimum ${b} must be a release, not a prerelease`);
+  for (let i = 0; i < 3; i++) if (pa.nums[i] !== pb.nums[i]) return pa.nums[i] - pb.nums[i];
+  return pa.pre ? -1 : 0;
 }
 
-// The package a lockfile spec installs: `name@range`, `@scope/name@range`, or an alias `x@npm:name@range`.
+// The package a lockfile spec installs: `name@range`, `@scope/name@range`, `name@npm:range`,
+// or an alias `x@npm:name@range`.
 function specName(spec) {
   const at = spec.indexOf('@', 1);
   if (at < 0) return null;
   const rest = spec.slice(at + 1);
-  if (rest.startsWith('npm:')) return specName(rest.slice(4));
+  if (rest.startsWith('npm:')) return specName(rest.slice(4)) ?? spec.slice(0, at);
   return spec.slice(0, at);
 }
 
 // Every resolved version of `name` in a yarn v1 lockfile (one entry per range group).
-export function lockVersions(lock, name) {
+function lockVersions(lock, name) {
   const out = [];
   for (const block of lock.split(/\n\s*\n/)) {
     const head = block.split('\n').find((l) => l && !l.startsWith('#'));
@@ -63,6 +68,16 @@ test('lockVersions reads yarn v1 entries, scoped and quoted', () => {
 test('lockVersions follows npm aliases and skips specs with no version', () => {
   const lock = '"bp@npm:body-parser@1.20.8":\n  version "1.20.8"\n\nbody-parsers:\n  version "9.9.9"\n';
   assert.deepEqual(lockVersions(lock, 'body-parser'), ['1.20.8']);
+  const npmRange = 'body-parser@npm:~1.20.5:\n  version "1.20.8"\n';
+  assert.deepEqual(lockVersions(npmRange, 'body-parser'), ['1.20.8']);
+});
+
+test('cmp ignores build metadata and refuses what it cannot read', () => {
+  assert.equal(cmp('1.20.9+meta', '1.20.9'), 0);
+  assert.equal(cmp('1.20.8+meta', '1.20.9') < 0, true);
+  assert.throws(() => cmp('1.20', '1.20.9'), /not a semver/);
+  assert.throws(() => cmp('latest', '1.20.9'), /not a semver/);
+  assert.throws(() => cmp('2.0.0-beta.1', '2.0.0-beta.3'), /must be a release/);
 });
 
 test('yarn.lock has no version with a known high advisory', () => {
