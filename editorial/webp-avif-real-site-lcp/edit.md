@@ -20,7 +20,8 @@ Separate pass after the draft, reading it against the bench files, in the workfl
 - "the saving was 0.3 seconds" is now 0.15 s; "2.4 seconds" held (2,435 ms).
 - "3.8 KB" for the resized logo: the bench wrote 3,812 bytes, a rerun with another sharp install 3,862. Now "under 4 KB", true of both.
 - "500 KB ... about eight times what WebP took off our test post" kept: it compares bytes (499,921 / 61,982 = 8.1), not the modes, and the totals didn't change in the rerun.
-- date: stays 2026-11-02: not in the future, 3 days after the previous post (tests need 2+), and it leaves 2026-11-04 free for the next post.
+- date: now 2026-11-03, the day of the logo rerun, so the post isn't dated before its own data. Not in the future, 4 days after the previous post (tests need 2+).
+- Code review fixes: the bench scripts' median took the upper middle value for even counts; fixed (mean of the two), rerun: the median image saved 31.5%, not 29.4% (still inside Google's 25-34%, so the point stands); ms/MP unchanged at 0.13 and 1.8. The description said "gained 0.3 s", which reads as slower: now "loaded 0.3 s faster". The method list now names the logo test (four tests) and the DevTools runs on the post. The encode timer includes the JPEG decode, now said in the AVIF section. serve.mjs refused every file with a relative root: fixed.
 
 ## Content studio
 First run: score 85, 8 blockers, 1 failed. Fixed: keyword in the title and description, an Almanac link at the sentence that lacked one, "the best source" reworded, two long paragraphs split.

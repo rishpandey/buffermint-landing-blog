@@ -177,12 +177,12 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **Blocker:** the test needs logged-in accounts on 8 apps, which a lane doesn't have (skipped 2026-11-02). Take the next `todo` until someone can run it.
 - **Status:** todo
 
-### 13. WebP on a real site: 3.0 → 1.8 MB and what it did to LCP · `next`
+### 13. WebP on a real site: 3.78 → 2.20 MB and what it did to LCP · `next`
 - **Keyword:** `convert images to webp` (level 4; Wikipedia "WebP" 10,119/mo), `image compressor` (level 4; HN 47).
 - **New angle:** quality sweep on our 65 JPEGs, then JPEG vs WebP vs AVIF on one build. The old figures (LCP 10.3 → 7.0 s, 8.5 → 5.0 s) did not reproduce when split by commit: don't reuse them, here or in topic 14.
 - **Sources:** Google's WebP docs (developers.google.com/speed/webp), web.dev on LCP, caniuse WebP/AVIF, Cloudflare or Jake Archibald on AVIF vs WebP, the HTTP Archive Web Almanac (media chapter).
 - **Internal links:** /tools/photo/jpg-to-webp/, /tools/photo/png-to-webp/, /tools/photo/image-compress/, /tools/photo/resize-image/, topic 14.
-- **Status:** published 2026-11-02 → `/articles/webp-avif-real-site-lcp/` (format moved post LCP 0.3-0.6 s, home LCP not at all)
+- **Status:** published 2026-11-03 (dated; goes live after its review merges) → `/articles/webp-avif-real-site-lcp/` (format moved post LCP 0.3-0.6 s, home LCP not at all; a 504 KB logo cost 2.4 s simulated, 0.15 s DevTools)
 
 ### 14. Core Web Vitals on a small marketing site: what actually moved ours · `next`
 - **Keyword:** `core web vitals` (level 4; HN 68).

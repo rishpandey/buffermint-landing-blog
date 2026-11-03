@@ -1,7 +1,7 @@
 const s=require('./sweep.json');const R=s.rows;
 console.log('rows',R.length,'sumjpeg',R.reduce((a,r)=>a+r.jpeg,0));
 const withV=R.filter(r=>r.variants&&r.variants.length);console.log('withV',withV.length,'errs',R.filter(r=>r.error).length, 'keys',Object.keys(R[0]));
-const med=a=>{a=[...a].sort((x,y)=>x-y);return a[Math.floor(a.length/2)]};
+const med=a=>{a=[...a].sort((x,y)=>x-y);const n=a.length,h=n>>1;return n%2?a[h]:(a[h-1]+a[h])/2};
 // smallest variant at or above the SSIM target
 const smallestAt=(vs,t)=>vs.filter(v=>v.ssim>=t).sort((a,b)=>a.bytes-b.bytes)[0];
 for(const t of [0.98,0.985,0.99]){

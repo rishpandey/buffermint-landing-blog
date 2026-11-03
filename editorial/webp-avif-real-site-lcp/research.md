@@ -22,7 +22,7 @@ Why topic 13 and not 12: topic 12 (EXIF) is the top `todo`, but its test needs l
 ## Disagreements
 Google's 25-34% is at equal SSIM on its own corpus. Our shipped copies fell 40% (3.0 to 1.8 MB) but were not made at a matched SSIM, so that number can't be compared with Google's until we score them. Archibald's AVIF is under half of WebP on a hand-tuned image, Cloudflare says "half", and blogs found by search say 20-50% with no method. Search found no controlled AVIF vs WebP benchmark in those blogs, so none of them is cited.
 
-Result, read 2026-11-02: at SSIM 0.98 or better, the smallest tested WebP was 16.6% lighter in total and 29.4% lighter on the median image (50 of 65 images reached the bar in both formats). Google's 25-34% fits the median image; larger files saved less. AVIF was 39.5% lighter than WebP in total and 46.5% on the median image, close to Cloudflare's "half". The reference is our JPEG, not an uncompressed original, so this is not the same test as Google's.
+Result, read 2026-11-02: at SSIM 0.98 or better, the smallest tested WebP was 16.6% lighter in total and 31.5% lighter on the median image (29.4% before the median fix of 2026-11-03) (50 of 65 images reached the bar in both formats). Google's 25-34% fits the median image; larger files saved less. AVIF was 39.5% lighter than WebP in total and 47.2% on the median image, close to Cloudflare's "half". The reference is our JPEG, not an uncompressed original, so this is not the same test as Google's.
 
 The two Lighthouse modes also disagree: simulated says the logo fix saves 2.4 s, DevTools throttling 0.3 s. The doc warns about both, so neither is treated as the truth and both are printed.
 

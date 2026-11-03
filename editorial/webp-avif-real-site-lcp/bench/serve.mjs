@@ -5,8 +5,8 @@ const T = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'tex
 const cache = new Map();
 http.createServer((req, res) => {
   let p = decodeURIComponent(new URL(req.url, 'http://x').pathname);
-  let f = path.join(root, p);
-  if (!f.startsWith(path.resolve(root))) { res.writeHead(403); return res.end(); }
+  const base = path.resolve(root); let f = path.resolve(base, '.' + p);
+  const rel = path.relative(base, f); if (rel.startsWith('..') || path.isAbsolute(rel)) { res.writeHead(403); return res.end(); }
   if (fs.existsSync(f) && fs.statSync(f).isDirectory()) f = path.join(f, 'index.html');
   if (!fs.existsSync(f)) { res.writeHead(404); return res.end('nf'); }
   const ext = path.extname(f); const type = T[ext] || 'application/octet-stream';

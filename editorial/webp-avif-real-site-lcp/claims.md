@@ -9,12 +9,12 @@
 | 3 | The modes disagreed on the logo gain: 2.4 s in one, 0.15 s in the other | ours: bench/lighthouse-logo.jsonl, bench/lighthouse-devtools-logo.jsonl | medians original vs resized, 5 runs each, one session: simulated 4,596 - 2,161 = 2,435 ms; DevTools 2,563 - 2,409 = 154 ms |
 | 4 | 65 JPEGs, 4.27 MB | ours: bench/sweep.json | 65 rows, sum 4,265,300 bytes |
 | 5 | sharp 0.35.5, effort 4, six qualities each | ours: bench/encode-sweep.mjs, sweep.json | SETS and versions in the file |
-| 6 | Lighthouse 13.5.0, Chrome 156, five runs per page | ours: bench/lighthouse.jsonl | `lh`, `chrome` fields; 60 rows |
+| 6 | Lighthouse 13.5.0, Chrome 156, five runs per page; four tests | ours: bench/lighthouse.jsonl, the three other jsonl files, sweep.json | `lh`, `chrome` fields; 5 rows per label and page |
 | 7 | 95 Lighthouse runs | ours: count of rows | lighthouse.jsonl 60 + lighthouse-devtools-post.jsonl 15 + lighthouse-logo.jsonl 10 + lighthouse-devtools-logo.jsonl 10 = 95 |
 | 8 | Quality table (all 12 rows: WebP 90/85/80/75/70/60, AVIF 70/60/55/50/45/35) | ours: bench/analyse-outliers.js on sweep.json | per setting: sum of bytes, saving vs the 4,265,300-byte JPEG total, median SSIM, count of images larger than their JPEG |
 | 9 | AVIF 50 is 41% smaller than WebP 80 at a higher SSIM | ours: same | 1,617,097 vs 2,746,302 bytes; 0.9781 vs 0.9755 |
 | 10 | Lossy WebP 25-34% smaller than JPEG at equal SSIM | https://developers.google.com/speed/webp | "25-34% smaller" than comparable JPEG at equivalent SSIM |
-| 11 | At SSIM 0.98: 50 of 65; WebP 29.4% median, 16.6% total; by size thirds about -3% / 69% / 11% median; AVIF 49.6% total, 39.5% lighter than WebP | ours: bench/analyse-sweep.js | t=0.98 row: n 50, medw 0.294, w 0.166, a 0.496, aw 0.395; `third` lines: median saved -3.4 / 69.3 / 10.8 |
+| 11 | At SSIM 0.98: 50 of 65; WebP 31.5% median, 16.6% total; by size thirds about -3% / 69% / 11% median; AVIF 49.6% total, 39.5% lighter than WebP | ours: bench/analyse-sweep.js | t=0.98 row: n 50, medw 0.315 (even-count median: mean of the two middle values), w 0.166, a 0.496, aw 0.395; `third` lines: median saved -3.4 / 69.3 / 10.8 |
 | 12 | Cloudflare's "half" | https://blog.cloudflare.com/generate-avif-images-with-image-resizing/ | AVIF can be half the size of JPEG and WebP |
 | 13 | 51 copies, 3.78 to 2.20 MB, 41.8% | ours: bench/analyse-sweep.js | shipped sums 3,779,497 and 2,198,080 |
 | 14 | Median shipped SSIM 0.975; 4 of 51 below 0.95; worst 0.886; q90 0.902; AVIF 70 0.951 | ours: bench/analyse-outliers.js | photo-1555580399-49e780f216b7.jpeg |
@@ -36,7 +36,7 @@
 | 30 | Old claim 10.3 to 7.0 s, 8.5 to 5.0 s, Lighthouse 12.2.1 | ours: STATUS.md 2026-10-25 entry | as stated |
 | 31 | Two commits; second cut more than 350 KB of JavaScript | ours: git fd33e24, 2368247; STATUS.md | vendor.js 479 (commit: 469) to 104 KB |
 | 32 | History table | ours: bench/lighthouse.jsonl (h-before, h-webp, h-vendor) | 5,712 / 5,183 / 4,733; 4,353 / 3,846 / 3,080 ms |
-| 33 | AVIF 1.8 s vs WebP 0.13 s per megapixel, about 14 times; over 3 s for a big photo | ours: bench/analyse-sweep.js | 1,794 and 128 ms/MP; 3,134 ms on a 1600x1067 image at q50 |
+| 33 | AVIF 1.8 s vs WebP 0.13 s per megapixel, about 14 times; over 3 s for a big photo | ours: bench/analyse-sweep.js | 1,793 and 128 ms/MP, timed from sharp(src) so JPEG decode is included; 3,134 ms on a 1600x1067 image at q50 |
 | 34 | AVIF 96.35%, WebP 97.18% | https://caniuse.com/avif, https://caniuse.com/webp | read 2026-11-02 |
 | 35 | AVIF shows nothing until fully arrived | https://jakearchibald.com/2020/avif-has-landed/ | no progressive rendering |
 | 36 | WebP 12%, AVIF 1.0%, JPEG 32.4% of mobile images | https://almanac.httparchive.org/en/2024/media | mobile format shares |
