@@ -474,7 +474,7 @@ None of the old posts has a `## Sources` section or an external citation, except
 |---|---|---|---|
 | launch-your-micro-saas-product | 2,074 | **Keep, refresh** (target `how to start a micro saas`, level 2) | The micro-SaaS pillar. It absorbs `micro-saas-is-the-future`. Update with 2026 evidence: what earns now (one trade, one country, a local rule) with third-party examples and their verified revenue from public sources. |
 | micro-saas-is-the-future | 407 | **Merge** → launch-your-micro-saas-product | Thin opinion piece; same keyword. |
-| 10-micro-saas-ideas-in-2021-copy | 1,159 | **Leave** until the owner answers PLAN 11 (slug) | `-copy` slug and 2021 ideas; don't touch (PLAN 11). Afterwards: refresh as dated ideas with evidence, or merge into the pillar. |
+| 10-micro-saas-ideas-in-2021-copy (now micro-saas-ideas, 301, D4 2026-11-03) | 1,159 | **Leave** the text; the slug moved per PLAN 11 | `-copy` slug and 2021 ideas; don't touch (PLAN 11). Afterwards: refresh as dated ideas with evidence, or merge into the pillar. |
 | when-is-the-right-time-to-launch-an-mvp | 952 | **Keep, refresh** (target `mvp development`, level 2; HN 57) | The MVP post. It absorbs the two below. |
 | 5-reasons-why-building-your-mvp-is-a-challenge | 594 | **Merge** → when-is-the-right-time-to-launch-an-mvp | Thin, same topic. |
 | why-speed-to-market-matters-for-your-saas-product-launch | 867 | **Merge** → when-is-the-right-time-to-launch-an-mvp | Same argument ("launch early"); 3 views in the counted week, so keep the URL alive with a 301. |
@@ -536,7 +536,7 @@ Result: 21 posts → 12 kept (9 refreshed, 3 left as they are) and 9 merged with
    The refresh lane fixes them as it refreshes, and the test enforces it once `updated:` is set.
 2. **Redirects for merges:** done in `buffermint-pages/static/_redirects` (refresh lane, 2026-10-29; deploy with this repo).
 3. **Category pages** (`/idea-validation`, `/startup-ideas`) have no lastmod and thin intros. Only 6 posts carried a category; the refresh lane added `idea_validation` to the MVP and PMF posts and `startup_ideas` to the micro-SaaS guide. Assign the rest during later refreshes, or add a "SaaS operations" category for the new topics (config.php `categories`).
-4. **`/our-pricing`** is empty and in the sitemap (PLAN 11, owner).
+4. **`/our-pricing`** was empty and in the sitemap: deleted with a 301 to the home page (owner decision D4, 2026-11-03).
 5. **Search Console / Bing verification** (owner; brand.json `verification`): without them there's no query data, and Bing's keyword API stays closed.
 6. **Author entity:** posts name "Rishabh Pandey" with no author page or `sameAs`. An author page with a short bio would support E-E-A-T. Needs the owner's OK on public bio copy.
 7. **Feed:** a refreshed post keeps its place (sorted by `date`). That's fine; readers see the `<updated>`.

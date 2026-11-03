@@ -23,6 +23,13 @@ export const MERGED = {
   'your-strategy-is-a-voyage': 'how-to-achieve-a-product-market-fit-with-your-product',
 };
 
+// Moved pages (owner decision D4, 2026-11-03, PLAN.md item 11): old path -> new path. Unlike a merged post, nothing on
+// the site may still link to the old path; the 301 is only for links from outside.
+export const MOVED = {
+  '/articles/10-micro-saas-ideas-in-2021-copy': '/articles/micro-saas-ideas',
+  '/our-pricing': '/',
+};
+
 const PAGES = join(root, '../buffermint-pages');
 const PAGES_REDIRECTS = join(PAGES, 'static/_redirects');
 const isPost = (slug) => existsSync(join(build, 'articles', slug, 'index.html')) || existsSync(join(build, 'articles', `${slug}.html`));
@@ -83,6 +90,46 @@ test('buffermint-pages answers 301 from each merged post to its target', (t) => 
     for (const [from, to] of Object.entries(MERGED)) {
       for (const path of [`/articles/${from}`, `/articles/${from}/`]) {
         assert.deepEqual(rules.get(path), { to: `/articles/${to}`, code: '301' }, `${path} in static/_redirects of ${rules.from} (merge and check out the pages side first)`);
+      }
+    }
+  }
+});
+
+const isPage = (path) => path === '/' ? existsSync(join(build, 'index.html'))
+  : existsSync(join(build, path.slice(1), 'index.html')) || existsSync(join(build, `${path.slice(1)}.html`));
+// an href, a <loc>, an Atom <id>/<link> or a JSON url to the path (absolute or root-relative), with or without a slash
+const linksTo = (text, path) => new RegExp(`(?:https?://(?:www\\.)?buffermint\\.com)?${path}/?(?=["'<#?\\s]|$)`, 'm').test(text);
+
+test('a moved page is gone from the build, the sitemap, the feed and the search index; its new path is built', () => {
+  const files = ['sitemap.xml', 'feed.xml', 'index.json'].map((f) => [f, readFileSync(join(build, f), 'utf8')]);
+  for (const [from, to] of Object.entries(MOVED)) {
+    assert.ok(!isPage(from), `${from} is still built`);
+    assert.ok(isPage(to), `${to} (the new home of ${from}) isn't built`);
+    for (const [name, text] of files) assert.ok(!linksTo(text, from), `${from} is still in ${name}`);
+  }
+  assert.ok(!existsSync(join(root, 'source/_pages/our-pricing.md')), 'source/_pages/our-pricing.md still exists');
+  assert.ok(existsSync(join(root, 'source/_posts/micro-saas-ideas.blade.md')), 'the micro-SaaS ideas post moved away');
+  assert.match(readFileSync(join(build, 'sitemap.xml'), 'utf8'), /buffermint\.com\/articles\/micro-saas-ideas</, 'micro-saas-ideas is not in sitemap.xml');
+});
+
+test('no page in the built site links to a moved page\'s old path', () => {
+  const found = [];
+  for (const file of htmlFiles()) {
+    const html = readFileSync(file, 'utf8');
+    for (const from of Object.keys(MOVED)) if (linksTo(html, from)) found.push(`${relative(build, file)} → ${from}`);
+  }
+  assert.deepEqual(found, []);
+});
+
+test('buffermint-pages answers 301 from each moved page to its new path', (t) => {
+  if (!existsSync(join(PAGES, '.git'))) {
+    if (onMain()) assert.fail(`${PAGES} must be checked out next to this repo to verify landing main`);
+    return t.skip(`${PAGES} is not checked out next to this repo`);
+  }
+  for (const rules of pagesRulesText().map(parseRules)) {
+    for (const [from, to] of Object.entries(MOVED)) {
+      for (const path of [from, `${from}/`]) {
+        assert.deepEqual(rules.get(path), { to, code: '301' }, `${path} in static/_redirects of ${rules.from} (merge and check out the pages side first)`);
       }
     }
   }

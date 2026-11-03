@@ -312,6 +312,11 @@ Effort **S**.
 **Done 2026-10-24 (mechanical part):** the 7 Calendly links use `{{ $page->discovery_call_url }}` (no
 `?month=2021-08`). Everything else below still needs your decision.
 
+**Decided 2026-11-03 (owner decision D4, "All as recommended"; lane `t-20261103-landing-copy-d4`, BM-42):** the
+`-copy` post moved to `/articles/micro-saas-ideas` (option a's slug; text not refreshed yet) with a 301 in
+`buffermint-pages/static/_redirects`; `/our-pricing` is deleted with a 301 to the home page; the two testimonials
+are removed; "about 45 days" stays. The rest of the copy list below is still open.
+
 - **All 21 posts are dated 10 Jul to 1 Sep 2021**, including the one added in March 2024
   (`the-ultimate-guide-…`, `date: 2021-09-01`). The home page and the blog show "01 Sep 2021" as the
   newest post.
