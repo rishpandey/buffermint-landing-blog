@@ -33,24 +33,6 @@
   </div>
 </section>
 
-<!-- TESTIMONIALS -->
-<section class="site-section">
-  <div class="bm-container">
-    <div class="site-quotes">
-      <figure class="site-quote">
-        <a href="https://www.zenmindmap.com/" class="site-quote-logo"><img src="{{ mix('img/logos/zmm-logo.png', 'assets/build') }}" alt="Zen Mind Maps" height="32"></a>
-        <blockquote>“BufferMint helped us launch two products. Their thoughtfulness, attitude and focus on results show their credibility. They have been crucial to the success of our products.”</blockquote>
-        <figcaption><img src="{{ mix('img/photos/nick.png', 'assets/build') }}" alt="" width="40" height="40"> <span><b>Nick Hoang</b> Zen Mind Maps</span></figcaption>
-      </figure>
-      <figure class="site-quote">
-        <a href="https://www.shasilluminated.org/" class="site-quote-logo"><img src="{{ mix('img/logos/shas-logo.png', 'assets/build') }}" alt="Shas Illuminated" height="32"></a>
-        <blockquote>“BufferMint is a wonderful agency for both design and development. They have been the perfect partner for Shas Illuminated. They are a pleasure to work with and I recommend them highly for anyone that wants a beautiful web application.”</blockquote>
-        <figcaption><img src="{{ mix('img/photos/yacov.jpeg', 'assets/build') }}" alt="" width="40" height="40"> <span><b>Yacov Metz</b> Shas Illuminated</span></figcaption>
-      </figure>
-    </div>
-  </div>
-</section>
-
 <!-- PRICING -->
 <section class="site-section site-alt" id="pricing">
   <div class="bm-container">

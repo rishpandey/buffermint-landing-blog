@@ -1,6 +1,11 @@
 # buffermint-landing — status
 
-Last updated: 2026-11-03 (yarn audit highs fixed, BM-403, see Security); 2026-11-03 (tool-link gate leftovers, BM-402, see below); 2026-11-03 (main merged into blog covers lane); 2026-11-03 (WebP post finished on `lane/t-20261103-blog-post-finish`, BM-506: waits for its review lane's fact-check, edit and approval); 2026-11-02 (blog post webp-avif-real-site-lcp, topic 13, on its lane); 2026-11-01 (blog covers, BM-396, see below); 2026-10-31 (post gate checks tool links, BM-366; brand bump to 7a2f905; blog topics 33–47 merged, see below); 2026-10-30 (all blog lanes live at 99c8c02: 11 new posts, 9 refreshed, 9 merged with 301s). The publish was held 2026-10-29 18:45 by a false live-check alarm (fixed in bin/landing-autopublish), then by one broken link in the -copy post to a merged URL (fixed in 99c8c02; the blog template check now runs seo-check). **Dates (owner, 2026-10-30):** no future dates, posts 2–3 days apart: the 11 new posts are dated 2026-10-05 → 10-30 (dd9e673, live); any October day later than a post's own date reads "in October 2026"; `tests/posts.test.mjs` now covers every 2026 post and checks dates (none after today, none shared, 2+ days apart). The blog plan is `BLOG-PLAN.md`. The master plan is in `../PLAN.md`.
+Last updated: 2026-11-03 (PLAN 11 copy, owner decision D4, BM-42, see below); 2026-11-03 (yarn audit highs fixed, BM-403, see Security); 2026-11-03 (tool-link gate leftovers, BM-402, see below); 2026-11-03 (main merged into blog covers lane); 2026-11-03 (WebP post finished on `lane/t-20261103-blog-post-finish`, BM-506: waits for its review lane's fact-check, edit and approval); 2026-11-02 (blog post webp-avif-real-site-lcp, topic 13, on its lane); 2026-11-01 (blog covers, BM-396, see below); 2026-10-31 (post gate checks tool links, BM-366; brand bump to 7a2f905; blog topics 33–47 merged, see below); 2026-10-30 (all blog lanes live at 99c8c02: 11 new posts, 9 refreshed, 9 merged with 301s). The publish was held 2026-10-29 18:45 by a false live-check alarm (fixed in bin/landing-autopublish), then by one broken link in the -copy post to a merged URL (fixed in 99c8c02; the blog template check now runs seo-check). **Dates (owner, 2026-10-30):** no future dates, posts 2–3 days apart: the 11 new posts are dated 2026-10-05 → 10-30 (dd9e673, live); any October day later than a post's own date reads "in October 2026"; `tests/posts.test.mjs` now covers every 2026 post and checks dates (none after today, none shared, 2+ days apart). The blog plan is `BLOG-PLAN.md`. The master plan is in `../PLAN.md`.
+## PLAN 11 copy, owner decision D4 2026-11-03 (lane `lane/t-20261103-landing-copy-d4`, BM-42; not merged or published yet)
+- The `-copy` post is now `source/_posts/micro-saas-ideas.blade.md` (`/articles/micro-saas-ideas`; text, title, date and cover files unchanged). `/our-pricing` (empty) is deleted. Both old paths answer 301 (with and without a trailing slash) from `buffermint-pages/static/_redirects`, on the same lane branch there: **merge the pages lane first**, as with the merged posts. No page linked either old path.
+- The two agency-era testimonials (Zen Mind Maps, Shas Illuminated) are gone from the home page, with their CSS and the 4 images (this also removes the 504 KB `shas-logo.png`). "A launch plan of about 45 days" stays.
+- Tests: `tests/redirects.test.mjs` (moved pages gone from build, sitemap, feed and index.json; new path built; no page links an old path; pages rules present), `tests/home-copy.test.mjs`, `buffermint-pages/test/redirects.test.mjs`.
+
 ## Blog covers 2026-11-01 (lane `lane/t-20261031-blog-covers`, BM-396)
 - All 24 posts have a new text cover (the WebP post of 2026-11-03 got its cover when main was merged in; its three-format comparison photo moved into the body, after "What we tested", and its Sources now say "Comparison photo"; this changes an approved post, so the reviewer confirms it) from `bin/blog-cover` (ops repo): `<slug>-cover-<hash>-1200.jpeg` (1200 × 630) and `<slug>-cover-<hash>-600.jpeg`, each with a WebP copy (the hash is of the title line, so a new title gets a new URL), in the cover maker's core with Hanken Grotesk on a brand gradient. The old cover files stay in `source/assets/img/uploads/`.
 - These covers carry the headline, so no page may crop them: the post page's parallax band is gone (the whole cover sits under the title block, clear of the `h1`), the featured card shows the whole image without the curved overlay, and article and home cards use the 40:21 frame.
@@ -10,7 +15,7 @@ Last updated: 2026-11-03 (yarn audit highs fixed, BM-403, see Security); 2026-11
 - Dated 2026-11-03. Logo figures from the same-session rerun (5 runs per mode): simulated 4.60 to 2.16 s, DevTools 2.56 to 2.41 s; 95 Lighthouse runs in all. Bench medians now average the two middle values for even counts (median WebP saving 31.5%). Stages 5-7 (factcheck.md, approval.md) are the review lane's.
 - `source/_posts/webp-avif-real-site-lcp.blade.md`, topic 13, keyword `convert images to webp`; files and benchmark data in `editorial/webp-avif-real-site-lcp/`.
 - Measured: q90 WebP is larger than our JPEGs in total; format change moves post LCP 0.3-0.6 s and home LCP not at all. The old "10.3 to 7.0 s" figure did not reproduce, so don't reuse it.
-- Open: `shas-logo.png` on the home page is 504 KB, 1,467 px square, shown 32 px tall (not fixed here).
+- Open: `shas-logo.png` on the home page is 504 KB, 1,467 px square, shown 32 px tall (not fixed here). Gone with the testimonials, 2026-11-03 (D4).
 
 ## Tool-link gate leftovers 2026-11-03 (lane `lane/t-20261102-landing-tool-link-gate`, BM-402)
 - A dead `/tools/` link that the post already has on `origin/main` is now a test diagnostic ("already published, not failing"), so a hide in the local tools checkout no longer fails every landing lane. A link a lane adds, a draft being published and an open topic still fail. `origin/main` is read only for a post with a dead link; no git or an unparseable copy means strict.
@@ -99,7 +104,7 @@ The 4 Medium findings of the baseline review (`company/reviews/baseline-buffermi
 - `source/assets/build/` stays gitignored and is fully rebuilt by `yarn run prod`. The archived HK Grotesk Pro files stay in `~agent/archive/landing-hkgroteskpro/` on the VPS, unused.
 
 ## Next steps
-1. PLAN 11, needs the owner: post dates (all 2021), the `-copy` slug (option a or b), the empty `/our-pricing` page (write or delete), the copy questions.
+1. PLAN 11: the `-copy` slug, `/our-pricing` and the testimonials are done (D4, 2026-11-03, above); still open there: the About page's 2019 line, the newsletter line, Careers and the footer social links.
 2. PLAN 12B: merge `jigsaw-1.8` once the owner says so, then deploy; 14 (optional). Ship the 2026-10-27 lane (BM-45/46/47) after review.
 3. Footer: Twitter → X and Facebook links live in the brand repo chrome, not here.
 
@@ -107,7 +112,7 @@ The 4 Medium findings of the baseline review (`company/reviews/baseline-buffermi
 - Merging `jigsaw-1.8` (PLAN 12B, ready).
 - 2026-10-26 (BM-189): `deploy.sh` no longer defaults to a root login; Mac emergency path uses `agent@buffermint-vps` + `sudo bm-www` (OWNER-TODO 30 unblocked).
 - Search Console and Bing verification.
-- The 3 unanswered questions in `../COPY-REVIEW.md`: the "45 days" claim, the testimonial, and the Work-with-us target.
+- The Work-with-us target in `../COPY-REVIEW.md` (the "45 days" claim stays and the testimonials are gone, owner decision D4, 2026-11-03).
 
 ## Tests
 - `npm run prod && ./vendor/bin/jigsaw build production && npm test` (node:test over the built site).
