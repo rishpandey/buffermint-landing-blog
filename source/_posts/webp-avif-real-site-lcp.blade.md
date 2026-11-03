@@ -1,9 +1,9 @@
 ---
+featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover-7d025c-1200.jpeg
+featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover-7d025c-600.jpeg
 title: "Convert images to WebP? What it did to LCP on a real site"
 seo_description: "We tested what happens when you convert images to WebP or AVIF: 65 images, 95 Lighthouse runs. A post loaded 0.3 s faster, our home page no faster. Here's why."
 keyword: convert images to webp
-featured_image: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
-featured_thumbnail: assets/img/uploads/webp-avif-real-site-lcp-cover.jpeg
 author: Rishabh Pandey
 show_meta: true
 section: postContent
