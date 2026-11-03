@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: convert images to webp",
-  "created_at": "2026-11-02T18:12:23.658Z",
+  "created_at": "2026-11-03T03:56:10.744Z",
   "data": {
     "score": 94,
     "items": [
@@ -80,14 +80,14 @@
         "group": "keyword",
         "label": "Keyword use",
         "status": "pass",
-        "detail": "3 times in 1697 words."
+        "detail": "3 times in 1823 words."
       },
       {
         "id": "keyword.length",
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "1697 words."
+        "detail": "1823 words."
       },
       {
         "id": "links.internal",
@@ -108,7 +108,7 @@
         "group": "readability",
         "label": "Reading ease",
         "status": "pass",
-        "detail": "Flesch 84 (60+ is plain English; shorter sentences and words raise it)."
+        "detail": "Flesch 83 (60+ is plain English; shorter sentences and words raise it)."
       },
       {
         "id": "readability.sentences",
@@ -122,14 +122,14 @@
         "group": "readability",
         "label": "Paragraph length",
         "status": "warn",
-        "detail": "1 paragraph is over 120 words; split them."
+        "detail": "2 paragraphs are over 120 words; split them."
       }
     ],
     "stats": {
-      "words": 1697,
-      "sentences": 107,
-      "reading_ease": 84,
-      "reading_minutes": 7,
+      "words": 1823,
+      "sentences": 112,
+      "reading_ease": 83,
+      "reading_minutes": 8,
       "h1": 1,
       "h2": 8,
       "h3": 0,

@@ -1,18 +1,20 @@
 {
   "type": "content.fact_check",
-  "title": "Fact check: Convert images to WebP? What it did to LCP on a real site (7 to fix)",
-  "created_at": "2026-11-02T18:12:25.688Z",
+  "title": "Fact check: Convert images to WebP? What it did to LCP on a real site (9 to fix)",
+  "created_at": "2026-11-03T03:56:12.818Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "af5ce6e3da04c1f56a5fb0beae64c449",
-    "checked_at": "2026-11-02T18:12:25.688Z",
+    "content_md5": "95bc7048231bdda37c7c6ba443daebc2",
+    "checked_at": "2026-11-03T03:56:12.817Z",
     "blockers": [
-      "Unsupported claim (1.6%, 21.5%, 35.6%, 46.6%, 46.8%, 62.1%, 68.6%): add a source link or put it in the facts sheet: \"| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP \"",
+      "Unsupported claim (1.6%, 21.5%, 35.6%, 46.6%, 49.4%, 54.7%, 31.8%, 46.8%, 55.6%, 62.1%, 68.6%, 78.7%): add a source link or put it in the facts sheet: \"| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP \"",
       "Unsupported claim (41%): add a source link or put it in the facts sheet: \"Quality numbers also don't carry across formats: AVIF 50 scored higher than WebP 80 and came out 41% smaller.\"",
-      "Unsupported claim (29.4%, 16.6%): add a source link or put it in the facts sheet: \"WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files sav\"",
+      "Unsupported claim (16.6%): add a source link or put it in the facts sheet: \"WebP saved 16.6% of total bytes.\"",
+      "Unsupported claim (29.4%): add a source link or put it in the facts sheet: \"The median image saved 29.4%, which looks like a match for Google's range but isn't one, because almost nothing landed n\"",
+      "Unsupported claim (3%, 69%, 11%): add a source link or put it in the facts sheet: \"Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the lar\"",
       "Unsupported claim (49.6%, 39.5%): add a source link or put it in the facts sheet: \"AVIF saved 49.6% of total bytes, and came out 39.5% lighter than WebP.\"",
-      "Unsupported claim (41.8%): add a source link or put it in the facts sheet: \"The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.\"",
+      "Unsupported claim (41.8%): add a source link or put it in the facts sheet: \"When we tested, the site shipped 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.\"",
       "Unsupported claim (1,467): add a source link or put it in the facts sheet: \"Images came to 556 KB, and one PNG made up 504 KB of that: a logo beside a testimonial, 1,467 pixels square, displayed 3\"",
       "Unsupported claim (14 times): add a source link or put it in the facts sheet: \"- Encoding time. At the same effort setting, AVIF took a median 1.8 seconds per megapixel against 0.13 for WebP, about 1\""
     ],
@@ -134,15 +136,20 @@
     "claims": [
       {
         "kind": "number",
-        "text": "| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP 90 | 4.34 MB | −1.6% | 0.987 | 33 of 65 | | WebP 85 | 3.35 MB | 21.5% | 0.981 | 17 | | WebP 80 | 2.75 MB | 35.6% | 0.976 | 10 | | WebP 75 | 2.28 MB | 46.6% | 0.968 | 8 | | AVIF 60 | 2.27 MB | 46.8% | 0.986 | 5 | | AVIF 50 | 1.62 MB | 62.1% | 0.978 | 0 | | AVIF 45 | 1.34 MB | 68.6",
+        "text": "| Format and quality | Total size | Saved vs JPEG | Median SSIM | Images that got bigger | |---|---|---|---|---| | WebP 90 | 4.34 MB | −1.6% | 0.987 | 33 of 65 | | WebP 85 | 3.35 MB | 21.5% | 0.981 | 17 | | WebP 80 | 2.75 MB | 35.6% | 0.976 | 10 | | WebP 75 | 2.28 MB | 46.6% | 0.968 | 8 | | WebP 70 | 2.16 MB | 49.4% | 0.966 | 4 | | WebP 60 | 1.93 MB | 54.7% | 0.961 | 4 | | AVIF 70 | 2.91 MB | 31.8",
         "numbers": [
           "1.6%",
           "21.5%",
           "35.6%",
           "46.6%",
+          "49.4%",
+          "54.7%",
+          "31.8%",
           "46.8%",
+          "55.6%",
           "62.1%",
-          "68.6%"
+          "68.6%",
+          "78.7%"
         ],
         "cues": [],
         "links": [],
@@ -181,10 +188,37 @@
       },
       {
         "kind": "number",
-        "text": "WebP saved 29.4% on the median image, inside Google's range, but only 16.6% of total bytes, because our larger files saved less.",
+        "text": "WebP saved 16.6% of total bytes.",
         "numbers": [
-          "29.4%",
           "16.6%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The median image saved 29.4%, which looks like a match for Google's range but isn't one, because almost nothing landed near it.",
+        "numbers": [
+          "29.4%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Split by file size, the smallest third of images grew by about 3% at the median, the middle third saved 69%, and the largest third saved 11%.",
+        "numbers": [
+          "3%",
+          "69%",
+          "11%"
         ],
         "cues": [],
         "links": [],
@@ -209,7 +243,7 @@
       },
       {
         "kind": "number",
-        "text": "The site now ships 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.",
+        "text": "When we tested, the site shipped 51 WebP copies, 3.78 MB down to 2.20 MB, or 41.8% lighter.",
         "numbers": [
           "41.8%"
         ],
