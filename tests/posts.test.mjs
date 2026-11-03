@@ -83,7 +83,7 @@ export function checkPost(post, all = []) {
   const prose = `${title}\n${desc}\n${body}`
     .replace(/```[\s\S]*?```|`[^`\n]*`/g, ' ')
     .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/\bhref\s*=\s*["'][^"']*["']/gi, '')
+    .replace(/\bhref\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'>]+)/gi, '') // as links() reads it
     .replace(/https?:\/\/\S+/g, '');
   for (const [re, what] of PLACEHOLDERS) if (re.test(prose)) problems.push(`placeholder text: ${what}`);
 

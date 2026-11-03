@@ -73,14 +73,15 @@ const sitePathOf = (url) => {
   try { return new URL(url, 'https://buffermint.com').pathname; } catch { return ''; }
 };
 
-// Written paths, site-relative or on buffermint.com (/assets/tools/, ~/tools/, ?u=/tools/ and example.com/tools/
+// Written paths, site-relative or on buffermint.com in any case and with a port (/assets/tools/, ~/tools/, ?u=/tools/ and example.com/tools/
 // don't count), plus every internal link the shared links() reads (unquoted href, an all-caps host, :443). A
 // sentence's full stop is not part of the path. Each path once, as segments.
 function toolLinks(text) {
-  const written = [...text.matchAll(/(?:(?<![\w.-])(?:www\.)?[Bb]uffer[Mm]int\.com|(?<![\w./~=-]))(\/tools\/[\w./-]*)/g)].map((m) => m[1]);
-  const linked = links(text).filter(isInternal).map(sitePathOf);
+  const written = [...text.matchAll(/(?:(?<![\w.-])(?:[Ww]{3}\.)?[Bb][Uu][Ff][Ff][Ee][Rr][Mm][Ii][Nn][Tt]\.[Cc][Oo][Mm](?::\d+)?|(?<![\w./~=-]))(\/tools\/[\w./-]*)/g)].map((m) => m[1]);
+  const linked = links(text).filter(isInternal);
   const seen = new Set();
-  return [...written, ...linked].map(toolPath).filter((path) => {
+  // Both through URL, so /tools/pdf/../dev/x/ reads once, as the browser resolves it
+  return [...written, ...linked].map(sitePathOf).map(toolPath).filter((path) => {
     if (!path || seen.has(path.join('/'))) return false;
     seen.add(path.join('/'));
     return true;
@@ -104,16 +105,21 @@ function deadReason(path, { categories, unbuilt, hidden, workflows }) {
   return hidden.has(slug) ? 'is hidden' : null;
 }
 
-// sources: [{ name, text, published? }]. published: the text of the version already on origin/main, if any.
+// sources: [{ name, text, published? }]. published() gives the text of the version already on origin/main, or null;
+// it is asked only for a post with a dead link (one git call each).
 // A dead link that the published version has too is a diagnostic: the catalogue moved under a live post, and failing
 // every landing lane over it would hold the queue. A link a lane adds, a draft's and a topic's still fail.
 function toolLinkReport(sources, catalogue) {
   const report = { failures: new Set(), diagnostics: new Set() };
   for (const { name, text, published } of sources) {
-    const old = new Set(published == null ? [] : toolLinks(published).map((path) => path.join('/')));
+    let old;
     for (const path of toolLinks(text)) {
       const reason = deadReason(path, catalogue);
       if (!reason) continue;
+      if (!old) {
+        const before = published?.() ?? null;
+        old = new Set(before == null ? [] : toolLinks(before).map((p) => p.join('/')));
+      }
       const key = path.join('/');
       (old.has(key) ? report.diagnostics : report.failures).add(`${name}: /tools/${key}${key ? '/' : ''} ${reason}`);
     }
@@ -127,10 +133,10 @@ const postSources = (dir) => readdirSync(dir).filter((f) => f.endsWith('.md')).m
   text: readFileSync(join(dir, name), 'utf8'),
 }));
 // A post's code samples and comments aren't links: a post about an API can show `POST /tools/call`. A topic's
-// backticks can be one. A fence opens and closes only at the start of a line (up to 3 spaces in, as CommonMark
-// says); an unclosed one runs to the end, as it renders.
+// backticks can be one. A fence opens and closes only at the start of a line, after nothing but indentation or a
+// blockquote's > (a fence in a list item or a quote is still a fence); an unclosed one runs to the end, as it renders.
 const withoutCode = (text) => text
-  .replace(/^ {0,3}((`|~)\2{2,})[^\n]*$[\s\S]*?(?:^ {0,3}\1\2*[ \t]*$|(?![\s\S]))/gm, '')
+  .replace(/^[ \t>]*((`|~)\2{2,})[^\n]*$[\s\S]*?(?:^[ \t>]*\1\2*[ \t]*$|(?![\s\S]))/gm, '')
   .replace(/<pre[\s\S]*?<\/pre>|<code[\s\S]*?<\/code>|<!--[\s\S]*?-->|`[^`\n]*`/g, '');
 // The body of a live post as the site shows it; null for a draft, which answers to this gate once it is published
 const liveText = (text, name) => {
@@ -145,11 +151,15 @@ const gitPublished = (name) => {
     return null;
   }
 };
+// The live body of the origin/main copy; null for a draft there, or a copy that doesn't parse (then strict)
+const publishedLive = (text, name) => {
+  if (text == null) return null;
+  try { return liveText(text, name); } catch { return null; }
+};
 const livePostSources = (dir, published = gitPublished) => postSources(dir).flatMap(({ name, text }) => {
   const live = liveText(text, name);
   if (live == null) return [];
-  const old = published(name);
-  return [{ name, text: live, published: old == null ? null : liveText(old, name) }];
+  return [{ name, text: live, published: () => publishedLive(published(name), name) }];
 });
 const topicSources = (openTopics) => openTopics.map((topic) => ({ name: `topic ${topic.number}`, text: topic.section }));
 
@@ -228,8 +238,9 @@ test('toolLinks finds site and buffermint.com links, and nothing else', () => {
 
 test('toolLinks reads what the shared links() reads: an all-caps host, :443, an unquoted href, and keeps a doubled slash', () => {
   const text = '[a](HTTPS://WWW.BUFFERMINT.COM/tools/pdf/caps/) [b](https://buffermint.com:443/tools/pdf/port/?x#y) <a href=/tools/pdf/bare>c</a> '
-    + '[d](/tools/pdf//gone/) [e](https://evil.example/tools/pdf/no/) <a href="//cdn.x/tools/pdf/no/">f</a>';
-  assert.deepEqual(toolLinks(text).map((p) => p.join('/')), ['pdf//gone', 'pdf/caps', 'pdf/port', 'pdf/bare']);
+    + '[d](/tools/pdf//gone/) [e](https://evil.example/tools/pdf/no/) <a href="//cdn.x/tools/pdf/no/">f</a> [g](/tools/pdf/../dev/up/) '
+    + 'plain HTTPS://BUFFERMINT.COM/tools/dev/shout/ and https://buffermint.com:443/tools/dev/bare-port/';
+  assert.deepEqual(toolLinks(text).map((p) => p.join('/')).sort(), ['dev/bare-port', 'dev/shout', 'dev/up', 'pdf//gone', 'pdf/bare', 'pdf/caps', 'pdf/port']);
 });
 
 test('withoutCode drops a post\'s code samples, so their paths are not links', () => {
@@ -242,6 +253,8 @@ test('withoutCode: a fence counts only at the start of a line, and an unclosed o
   assert.deepEqual(toolLinks(withoutCode(midLine)).map((p) => p.join('/')), ['dev/one', 'dev/two']);
   const nested = '````md\n```\n/tools/in/side/\n```\n````\n[c](/tools/dev/three/)\n   ~~~\n/tools/x/y/\n   ~~~~\n[d](/tools/dev/four/)\n```\n/tools/open/end/';
   assert.deepEqual(toolLinks(withoutCode(nested)).map((p) => p.join('/')), ['dev/three', 'dev/four']);
+  const inside = '- item\n\n    ```\n    curl /tools/call\n    ```\n\n> ```\n> GET /tools/list\n> ```\n[e](/tools/dev/five/)';
+  assert.deepEqual(toolLinks(withoutCode(inside)).map((p) => p.join('/')), ['dev/five'], 'a fence in a list item or a quote');
 });
 
 test('toolLinkProblems fails a fixture post and topic with dead links, and passes live ones', () => {
@@ -360,6 +373,16 @@ test('checkToolLinks skips with no checkout, fails a broken one, and covers live
       ],
       diagnostics: ['dead.blade.md: /tools/pdf/gone/ is not in the catalogue'],
     });
+
+    // The origin/main copy is only read for a post with a dead link, and one that doesn't parse means strict, not a crash
+    post('odd.blade.md', '', '[x](/tools/pdf/odd/)');
+    const asked = [];
+    const report = checkToolLinks(tools, posts, [], (name) => {
+      asked.push(name);
+      return name === 'odd.blade.md' ? 'no front matter here [x](/tools/pdf/odd/)' : onMain[name] ?? null;
+    });
+    assert.deepEqual(asked.sort(), ['dead.blade.md', 'draft.blade.md', 'odd.blade.md'], 'live.blade.md has no dead link');
+    assert.ok(report.failures.includes('odd.blade.md: /tools/pdf/odd/ is not in the catalogue'));
   } finally {
     rmSync(dir, { recursive: true });
   }
@@ -372,6 +395,7 @@ test('gitPublished reads a post as it is on origin/main, and null for one that i
   } catch {
     return t.skip('no git or no origin/main here: every post problem fails, which is the strict side');
   }
+  if (!onMain.length) return t.skip('no posts on origin/main');
   const name = onMain[0].split('/').pop();
   assert.match(gitPublished(name), /^---\r?\n/);
   assert.equal(gitPublished('not-a-post-on-main.blade.md'), null);
