@@ -65,3 +65,20 @@ export function siteOf(url) {
 export function hostOf(url) {
   try { return new URL(url).hostname.toLowerCase().replace(/\.$/, '') || null; } catch { return null; }
 }
+
+export const OUR_HOSTS = /^(www\.)?buffermint\.com$/i;
+
+// Markdown and HTML links, as written: inline, reference-style definitions, autolinks and href (quoted or not)
+export function links(text) {
+  text = text.replace(/!\[[^\]]*\]\([^)]*\)/g, ' '); // images are not links
+  const out = [];
+  for (const m of text.matchAll(/\]\(\s*<?([^)\s>]+)>?(?:\s+"[^"]*")?\s*\)/g)) out.push(m[1]);
+  for (const m of text.matchAll(/\bhref\s*=\s*(?:"([^"]+)"|'([^']+)'|([^\s"'>]+))/gi)) out.push(m[1] ?? m[2] ?? m[3]);
+  for (const m of text.matchAll(/^\s*\[[^\]]+\]:\s*(\S+)/gm)) out.push(m[1]); // reference-style definitions
+  for (const m of text.matchAll(/<(https?:\/\/[^>\s]+)>/g)) out.push(m[1]); // autolinks
+  return out;
+}
+
+export const isAbsolute = (u) => /^https?:\/\//i.test(u);
+export const isExternal = (u) => isAbsolute(u) && hostOf(u) && !OUR_HOSTS.test(hostOf(u));
+export const isInternal = (u) => (u.startsWith('/') && !u.startsWith('//')) || (isAbsolute(u) && OUR_HOSTS.test(hostOf(u) ?? ''));

@@ -6,13 +6,12 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync, readdirSync } from 'node:fs';
 import { join } from 'node:path';
-import { hostOf, parsePost, root, siteOf } from './helpers.mjs';
+import { isExternal, isInternal, links, parsePost, root, siteOf } from './helpers.mjs';
 
 const POSTS = join(root, 'source/_posts');
 // The relaunched blog's posts start in October 2026 (backdated as far as 2026-10-05 on the owner's word, 2026-10-30);
 // every older post is from 2021.
 export const CUTOFF = '2026-01-01';
-const OUR_HOSTS = /^(www\.)?buffermint\.com$/i;
 
 const day = (v) => (v ? String(v).slice(0, 10) : '');
 const isDraft = ({ meta }) => meta.published === 'false';
@@ -24,21 +23,6 @@ function sourcesSection(body) {
   const m = body.match(/^##[ \t]+Sources[ \t]*\r?\n([\s\S]*?)(?=^#{1,2}[ \t]|(?![\s\S]))/m);
   return m ? m[1] : null;
 }
-
-// Markdown and HTML links, as written
-function links(text) {
-  text = text.replace(/!\[[^\]]*\]\([^)]*\)/g, ' '); // images are not links
-  const out = [];
-  for (const m of text.matchAll(/\]\(\s*<?([^)\s>]+)>?(?:\s+"[^"]*")?\s*\)/g)) out.push(m[1]);
-  for (const m of text.matchAll(/\bhref\s*=\s*["']([^"']+)["']/gi)) out.push(m[1]);
-  for (const m of text.matchAll(/^\s*\[[^\]]+\]:\s*(\S+)/gm)) out.push(m[1]); // reference-style definitions
-  for (const m of text.matchAll(/<(https?:\/\/[^>\s]+)>/g)) out.push(m[1]); // autolinks
-  return out;
-}
-
-const isAbsolute = (u) => /^https?:\/\//i.test(u);
-const isExternal = (u) => isAbsolute(u) && hostOf(u) && !OUR_HOSTS.test(hostOf(u));
-const isInternal = (u) => (u.startsWith('/') && !u.startsWith('//')) || (isAbsolute(u) && OUR_HOSTS.test(hostOf(u) ?? ''));
 
 // Readable words: no code, tags, Blade directives, link targets or markdown syntax
 export function bodyWords(body) {
@@ -99,7 +83,7 @@ export function checkPost(post, all = []) {
   const prose = `${title}\n${desc}\n${body}`
     .replace(/```[\s\S]*?```|`[^`\n]*`/g, ' ')
     .replace(/!?\[([^\]]*)\]\([^)]*\)/g, '$1')
-    .replace(/\bhref\s*=\s*["'][^"']*["']/gi, '')
+    .replace(/\bhref\s*=\s*(?:"[^"]*"|'[^']*'|[^\s"'>]+)/gi, '') // as links() reads it
     .replace(/https?:\/\/\S+/g, '');
   for (const [re, what] of PLACEHOLDERS) if (re.test(prose)) problems.push(`placeholder text: ${what}`);
 
@@ -263,6 +247,8 @@ test('the checker: missing Sources, duplicate keyword, scope', () => {
 test('the checker: real link text, code samples and odd URLs are not problems', () => {
   const text = good.body.replace('## Sources', 'Add the [Add page numbers](/tools/pdf/add-page-numbers/) tool to [your own invoice](/tools/everyday/invoice-generator/). The release is coming soon, says the vendor.\n\n```js\n// TODO: not a placeholder, a code sample\n```\n\nA broken link [a](https://) in the text.\n\n## Sources');
   assert.deepEqual(checkPost({ ...good, body: text }, [good]), []);
+  const unquoted = good.body.replace('## Sources', 'See <a href=/tools/dev/notes/?tag=TODO>the notes tool</a>.\n\n## Sources');
+  assert.deepEqual(checkPost({ ...good, body: unquoted }, [good]), [], 'an unquoted href is a link target, not prose');
   assert.ok(checkPost({ ...good, body: good.body + '\n[insert chart here]\n' }, [good]).includes('placeholder text: [insert …] slot'));
   assert.deepEqual(checkPost({ ...good, body: good.body.replace('## Sources', '## Sources\n- [bad](https://)') }, [good]), [], 'a malformed URL is ignored, not a crash');
 });
