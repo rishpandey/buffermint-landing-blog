@@ -1,0 +1,14 @@
+page	build	n	score	lcp_ms	lcp_range	fcp_ms	tbt_ms	cls	si_ms	total_kb	js_kb	css_kb	img_kb	font_kb	req	mainthread_ms	lcp_element
+/	b0-start	3	81	2485	2437-2579	2485	493	0.000	2492	1124	172	49	862	35	22	1703	
+/	b3-vendor	3	88	2529	2458-2555	2529	270	0.000	2536	718	80	40	556	35	19	1141	
+/	b5-no-vue	3	94	2495	1938-2524	2495	62	0.000	2502	682	45	40	556	35	19	915	main#app > section.site-hero > div.bm-container > p.site-lead
+/	b6-main	3	95	2367	2346-2377	2367	53	0.000	2373	133	45	40	7	35	15	581	main#app > section.site-hero > div.bm-container > p.site-lead
+/about-us/	b0-start	3	85	2202	2029-2223	2092	456	0.000	2146	640	172	49	313	100	21	1359	
+/about-us/	b3-vendor	3	92	2209	2206-2242	2107	229	0.000	2157	322	81	41	94	100	20	903	
+/about-us/	b5-no-vue	3	96	2212	2198-2226	2100	71	0.000	2159	286	45	41	94	100	20	634	div#post-container > div.row > div#post-content > p
+/about-us/	b6-main	3	96	2240	2197-2308	2142	53	0.000	2191	223	46	41	31	100	20	675	div#post-container > div.row > div#post-content > p
+post	b0-start	3	63	6363	6299-6451	2069	521	0.000	2907	960	172	49	694	35	24	2586	(cut)
+post	b3-vendor	3	78	4136	4132-4201	2104	305	0.000	2571	383	81	41	218	35	21	2089	(cut)
+post	b5-no-vue	3	86	3815	3811-3856	2184	53	0.000	2755	284	45	41	154	35	21	1827	(cut)
+post	b6-main	3	92	3120	3117-3143	2084	49	0.000	2394	160	46	41	29	35	21	650	(cut)
+# Lighthouse 13.5.0, Chrome/156.0.0.0, 36 runs, benchmarkIndex median 1657 (range 1439.5-1782)
