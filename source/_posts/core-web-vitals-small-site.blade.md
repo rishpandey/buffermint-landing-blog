@@ -1,4 +1,6 @@
 ---
+featured_image: assets/img/uploads/core-web-vitals-small-site-cover-2d4a31-1200.jpeg
+featured_thumbnail: assets/img/uploads/core-web-vitals-small-site-cover-2d4a31-600.jpeg
 title: "Core Web Vitals on a small site: what moved ours, measured"
 seo_description: "We rebuilt our site at seven points in its history and ran Lighthouse 141 times. What moved our Core Web Vitals, what didn't, and which numbers to trust."
 keyword: core web vitals
