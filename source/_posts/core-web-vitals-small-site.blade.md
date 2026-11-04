@@ -12,11 +12,11 @@ date: 2026-11-05
 extends: _layouts.post
 ---
 
-Lighthouse told us our home page's Largest Contentful Paint (LCP) fell from 6.1 seconds to 1.9 in eleven days. Run a second way, with the slow connection applied during the load, the same pages went from 2.5 seconds to 2.4. Our home page barely changed. What we'd really improved was a blog post, whose LCP fell by half in both modes, and the JavaScript that blocked every page, which both modes saw drop to almost nothing. The third vital, layout shift, never needed fixing.
+Lighthouse told us our home page's Largest Contentful Paint (LCP), one of the three Core Web Vitals, fell from 6.1 seconds to 1.9 in eleven days. Run a second way, with the slow connection applied during the load, the same page went from 2.49 seconds to 2.37. What we had really sped up was a blog post, whose LCP fell by half in both modes, and the JavaScript that blocked every page, which both modes saw drop to almost nothing. The third vital, layout shift, never needed fixing.
 
 We know which change did what because we rebuilt buffermint.com at seven points in its git history, served each copy the same way, and ran Lighthouse 141 times. This post gives the numbers, shows which ones a small site can trust, and ends with the order we'd fix things in next time.
 
-## The three vitals, and the score that isn't one of them
+## The three Core Web Vitals, and the score that isn't one of them
 
 Google's [Core Web Vitals](https://web.dev/articles/vitals) are three measurements of real visits:
 
@@ -81,9 +81,9 @@ Median CLS was 0 to 0.003 everywhere, in both modes, and no single run went abov
 
 ## Where the two modes disagree: text LCP
 
-On the home page and the About page, the largest element is text. With DevTools throttling, that text appeared with the first paint, at 2.2 to 2.5 seconds, in every build. Nothing we changed moved it, because nothing we changed was in its way.
+On the home page and the About page, the largest element is text. With DevTools throttling, that text appeared with the first paint, at 2.2 to 2.5 seconds, in every build. Nothing we changed moved it.
 
-Simulated throttling put the home page's LCP at 4.6 to 6.1 seconds for six builds, and then 1.86 s once build 7 deleted an old testimonial section. In [our WebP test](/articles/webp-avif-real-site-lcp/) we traced that to one 504 KB PNG in the section, a client logo shown 32 pixels tall, and saw the two modes disagree about it then too. The simulation estimates a slow load from a fast one, and [Lighthouse's throttling docs](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) say it can be inaccurate. We didn't trace its reasoning. What we can say is that a large file on the page moved the simulated LCP of a paragraph by seconds, and the applied-throttling LCP of the same paragraph by almost nothing.
+Simulated throttling put the home page's LCP at 4.6 to 6.1 seconds for six builds, and then 1.86 s once build 7 deleted an old testimonial section. In [our WebP test](/articles/webp-avif-real-site-lcp/) we traced that to one 504 KB PNG in the section, a logo beside a testimonial shown 32 pixels tall, and saw the two modes disagree about it then too. The simulation estimates a slow load from a fast one, and [Lighthouse's throttling docs](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) say it can be inaccurate. We didn't trace its reasoning. What we can say is that a large file on the page moved the simulated LCP of a paragraph by seconds, and the applied-throttling LCP of the same paragraph by almost nothing.
 
 Deleting that section was still worth doing: it took the home page from 682 KB to 144 KB, which a visitor on a metered connection pays for. It just didn't make the headline appear sooner. If your lab LCP element is text and your simulated LCP is far behind your first paint, check it in DevTools mode before you rebuild anything.
 
@@ -93,36 +93,40 @@ The blog post's LCP element was a photo, and both modes say it improved a lot: 5
 
 That photo was a parallax background. A script set it after the page loaded, so the browser couldn't start fetching it early. It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP. In simulated mode the cap took 1.26 s off (it also shrank a second image on the page) and WebP 0.30 s. Today the cover is an ordinary image element of 21 KB.
 
-The WebP build also took 0.47 s off the post without touching that photo, which was still a JPEG then. Two card images further down stopped loading during the test, about 180 KB that the photo no longer had to share the connection with. Both already had `loading="lazy"`; the only change to their tags was the `width` and `height` we added. [web.dev explains why that matters](https://web.dev/articles/browser-level-image-lazy-loading): an image with no dimensions starts out as 0×0 pixels, so a whole row of them can look as if it fits on screen, and the browser may load them all. With real dimensions, the cards took up their space and fell outside the range Chrome loads ahead. Lazy loading without dimensions can quietly do nothing.
+The WebP build also took 0.47 s off the post without touching that photo, which was still a JPEG then. Two card images further down stopped loading during the test, about 180 KB that the photo no longer had to share the connection with.
+
+Both already had `loading="lazy"`; the only change to their tags was the `width` and `height` we added. [web.dev explains why that matters](https://web.dev/articles/browser-level-image-lazy-loading): an image with no dimensions starts out as 0×0 pixels, so a whole row of them can look as if it fits on screen, and the browser may load them all. With real dimensions, the cards took up their space and fell outside the range Chrome loads ahead. Lazy loading without dimensions can quietly do nothing.
 
 ## TBT: the gain both modes saw
 
-Between the start and build 6, TBT fell from 456 to 521 ms to about 50 ms in DevTools mode on all three pages, and from 146 to 361 ms to under 10 ms simulated. The simulated runs show where it happened: the image builds barely touched TBT, while dropping 374 KB of unused libraries (build 4) and then Vue (build 6) took almost all of it. The full Vue build had been compiling every page in the browser on each load, though only the blog search box used it. In DevTools mode, main-thread work on the post fell from 2.59 s at the start to 1.83 s at build 6.
+Between the start and build 6, TBT fell from 456 to 521 ms to about 50 ms in DevTools mode on all three pages, and from 146 to 361 ms to under 10 ms simulated. The simulated runs show where it happened. In the image builds TBT bounced around without a trend (175 to 361 ms on the post); it fell for good when we dropped 374 KB of unused libraries (build 4) and then Vue (build 6).
 
-This is the change most likely to matter for real visitors, as pages that answer taps sooner, which is INP. It's also the change our lab test can't fully show, because INP needs real taps. In the score it was worth the most: in DevTools mode the home page went from 81 to 94 between the start and build 6 with its LCP, first paint and layout shift all flat, so the rise came from TBT alone.
+The full Vue build had been compiling every page in the browser on each load, though only the blog search box used it. In DevTools mode, main-thread work on the post fell from 2.59 s at the start to 1.83 s at build 6.
+
+This is the change most likely to matter for real visitors: pages that answer taps sooner, which is what INP measures. It's also the change our lab test can't fully show, because INP needs real taps. In the score it was worth the most: in DevTools mode the home page went from 81 to 94 between the start and build 6 with its LCP, first paint and layout shift all flat, so the rise came from TBT alone.
 
 ## What didn't move
 
-- **Text LCP**, in DevTools mode, as above. Simulated First Contentful Paint also stayed at 1.35 s on the home page and the post, and 1.65 s on About, in all seven builds. What blocks our first paint is our stylesheet and fonts, and none of these changes touched them.
+- **Text LCP**, in DevTools mode, as above. Simulated First Contentful Paint also stayed at 1.35 s on the home page and the post, and 1.65 s on About, in all seven builds. That held even when build 4 cut the stylesheets from 49 to 40 KB transferred. We haven't yet traced what holds the first paint back.
 - **CLS** was never a problem in the lab. Setting `width` and `height` on images is still right, because it prevents shifts a visitor sees while scrolling, but it didn't change a lab number for us.
 
 ## Does any of this matter for search?
 
 Some, but less than relevance. Google's page experience documentation says Core Web Vitals ["are used by our ranking systems"](https://developers.google.com/search/docs/appearance/page-experience), and in the same document that it shows the most relevant content "even if the page experience is sub-par". It adds that chasing a perfect score just for SEO "may not be the best use of your time". And for a site with no field data, Google has no Core Web Vitals data of its own to judge you on. Fix them for the visitors who arrive.
 
-A failing grade is common. [The 2025 Web Almanac](https://almanac.httparchive.org/en/2025/performance) found 48% of mobile sites passed all three vitals in July 2025. LCP was the one most often missed: 62% had good LCP, 77% good INP and 81% good CLS. It put median mobile TBT at 1,916 ms, up 58% on the year before. Our worst build had a TBT of 521 ms in DevTools mode.
+A failing grade is common. [The 2025 Web Almanac](https://almanac.httparchive.org/en/2025/performance) found 48% of mobile sites passed all three vitals in July 2025. LCP was the one most often missed: [62% had good LCP, 77% good INP and 81% good CLS](https://almanac.httparchive.org/en/2025/performance). The same chapter put [median mobile TBT at 1,916 ms](https://almanac.httparchive.org/en/2025/performance), up 58% on the year before. Our worst build had a TBT of 521 ms in DevTools mode.
 
 ## The order we'd fix things in next time
 
 1. **Find your LCP element.** Lighthouse and PageSpeed Insights both name it. If it's text, images won't speed it up. If it's an image, its size and how early it starts loading are most of your LCP.
-2. **Sort the page's requests by size and open the biggest.** Our heaviest file was a logo nobody had looked at in years. If an image is far larger than it's shown, [resize it](/tools/photo/resize-image/) before you think about formats.
+2. **Sort the page's requests by size and open the biggest.** Our heaviest file was a logo that had sat in our repository since 2021. If an image is far larger than its displayed size, [resize it](/tools/photo/resize-image/) before you think about formats.
 3. **Make the LCP image small and load it early.** Use an ordinary image element with `width` and `height`, not a background a script sets. Then compress it; our [image compressor](/tools/photo/image-compress/) runs in the browser.
 4. **Stop loading what's below the fold.** Lazy-load images further down, with `width` and `height` set, so they don't compete with the LCP element.
-5. **Delete JavaScript you don't use** before you optimize what you keep. It's the main lever on TBT, and so the best lab signal you have for INP. A [JavaScript minifier](/tools/dev/js-minifier/) or a [CSS and HTML minifier](/tools/dev/minifier/) helps once the dead code is gone.
+5. **Delete JavaScript you don't use** before you optimize what you keep. It's the main lever on TBT, and TBT is how the lab approximates INP. A [JavaScript minifier](/tools/dev/js-minifier/) or a [CSS and HTML minifier](/tools/dev/minifier/) helps once the dead code is gone.
 6. **Run each test five times, and check big wins in DevTools mode too.** Compare versions of your own page, not one score against a target.
 7. **Switch to field data when you get it.** Once PageSpeed Insights shows real-user data for your site, that is the number Google uses.
 
-Our own next job is the first paint, the one number neither mode saw move.
+Our own next job is the first paint, the one number that barely moved in either mode.
 
 ## Sources
 

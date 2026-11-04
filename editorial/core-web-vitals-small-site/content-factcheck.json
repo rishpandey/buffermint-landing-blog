@@ -1,0 +1,309 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: Core Web Vitals on a small site: what moved ours, measured (4 to fix)",
+  "created_at": "2026-11-04T04:58:33.762Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "a0bc3e0e6673309b1dfb90fca7fade32",
+    "checked_at": "2026-11-04T04:58:33.761Z",
+    "blockers": [
+      "Unsupported claim (141 times): add a source link or put it in the facts sheet: \"We know which change did what because we rebuilt buffermint.com at seven points in its git history, served each copy the\"",
+      "Unsupported claim (1,600): add a source link or put it in the facts sheet: \"Image cap (24 Oct) | uploaded images resized to at most 1,600 px wide | | 3.\"",
+      "Unsupported claim (1,124): add a source link or put it in the facts sheet: \"Start | 72, 6.08 s, 295 ms | 87, 3.78 s, 146 ms | 71, 5.48 s, 361 ms | 1,124 KB | | 2.\"",
+      "Unsupported claim (1,600): add a source link or put it in the facts sheet: \"It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP.\""
+    ],
+    "warnings": [
+      "Superlative without a source (\"the best\"): can you back it up? \"It adds that chasing a perfect score just for SEO \"may not be the best use of your time\".\""
+    ],
+    "links": [
+      {
+        "url": "https://web.dev/articles/vitals",
+        "text": "Core Web Vitals",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/blog/inp-cwv-march-12",
+        "text": "replaced First Input Delay",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring",
+        "text": "built from five lab metrics",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/tbt",
+        "text": "web.dev's TBT page",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://developer.chrome.com/docs/crux/methodology",
+        "text": "Chrome UX Report",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://developer.chrome.com/docs/crux/api",
+        "text": "28-day window",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/inp",
+        "text": "web.dev's INP guide",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/lab-and-field-data-differences",
+        "text": "as web.dev puts it",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.debugbear.com/blog/lighthouse-lab-data-not-matching-field-data",
+        "text": "DebugBear notes",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://github.com/GoogleChrome/lighthouse/blob/main/docs/variability.md",
+        "text": "Lighthouse's variability guide",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/articles/webp-avif-real-site-lcp/",
+        "text": "our WebP test",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md",
+        "text": "Lighthouse's throttling docs",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://web.dev/articles/browser-level-image-lazy-loading",
+        "text": "web.dev explains why that matters",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://developers.google.com/search/docs/appearance/page-experience",
+        "text": "\"are used by our ranking systems\"",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://almanac.httparchive.org/en/2025/performance",
+        "text": "The 2025 Web Almanac",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/photo/resize-image/",
+        "text": "resize it",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/photo/image-compress/",
+        "text": "image compressor",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/dev/js-minifier/",
+        "text": "JavaScript minifier",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/dev/minifier/",
+        "text": "CSS and HTML minifier",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "We know which change did what because we rebuilt buffermint.com at seven points in its git history, served each copy the same way, and ran Lighthouse 141 times.",
+        "numbers": [
+          "141 times"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Since Lighthouse 10 it has been built from five lab metrics: Total Blocking Time (TBT) 30%, LCP 25%, CLS 25%, First Contentful Paint 10% and Speed Index 10%.",
+        "numbers": [
+          "30%",
+          "25%",
+          "25%",
+          "10%",
+          "10%"
+        ],
+        "cues": [],
+        "links": [
+          "https://developer.chrome.com/docs/lighthouse/performance/performance-scoring"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Image cap (24 Oct) | uploaded images resized to at most 1,600 px wide | | 3.",
+        "numbers": [
+          "1,600"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Start | 72, 6.08 s, 295 ms | 87, 3.78 s, 146 ms | 71, 5.48 s, 361 ms | 1,124 KB | | 2.",
+        "numbers": [
+          "1,124"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP.",
+        "numbers": [
+          "1,600"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "superlative",
+        "text": "It adds that chasing a perfect score just for SEO \"may not be the best use of your time\".",
+        "numbers": [],
+        "cues": [
+          "the best"
+        ],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "The 2025 Web Almanac found 48% of mobile sites passed all three vitals in July 2025.",
+        "numbers": [
+          "48%"
+        ],
+        "cues": [],
+        "links": [
+          "https://almanac.httparchive.org/en/2025/performance"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "LCP was the one most often missed: 62% had good LCP, 77% good INP and 81% good CLS.",
+        "numbers": [
+          "62%",
+          "77%",
+          "81%"
+        ],
+        "cues": [],
+        "links": [
+          "https://almanac.httparchive.org/en/2025/performance"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "The same chapter put median mobile TBT at 1,916 ms, up 58% on the year before.",
+        "numbers": [
+          "1,916",
+          "58%"
+        ],
+        "cues": [],
+        "links": [
+          "https://almanac.httparchive.org/en/2025/performance"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      }
+    ],
+    "guard": []
+  }
+}

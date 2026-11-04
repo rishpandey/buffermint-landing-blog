@@ -189,7 +189,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** our before/after log: vendor.js 479 → 104 KB, Vue removed (main.js 123,549 → 18,741 B), Lighthouse home 65 → 67, post 63 → 68, About 66 → 76. Those Lighthouse runs (2026-10-25) predate the Vue removal (2026-10-28), so rerun Lighthouse before crediting it. Include what didn't help. Every number is from STATUS.md with its date and tool version.
 - **Sources:** web.dev Core Web Vitals, the Chrome UX Report docs, the Lighthouse scoring docs, HTTP Archive Web Almanac (performance chapter), Google Search Central on page experience.
 - **Internal links:** /tools/dev/minifier/, /tools/dev/js-minifier/, /tools/photo/image-compress/, topic 13.
-- **Status:** writing (lane t-20261104-blog-post, 2026-11-04; topic 12 still blocked on logged-in accounts)
+- **Status:** published 2026-11-05 (dated; written 2026-11-04 by lane t-20261104-blog-post, goes live after its review merges) → `/articles/core-web-vitals-small-site/` (7 builds from git history, 105 simulated + 36 DevTools Lighthouse 13.5.0 runs: the image-LCP post fell by half in both modes (DevTools 6.36 → 3.12 s); text LCP on home/About flat in DevTools mode (2.49 → 2.37 s) while simulated said 6.1 → 1.9 s; TBT to ~50 ms from the vendor trim and Vue removal; width/height made lazy card images actually lazy; CLS never an issue)
 
 ### 15. Cookieless analytics for a small SaaS: GoatCounter vs Plausible vs Umami · `next`
 - **Keyword:** `cookieless analytics` (level 4), `plausible analytics` (level 4; HN 44).
