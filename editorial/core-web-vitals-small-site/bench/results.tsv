@@ -1,0 +1,23 @@
+page	build	n	score	lcp_ms	lcp_range	fcp_ms	tbt_ms	cls	si_ms	total_kb	js_kb	css_kb	img_kb	font_kb	req	mainthread_ms	lcp_element
+/	b0-start	5	72	6079	6078-6099	1353	295	0.000	1353	1124	172	49	862	35	22	1211	div#app > section.site-hero > div.bm-container > p.site-lead
+/	b1-cap1600	5	71	5704	5701-5723	1353	330	0.000	1353	998	172	49	736	35	22	1404	div#app > section.site-hero > div.bm-container > p.site-lead
+/	b2-webp	5	75	5180	5178-5255	1353	257	0.000	1353	818	172	49	556	35	19	1215	main#app > section.site-hero > div.bm-container > p.site-lead
+/	b3-vendor	5	79	4731	4731-4760	1353	210	0.000	1353	718	80	40	556	35	19	940	main#app > section.site-hero > div.bm-container > p.site-lead
+/	b4-covers-webp	5	79	4733	4731-4759	1354	220	0.000	1354	718	80	40	556	35	19	850	main#app > section.site-hero > div.bm-container > p.site-lead
+/	b5-no-vue	5	84	4581	4507-4599	1353	2	0.000	1353	682	45	40	556	35	19	688	main#app > section.site-hero > div.bm-container > p.site-lead
+/	b6-main	5	99	1861	1846-1879	1353	0	0.000	1353	144	45	40	18	35	16	652	main#app > section.site-hero > div.bm-container > p.site-lead
+/about-us/	b0-start	5	87	3778	3633-3806	1654	146	0.000	1654	640	172	49	313	100	21	1076	div#post-container > div.row > div#post-content > p
+/about-us/	b1-cap1600	5	87	3714	3639-3803	1654	153	0.000	1654	514	172	49	187	100	21	1182	div#post-container > div.row > div#post-content > p
+/about-us/	b2-webp	5	89	3554	3509-3601	1652	139	0.000	1652	431	172	49	104	100	21	1126	div#post-container > div.row > div#post-content > p
+/about-us/	b3-vendor	5	96	2659	2640-2664	1653	83	0.000	1653	331	81	41	104	100	21	814	div#post-container > div.row > div#post-content > p
+/about-us/	b4-covers-webp	5	96	2658	2648-2678	1653	81	0.000	1653	331	81	41	104	100	21	826	div#post-container > div.row > div#post-content > p
+/about-us/	b5-no-vue	5	97	2478	2477-2480	1653	7	0.000	1653	296	45	41	104	100	21	621	div#post-container > div.row > div#post-content > p
+/about-us/	b6-main	5	97	2405	2402-2490	1655	7	0.000	1655	236	46	41	43	100	21	571	div#post-container > div.row > div#post-content > p
+post	b0-start	5	71	5479	5477-5480	1352	361	0.000	1353	960	172	49	694	35	24	1615	(cut)
+post	b1-cap1600	5	83	4219	4203-4239	1352	175	0.000	1359	663	172	49	398	35	24	1544	(cut)
+post	b2-webp	5	82	3754	3752-3755	1352	314	0.000	1352	483	172	49	218	35	21	1458	(cut)
+post	b3-vendor	5	88	3152	3152-3390	1352	241	0.000	1352	383	81	41	218	35	21	1234	(cut)
+post	b4-covers-webp	5	92	2853	2853-3003	1352	196	0.000	1352	320	81	41	154	35	21	1198	(cut)
+post	b5-no-vue	5	96	2703	2701-2709	1352	3	0.000	1352	284	45	41	154	35	21	966	(cut)
+post	b6-main	5	99	2159	1948-2219	1352	8	0.000	1352	160	46	41	29	35	21	633	(cut)
+# Lighthouse 13.5.0, Chrome/156.0.0.0, 105 runs, benchmarkIndex median 1591 (range 1298.5-1779)
