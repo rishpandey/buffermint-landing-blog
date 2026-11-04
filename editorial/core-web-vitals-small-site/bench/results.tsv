@@ -13,11 +13,11 @@ page	build	n	score	lcp_ms	lcp_range	fcp_ms	tbt_ms	cls	si_ms	total_kb	js_kb	css_k
 /about-us/	b4-covers-webp	5	96	2658	2648-2678	1653	81	0.000	1653	331	81	41	104	100	21	826	div#post-container > div.row > div#post-content > p
 /about-us/	b5-no-vue	5	97	2478	2477-2480	1653	7	0.000	1653	296	45	41	104	100	21	621	div#post-container > div.row > div#post-content > p
 /about-us/	b6-main	5	97	2405	2402-2490	1655	7	0.000	1655	236	46	41	43	100	21	571	div#post-container > div.row > div#post-content > p
-post	b0-start	5	71	5479	5477-5480	1352	361	0.000	1353	960	172	49	694	35	24	1615	(cut)
-post	b1-cap1600	5	83	4219	4203-4239	1352	175	0.000	1359	663	172	49	398	35	24	1544	(cut)
-post	b2-webp	5	82	3754	3752-3755	1352	314	0.000	1352	483	172	49	218	35	21	1458	(cut)
-post	b3-vendor	5	88	3152	3152-3390	1352	241	0.000	1352	383	81	41	218	35	21	1234	(cut)
-post	b4-covers-webp	5	92	2853	2853-3003	1352	196	0.000	1352	320	81	41	154	35	21	1198	(cut)
-post	b5-no-vue	5	96	2703	2701-2709	1352	3	0.000	1352	284	45	41	154	35	21	966	(cut)
-post	b6-main	5	99	2159	1948-2219	1352	8	0.000	1352	160	46	41	29	35	21	633	(cut)
+post	b0-start	5	71	5479	5477-5480	1352	361	0.000	1353	960	172	49	694	35	24	1615	body.bg-light > div#app > div.pb-6 > section.py-12
+post	b1-cap1600	5	83	4219	4203-4239	1352	175	0.000	1359	663	172	49	398	35	24	1544	body.bg-light > div#app > div.pb-6 > section.py-12
+post	b2-webp	5	82	3754	3752-3755	1352	314	0.000	1352	483	172	49	218	35	21	1458	body.bg-light > main#app > div.pb-6 > section.py-12
+post	b3-vendor	5	88	3152	3152-3390	1352	241	0.000	1352	383	81	41	218	35	21	1234	body.bg-light > main#app > div.pb-6 > section.py-12
+post	b4-covers-webp	5	92	2853	2853-3003	1352	196	0.000	1352	320	81	41	154	35	21	1198	body.bg-light > main#app > div.pb-6 > section.py-12
+post	b5-no-vue	5	96	2703	2701-2709	1352	3	0.000	1352	284	45	41	154	35	21	966	body.bg-light > main#app > div.pb-6 > section.py-12
+post	b6-main	5	99	2159	1948-2219	1352	8	0.000	1352	160	46	41	29	35	21	633	div.row > div.col-12 > picture > img.post-cover
 # Lighthouse 13.5.0, Chrome/156.0.0.0, 105 runs, benchmarkIndex median 1591 (range 1298.5-1779)

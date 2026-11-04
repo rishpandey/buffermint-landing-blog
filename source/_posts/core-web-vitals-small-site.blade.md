@@ -77,7 +77,7 @@ DevTools throttling, median of three runs:
 | 6. No Vue | 94, 2.50 s, 62 ms | 96, 2.21 s, 71 ms | 86, 3.82 s, 53 ms |
 | 7. Today | 95, 2.37 s, 53 ms | 96, 2.24 s, 53 ms | 92, 3.12 s, 49 ms |
 
-Median CLS was 0 to 0.003 everywhere, in both modes, and no single run went above 0.005.
+Median CLS was 0 to 0.003 everywhere, in both modes, and no single run went above 0.01.
 
 ## Where the two modes disagree: text LCP
 

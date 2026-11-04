@@ -1,12 +1,12 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: Core Web Vitals on a small site: what moved ours, measured (4 to fix)",
-  "created_at": "2026-11-04T04:58:33.762Z",
+  "created_at": "2026-11-04T05:02:19.942Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "a0bc3e0e6673309b1dfb90fca7fade32",
-    "checked_at": "2026-11-04T04:58:33.761Z",
+    "content_md5": "0951f13dd255a94f88238c3b723f463e",
+    "checked_at": "2026-11-04T05:02:19.942Z",
     "blockers": [
       "Unsupported claim (141 times): add a source link or put it in the facts sheet: \"We know which change did what because we rebuilt buffermint.com at seven points in its git history, served each copy the\"",
       "Unsupported claim (1,600): add a source link or put it in the facts sheet: \"Image cap (24 Oct) | uploaded images resized to at most 1,600 px wide | | 3.\"",
