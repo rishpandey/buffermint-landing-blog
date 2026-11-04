@@ -189,7 +189,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** our before/after log: vendor.js 479 → 104 KB, Vue removed (main.js 123,549 → 18,741 B), Lighthouse home 65 → 67, post 63 → 68, About 66 → 76. Those Lighthouse runs (2026-10-25) predate the Vue removal (2026-10-28), so rerun Lighthouse before crediting it. Include what didn't help. Every number is from STATUS.md with its date and tool version.
 - **Sources:** web.dev Core Web Vitals, the Chrome UX Report docs, the Lighthouse scoring docs, HTTP Archive Web Almanac (performance chapter), Google Search Central on page experience.
 - **Internal links:** /tools/dev/minifier/, /tools/dev/js-minifier/, /tools/photo/image-compress/, topic 13.
-- **Status:** todo
+- **Status:** writing (lane t-20261104-blog-post, 2026-11-04; topic 12 still blocked on logged-in accounts)
 
 ### 15. Cookieless analytics for a small SaaS: GoatCounter vs Plausible vs Umami · `next`
 - **Keyword:** `cookieless analytics` (level 4), `plausible analytics` (level 4; HN 44).

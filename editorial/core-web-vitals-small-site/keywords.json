@@ -1,0 +1,1349 @@
+{
+  "type": "content.keywords",
+  "title": "core web vitals: 91 ideas, 12 pieces",
+  "created_at": "2026-11-04T03:51:35.024Z",
+  "data": {
+    "seed": "core web vitals",
+    "topic": "core web vitals",
+    "keywords": [
+      {
+        "keyword": "core web vitals",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 6,
+        "best_rank": 1,
+        "score": 100,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what is core web vitals",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 5,
+        "best_rank": 1,
+        "score": 100,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals meaning",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 6,
+        "best_rank": 2,
+        "score": 99,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals test",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 7,
+        "best_rank": 2,
+        "score": 99,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what is core web vitals in seo",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 4,
+        "best_rank": 2,
+        "score": 99,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals google",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 7,
+        "best_rank": 3,
+        "score": 98,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals explained",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 5,
+        "best_rank": 4,
+        "score": 97,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals seo",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 8,
+        "best_rank": 5,
+        "score": 96,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how to fix core web vitals",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 4,
+        "best_rank": 5,
+        "score": 96,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals and seo",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 3,
+        "best_rank": 1,
+        "score": 95,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals check",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 4,
+        "best_rank": 8,
+        "score": 93,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals report",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 5,
+        "best_rank": 8,
+        "score": 93,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals assessment",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 3,
+        "best_rank": 5,
+        "score": 91,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals inp",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 3,
+        "best_rank": 8,
+        "score": 88,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals guide",
+        "engines": [
+          "bing"
+        ],
+        "lists": 7,
+        "best_rank": 1,
+        "score": 65,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what are core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 5,
+        "best_rank": 1,
+        "score": 65,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals audit",
+        "engines": [
+          "bing"
+        ],
+        "lists": 6,
+        "best_rank": 3,
+        "score": 63,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals tools",
+        "engines": [
+          "bing"
+        ],
+        "lists": 8,
+        "best_rank": 3,
+        "score": 63,
+        "band": "high",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "google web core vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 3,
+        "best_rank": 3,
+        "score": 58,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what is core web vitals assessment",
+        "engines": [
+          "google"
+        ],
+        "lists": 3,
+        "best_rank": 3,
+        "score": 58,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals organic ranking",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 1,
+        "score": 55,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "does core web vitals affect seo",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 1,
+        "score": 55,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "web core vitals test",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 1,
+        "score": 55,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 1,
+        "score": 55,
+        "band": "high",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "web core vitals check",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 3,
+        "score": 53,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what are the core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 3,
+        "score": 53,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what is core web vitals optimization",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 4,
+        "score": 52,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "free core web vitals test",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 5,
+        "score": 51,
+        "band": "medium",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "que es core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 3,
+        "best_rank": 10,
+        "score": 51,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals accessibility",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 6,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals def",
+        "engines": [
+          "bing"
+        ],
+        "lists": 3,
+        "best_rank": 13,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals for seo",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals vs lighthouse",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "good core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how core web vitals affect seo",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "is core web vitals a ranking factor",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what is core web vitals in google search console",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 6,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "why core web vitals assessment failed",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 1,
+        "score": 50,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals best practices",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals for wordpress",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals online tools",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals visualizer",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what does core web vitals mean",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what is core web vitals in hindi",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 7,
+        "score": 49,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "why core web vitals are important",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "are core web vitals important",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals analysis",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals and lighthouse",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals automation",
+        "engines": [
+          "bing"
+        ],
+        "lists": 2,
+        "best_rank": 8,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals for mobile",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals metrics",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals pharma",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "does passing core web vitals increase seo",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "how many core web vitals are there",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals and page speed",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals checker",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals in react",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals overview",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "google's core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "what do core web vitals measure",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals field data vs lab data",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 5,
+        "score": 46,
+        "band": "low",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals in 2026",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 5,
+        "score": 46,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how to improve core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 5,
+        "score": 46,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what are core web vitals metrics",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 5,
+        "score": 46,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what does core web vitals assessment failed mean",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 5,
+        "score": 46,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what is core web vitals in seo in hindi",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 10,
+        "score": 46,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals in google search console",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 6,
+        "score": 45,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals para seo",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 6,
+        "score": 45,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how to check core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 6,
+        "score": 45,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "understanding core web vitals and google search results",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 6,
+        "score": 45,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals in digital marketing",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 7,
+        "score": 44,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals score",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 7,
+        "score": 44,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "google lighthouse vs core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 7,
+        "score": 44,
+        "band": "low",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals in search console",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals optimization",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals standards",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "pagespeed insights vs core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "what are core web vitals and why do they matter",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals in hindi",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals in seo",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals site",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "google core web vitals test",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how to pass core web vitals assessment",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "what are core web vitals and why are they important",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "core web vitals in gsc",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 10,
+        "score": 41,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "how to optimize core web vitals",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 10,
+        "score": 41,
+        "band": "low",
+        "intent": "informational",
+        "question": true
+      },
+      {
+        "keyword": "c'est quoi core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 14,
+        "score": 40,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "check core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 13,
+        "score": 40,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "core web vitals test google",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 20,
+        "score": 40,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "measure core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 12,
+        "score": 40,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "was sind core web vitals",
+        "engines": [
+          "bing"
+        ],
+        "lists": 1,
+        "best_rank": 15,
+        "score": 40,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      }
+    ],
+    "topic_interest": {
+      "keyword": "core web vitals",
+      "article": "Web performance",
+      "months": [
+        {
+          "month": "202511",
+          "views": 386
+        },
+        {
+          "month": "202512",
+          "views": 455
+        },
+        {
+          "month": "202601",
+          "views": 490
+        },
+        {
+          "month": "202602",
+          "views": 378
+        },
+        {
+          "month": "202603",
+          "views": 440
+        },
+        {
+          "month": "202604",
+          "views": 445
+        },
+        {
+          "month": "202605",
+          "views": 1474
+        },
+        {
+          "month": "202606",
+          "views": 974
+        },
+        {
+          "month": "202607",
+          "views": 2036
+        },
+        {
+          "month": "202608",
+          "views": 1151
+        },
+        {
+          "month": "202609",
+          "views": 1270
+        },
+        {
+          "month": "202610",
+          "views": 16880
+        }
+      ],
+      "monthly": 6434,
+      "prev": 1495,
+      "trend": 3.3,
+      "cached": 0,
+      "requests": 2
+    },
+    "sources": [
+      {
+        "id": "suggest-google",
+        "label": "Google autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-bing",
+        "label": "Bing autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-youtube",
+        "label": "YouTube autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "not picked for this run",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "suggest-duckduckgo",
+        "label": "DuckDuckGo autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "off by default: its robots.txt disallows /ac/?q= (checked when turned on)",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "wikipedia",
+        "label": "Wikipedia pageviews",
+        "status": "ok",
+        "grade": "V",
+        "what": "monthly views of the matching article (measured topic interest, not searches)",
+        "detail": "1 of 6 topics matched an article",
+        "requests": 7,
+        "cached": 1
+      },
+      {
+        "id": "pagespeed",
+        "label": "PageSpeed Insights",
+        "status": "off",
+        "grade": "V",
+        "what": "Lighthouse lab scores",
+        "detail": "needs a site URL as the seed",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "serp",
+        "label": "Search result pages",
+        "status": "off",
+        "grade": null,
+        "what": "who ranks (not used: robots.txt and the engines' terms)",
+        "detail": "google: www.google.com/robots.txt disallows /search?…; bing: www.bing.com/robots.txt disallows /search?…; duckduckgo: html.duckduckgo.com/robots.txt allows /html/, but the engine's terms bar automated queries: not fetched",
+        "requests": 0,
+        "cached": 0
+      }
+    ],
+    "notes": [
+      "Interest bands come from autosuggest (which engines suggest a phrase, how often and how high), ranked within this run. They show that people type a phrase, not how many: a proxy, not search volume.",
+      "Intent and page types are rules on the words of each phrase (estimate). Wikipedia views measure interest in a topic, not searches."
+    ],
+    "fetched_at": "2026-11-04T03:51:34.996Z",
+    "clusters": [
+      {
+        "key": "head",
+        "band": "high",
+        "wikipedia": {
+          "article": "Web performance",
+          "monthly": 6434,
+          "trend": 3.3
+        }
+      },
+      {
+        "key": "seo",
+        "band": "high",
+        "wikipedia": null
+      },
+      {
+        "key": "test",
+        "band": "high",
+        "wikipedia": null
+      },
+      {
+        "key": "google",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "assessment",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "check",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "tool",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "ranking",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "lighthouse",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "doe",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "optimization",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "important",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "metric",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "hindi",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "measure",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "search",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "they",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "more",
+        "band": "high",
+        "wikipedia": null
+      }
+    ]
+  }
+}
