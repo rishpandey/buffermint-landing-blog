@@ -20,3 +20,13 @@ Last run (committed): SEO 97, 0 failed; one warning left, "4 paragraphs are over
 - The rules table's 5,000 and 0.3% have their four source links in the sentence right above the table; the tool wants a link in the same block.
 - "0.3% … 0.1%" (Google) and "Yahoo also says 0.3%" are marked unverified because the tool's fetch didn't find the figures; I read them on both pages on 15 November 2026 (Google writes "0.30%" and "0.10%" in places; claims rows 6, 7, 14). Each sentence links its page.
 - The checklist's 0.1% repeats row 7.
+
+## Code review pass (2026-11-15)
+- **Null MX domains.** Two domains publish only the null MX (`0 .`, no mail) plus `v=spf1 -all`; the first count treated them as mail domains. Now 119 mail domains; every share in the post, the table, claims rows 31–36, 40 and research.md recomputed (DMARC 77, p=none 40, reject 21, rua 44, `-all` 15; DKIM 62 of 113; 19 of 27 sending-service domains at p=none). The headline 42 (35%) is unchanged. The first `p=none` count of the sending-service domains also matched `sp=none`; the script now matches the `p` tag only.
+- **Selectors.** The post called the `s1`/`k1` matches "Resend's or SendGrid's usual selector"; it now names the three selectors without attributing them.
+- **Forwarders.** "Such an SPF record authorizes only the forwarder" was true of 13 of the 14 Namecheap records (one also includes Google); the post says 13.
+- **Checklist vs record table.** "SPF on every domain you send from" contradicted the table (SPF goes on the bounce subdomain); "MX only if you receive mail" contradicted the bounce subdomain's MX. Both reworded; the table now mentions a bounce subdomain for the newsletter stream.
+- **Description.** "165 new domains" became "165 product domains" (the body says a few are established companies).
+- **Reproducibility.** Added `survey/sample.py` (the sample filter, reproduces `domains.txt` exactly), `survey/extra.py` (rows 36, 37, 40, 45) and the raw results (`survey.json`, `dkim.json`, `dkim.json.wild.json`). Checked that none of the 26 subdomain hosts has its own `_dmarc` record, so mixing host DMARC with org MX/SPF changes nothing.
+- **BLOG-PLAN.** The "still unchecked: topic 16's 0.3%" note now records where it was found.
+- **Stays:** the date (2026-11-16): no date passes the post test on 2026-11-15 (see above). BLOG-PLAN says "published 2026-11-16 … goes live after its review merges", as the task's step 6 and earlier lanes do.
