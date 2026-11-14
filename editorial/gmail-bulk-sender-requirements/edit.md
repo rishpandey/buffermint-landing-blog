@@ -1,0 +1,22 @@
+# Edit: gmail-bulk-sender-requirements
+
+Separate pass on 2026-11-15, after the draft was committed (commit efe0e49 on lane/t-20261115-blog-post), reading the whole post as the target reader: a small-SaaS founder sending sign-ups, resets, receipts and a newsletter, who wants to know which rules bind and what to publish in DNS.
+
+## Changes
+- **Opening checked against the question.** First paragraph gives the answer (who counts as bulk, the five requirements, why to meet them early); second gives our survey number. Kept. "the one bulk requirement anyone can check from outside" was wrong (SPF is also visible and also required): now "the bulk-only requirement". Split both opening paragraphs (Content studio: over 120 words).
+- **Unsourced generalizations removed.** "Most sending services sign [the unsubscribe headers] for you" had no source: now tells the reader how to check (`h=` tag). "Your sending service handles TLS and reverse DNS" likewise: now "confirm them with your sending service, or set them up if you run your own server". "Most are small, new products" was a judgment we didn't measure: now "includes a few established companies as well as new projects". "Existing `p=none` records still work" became "the `p=none` policy itself is unchanged", which is what RFC 9989 says.
+- **`~all` paragraph.** "That's normal and fine once DKIM and DMARC are in place" was opinion: replaced by what RFC 7208 §8.5 says (don't reject on softfail alone) and that DMARC decides. `?all` named as neutral.
+- **Quotes made exact.** Yahoo: "highly recommended" (not "highly recommends"); Google FAQ: "we recommend" 48 hours.
+- **Tool descriptions made exact.** The header analyzer paragraph claimed it shows "the signing domain and the route"; its own description says SPF/DKIM/DMARC results, sender mismatches and delivery hops, so the post says that. "Show original shows SPF, DKIM and DMARC" isn't on Google's help page: now it says it shows the full header, linked to that page. Subject tester: listed what its description says (spam words, capitals, length, phone and desktop previews).
+- **Send. subdomain sentence.** Said "19 domains had that `send.` record", implying all were Resend: now "an MX record on a `send.` subdomain, 11 of them pointing at SES".
+- **SEO (Content studio first run, score 91):** title cut from 64 to 60 characters ("Gmail bulk sender requirements, plus Yahoo and Outlook rules"); slug renamed to the keyword (`gmail-bulk-sender-requirements`, the post is new so nothing links to the old one); description cut to 153 characters (the post test caught 161). Second run: 97, 0 failed.
+- **Links next to the numbers** for the opening requirements, Yahoo's list, Google's subdomain counting, its FAQ example and the 0.3%/Yahoo figures.
+- **Date.** The task says today's date (2026-11-15), but `tests/posts.test.mjs` requires 2+ days after the previous post (cookieless analytics, dated 2026-11-14) and no future date. No date passes both today, so the post is dated 2026-11-16, the first date that keeps the owner's spacing rule; it goes live only after its review, which is no earlier. The check passes from 16 November (local time).
+- **Checked:** one idea per paragraph; headings say what each section finds; no hype words or exclamation marks; "as of November 2026" and "read on 15 November 2026" for the rules; no product that isn't public named; American spelling ("honor", "recognizable", "authorizes"). Our survey names no domain in the post.
+
+## Content studio check
+Last run (committed): SEO 97, 0 failed; one warning left, "4 paragraphs are over 120 words": no prose paragraph in the post is over 100 words, so it counts the two tables and bullet lists as paragraphs. Fact-check 6 blockers, 2 warnings. They stay because:
+- 35%, 54% and the survey table's percentages are our own DNS survey (claims rows 30–40, `ours:` with the scripts in `survey/`), which the tool can't read.
+- The rules table's 5,000 and 0.3% have their four source links in the sentence right above the table; the tool wants a link in the same block.
+- "0.3% … 0.1%" (Google) and "Yahoo also says 0.3%" are marked unverified because the tool's fetch didn't find the figures; I read them on both pages on 15 November 2026 (Google writes "0.30%" and "0.10%" in places; claims rows 6, 7, 14). Each sentence links its page.
+- The checklist's 0.1% repeats row 7.

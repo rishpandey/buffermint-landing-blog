@@ -203,7 +203,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** one checklist reconciled from the three providers' own pages. Check the much-quoted 0.3% spam-rate figure at its source: search found it only in vendor blogs. Add the DNS records a typical small SaaS needs, with transactional and marketing mail on separate subdomains.
 - **Sources:** Google's sender guidelines (support.google.com/a/answer/81126), Yahoo Sender Hub (senders.yahooinc.com), the Microsoft Defender/Outlook announcement for high-volume senders (techcommunity.microsoft.com), RFC 8058 and RFC 7489, Red Sift guide (redsift.com/guides/bulk-email-sender-requirements, found 2026-10-29).
 - **Internal links:** /tools/privacy/email-header-analyzer/, /tools/business/cold-email-template/, /tools/seo/email-subject-tester/.
-- **Status:** writing (lane t-20261115-blog-post, 2026-11-15)
+- **Status:** published 2026-11-16 (dated; written 2026-11-15 by lane t-20261115-blog-post, goes live after its review merges) → `/articles/gmail-bulk-sender-requirements/` (rules table from the Google, Yahoo and Microsoft pages; the 0.3% figure found in Google's own guidelines and FAQ, with 0.1% as the target; our DNS survey of 165 Show HN product domains from Oct 2026: 42 of 121 mail domains (35%) without DMARC, 41 at p=none, 1 with two SPF records, DKIM at a common selector on 62 of 114; record table with transactional and newsletter subdomains and a custom MAIL FROM; RFC 9989 changes)
 
 ### 17. E-invoicing in 2026–27: what a small SaaS selling into the EU must do · `next`
 - **Keyword:** `e invoicing france` (level 4), `e invoicing belgium` (level 3), `peppol` (level 2; HN 50; Wikipedia 1,135/mo).
