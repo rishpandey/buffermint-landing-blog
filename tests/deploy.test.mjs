@@ -90,3 +90,39 @@ test('deploy.sh says nothing and changes nothing when brand is already on the re
   assert.equal(run(), '');
   assert.equal(git(join(site, 'brand'), 'rev-parse', 'HEAD'), recorded);
 });
+
+// Fix 11 (audit L5): only merged, pushed main ships; a lane may have its branch checked out in the landing folder.
+test('release guard: runs before any build; passes main or a detached checkout at origin/main, refuses a lane branch or unpushed commit', (t) => {
+  const start = at(/^release_guard\(\) \{/);
+  const end = lines.indexOf('}', start);
+  const call = at(/^why=\$\(release_guard\)/);
+  assert.ok(start >= 0 && end > start && call > end, 'guard block found');
+  assert.ok(call < at(/ALLOW_DIRTY:-/) && call < at(/^composer install/) && call < at(/^yarn run prod/), 'before the dirty check and the build');
+  const guard = (cwd) => {
+    try {
+      return sh(cwd, 'bash', ['-euo', 'pipefail', '-c', `${lines.slice(start, end + 1).join('\n')}\nrelease_guard && echo passed`]);
+    } catch (e) {
+      return `refused: ${e.stdout.trim()}`;
+    }
+  };
+  const tmp = mkdtempSync(join(tmpdir(), 'landing-guard-'));
+  t.after(() => rmSync(tmp, { recursive: true, force: true }));
+  git(tmp, 'init', '-q', '--bare', 'origin.git');
+  const work = join(tmp, 'work');
+  mkdirSync(work);
+  git(work, 'init', '-q');
+  git(work, 'remote', 'add', 'origin', join(tmp, 'origin.git'));
+  writeFileSync(join(work, 'a'), '1');
+  git(work, 'add', 'a');
+  git(work, 'commit', '-qm', 'one');
+  git(work, 'push', '-q', 'origin', 'main');
+  assert.equal(guard(work), 'passed');
+  git(work, 'checkout', '-q', '--detach');
+  assert.equal(guard(work), 'passed', 'bin/landing-autopublish builds in a detached worktree');
+  git(work, 'checkout', '-q', '-b', 'lane/t-x');
+  assert.equal(guard(work), 'refused: on branch lane/t-x, not main (a lane may be working here)');
+  git(work, 'checkout', '-q', 'main');
+  writeFileSync(join(work, 'a'), '2');
+  git(work, 'commit', '-qam', 'local');
+  assert.match(guard(work), /^refused: HEAD \w{10} isn't origin\/main \w{10}/);
+});

@@ -12,6 +12,20 @@ STAGE=/srv/buffermint/.mac-stage
 [ -x /usr/local/sbin/bm-publish ] && ON_VPS=1 || ON_VPS=
 [ -n "$ON_VPS" ] || [ "${ALLOW_MAC_DEPLOY:-}" = 1 ] || { echo "Deploys run on buffermint-vps since 2026-10-23: ssh buffermint-agent, then cd /srv/buffermint/buffermint-landing. (ALLOW_MAC_DEPLOY=1 overrides, for emergencies only.)"; exit 1; }
 DIR=/var/www/buffermint-landing
+# Only merged, pushed main ships (fix 11, audit L5): a lane may have its branch checked out in this folder. On main (or
+# detached, as bin/landing-autopublish's worktree is) at origin/main after a fetch. No override (ALLOW_DIRTY below
+# covers uncommitted files only).
+release_guard() {
+  local b h o lim=()
+  b=$(git symbolic-ref --quiet --short HEAD 2>/dev/null) || b=
+  [ -z "$b" ] || [ "$b" = main ] || { echo "on branch $b, not main (a lane may be working here)"; return 1; }
+  command -v timeout >/dev/null && lim=(timeout 60)   # macOS has no timeout(1)
+  # into a fixed ref, not FETCH_HEAD, which another fetch in this folder could rewrite meanwhile
+  GIT_TERMINAL_PROMPT=0 ${lim[@]+"${lim[@]}"} git fetch --quiet origin +refs/heads/main:refs/remotes/origin/main 2>/dev/null || { echo "couldn't fetch origin main"; return 1; }
+  h=$(git rev-parse --verify -q HEAD) && o=$(git rev-parse --verify -q refs/remotes/origin/main) || { echo "couldn't read HEAD or origin/main"; return 1; }
+  [ "$h" = "$o" ] || { echo "HEAD ${h:0:10} isn't origin/main ${o:0:10} (unpushed, behind or another commit)"; return 1; }
+}
+why=$(release_guard) || { echo "Not deploying: $why. Deploy only merged main: merge and push, then run it from a clean main checkout (git pull --ff-only if it's behind)."; exit 1; }
 # deploy only committed work (ALLOW_DIRTY=1 to override, e.g. while testing)
 if [ -z "${ALLOW_DIRTY:-}" ] && [ -n "$(git status --porcelain --ignore-submodules=none)" ]; then
   echo "Uncommitted changes: commit them first (or ALLOW_DIRTY=1 ./deploy.sh)."; exit 1
