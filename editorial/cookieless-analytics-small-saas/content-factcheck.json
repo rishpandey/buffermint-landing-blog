@@ -1,12 +1,12 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: Cookieless analytics compared: GoatCounter, Plausible, Umami (5 to fix)",
-  "created_at": "2026-11-14T09:57:32.177Z",
+  "created_at": "2026-11-14T09:58:22.003Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "279c19457b37d5fd6554936dcc124da8",
-    "checked_at": "2026-11-14T09:57:32.177Z",
+    "content_md5": "b7d79109e5d2bd4b07ff3e0c9f39612d",
+    "checked_at": "2026-11-14T09:58:22.003Z",
     "blockers": [
       "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 millise\"",
       "Unsupported claim (0.1%, 2,261, 2,292): add a source link or put it in the facts sheet: \"| Measure | Value | |---|---| | Memory now (systemd) | 33.3 MB | | Memory peak | 83.4 MB, under a 150 MB limit we set | \"",
@@ -270,7 +270,7 @@
       },
       {
         "kind": "number",
-        "text": "Add UTM tags to the links you control, with our UTM builder or by hand, and each tool will group visits by campaign. - Your own visits and bots. Plausible's self-hosted edition gets only basic bot filtering, while its cloud excludes about 32K data-centre IP ranges.",
+        "text": "Add UTM tags to the links you control, with our UTM builder or by hand, and each tool will group visits by campaign. - Your own visits and bots. Plausible's self-hosted edition gets only basic bot filtering, while its cloud excludes about 32K data-center IP ranges.",
         "numbers": [
           "32K"
         ],

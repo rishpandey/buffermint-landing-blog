@@ -1,4 +1,6 @@
 ---
+featured_image: assets/img/uploads/cookieless-analytics-small-saas-cover-47c522-1200.jpeg
+featured_thumbnail: assets/img/uploads/cookieless-analytics-small-saas-cover-47c522-600.jpeg
 title: "Cookieless analytics compared: GoatCounter, Plausible, Umami"
 seo_description: "Cookieless analytics on our own server: GoatCounter at 33 MB of RAM, 3 ms a hit. How it compares with Plausible and Umami on cost, counting and consent."
 keyword: cookieless analytics
