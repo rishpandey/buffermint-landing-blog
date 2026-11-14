@@ -12,7 +12,7 @@ date: 2026-11-14
 extends: _layouts.post
 ---
 
-Cookieless analytics tools count your visitors without storing anything in their browser, and the three open-source ones most small sites look at, GoatCounter, Plausible and Umami, all do that. What they don't do is make the consent question go away in the EU: the regulators' guidance is about reading information from a visitor's device, not only cookies. Pick by how you want to run the tool and how you want "a visitor" counted, then check the consent conditions that apply where your readers are.
+Cookieless analytics tools count your visitors without setting cookies or storing an ID in their browser, and the three open-source ones most small sites look at, GoatCounter, Plausible and Umami, all do that. What they don't do is make the consent question go away in the EU: the regulators' guidance is about reading information from a visitor's device, not only cookies. Pick by how you want to run the tool and how you want "a visitor" counted, then check the consent conditions that apply where your readers are.
 
 We've run GoatCounter on our own server since 23 October 2026. Since its last restart 20 days ago it has used about 0.1% of one CPU core and sits at 33 MB of memory (83 MB at its peak), and over 23 days of logs it answered each counted hit in a median of 3 milliseconds. Below are those numbers, how each tool decides who counts as one visitor, what each costs at small-site traffic, and where the law stood in November 2026.
 
@@ -22,14 +22,14 @@ None of the three sets a cookie. Each one recognizes a returning visitor on the 
 
 | | GoatCounter | Plausible | Umami |
 |---|---|---|---|
-| Built from | site + browser string + IP | daily salt + domain + IP + browser string | site + IP + browser string + salt |
+| Built from | site + browser string + IP | daily salt + domain + IP + browser string | site + IP + browser string + monthly salt + server secret |
 | Same person counts as one visitor for | 8 hours | one day (salt rotated every 24 hours) | one calendar month (default) |
 | Raw IP stored | no | no | no IP column in its session table |
 | Where it's documented | [sessions help page](https://www.goatcounter.com/help/sessions) | [data policy](https://plausible.io/data-policy) | the [source code](https://github.com/umami-software/umami) (no docs page) |
 
 GoatCounter keeps the key in memory only, mapped to a random ID, and drops it after 8 hours; the IP and browser string never reach its database. Plausible hashes the inputs with a salt it rotates and deletes every 24 hours, so nobody can recompute yesterday's IDs.
 
-Umami's session ID is a hash of the site, IP, browser string and a salt that, unless you set `SALT_ROTATION`, changes at the start of each month. That salt is derived from the month's start date and the server's secret, not a random value that is thrown away.
+Umami's session ID is a hash of the site, IP, browser string and a salt that, unless you set `SALT_ROTATION`, changes at the start of each month. That salt is derived from the month's start date and the server's secret, not a random value that is thrown away. If you send Umami an ID of your own for a signed-in user (its `distinctId`), that ID joins the hash too, so the month-long window applies to anonymous visitors.
 
 The practical result: someone who reads your blog on Monday and again on Thursday is one visitor that month in Umami, two in Plausible, and two in GoatCounter. Treat "unique visitors" as a tool-specific number. Compare it with itself over time, never with another tool's figure.
 
@@ -60,7 +60,7 @@ Prices as of November 2026, from each tool's own page:
 | Free hosted option | yes, "for reasonable public usage" | no (30-day trial) | Hobby: 100K events a month, 1 site, 6 months of data |
 | First paid plan | none listed | Starter $9 a month, up to 10k pageviews, 1 site | Pro $20 a month, 1M events, 20 sites, 2 years of data |
 | What counts toward the limit | not stated | pageviews and custom events | pageviews, events and each saved event property |
-| Self-hosted license | open source, any purpose | AGPLv3, releases twice a year | MIT (self-host with Postgres) |
+| Self-hosted license | EUPL 1.2 (lightly modified), any purpose | AGPLv3, releases twice a year | MIT (self-host with Postgres) |
 
 Sources: [GoatCounter](https://www.goatcounter.com/), [Plausible pricing](https://plausible.io/#pricing) and [plan docs](https://plausible.io/docs/subscription-plans), [Umami pricing](https://umami.is/pricing), [Plausible's self-hosting page](https://plausible.io/self-hosted-web-analytics).
 
@@ -74,12 +74,12 @@ We downloaded each tool's standard tracking script on 14 November 2026 and compr
 
 | Script | Size | Gzipped |
 |---|---|---|
-| Plausible `script.js` | 2,841 B | 1,295 B |
-| Our own sender for GoatCounter | 5,003 B | 2,145 B |
-| GoatCounter `count.js` | 9,213 B | 3,329 B |
-| Umami `script.js` | 9,246 B | 4,144 B |
+| Plausible `script.js` | 2,841 B | 1,285 B |
+| Our own sender for GoatCounter | 5,003 B | 2,132 B |
+| GoatCounter `count.js` | 9,213 B | 3,319 B |
+| Umami `script.js` | 9,246 B | 4,134 B |
 
-GoatCounter's own claim of about 3.5 KB matches its gzipped size. The largest is about 4 KB over the wire, so script weight shouldn't decide your choice; when we measured our own [Core Web Vitals](/articles/core-web-vitals-small-site/), images and our site's own JavaScript were what moved. We wrote our own sender instead of using `count.js` so that it never sends a page's query string, which on our [free tools](/tools/) can hold what someone typed.
+GoatCounter's own claim of about 3.5 KB matches its gzipped size. The largest is about 4 KB over the wire, so script weight shouldn't decide your choice; when we measured our own [Core Web Vitals](/articles/core-web-vitals-small-site/), images and our site's own JavaScript were what moved. We wrote our own senders instead of using `count.js` so that they never send a page's query string, which on our [free tools](/tools/) can hold what someone typed. The one in the table is the sender on these articles, measured as we serve it: unminified, with its comments.
 
 ## Do you still need a consent banner?
 
@@ -101,7 +101,7 @@ So for a small SaaS with EU or UK visitors, cookieless analytics usually moves y
 2. Say in your privacy policy what you count, with which tool, and where it's hosted. Our [privacy policy generator](/tools/seo/privacy-policy-generator/) gives you a starting draft.
 3. Offer a simple opt-out that works without an account.
 4. Keep the tool to your own domains; don't share one identifier across unrelated sites.
-5. For French visitors, check the CNIL's two technical conditions as well: none of the three tools' pages we read says it truncates the last byte of the IP address before using it, so ask the vendor, or truncate it yourself in a proxy and accept rougher visitor counts.
+5. For French visitors, check the CNIL's IP condition as well: none of the three tools' pages we read says it truncates the last byte of the IP address before using it, so ask the vendor, or truncate it yourself in a proxy and accept rougher visitor counts.
 6. Strip what you don't need before it's sent: query strings, the referring page's full address, form input.
 
 What we strip on our side, for item 6: our sender drops the query string; our proxy forwards only the counting fields, never the Referer header or cookies; and our web server's access log for the stats host removes query strings, Referer and cookies.
@@ -127,7 +127,7 @@ Whichever you pick, measure the same way for a few months before acting on the n
 
 - GoatCounter, [Sessions](https://www.goatcounter.com/help/sessions), [GDPR consent notices](https://www.goatcounter.com/help/gdpr) and [home page](https://www.goatcounter.com/) (read 14 November 2026)
 - Plausible, [Data policy](https://plausible.io/data-policy), [Pricing](https://plausible.io/#pricing), [Subscription plans](https://plausible.io/docs/subscription-plans), [Self-hosted web analytics](https://plausible.io/self-hosted-web-analytics) (read 14 November 2026)
-- Plausible, [Community Edition repository](https://github.com/plausible/community-edition), v3.2.1
+- Plausible, [Community Edition repository](https://github.com/plausible/community-edition); current release v3.2.1 ([plausible/analytics releases](https://github.com/plausible/analytics/releases))
 - Umami, [Pricing](https://umami.is/pricing), [Installation](https://docs.umami.is/docs/install), and the [umami repository](https://github.com/umami-software/umami) (`src/lib/collection-session.ts`, `src/lib/crypto.ts`), v3.5.0
 - European Data Protection Board, [Guidelines 2/2023 on the technical scope of Art. 5(3) of the ePrivacy Directive, version 2.0](https://edpb.europa.eu/system/files/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf), adopted 7 October 2024
 - CNIL, [Sheet no. 16: Use analytics on your websites and applications](https://www.cnil.fr/en/sheet-ndeg16-use-analytics-your-websites-and-applications)

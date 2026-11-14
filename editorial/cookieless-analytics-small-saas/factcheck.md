@@ -1,6 +1,6 @@
 # Fact-check: cookieless-analytics-small-saas
 
-Review lane t-20261106-blog-post-review, 2026-11-14. Every row of `claims.md` checked: each URL opened on 2026-11-14 (WebFetch, curl for raw files, the EDPB PDF through `pdftotext`) and compared with the post; every `ours:` number re-measured on buffermint-vps the same afternoon. `content-factcheck.json` read first: its 5 blockers and 1 warning are all `ours:` measurements or calculations (0.1%, 2,261/2,292, ~3,000 a month, the script sizes) and the price table, all verified below. Re-measured later the same day, the live numbers had moved slightly as expected (memory 42.7 MB now, CPU 29 min 51 s, 2,314/2,283 hits, p95 8.3 ms, median day 51, because more hits had arrived); the post gives the values at the lane's measurement time and dates them 14 November, so they stand. Gzip sizes from stdin come out 8–10 B smaller than the post's (the lane's `gzip -9c <file>` stores the file name in the header); the plain sizes match exactly and the difference doesn't change any comparison.
+Review lane t-20261106-blog-post-review, 2026-11-14. Every row of `claims.md` checked: each URL opened on 2026-11-14 (WebFetch, curl for raw files, the EDPB PDF through `pdftotext`) and compared with the post; every `ours:` number re-measured on buffermint-vps the same afternoon. `content-factcheck.json` read first: its 5 blockers and 1 warning are all `ours:` measurements or calculations (0.1%, 2,261/2,292, ~3,000 a month, the script sizes) and the price table, all verified below. Re-measured later the same day, the live numbers had moved slightly as expected (memory 42.7 MB now, CPU 29 min 51 s, 2,314/2,283 hits, p95 8.3 ms, median day 51, because more hits had arrived); the post gives the values at the lane's measurement time and dates them 14 November, so they stand. Gzip sizes from stdin came out 8–13 B smaller than the lane's (its `gzip -9c <file>` stored the file name in the header); the post now uses the stdin figures.
 
 | # | Verdict | Evidence |
 |---|---|---|
@@ -10,7 +10,7 @@ Review lane t-20261106-blog-post-review, 2026-11-14. Every row of `claims.md` ch
 | 4 | verified | my rerun over stats.log: median 3.12 ms, p95 8.32 ms (lane: 3.11/7.98 earlier the same day) |
 | 5 | verified | goatcounter.com/help/sessions: "concat(siteID, User-Agent, IP)", 8 hours in memory as sessionID → UUIDv4, "never stored to the database or disk" |
 | 6 | verified | plausible.io/data-policy: "hash(daily_salt + website_domain + ip_address + user_agent)", "rotated and deleted every 24 hours", raw IP/UA not stored |
-| 7 | verified | umami master `collection-session.ts`: `uuid(sourceId, ip, userAgent, sessionSalt, distinctId ?? '')`; `crypto.ts` getSalt: unset → `hash(startOfMonth(createdAt).toUTCString())`; `uuid` adds `secret()` = hash of the app secret |
+| 7 | fixed | umami master `collection-session.ts`: `uuid(sourceId, ip, userAgent, sessionSalt, distinctId ?? '')`; `crypto.ts` getSalt: unset → `hash(startOfMonth(createdAt).toUTCString())`; `uuid` adds `secret()` = hash of the app secret |; the table now says "monthly salt + server secret" and the text notes `distinctId` (row 55)
 | 8 | verified | `prisma/schema.prisma` model Session: no IP column |
 | 9 | verified | follows from 5–7 (8 h window, daily salt, monthly salt); post says "that month" |
 | 10 | verified | `goatcounter version`: v2.7.0; GitHub latest release v2.7.0 (2025-12-15); unit `-db sqlite+…` |
@@ -32,7 +32,7 @@ Review lane t-20261106-blog-post-review, 2026-11-14. Every row of `claims.md` ch
 | 26 | verified | 1 pageview + 5 events = 6 counted units |
 | 27 | verified | self-hosted page: funnels, user journeys, ecommerce revenue goals, SSO, sites API cloud-only; CE "Basic bot filtering"; Cloud "~32K data center IP ranges" |
 | 28 | fixed | words verbatim on the page; the post used them without quote marks, so I quoted and linked them (see row 53) |
-| 29 | verified | my curl of all three scripts and `buffermint-brand/dist/analytics.js`: 2,841 / 9,213 / 9,246 / 5,003 B exactly; gzip within the header's file-name bytes (see note above) |
+| 29 | fixed | my curl: 2,841 / 9,213 / 9,246 / 5,003 B exactly; gzip from stdin 1,285 / 3,319 / 4,134 / 2,132 B, so the post's gzip column now uses those (the first figures included the gzip header's file name) |
 | 30 | verified | goatcounter.com: "adds just ~3.5KB of extra data" |
 | 31 | verified | analytics.js sends `location.pathname`, header comment "never the query string"; referrer only as origin + pathname of an external page |
 | 32 | verified | data-policy: "you do not need cookie banners for analytics or to collect consent for tracking" |
@@ -57,6 +57,10 @@ Review lane t-20261106-blog-post-review, 2026-11-14. Every row of `claims.md` ch
 | 51 | verified | none of the sessions page, data policy, Umami pricing or collection-session.ts mentions truncating the IP; all use the full IP |
 | 52 | verified | GitHub license API for umami-software/umami: MIT |
 | 53 | verified | self-hosted page: "infrastructure you maintain, not software you install once" |
+| 54 | verified | goatcounter LICENSE: "a slightly modified version of European Union Public License (EUPL) 1.2" |
+| 55 | verified | collection-session.ts line 111 and crypto.ts `uuid()` as quoted in claims row 55 |
+| 56 | verified | live https://buffermint.com/brand/analytics.js 5,003 B = build_production/brand/analytics.js = brand dist file |
+| 57 | verified | analytics.js `send(location.pathname)`; tools common.js `count(location.pathname)` |
 
 Copying: the distinctive sentences I compared (the visitor-ID explanations, the CNIL and ICO condition lists, the EDPB paragraphs) are paraphrased; the verbatim phrases are short, quoted and linked.
 
@@ -64,7 +68,7 @@ Copying: the distinctive sentences I compared (the visitor-ID explanations, the 
 
 Read as the target reader: a small-SaaS founder choosing a privacy-friendly analytics tool who wants to know the cost, the running effort and whether a banner is still needed.
 - **New angle is real.** Our own GoatCounter footprint and per-hit latency from the live server, the "how long is one visitor" comparison (Umami's read from its source code, which no docs page states), script weights measured the same way the same day, and the consent picture from primary sources including the UK's February 2026 change. Not generic and not one-source: 8 publishers (GoatCounter, Plausible, Umami, GitHub, EDPB, CNIL, ICO, Clifford Chance) plus our data.
-- **Changed:** quoted and linked Plausible's "infrastructure you maintain…" phrase (it was verbatim without quote marks); Umami's licence row now says MIT instead of a vague "open source". Both are small; the argument stands.
+- **Changed:** quoted and linked Plausible's "infrastructure you maintain…" phrase (it was verbatim without quote marks); the licence row names EUPL 1.2 (GoatCounter) and MIT (Umami); gzip sizes redone from stdin; Umami's ID inputs include the server secret and an optional `distinctId`; the opening says "without setting cookies or storing an ID" (the senders do use localStorage, but only for an opt-out flag); checklist item 5 says "the CNIL's IP condition" (it said "two" and named one); the sender paragraph says the measured file is our unminified article sender and that both our senders drop query strings; the Sources line says v3.2.1 is the plausible/analytics release. All precision fixes; the argument stands.
 - **Kept:** the opening answers the question (cookieless ≠ no consent question in the EU) in its first paragraph; each section earns its place; the checklist is concrete and says it isn't legal advice. Tool links (privacy policy generator, UTM builder) genuinely help those steps; the CWV link is a real related post.
 - **Public copy:** neutral. No unreleased products, no funnel; only the free tools and an earlier post are linked. The post doesn't claim our site meets its own checklist (no privacy page yet; handed to the coordinator as a Later item).
 - **Dates:** dated 2026-11-14 (9 days after the previous post; passes the 2+ days rule). Prices "as of November 2026", our measurements dated 14 November, regulator documents with their adoption or effect dates.
