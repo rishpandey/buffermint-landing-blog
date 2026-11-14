@@ -1,0 +1,255 @@
+{
+  "type": "content.keywords",
+  "title": "cookieless analytics: 11 ideas, 3 pieces",
+  "created_at": "2026-11-14T09:47:25.493Z",
+  "data": {
+    "seed": "cookieless analytics",
+    "topic": "cookieless analytics",
+    "keywords": [
+      {
+        "keyword": "cookieless analytics",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 7,
+        "best_rank": 1,
+        "score": 100,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "cookieless web analytics",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 7,
+        "best_rank": 1,
+        "score": 100,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "google analytics cookieless",
+        "engines": [
+          "bing"
+        ],
+        "lists": 6,
+        "best_rank": 2,
+        "score": 64,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "best cookieless analytics",
+        "engines": [
+          "google"
+        ],
+        "lists": 2,
+        "best_rank": 1,
+        "score": 55,
+        "band": "medium",
+        "intent": "commercial",
+        "question": false
+      },
+      {
+        "keyword": "cookieless analytics free",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 2,
+        "score": 49,
+        "band": "medium",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "cookieless analytics tools",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 3,
+        "score": 48,
+        "band": "medium",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "cookieless google analytics",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 4,
+        "score": 47,
+        "band": "medium",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "cookieless website analytics",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 6,
+        "score": 45,
+        "band": "low",
+        "intent": "navigational",
+        "question": false
+      },
+      {
+        "keyword": "google analytics cookieless tracking",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 8,
+        "score": 43,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "adobe analytics cookieless tracking",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 9,
+        "score": 42,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      },
+      {
+        "keyword": "google analytics cookieless pings",
+        "engines": [
+          "google"
+        ],
+        "lists": 1,
+        "best_rank": 10,
+        "score": 41,
+        "band": "low",
+        "intent": "informational",
+        "question": false
+      }
+    ],
+    "topic_interest": {
+      "keyword": "cookieless analytics",
+      "months": [],
+      "monthly": null,
+      "prev": null,
+      "trend": null,
+      "cached": 0,
+      "requests": 1,
+      "article": null,
+      "note": "best article \"Customer data platform\" is off-topic, ignored"
+    },
+    "sources": [
+      {
+        "id": "suggest-google",
+        "label": "Google autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-bing",
+        "label": "Bing autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-youtube",
+        "label": "YouTube autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "not picked for this run",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "suggest-duckduckgo",
+        "label": "DuckDuckGo autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "off by default: its robots.txt disallows /ac/?q= (checked when turned on)",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "wikipedia",
+        "label": "Wikipedia pageviews",
+        "status": "ok",
+        "grade": "V",
+        "what": "monthly views of the matching article (measured topic interest, not searches)",
+        "detail": "0 of 3 topics matched an article",
+        "requests": 3,
+        "cached": 0
+      },
+      {
+        "id": "pagespeed",
+        "label": "PageSpeed Insights",
+        "status": "off",
+        "grade": "V",
+        "what": "Lighthouse lab scores",
+        "detail": "needs a site URL as the seed",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "serp",
+        "label": "Search result pages",
+        "status": "off",
+        "grade": null,
+        "what": "who ranks (not used: robots.txt and the engines' terms)",
+        "detail": "google: www.google.com/robots.txt disallows /search?…; bing: www.bing.com/robots.txt disallows /search?…; duckduckgo: html.duckduckgo.com/robots.txt allows /html/, but the engine's terms bar automated queries: not fetched",
+        "requests": 0,
+        "cached": 0
+      }
+    ],
+    "notes": [
+      "Interest bands come from autosuggest (which engines suggest a phrase, how often and how high), ranked within this run. They show that people type a phrase, not how many: a proxy, not search volume.",
+      "Intent and page types are rules on the words of each phrase (estimate). Wikipedia views measure interest in a topic, not searches."
+    ],
+    "fetched_at": "2026-11-14T09:47:25.462Z",
+    "clusters": [
+      {
+        "key": "head",
+        "band": "high",
+        "wikipedia": null
+      },
+      {
+        "key": "google",
+        "band": "medium",
+        "wikipedia": null
+      },
+      {
+        "key": "tracking",
+        "band": "low",
+        "wikipedia": null
+      },
+      {
+        "key": "more",
+        "band": "medium",
+        "wikipedia": null
+      }
+    ]
+  }
+}
