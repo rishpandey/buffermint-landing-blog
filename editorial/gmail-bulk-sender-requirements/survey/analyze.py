@@ -8,7 +8,9 @@ def tag(rec, k):
     m = re.search(r'(?:^|;)\s*' + k + r'\s*=\s*([^;]+)', rec, re.I)
     return m.group(1).strip().lower() if m else None
 C = collections.Counter()
-mailers = [r for r in R if mxreal(r) or r['spf']]
+# a null MX alone (RFC 7505: 'MX 0 .') declares the domain sends and receives no mail: not a mail domain
+nullonly = lambda r: r['mx'] and not mxreal(r)
+mailers = [r for r in R if (mxreal(r) or r['spf']) and not nullonly(r)]
 nullmx = [r for r in R if r['mx'] and not mxreal(r)]
 C['orgs'] = len(R); C['mail_capable(mx or spf)'] = len(mailers); C['null_mx'] = len(nullmx)
 C['mx'] = sum(1 for r in R if mxreal(r))

@@ -203,7 +203,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** one checklist reconciled from the three providers' own pages. Check the much-quoted 0.3% spam-rate figure at its source: search found it only in vendor blogs. Add the DNS records a typical small SaaS needs, with transactional and marketing mail on separate subdomains.
 - **Sources:** Google's sender guidelines (support.google.com/a/answer/81126), Yahoo Sender Hub (senders.yahooinc.com), the Microsoft Defender/Outlook announcement for high-volume senders (techcommunity.microsoft.com), RFC 8058 and RFC 7489, Red Sift guide (redsift.com/guides/bulk-email-sender-requirements, found 2026-10-29).
 - **Internal links:** /tools/privacy/email-header-analyzer/, /tools/business/cold-email-template/, /tools/seo/email-subject-tester/.
-- **Status:** published 2026-11-16 (dated; written 2026-11-15 by lane t-20261115-blog-post, goes live after its review merges) → `/articles/gmail-bulk-sender-requirements/` (rules table from the Google, Yahoo and Microsoft pages; the 0.3% figure found in Google's own guidelines and FAQ, with 0.1% as the target; our DNS survey of 165 Show HN product domains from Oct 2026: 42 of 121 mail domains (35%) without DMARC, 41 at p=none, 1 with two SPF records, DKIM at a common selector on 62 of 114; record table with transactional and newsletter subdomains and a custom MAIL FROM; RFC 9989 changes)
+- **Status:** published 2026-11-16 (dated; written 2026-11-15 by lane t-20261115-blog-post, goes live after its review merges) → `/articles/gmail-bulk-sender-requirements/` (rules table from the Google, Yahoo and Microsoft pages; the 0.3% figure found in Google's own guidelines and FAQ, with 0.1% as the target; our DNS survey of 165 Show HN product domains from Oct 2026: 42 of 119 mail domains (35%) without DMARC, 40 at p=none, 1 with two SPF records, DKIM at a common selector on 62 of 113; record table with transactional and newsletter subdomains and a custom MAIL FROM; RFC 9989 changes)
 
 ### 17. E-invoicing in 2026–27: what a small SaaS selling into the EU must do · `next`
 - **Keyword:** `e invoicing france` (level 4), `e invoicing belgium` (level 3), `peppol` (level 2; HN 50; Wikipedia 1,135/mo).
@@ -457,7 +457,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 | 29 upload limits | Traffic updated. Any Discord limit must be read fresh: it moved to 20 MB on 13 Aug 2026. | topic 39 |
 | 32 price increases | Still level 2; the Bing check it waits on is still not possible. | Appendix C method |
 
-**Still unchecked, left for the writing lane:** topic 16's 0.3% spam-rate figure (search again found it only on vendor sites; open Google's page).
+**Still unchecked, left for the writing lane:** topic 16's 0.3% spam-rate figure (search again found it only on vendor sites; open Google's page). *(Checked 2026-11-15 by lane t-20261115-blog-post: it is in Google's own sender guidelines and FAQ, support.google.com/a/answer/81126 and /14229414.)*
 
 **Measured, not chosen:** `soc 2 for startups` (level 4; we'd have no data of our own, only vendor ranges), and `invoice generator`, `json formatter`, `merge pdf`, `password generator` and other level 3–4 tool terms where a post can't beat the tool page. In topics 35, 37 and 39, `uuid generator`, `qr code generator` and `compress video` are the same kind: context, not the post's `keyword:`, which is always the first one listed.
 

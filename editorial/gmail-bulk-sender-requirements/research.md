@@ -23,8 +23,8 @@ What's newer since the plan (2026-10-29): DMARC has a new core RFC, RFC 9989 (Ma
 Our own data (2026-11-15, buffermint-vps, scripts in this folder's claims.md):
 - Sample: every Show HN story created in October 2026 with 10+ points, from the HN Algolia API: 300 stories. Hosts other than code hosts, app stores, social sites and free hosting subdomains (github.com, *.vercel.app, *.github.io, etc.): 165 domains (all different registrable domains).
 - `dig` for MX and SPF at the registrable domain and DMARC at `_dmarc.<host>` then the registrable domain.
-- 121 of 165 publish an MX or an SPF record (117 an MX, 2 more a null MX). Of those 121: no SPF 8, two SPF records 1 (an SPF permerror), SPF ending `~all` 87, `-all` 17, `?all` 7, no `all` 1. DMARC: none 42 (35%), p=none 41, quarantine 16, reject 22; rua on 45. A single SPF and a DMARC record: 75 (62%); with an enforcing policy: 36 (30%).
-- Mail hosts: Google 40, Cloudflare Email Routing 20, Fastmail 7, Proton 3, Zoho 3, Microsoft 2, ImprovMX 2, other 40 (14 of the SPF records include Namecheap's forwarding). Amazon SES appears in 9 SPF records.
+- 121 of 165 publish an MX or an SPF record (117 an MX); 2 of those have only a null MX (declare no mail) and are left out, so 119 mail domains. Of those 119: no SPF 8, two SPF records 1 (an SPF permerror), SPF ending `~all` 87, `-all` 15, `?all` 7, no `all` 1. DMARC: none 42 (35%), p=none 40, quarantine 16, reject 21; rua on 44. (Updated after the code review; first count included the 2 null-MX domains.)
+- Mail hosts: Google 40, Cloudflare Email Routing 20, Fastmail 7, Proton 3, Zoho 3, Microsoft 2, ImprovMX 2, other 40 (14 of the SPF records include Namecheap's forwarding, 13 with nothing else). Amazon SES appears in 9 SPF records.
 - DKIM can't be listed from DNS without the selector; see the probe in claims.md (common selectors only, a lower bound).
 
 ## Disagreements
@@ -37,7 +37,7 @@ Our own data (2026-11-15, buffermint-vps, scripts in this folder's claims.md):
 - **Transactional vs marketing.** Unsubscribe rules apply to marketing and subscribed messages (Google, Yahoo); authentication applies to everything. A password reset needs SPF/DKIM/DMARC alignment but no unsubscribe header.
 
 ## New angle
-1. Our own DNS survey of the 165 product domains launched on Show HN in October 2026: how many would pass the DNS half of the bulk rules (DMARC present: 65% of mail-capable domains; 35% have none), the SPF mistakes we saw, and which mail setups they use (many receive through forwarding services whose SPF only covers the forwarder).
+1. Our own DNS survey of the 165 product domains launched on Show HN in October 2026: how many would pass the DNS half of the bulk rules (DMARC present: 77 of 119 mail domains, 65%; 42, 35%, have none), the SPF mistakes we saw, and which mail setups they use (many receive through forwarding services whose SPF only covers the forwarder).
 2. One checklist reconciled from the three providers' own pages, with the disagreements shown (bulk threshold, unsubscribe speed, mailto, spam rate), and the 0.3% figure traced to Google's pages.
 3. The DNS records a small SaaS needs, with transactional and marketing mail on separate subdomains (why: Google counts subdomains under the primary domain for the threshold, but spam complaints and reputation still sit with the sending domain; the SES/Resend MAIL FROM pattern), and the RFC 9989 changes (pct gone, t=y).
 

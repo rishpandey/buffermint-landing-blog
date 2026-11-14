@@ -1,10 +1,10 @@
 # Claims: gmail-bulk-sender-requirements
 
-Our own data: DNS lookups from buffermint-vps on 2026-11-15 by lane t-20261115-blog-post. Scripts in `survey/` next to this file (run with `python3 -I`):
-1. Sample: `curl "https://hn.algolia.com/api/v1/search_by_date?tags=show_hn&numericFilters=created_at_i%3E%3D1790812800,created_at_i%3C1793491200,points%3E%3D10&hitsPerPage=1000"` (1 Oct 2026 00:00 UTC to 1 Nov 2026 00:00 UTC, 10+ points): 300 hits, nbHits 300. Hosts minus code hosts, app stores, social sites and free hosting subdomains (list in the one-liner kept in research notes: github.com, gitlab.com, youtube.com, apps.apple.com, play.google.com, huggingface.co, arxiv.org, codeberg.org, npmjs.com, pypi.org, Chrome Web Store, news.ycombinator.com, twitter.com, x.com, medium.com, substack.com, vercel.app, netlify.app, github.io, pages.dev, itch.io, producthunt.com, reddit.com, addons.mozilla.org, crates.io, docs.google.com, VS Code marketplace, fly.dev, onrender.com, replit.app, lovable.app, streamlit.app), `www.` stripped: 165 hosts in `survey/domains.txt`, 165 distinct registrable domains.
-2. `survey.py domains.txt survey.json`: `dig +short` MX and TXT (SPF) at the registrable domain; DMARC TXT at `_dmarc.<host>`, then `_dmarc.<registrable domain>`.
-3. `analyze.py survey.json`: counts below. "Mail domain" = a non-null MX or an SPF record.
-4. `dkim.py survey.json dkim.json`: TXT and CNAME at `<sel>._domainkey.<domain>` for google, resend, selector1, s1, k1, default, mail, dkim, sig1, protonmail, fm1, zmail; MX at `send.<domain>`. `control.py dkim.json`: the same lookups for a made-up selector `zq7xk2bm` and host; domains answering are wildcard and excluded (7 for DKIM, 7 for `send.` MX).
+Our own data: DNS lookups from buffermint-vps on 2026-11-15 by lane t-20261115-blog-post. Everything is in `survey/` next to this file (run with `python3 -I`), including the raw results (`survey.json`, `dkim.json`, `dkim.json.wild.json`):
+1. `sample.py showhn.json domains.txt`: the curl in its header (Show HN, 1 Oct 2026 00:00 UTC to 1 Nov 2026 00:00 UTC, 10+ points: 300 hits, nbHits 300), minus code hosts, app stores, social sites and free hosting subdomains (list in the script), `www.` stripped: 165 hosts in `domains.txt`, 165 distinct registrable domains.
+2. `survey.py domains.txt survey.json`: `dig +short` MX and TXT (SPF) at the registrable domain; DMARC TXT at `_dmarc.<host>`, then `_dmarc.<registrable domain>`. (None of the 26 subdomain hosts has its own `_dmarc` record, checked 2026-11-15, so every DMARC result is the registrable domain's.)
+3. `analyze.py survey.json`: counts below. "Mail domain" = a non-null MX or an SPF record, minus domains whose only MX is the null MX (`0 .`, RFC 7505: no mail); 2 such domains, both `v=spf1 -all`.
+4. `dkim.py survey.json dkim.json`: TXT and CNAME at `<sel>._domainkey.<domain>` for google, resend, selector1, s1, k1, default, mail, dkim, sig1, protonmail, fm1, zmail; MX at `send.<domain>`. `control.py dkim.json`: the same lookups for a made-up selector `zq7xk2bm` and host; domains answering are wildcard and excluded (7 for DKIM, 7 for `send.` MX). `extra.py survey.json dkim.json`: rows 36, 37, 40, 45 over the 119 mail domains.
 
 | # | Claim (as written in the post) | Source | What the source says |
 |---|---|---|---|
@@ -38,21 +38,21 @@ Our own data: DNS lookups from buffermint-vps on 2026-11-15 by lane t-20261115-b
 | 28 | Google asks for the one-click headers with an HTTPS URL | https://support.google.com/a/answer/81126 | List-Unsubscribe-Post: List-Unsubscribe=One-Click and List-Unsubscribe with an HTTPS URL |
 | 29 | Our plan noted the 0.3% figure turned up only on vendor blogs | ours: BLOG-PLAN.md topic 16 and line 460 ("search again found it only on vendor sites") | as stated |
 | 30 | 165 product domains that reached 10 points on Show HN in October 2026; 300 stories | ours: step 1 | 300 hits; 165 domains |
-| 31 | 121 handle email (MX or SPF) | ours: analyze.py `mail_capable` | 121 |
-| 32 | 42 (35%) publish no DMARC record | ours: analyze.py `dmarc_none` | 42/121 = 34.7% |
-| 33 | DMARC 79 (65%); p=none 41 (34%); quarantine 16 (13%); reject 22 (18%); rua 45 (37%) | ours: analyze.py | 41+16+22 = 79; 79/121 = 65.3%, 33.9%, 13.2%, 18.2%, 37.2% |
-| 34 | No SPF 8 (7%); two SPF records 1 (1%) | ours: analyze.py `spf_none`, `spf_multiple` | 8/121 = 6.6%; 1/121 = 0.8% |
-| 35 | SPF ending ~all 87 (72%), -all 17 (14%), ?all 7 (6%) | ours: analyze.py `spf_all_*` | 71.9%, 14.0%, 5.8% (1 more has no `all`) |
-| 36 | 29 domains showed a sending service; only 2 had no DMARC; 20 of 27 at p=none | ours: one-liner over survey.json + dkim.json (resend/s1/k1 selector, `send.` MX at amazonses, or amazonses in SPF; wildcard excluded) | 29; 2 without DMARC; 20 p=none |
-| 37 | 20 receive through Cloudflare Email Routing; 14 more include Namecheap's forwarding in SPF | ours: MX containing `mx.cloudflare.net` = 20; SPF including `spf.efwd.registrar-servers.com` = 14; overlap 0 | as stated |
-| 38 | Two SPF records: RFC 7208 treats as a permanent error | https://www.rfc-editor.org/rfc/rfc7208.html §4.5 | more than one record → "permerror" |
+| 31 | 119 handle email (MX or SPF, null-MX-only excluded) | ours: analyze.py `mail_capable` | 119 (121 with MX or SPF, minus 2 null-MX-only) |
+| 32 | 42 (35%) publish no DMARC record | ours: analyze.py `dmarc_none` | 42/119 = 35.3% |
+| 33 | DMARC 77 (65%); p=none 40 (34%); quarantine 16 (13%); reject 21 (18%); rua 44 (37%) | ours: analyze.py | 40+16+21 = 77; 77/119 = 64.7%, 33.6%, 13.4%, 17.6%, 37.0% |
+| 34 | No SPF 8 (7%); two SPF records 1 (1%) | ours: analyze.py `spf_none`, `spf_multiple` | 8/119 = 6.7%; 1/119 = 0.8% |
+| 35 | SPF ending ~all 87 (73%), -all 15 (13%), ?all 7 (6%) | ours: analyze.py `spf_all_*` | 73.1%, 12.6%, 5.9% (1 more has no `all`) |
+| 36 | 29 domains showed a sending service (`resend`, `s1` or `k1` selector, SES bounce subdomain, or SES in SPF); only 2 had no DMARC; 19 of 27 at p=none | ours: extra.py | 29; 2 without DMARC; 19 p=none |
+| 37 | 20 receive through Cloudflare Email Routing; 14 more include Namecheap's forwarding in SPF, 13 with nothing else | ours: extra.py (MX `mx.cloudflare.net`; SPF `include:spf.efwd.registrar-servers.com`; forwarder-only = no other include/ip4/ip6/a/mx) | 20; 14; 13; overlap 0 (the 14th also includes `_spf.google.com`) |
+| 38 | One domain publishes two SPF records;: RFC 7208 treats as a permanent error | https://www.rfc-editor.org/rfc/rfc7208.html §4.5 | more than one record → "permerror" |
 | 39 | ?all is neutral; ~all softfail; RFC 7208 advises not rejecting on softfail alone | https://www.rfc-editor.org/rfc/rfc7208.html §2.6.3, §2.6.5, §8.5 | neutral = no assertion; softfail "weak statement"; receivers shouldn't reject solely on softfail |
-| 40 | At least 62 of 114 mail domains without wildcard DNS (54%) have a key at one of 12 names; google 29, resend 20 | ours: control.py | 121 − 7 wildcard = 114; 62; google 29, resend 20 |
+| 40 | At least 62 of 113 mail domains without wildcard DNS (55%) have a key at one of 12 names; google 29, resend 20 | ours: extra.py | 119 − 6 wildcard = 113; 62 (54.9%); google 29, resend 20 |
 | 41 | Resend docs recommend sending from a subdomain | https://resend.com/docs/add-a-domain | "We strongly recommend sending emails from a subdomain" |
 | 42 | Subdomains don't escape Gmail's bulk count or its compliance view | https://support.google.com/a/answer/14229414 ; https://support.google.com/mail/answer/14668346 | subdomains roll up to primary domain; compliance dashboard "applies to primary domains only" |
 | 43 | SES uses a subdomain of amazonses.com unless you set your own; MX `10 feedback-smtp.<region>.amazonses.com` and `v=spf1 include:amazonses.com ~all` | https://docs.aws.amazon.com/ses/latest/dg/mail-from.html | as quoted in the guide's record table |
 | 44 | Resend does the same at send.example.com by default | https://resend.com/docs/add-a-domain | Return-Path "defaults to `send.example.com`" |
-| 45 | 19 domains had an MX on a send. subdomain, 11 pointing at SES | ours: control.py `send_mx`, `send_mx_amazonses` | 19; 11 |
+| 45 | 19 domains had an MX on a send. subdomain, 11 pointing at SES | ours: extra.py | 19; 11 |
 | 46 | Relaxed alignment is the default; same organizational domain aligns | https://www.rfc-editor.org/rfc/rfc9989.html (§11.8 "default alignment (relaxed)", Appendix B.1.1 example 2) | identifiers "in relaxed alignment because they both have the same Organizational Domain" |
 | 47 | RFC 9989, May 2026, replaces RFC 7489 | https://www.rfc-editor.org/rfc/rfc9989.html | May 2026; obsoletes RFC 7489 and RFC 9091 |
 | 48 | pct removed; t=y for test mode | https://www.rfc-editor.org/rfc/rfc9989.html | Appendix A.6 "Removal of the 'pct' Tag"; `t` tag test mode |
@@ -65,3 +65,4 @@ Our own data: DNS lookups from buffermint-vps on 2026-11-15 by lane t-20261115-b
 | 55 | Subject tester flags spam-trigger words, capitals and length; phone and desktop previews | ours: buffermint-tools `src/seo/_tools.json` email-subject-tester desc | "phone and desktop inbox previews, length, spam-trigger words, capitals" |
 | 56 | Postmaster Compliance status: SPF and DKIM, DNS, formatting, encryption, spam rate for all; DMARC and unsubscribe for bulk; primary domains only; up to 7 days | https://support.google.com/mail/answer/14668346 | as quoted in research.md |
 | 57 | RFC 8058 January 2017; RFC 7208 April 2014; Microsoft post 2 April 2025, updated later that month | the three pages | as stated |
+| 58 | Two null-MX domains left out of the mail count | ours: analyze.py `null_mx`; RFC 7505 | 2 |

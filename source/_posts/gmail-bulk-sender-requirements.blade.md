@@ -1,6 +1,6 @@
 ---
 title: "Gmail bulk sender requirements, plus Yahoo and Outlook rules"
-seo_description: "Gmail bulk sender requirements next to Yahoo's and Outlook's, from their own pages: the DNS records a small SaaS needs, and what 165 new domains publish."
+seo_description: "Gmail bulk sender requirements next to Yahoo's and Outlook's, from their own pages: the DNS records a small SaaS needs, and what 165 product domains publish."
 keyword: gmail bulk sender requirements
 author: Rishabh Pandey
 show_meta: true
@@ -14,7 +14,7 @@ extends: _layouts.post
 
 A small SaaS is usually far below 5,000 a day, but [Google counts](https://support.google.com/a/answer/14229414) every subdomain under your main domain together and never lets a domain drop back out, so the cheap move is to meet the bulk rules from your first email.
 
-To see how new products actually do, we looked up the DNS of the 165 product domains that reached 10 points on Show HN in October 2026. Of the 121 that handle email at all, 42 (35%) publish no DMARC record, the bulk-only requirement anyone can check from outside.
+To see how new products actually do, we looked up the DNS of the 165 product domains that reached 10 points on Show HN in October 2026. Of the 119 that handle email at all, 42 (35%) publish no DMARC record, the bulk-only requirement anyone can check from outside.
 
 Below: the rules side by side as of November 2026, where the three providers disagree, what we found in those domains, the DNS records to publish, and how to check yours.
 
@@ -45,29 +45,29 @@ The authentication rules apply to every message, password resets included. The u
 
 ## What 165 new product domains publish
 
-On 15 November 2026 we took every Show HN story from October 2026 with at least 10 points from the [Hacker News search API](https://hn.algolia.com/api) (300 stories), dropped links to code hosts, app stores, social sites and free hosting subdomains, and kept 165 distinct domains. For each we looked up the MX, SPF and DMARC records with `dig`, then probed 12 common DKIM selector names. Domains that answer for a made-up name (wildcard DNS) were left out of the DKIM count. The list includes a few established companies as well as new projects.
+On 15 November 2026 we took every Show HN story from October 2026 with at least 10 points from the [Hacker News search API](https://hn.algolia.com/api) (300 stories), dropped links to code hosts, app stores, social sites and free hosting subdomains, and kept 165 distinct domains. For each we looked up the MX, SPF and DMARC records with `dig`, then probed 12 common DKIM selector names. Domains that answer for a made-up name (wildcard DNS) were left out of the DKIM count, and two domains whose only MX record is the "null MX" that declares no mail were left out of the mail count. The list includes a few established companies as well as new projects.
 
-| Of the 121 domains with an MX or SPF record | Count | Share |
+| Of the 119 domains with an MX or SPF record | Count | Share |
 |---|---|---|
-| A DMARC record | 79 | 65% |
-| ↳ `p=none` | 41 | 34% |
+| A DMARC record | 77 | 65% |
+| ↳ `p=none` | 40 | 34% |
 | ↳ `p=quarantine` | 16 | 13% |
-| ↳ `p=reject` | 22 | 18% |
-| ↳ asks for aggregate reports (`rua`) | 45 | 37% |
+| ↳ `p=reject` | 21 | 18% |
+| ↳ asks for aggregate reports (`rua`) | 44 | 37% |
 | No DMARC record | 42 | 35% |
 | No SPF record | 8 | 7% |
 | Two SPF records (invalid) | 1 | 1% |
-| SPF ending in `~all` / `-all` / `?all` | 87 / 17 / 7 | 72% / 14% / 6% |
+| SPF ending in `~all` / `-all` / `?all` | 87 / 15 / 7 | 73% / 13% / 6% |
 
 Three things stood out.
 
-**The domains visibly set up to send app mail mostly do publish DMARC.** 29 domains showed a sending service in their DNS: a DKIM key at Resend's or SendGrid's usual selector, an Amazon SES bounce subdomain, or SES in their SPF. Only 2 of them had no DMARC record, and 20 of the 27 that had one sat at `p=none`. Sending providers walk you through these records when you add a domain, and it shows.
+**The domains visibly set up to send app mail mostly do publish DMARC.** 29 domains showed a sending service in their DNS: a DKIM key at the `resend`, `s1` or `k1` selector, an Amazon SES bounce subdomain, or SES in their SPF. Only 2 of them had no DMARC record, and 19 of the 27 that had one sat at `p=none`. Sending providers walk you through these records when you add a domain, and it shows.
 
-**Many domains only forward mail.** 20 receive through Cloudflare Email Routing and 14 more have SPF records that include Namecheap's forwarding service. That's a fine way to get replies to a personal inbox, but such an SPF record authorizes only the forwarder. The day the product starts sending sign-up emails from that domain, the sending service's records have to be added, and DMARC still has to be published.
+**Many domains only forward mail.** 20 receive through Cloudflare Email Routing, and 14 more include Namecheap's forwarding service in their SPF record, 13 of them with nothing else in it. That's a fine way to get replies to a personal inbox, but an SPF record like that authorizes only the forwarder. The day the product starts sending sign-up emails from that domain, the sending service's records have to be added, and DMARC still has to be published.
 
 **A few SPF records are broken or toothless.** One domain publishes two SPF records, which [RFC 7208](https://www.rfc-editor.org/rfc/rfc7208.html) treats as a permanent error: neither counts. Seven end in `?all` (neutral), which says nothing about servers not listed. Most use `~all` (softfail), and RFC 7208 advises receivers not to reject mail on a softfail alone: with DMARC published, it is DMARC that decides what happens to mail that fails.
 
-DKIM is harder to count from outside, because you need the selector name to find the key. At least 62 of the 114 mail domains without wildcard DNS (54%) have a key at one of the 12 names we tried, most often `google` (29) and `resend` (20). The real share is higher.
+DKIM is harder to count from outside, because you need the selector name to find the key. At least 62 of the 113 mail domains without wildcard DNS (55%) have a key at one of the 12 names we tried, most often `google` (29) and `resend` (20). The real share is higher.
 
 ## The DNS records a small SaaS needs
 
@@ -79,7 +79,7 @@ Here is a typical setup: staff mail on Google Workspace or another mailbox host,
 | `example.com` | TXT | `v=spf1 include:<mailbox host> ~all` | staff mail passes SPF |
 | `<selector>._domainkey.example.com` | TXT or CNAME | key from your mailbox host | staff mail passes DKIM |
 | `<selector>._domainkey.mail.example.com` | TXT or CNAME | key from your transactional service | app mail from `@mail.example.com` passes DKIM, aligned |
-| `bounce.mail.example.com` | MX + TXT | the service's bounce host and `v=spf1 include:<service> ~all` | custom bounce (MAIL FROM) domain, so SPF aligns too |
+| `bounce.mail.example.com` | MX + TXT | the service's bounce host and `v=spf1 include:<service> ~all` | custom bounce (MAIL FROM) domain, so SPF aligns too; add `bounce.news.example.com` the same way if your newsletter tool offers one |
 | `<selector>._domainkey.news.example.com` | TXT or CNAME | key from your newsletter tool | newsletter passes DKIM, aligned |
 | `_dmarc.example.com` | TXT | `v=DMARC1; p=none; rua=mailto:dmarc@example.com` | one policy for the domain and its subdomains, plus reports |
 
@@ -106,14 +106,14 @@ List-Unsubscribe-Post: List-Unsubscribe=One-Click
 
 ## How to check your own domain
 
-1. **Look up your records.** `dig +short TXT example.com`, `dig +short TXT _dmarc.example.com` and `dig +short MX example.com` show what receivers see. One SPF record, one DMARC record, MX only if you receive mail.
+1. **Look up your records.** `dig +short TXT example.com`, `dig +short TXT _dmarc.example.com` and `dig +short MX example.com` show what receivers see. One SPF record per name, one DMARC record, and an MX at the root only if you receive mail there (a custom bounce subdomain needs its own MX).
 2. **Send a real message to a Gmail address and read the headers.** In Gmail, open it and choose ["Show original"](https://support.google.com/mail/answer/29436) to see the full header, then copy it. Paste it into our [email header analyzer](/tools/privacy/email-header-analyzer/), which runs in your browser, to see the SPF, DKIM and DMARC results, any mismatch between the sender domains, and the delivery hops. You want `dmarc=pass`, and a DKIM `d=` on your own domain.
 3. **Add the domain to Google Postmaster Tools.** Its [Compliance status dashboard](https://support.google.com/mail/answer/14668346) checks SPF and DKIM, DNS, formatting, encryption and spam rate for every sender, plus DMARC and unsubscribe for bulk senders. It reports on primary domains only, and a fix can take up to 7 days to show.
 4. **Watch complaints, not just authentication.** The spam rate is the requirement you can't fix in DNS. Send only to people who asked, keep the From name recognizable, and make subject lines say what's inside. Our [subject line tester](/tools/seo/email-subject-tester/) flags spam-trigger words, capitals and length, and shows phone and desktop inbox previews.
 
 ## The checklist
 
-- [ ] SPF on every domain you send from, one record each, under 10 lookups
+- [ ] SPF on the root domain for staff mail and on each bounce (MAIL FROM) subdomain, one record per name, under 10 lookups
 - [ ] DKIM keys from every service that sends as you, on the subdomain it sends from
 - [ ] A custom bounce (MAIL FROM) subdomain on your transactional service
 - [ ] `_dmarc` record at `p=none` with `rua` reports; tighten after reading them

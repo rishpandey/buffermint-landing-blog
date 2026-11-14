@@ -1,0 +1,1988 @@
+[
+ {
+  "host": "100toolkit.com",
+  "org": "100toolkit.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "3anddoneapp.com",
+  "org": "3anddoneapp.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:3ac2f49ab6d34e43ada35097155012a5@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "3d.camilleworld.com",
+  "org": "camilleworld.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "adrs.systems",
+  "org": "adrs.systems",
+  "mx": [
+   "0 mx1.efwd.spaceship.net.",
+   "0 mx2.efwd.spaceship.net."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.spaceship.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "adyen.com",
+  "org": "adyen.com",
+  "mx": [
+   "10 ALT3.ASPMX.L.GOOGLE.com.",
+   "5 ALT1.ASPMX.L.GOOGLE.com.",
+   "5 ALT2.ASPMX.L.GOOGLE.com.",
+   "1 ASPMX.L.GOOGLE.com.",
+   "10 ALT4.ASPMX.L.GOOGLE.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.adyen.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:dmarc_report@adyen.com; adkim=s; aspf=s"
+  ]
+ },
+ {
+  "host": "againstallodds.games",
+  "org": "againstallodds.games",
+  "mx": [
+   "10 vmx02.prolocation.nl.",
+   "10 vmx01.prolocation.nl.",
+   "10 vmx03.prolocation.net."
+  ],
+  "spf": [
+   "v=spf1 include:spf.mailjet.com include:spfinc.prolocation.net  ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "agent.reviews",
+  "org": "agent.reviews",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "agentability.org",
+  "org": "agentability.org",
+  "mx": [
+   "0 agentability-org.mail.protection.outlook.com."
+  ],
+  "spf": [
+   "v=spf1 include:secureserver.net -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "ailegal.legal",
+  "org": "ailegal.legal",
+  "mx": [
+   "58 route2.mx.cloudflare.net.",
+   "31 route1.mx.cloudflare.net.",
+   "45 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:maxim.pkk@gmail.com"
+  ]
+ },
+ {
+  "host": "arsaze.com",
+  "org": "arsaze.com",
+  "mx": [
+   "2 route3.mx.cloudflare.net.",
+   "34 route1.mx.cloudflare.net.",
+   "95 route2.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:e4b254b63b4948318782edf048ca5df6@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "artmuseum.artfrompixels.com",
+  "org": "artfrompixels.com",
+  "mx": [
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "astrohelm.app",
+  "org": "astrohelm.app",
+  "mx": [
+   "10 in1-smtp.messagingengine.com.",
+   "20 in2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com include:mail.zendesk.com ?all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "awesomedataviz.com",
+  "org": "awesomedataviz.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "betterwispr.com",
+  "org": "betterwispr.com",
+  "mx": [
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "bigwhalehunting.com",
+  "org": "bigwhalehunting.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "bigwords.page",
+  "org": "bigwords.page",
+  "mx": [
+   "50 mailserver.purelymail.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.purelymail.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; ruf=mailto:dmarc@purelymail.com"
+  ]
+ },
+ {
+  "host": "billmender.com",
+  "org": "billmender.com",
+  "mx": [
+   "48 route3.mx.cloudflare.net.",
+   "69 route2.mx.cloudflare.net.",
+   "90 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; sp=none; adkim=r; aspf=r"
+  ]
+ },
+ {
+  "host": "bise.dev",
+  "org": "bise.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "bloffy.co",
+  "org": "bloffy.co",
+  "mx": [
+   "7 route2.mx.cloudflare.net.",
+   "13 route1.mx.cloudflare.net.",
+   "51 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "blumify.io",
+  "org": "blumify.io",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:amazonses.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:gaurav@blumify.io; adkim=r; aspf=r"
+  ]
+ },
+ {
+  "host": "book.humanexperiences.io",
+  "org": "humanexperiences.io",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "brickbrag.com",
+  "org": "brickbrag.com",
+  "mx": [
+   "10 mx02.easyname.eu.",
+   "10 mx01.easyname.eu."
+  ],
+  "spf": [
+   "v=spf1 include:spf.easyname.com -all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "butterbean.farm",
+  "org": "butterbean.farm",
+  "mx": [
+   "10 mail.butterbean.farm."
+  ],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "carrierexplode.com",
+  "org": "carrierexplode.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "catcopter.com",
+  "org": "catcopter.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "celeryman.fun",
+  "org": "celeryman.fun",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "certainthings.studio",
+  "org": "certainthings.studio",
+  "mx": [
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "chenglou.me",
+  "org": "chenglou.me",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "clova.email",
+  "org": "clova.email",
+  "mx": [
+   "1 mx.clova.email."
+  ],
+  "spf": [
+   "v=spf1 a:mx.clova.email ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; sp=reject; adkim=r; aspf=r; fo=1; rua=mailto:dmarc@clova.email"
+  ]
+ },
+ {
+  "host": "console.era.eon.io",
+  "org": "eon.io",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:mail.zendesk.com include:145275905.spf04.hubspotemail.net include:_spf.google.com include:amazonses.com include:_spf.salesforce.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject;"
+  ]
+ },
+ {
+  "host": "corgi.computer",
+  "org": "corgi.computer",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "dator.dev",
+  "org": "dator.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "deathplanswitch.com",
+  "org": "deathplanswitch.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "demo.ulda.io",
+  "org": "ulda.io",
+  "mx": [
+   "10 mail.protonmail.ch.",
+   "20 mailsec.protonmail.ch."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.protonmail.ch ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine"
+  ]
+ },
+ {
+  "host": "docs.hypermass.io",
+  "org": "hypermass.io",
+  "mx": [
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "dovepass.com",
+  "org": "dovepass.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "drop7.dev",
+  "org": "drop7.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "ego-lite.apposters.com",
+  "org": "apposters.com",
+  "mx": [
+   "56 route1.mx.cloudflare.net.",
+   "15 route2.mx.cloudflare.net.",
+   "4 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+  ]
+ },
+ {
+  "host": "evans.bike",
+  "org": "evans.bike",
+  "mx": [
+   "23 route2.mx.cloudflare.net.",
+   "4 route3.mx.cloudflare.net.",
+   "67 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "fakeipedia.org",
+  "org": "fakeipedia.org",
+  "mx": [
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "fframes.studio",
+  "org": "fframes.studio",
+  "mx": [
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "flexchords.com",
+  "org": "flexchords.com",
+  "mx": [
+   "10 mx1.improvmx.com.",
+   "20 mx2.improvmx.com."
+  ],
+  "spf": [
+   "v=spf1 include:amazonses.com include:spf.improvmx.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "freehire.me",
+  "org": "freehire.me",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; pct=100; rua=mailto:dmarc-reports@freehire.me; adkim=s; aspf=s"
+  ]
+ },
+ {
+  "host": "game.ultimidi.com",
+  "org": "ultimidi.com",
+  "mx": [
+   "51 route2.mx.cloudflare.net.",
+   "82 route3.mx.cloudflare.net.",
+   "90 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "genesisdb.io",
+  "org": "genesisdb.io",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com -all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "georadios.com",
+  "org": "georadios.com",
+  "mx": [
+   "10 mx2-hosting.jellyfish.systems.",
+   "20 mx3-hosting.jellyfish.systems.",
+   "5 mx1-hosting.jellyfish.systems."
+  ],
+  "spf": [
+   "v=spf1 +a +mx +ip4:198.177.120.26 +ip4:198.177.120.27 include:spf.web-hosting.com +ip4:162.0.217.178 ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "getopposable.com",
+  "org": "getopposable.com",
+  "mx": [
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "gmapscrawl.com",
+  "org": "gmapscrawl.com",
+  "mx": [
+   "1 mx1.larksuite.com.",
+   "10 mx3.larksuite.com.",
+   "5 mx2.larksuite.com."
+  ],
+  "spf": [
+   "v=spf1 +include:spf.onlarksuite.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+  ]
+ },
+ {
+  "host": "greenvitriol.com",
+  "org": "greenvitriol.com",
+  "mx": [
+   "79 route3.mx.cloudflare.net.",
+   "23 route2.mx.cloudflare.net.",
+   "5 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "grimoire.bio",
+  "org": "grimoire.bio",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "gtlds.fyi",
+  "org": "gtlds.fyi",
+  "mx": [
+   "16 route2.mx.cloudflare.net.",
+   "34 route3.mx.cloudflare.net.",
+   "51 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; aspf=s; adkim=s;"
+  ]
+ },
+ {
+  "host": "guitoro.com",
+  "org": "guitoro.com",
+  "mx": [
+   "88 route3.mx.cloudflare.net.",
+   "58 route1.mx.cloudflare.net.",
+   "66 route2.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "handwritten.danieljanus.pl",
+  "org": "danieljanus.pl",
+  "mx": [
+   "10 data.home.pl."
+  ],
+  "spf": [
+   "v=spf1 ip4:89.161.255.234 a mx"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "hangul.ink",
+  "org": "hangul.ink",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "hatamoto.dev",
+  "org": "hatamoto.dev",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:dmarc@hatamoto.dev; fo=1"
+  ]
+ },
+ {
+  "host": "hellojomp.com",
+  "org": "hellojomp.com",
+  "mx": [
+   "59 route2.mx.cloudflare.net.",
+   "9 route3.mx.cloudflare.net.",
+   "19 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "helohq.com",
+  "org": "helohq.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:dmarc@helohq.com; pct=100; adkim=s; aspf=s"
+  ]
+ },
+ {
+  "host": "hypernuclear.com",
+  "org": "hypernuclear.com",
+  "mx": [
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:dc-aa8e722993._spfm.hypernuclear.com ~all",
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "ilia.page",
+  "org": "ilia.page",
+  "mx": [
+   "10 mx01.mail.icloud.com.",
+   "10 mx02.mail.icloud.com."
+  ],
+  "spf": [
+   "v=spf1 include:icloud.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "impossiblemachines.xyz",
+  "org": "impossiblemachines.xyz",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "indigene.app",
+  "org": "indigene.app",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "innerloop.works",
+  "org": "innerloop.works",
+  "mx": [
+   "20 fwd2.porkbun.com.",
+   "10 fwd1.porkbun.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.porkbun.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "jamfetti.boondoggle.studio",
+  "org": "boondoggle.studio",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "jevcards.com",
+  "org": "jevcards.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "jointter.com",
+  "org": "jointter.com",
+  "mx": [
+   "50 mx3.zoho.eu.",
+   "10 mx.zoho.eu.",
+   "20 mx2.zoho.eu."
+  ],
+  "spf": [
+   "v=spf1 include:zohomail.eu ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "jotbus.com",
+  "org": "jotbus.com",
+  "mx": [
+   "50 mailserver.purelymail.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.purelymail.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; ruf=mailto:dmarc@purelymail.com"
+  ]
+ },
+ {
+  "host": "js.knitting.run",
+  "org": "knitting.run",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "kapwing.com",
+  "org": "kapwing.com",
+  "mx": [
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:spf.constantcontact.com include:spf.tapfiliate.com mx ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:627a7bcce8208@ag.dmarcly.com; ruf=mailto:627a7bcce8208@fo.dmarcly.com; sp=none; fo=0"
+  ]
+ },
+ {
+  "host": "kevs3d.co.uk",
+  "org": "kevs3d.co.uk",
+  "mx": [
+   "0 kevs3d.co.uk."
+  ],
+  "spf": [
+   "v=spf1 ip4:188.64.186.29 ip4:188.64.186.30 include:orange.ukhost4u.com +a +mx +ip4:188.64.187.125 +ip4:127.0.0.1 ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "lab.specr.net",
+  "org": "specr.net",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "legendofhyrule.com",
+  "org": "legendofhyrule.com",
+  "mx": [
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:b85fe70fa22348a889d293365488ea08@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "littleguys.hervalicio.us",
+  "org": "hervalicio.us",
+  "mx": [
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "llmspeed.dev",
+  "org": "llmspeed.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "mailaccess.pro",
+  "org": "mailaccess.pro",
+  "mx": [
+   "10 mx.zoho.in.",
+   "20 mx2.zoho.in.",
+   "50 mx3.zoho.in."
+  ],
+  "spf": [
+   "v=spf1 include:zoho.in ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:bfe242cf38984dbd9c552ff9a735e930@dmarc-reports.cloudflare.net;"
+  ]
+ },
+ {
+  "host": "mana.space",
+  "org": "mana.space",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "memorysync.io",
+  "org": "memorysync.io",
+  "mx": [
+   "61 route3.mx.cloudflare.net.",
+   "92 route1.mx.cloudflare.net.",
+   "41 route2.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:dmarc@memorysync.io; ruf=mailto:dmarc@memorysync.io;"
+  ]
+ },
+ {
+  "host": "mira.tours",
+  "org": "mira.tours",
+  "mx": [
+   "10 in1-smtp.messagingengine.com.",
+   "20 in2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com ?all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "museumofages.org",
+  "org": "museumofages.org",
+  "mx": [
+   "20 mailsec.protonmail.ch.",
+   "10 mail.protonmail.ch."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.protonmail.ch ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine"
+  ]
+ },
+ {
+  "host": "music.xy.dev",
+  "org": "xy.dev",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "mymirrormd.com",
+  "org": "mymirrormd.com",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "1 smtp.google.com.",
+   "1 aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:amazonses.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "nasscad.com",
+  "org": "nasscad.com",
+  "mx": [
+   "5 mx2.mail.ovh.net.",
+   "1 mx1.mail.ovh.net.",
+   "100 mx3.mail.ovh.net."
+  ],
+  "spf": [
+   "v=spf1 include:mx.ovh.com -all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "news.ycombinator.lol",
+  "org": "ycombinator.lol",
+  "mx": [
+   "10 mx1.improvmx.com.",
+   "20 mx2.improvmx.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.improvmx.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "niklasroy.com",
+  "org": "niklasroy.com",
+  "mx": [
+   "5 smtpin.rzone.de."
+  ],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1;p=reject;"
+  ]
+ },
+ {
+  "host": "offrun.dev",
+  "org": "offrun.dev",
+  "mx": [
+   "10 mailstore1.secureserver.net.",
+   "0 smtp.secureserver.net."
+  ],
+  "spf": [
+   "v=spf1 include:secureserver.net -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:dmarc_rua@onsecureserver.net; adkim=r; aspf=r;"
+  ]
+ },
+ {
+  "host": "oldroll.io",
+  "org": "oldroll.io",
+  "mx": [
+   "5 mx1.sg.aliyun.com.",
+   "10 mx2.sg.aliyun.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.sg.aliyun.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "onedeploy.co",
+  "org": "onedeploy.co",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "openhand.health",
+  "org": "openhand.health",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 aspmx2.googlemail.com.",
+   "10 aspmx3.googlemail.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:sendgrid.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+  ]
+ },
+ {
+  "host": "openlume.com",
+  "org": "openlume.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "opensidian.org",
+  "org": "opensidian.org",
+  "mx": [
+   "89 route3.mx.cloudflare.net.",
+   "1 route2.mx.cloudflare.net.",
+   "17 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "opper.ai",
+  "org": "opper.ai",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:dmarc-reports@opper.ai; ruf=mailto:dmarc-reports@opper.ai; sp=quarantine; adkim=r; aspf=r"
+  ]
+ },
+ {
+  "host": "oss.lsantos.dev",
+  "org": "lsantos.dev",
+  "mx": [
+   "20 mailsec.protonmail.ch.",
+   "10 mail.protonmail.ch."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.protonmail.ch mx ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; pct=100; fo=1; adkim=r; aspf=r; rua=mailto:77642d7e9379489cb86d41d9e643f139@dmarc-reports.cloudflare.net;"
+  ]
+ },
+ {
+  "host": "outcrop.rocks",
+  "org": "outcrop.rocks",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "outerweb.org",
+  "org": "outerweb.org",
+  "mx": [
+   "10 in1-smtp.messagingengine.com.",
+   "20 in2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com ?all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "parseable.com",
+  "org": "parseable.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all include:mail.zohopayroll.in"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+  ]
+ },
+ {
+  "host": "parsimony.lasu.dev",
+  "org": "lasu.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "patchwave.ai",
+  "org": "patchwave.ai",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:dmarc-reports@contextbridge.ai"
+  ]
+ },
+ {
+  "host": "pdftomp3.com",
+  "org": "pdftomp3.com",
+  "mx": [
+   "10 inbound-smtp.us-east-1.amazonaws.com."
+  ],
+  "spf": [
+   "v=spf1 include:amazonses.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "permit.petercai.com",
+  "org": "petercai.com",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:38a4e751ca904aa2b4c43ee568f85fc7@dmarc-reports.cloudflare.net,mailto:hello@petercai.com"
+  ]
+ },
+ {
+  "host": "petal.live",
+  "org": "petal.live",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none"
+  ]
+ },
+ {
+  "host": "peterszentkiralyi.eu",
+  "org": "peterszentkiralyi.eu",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "picoplayer.net",
+  "org": "picoplayer.net",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "pidgeon.ai",
+  "org": "pidgeon.ai",
+  "mx": [
+   "10 inbound-smtp.eu-west-1.amazonaws.com."
+  ],
+  "spf": [
+   "v=spf1 include:amazonses.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:dmarc@pidgeon.ai"
+  ]
+ },
+ {
+  "host": "pipod.dev",
+  "org": "pipod.dev",
+  "mx": [
+   "10 mailserver.purelymail.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.purelymail.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; ruf=mailto:dmarc@purelymail.com"
+  ]
+ },
+ {
+  "host": "pivotlake.io",
+  "org": "pivotlake.io",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "play.endothermic.ai",
+  "org": "endothermic.ai",
+  "mx": [
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com include:_spf.google.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "playgroundarcade.com",
+  "org": "playgroundarcade.com",
+  "mx": [
+   "79 route2.mx.cloudflare.net.",
+   "17 route3.mx.cloudflare.net.",
+   "55 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "pocketty.app",
+  "org": "pocketty.app",
+  "mx": [
+   "10 us1-smtp.messagingengine.com.",
+   "20 us2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com ?all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "popkern.dev",
+  "org": "popkern.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "premortem.site",
+  "org": "premortem.site",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "pressaudit.org",
+  "org": "pressaudit.org",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:admin@pressaudit.org"
+  ]
+ },
+ {
+  "host": "proa.so",
+  "org": "proa.so",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "proc-cli.com",
+  "org": "proc-cli.com",
+  "mx": [
+   "0 ."
+  ],
+  "spf": [
+   "v=spf1 -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:4e298071df3d4e84a2ec287c4a1c4157@dmarc-reports.cloudflare.net;"
+  ]
+ },
+ {
+  "host": "pug.sh",
+  "org": "pug.sh",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s;"
+  ]
+ },
+ {
+  "host": "pulseos.finance",
+  "org": "pulseos.finance",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "pumpkins.sh",
+  "org": "pumpkins.sh",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "rainbowsay.ai",
+  "org": "rainbowsay.ai",
+  "mx": [
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:e0bb3a152b654f91a3e2b89fec7c6927@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "ranet3.com",
+  "org": "ranet3.com",
+  "mx": [
+   "10 mailserver.purelymail.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.purelymail.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; ruf=mailto:dmarc@purelymail.com"
+  ]
+ },
+ {
+  "host": "readrare.com",
+  "org": "readrare.com",
+  "mx": [
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "rhun.app",
+  "org": "rhun.app",
+  "mx": [
+   "10 us1-smtp.messagingengine.com.",
+   "20 us2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com ?all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "rivendell.dmitrybrant.com",
+  "org": "dmitrybrant.com",
+  "mx": [
+   "0 mx2.mailchannels.net.",
+   "0 mx1.mailchannels.net."
+  ],
+  "spf": [
+   "v=spf1 mx include:netblocks.dreamhost.com include:relay.mailchannels.net -all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "rouler.io",
+  "org": "rouler.io",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject;"
+  ]
+ },
+ {
+  "host": "rstation.ai",
+  "org": "rstation.ai",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "scimigo.com",
+  "org": "scimigo.com",
+  "mx": [
+   "0 scimigo-com.mail.protection.outlook.com."
+  ],
+  "spf": [
+   "v=spf1 include:amazonses.com include:spf.protection.outlook.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:my_dmarc_report@scimigo.com"
+  ]
+ },
+ {
+  "host": "scottbezek.blogspot.com",
+  "org": "blogspot.com",
+  "mx": [],
+  "spf": [
+   "v=spf1 -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:mailauth-reports@google.com"
+  ]
+ },
+ {
+  "host": "sindresorhus.com",
+  "org": "sindresorhus.com",
+  "mx": [
+   "69 route1.mx.cloudflare.net.",
+   "71 route2.mx.cloudflare.net.",
+   "8 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; sp=reject; adkim=s; aspf=s; rua=mailto:6b780e7448654f8d9d751511fad9d398@dmarc-reports.cloudflare.net;"
+  ]
+ },
+ {
+  "host": "sketch.wakeshift.ai",
+  "org": "wakeshift.ai",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "slidebyside.com",
+  "org": "slidebyside.com",
+  "mx": [
+   "46 route3.mx.cloudflare.net.",
+   "71 route2.mx.cloudflare.net.",
+   "14 route1.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "snitch.alphaventure.com",
+  "org": "alphaventure.com",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 a mx include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none"
+  ]
+ },
+ {
+  "host": "sparkjs.dev",
+  "org": "sparkjs.dev",
+  "mx": [
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "spec-first.dev",
+  "org": "spec-first.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "starskirmish.com",
+  "org": "starskirmish.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1; p=reject;"
+  ]
+ },
+ {
+  "host": "stealmybitcoin.com",
+  "org": "stealmybitcoin.com",
+  "mx": [
+   "20 fwd2.porkbun.com.",
+   "10 fwd1.porkbun.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.porkbun.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "stelabouras.com",
+  "org": "stelabouras.com",
+  "mx": [
+   "10 in1-smtp.messagingengine.com.",
+   "20 in2-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com ?all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "stillwet.art",
+  "org": "stillwet.art",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "stoke.money",
+  "org": "stoke.money",
+  "mx": [
+   "23 route1.mx.cloudflare.net.",
+   "35 route2.mx.cloudflare.net.",
+   "13 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:c907c060baf04c0d8f83553f67d1581f@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "swurf.org",
+  "org": "swurf.org",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "sygal.app",
+  "org": "sygal.app",
+  "mx": [
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:rua@dmarc.brevo.com"
+  ]
+ },
+ {
+  "host": "tenderportal.io",
+  "org": "tenderportal.io",
+  "mx": [
+   "40 route1.mx.cloudflare.net.",
+   "48 route3.mx.cloudflare.net.",
+   "52 route2.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "thankyousteve.org",
+  "org": "thankyousteve.org",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "thingstodoapi.com",
+  "org": "thingstodoapi.com",
+  "mx": [
+   "56 route3.mx.cloudflare.net.",
+   "81 route1.mx.cloudflare.net.",
+   "97 route2.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:ed04ec5d039d49f290fd929a4da154d3@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "think-twice.me",
+  "org": "think-twice.me",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "thisandthat.chat",
+  "org": "thisandthat.chat",
+  "mx": [
+   "5 alt2.aspmx.l.google.com.",
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:50140405.spf03.hubspotemail.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:dmarc@thisandthat.chat; adkim=r; aspf=r; pct=100"
+  ]
+ },
+ {
+  "host": "thoreaubasic.com",
+  "org": "thoreaubasic.com",
+  "mx": [
+   "10 mx01.ionos.de.",
+   "10 mx00.ionos.de."
+  ],
+  "spf": [
+   "v=spf1 include:_spf-eu.ionos.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "timurschess.com",
+  "org": "timurschess.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "titleart.dvy.io",
+  "org": "dvy.io",
+  "mx": [
+   "15 route2.mx.cloudflare.net.",
+   "27 route1.mx.cloudflare.net.",
+   "43 route3.mx.cloudflare.net."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.mx.cloudflare.net ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:dmarc@dvy.io"
+  ]
+ },
+ {
+  "host": "tng.episodle.com",
+  "org": "episodle.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "trypalomino.com",
+  "org": "trypalomino.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1; p=reject;"
+  ]
+ },
+ {
+  "host": "typebook.lol",
+  "org": "typebook.lol",
+  "mx": [
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com.",
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "typeui.sh",
+  "org": "typeui.sh",
+  "mx": [
+   "9 inbound-smtp.us-east-1.amazonaws.com."
+  ],
+  "spf": [],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "uberblok.storagebits.workers.dev",
+  "org": "workers.dev",
+  "mx": [],
+  "spf": [
+   "v=spf1 -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; pct=100; rua=mailto:cloudflare@dmarc.area1reports.com; ruf=mailto:cloudflare@dmarc.area1reports.com; adkim=s; aspf=s;"
+  ]
+ },
+ {
+  "host": "uji.sh",
+  "org": "uji.sh",
+  "mx": [
+   "10 eforward3.registrar-servers.com.",
+   "15 eforward4.registrar-servers.com.",
+   "20 eforward5.registrar-servers.com.",
+   "10 eforward1.registrar-servers.com.",
+   "10 eforward2.registrar-servers.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.efwd.registrar-servers.com ~all"
+  ],
+  "dmarc": []
+ },
+ {
+  "host": "unfenced.land",
+  "org": "unfenced.land",
+  "mx": [
+   "20 mx2.zoho.com.",
+   "50 mx3.zoho.com.",
+   "10 mx.zoho.com."
+  ],
+  "spf": [
+   "v=spf1 include:zohomail.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:otherwatersflow@gmail.com; ruf=mailto:otherwatersflow@gmail.com; sp=none; adkim=r; aspf=r"
+  ]
+ },
+ {
+  "host": "urpiano.com",
+  "org": "urpiano.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "usejog.com",
+  "org": "usejog.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r; rua=mailto:dmarc_rua@onsecureserver.net;"
+  ]
+ },
+ {
+  "host": "usenua.com",
+  "org": "usenua.com",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; adkim=r; aspf=r;"
+  ]
+ },
+ {
+  "host": "wallhop.io",
+  "org": "wallhop.io",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "wherewhen.cc",
+  "org": "wherewhen.cc",
+  "mx": [
+   "20 eu2-smtp.messagingengine.com.",
+   "10 eu1-smtp.messagingengine.com."
+  ],
+  "spf": [
+   "v=spf1 include:spf.messagingengine.com include:zeptomail.net -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=quarantine; rua=mailto:45bc96040fa2441ba77dc555d2ac88c2@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "withnative.ai",
+  "org": "withnative.ai",
+  "mx": [
+   "1 smtp.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:_spf.mx.cloudflare.net ~all "
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none; rua=mailto:1550b235905f4099a75772f43a26ed5b@dmarc-reports.cloudflare.net"
+  ]
+ },
+ {
+  "host": "wonderhop.io",
+  "org": "wonderhop.io",
+  "mx": [
+   "10 inbound-smtp.us-east-1.amazonaws.com."
+  ],
+  "spf": [
+   "v=spf1 include:amazonses.com ~all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none"
+  ]
+ },
+ {
+  "host": "wordminos.com",
+  "org": "wordminos.com",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "wordpress.org",
+  "org": "wordpress.org",
+  "mx": [
+   "10 smtp2-dca.wordpress.org.",
+   "10 smtp1-dca.wordpress.org."
+  ],
+  "spf": [
+   "v=spf1 ip4:66.6.42.0/24 ip4:66.155.40.0/24 include:helpscoutemail.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:dmarc-reports@automattic.com;"
+  ]
+ },
+ {
+  "host": "wraps.dev",
+  "org": "wraps.dev",
+  "mx": [
+   "1 aspmx.l.google.com.",
+   "10 alt3.aspmx.l.google.com.",
+   "10 alt4.aspmx.l.google.com.",
+   "5 alt1.aspmx.l.google.com.",
+   "5 alt2.aspmx.l.google.com."
+  ],
+  "spf": [
+   "v=spf1 include:_spf.google.com include:amazonses.com -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=reject; rua=mailto:postmaster@mail.wraps.dev"
+  ]
+ },
+ {
+  "host": "yavashark.dev",
+  "org": "yavashark.dev",
+  "mx": [],
+  "spf": [],
+  "dmarc": []
+ },
+ {
+  "host": "yeahnah.lol",
+  "org": "yeahnah.lol",
+  "mx": [
+   "0 ."
+  ],
+  "spf": [
+   "v=spf1 -all"
+  ],
+  "dmarc": [
+   "v=DMARC1; p=none;"
+  ]
+ },
+ {
+  "host": "zebra.rodeo",
+  "org": "zebra.rodeo",
+  "mx": [
+   "10 spool.mail.gandi.net.",
+   "50 fb.mail.gandi.net."
+  ],
+  "spf": [
+   "v=spf1 include:_mailcust.gandi.net ?all"
+  ],
+  "dmarc": []
+ }
+]
