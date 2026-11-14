@@ -1,0 +1,320 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: Cookieless analytics compared: GoatCounter, Plausible, Umami (5 to fix)",
+  "created_at": "2026-11-14T09:57:32.177Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "279c19457b37d5fd6554936dcc124da8",
+    "checked_at": "2026-11-14T09:57:32.177Z",
+    "blockers": [
+      "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 millise\"",
+      "Unsupported claim (0.1%, 2,261, 2,292): add a source link or put it in the facts sheet: \"| Measure | Value | |---|---| | Memory now (systemd) | 33.3 MB | | Memory peak | 83.4 MB, under a 150 MB limit we set | \"",
+      "Unsupported claim (3,000): add a source link or put it in the facts sheet: \"The busiest day was 464 hits and the median day 48, so this is small-site traffic: about 3,000 hits a month at that rate\"",
+      "Unsupported claim (100K, $9, 10k, $20, 1M): add a source link or put it in the facts sheet: \"| | GoatCounter | Plausible | Umami | |---|---|---|---| | Free hosted option | yes, \"for reasonable public usage\" | no (\"",
+      "Unsupported claim (2,841, 1,295, 5,003, 2,145, 9,213, 3,329, 9,246, 4,144): add a source link or put it in the facts sheet: \"| Script | Size | Gzipped | |---|---|---| | Plausible script.js | 2,841 B | 1,295 B | | Our own sender for GoatCounter |\""
+    ],
+    "warnings": [
+      "The cited page doesn't show 3,000, $9, $108: \"At our traffic (about 3,000 hits a month), GoatCounter's hosted service and Umami's Hobby plan cost nothing, and Plausib\""
+    ],
+    "links": [
+      {
+        "url": "https://www.goatcounter.com/help/sessions",
+        "text": "sessions help page",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://plausible.io/data-policy",
+        "text": "data policy",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://github.com/umami-software/umami",
+        "text": "source code",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://github.com/plausible/community-edition",
+        "text": "at least 2 GB of RAM",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://docs.umami.is/docs/install",
+        "text": "Node.js 20.19 or newer and PostgreSQL 12.14 or newer",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.goatcounter.com/",
+        "text": "GoatCounter",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://plausible.io/#pricing",
+        "text": "Plausible pricing",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://plausible.io/docs/subscription-plans",
+        "text": "plan docs",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://umami.is/pricing",
+        "text": "Umami pricing",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://plausible.io/self-hosted-web-analytics",
+        "text": "Plausible's self-hosting page",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/articles/core-web-vitals-small-site/",
+        "text": "Core Web Vitals",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/",
+        "text": "free tools",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://www.goatcounter.com/help/gdpr",
+        "text": "GDPR page",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://edpb.europa.eu/system/files/2024-10/edpb_guidelines_202302_technical_scope_art_53_eprivacydirective_v2_en_0.pdf",
+        "text": "Guidelines 2/2023",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.cnil.fr/en/sheet-ndeg16-use-analytics-your-websites-and-applications",
+        "text": "audience measurement skip consent",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.cliffordchance.com/insights/resources/blogs/talking-tech/en/articles/2026/02/key-aspects-of-the-data--use-and-access--act-take-effect.html",
+        "text": "5 February 2026",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/",
+        "text": "ICO's guidance",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/seo/privacy-policy-generator/",
+        "text": "privacy policy generator",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/seo/utm-builder/",
+        "text": "UTM builder",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 milliseconds.",
+        "numbers": [
+          "0.1%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "| Measure | Value | |---|---| | Memory now (systemd) | 33.3 MB | | Memory peak | 83.4 MB, under a 150 MB limit we set | | Resident memory (ps) | 23 MB | | CPU time | 29 min 45 s in total, about 0.1% of one core | | Program size | 29 MB, one file | | Hits handled, 23 Oct to 14 Nov | 2,261 answered of 2,292 | | Time per hit | median 3.1 ms, 95th percentile 8.0 ms |",
+        "numbers": [
+          "0.1%",
+          "2,261",
+          "2,292"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The busiest day was 464 hits and the median day 48, so this is small-site traffic: about 3,000 hits a month at that rate.",
+        "numbers": [
+          "3,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "| | GoatCounter | Plausible | Umami | |---|---|---|---| | Free hosted option | yes, \"for reasonable public usage\" | no (30-day trial) | Hobby: 100K events a month, 1 site, 6 months of data | | First paid plan | none listed | Starter $9 a month, up to 10k pageviews, 1 site | Pro $20 a month, 1M events, 20 sites, 2 years of data | | What counts toward the limit | not stated | pageviews and custom ev",
+        "numbers": [
+          "100K",
+          "$9",
+          "10k",
+          "$20",
+          "1M"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "At our traffic (about 3,000 hits a month), GoatCounter's hosted service and Umami's Hobby plan cost nothing, and Plausible costs $9 a month, or $108 a year before the yearly discount of two months free.",
+        "numbers": [
+          "3,000",
+          "$9",
+          "$108"
+        ],
+        "cues": [],
+        "links": [
+          "https://umami.is/pricing",
+          "https://plausible.io/#pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "| Script | Size | Gzipped | |---|---|---| | Plausible script.js | 2,841 B | 1,295 B | | Our own sender for GoatCounter | 5,003 B | 2,145 B | | GoatCounter count.js | 9,213 B | 3,329 B | | Umami script.js | 9,246 B | 4,144 B |",
+        "numbers": [
+          "2,841",
+          "1,295",
+          "5,003",
+          "2,145",
+          "9,213",
+          "3,329",
+          "9,246",
+          "4,144"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Add UTM tags to the links you control, with our UTM builder or by hand, and each tool will group visits by campaign. - Your own visits and bots. Plausible's self-hosted edition gets only basic bot filtering, while its cloud excludes about 32K data-centre IP ranges.",
+        "numbers": [
+          "32K"
+        ],
+        "cues": [],
+        "links": [
+          "https://plausible.io/self-hosted-web-analytics"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Hosted is free for reasonable use; self-hosted, it is one program and one SQLite file, and ours sits at about 33 MB of memory. - You want a polished hosted dashboard and will pay: Plausible Cloud, from $9 a month for 10k pageviews.",
+        "numbers": [
+          "$9",
+          "10k"
+        ],
+        "cues": [],
+        "links": [
+          "https://plausible.io/#pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "The free hosted Hobby plan covers 100K events a month; self-hosted, it's a Node app on a database you already have.",
+        "numbers": [
+          "100K"
+        ],
+        "cues": [],
+        "links": [
+          "https://umami.is/pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      }
+    ],
+    "guard": []
+  }
+}
