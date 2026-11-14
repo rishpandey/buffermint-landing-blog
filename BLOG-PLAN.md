@@ -196,7 +196,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** we run GoatCounter self-hosted. Give the real setup, server footprint (measure RAM/disk on the VPS) and what it can't tell you. Compare with Plausible and Umami's documented features and prices, and state the consent rules: the CNIL exemption conditions for audience measurement, and what the ePrivacy Directive says.
 - **Sources:** goatcounter.com docs, plausible.io docs + pricing, umami.is docs, CNIL guidance on audience measurement (cnil.fr), the ePrivacy Directive on EUR-Lex.
 - **Internal links:** /tools/seo/utm-builder/, /tools/seo/privacy-policy-generator/, topic 31.
-- **Status:** todo
+- **Status:** writing (lane t-20261106-blog-post, 2026-11-14)
 
 ### 16. Gmail, Yahoo and Outlook sender rules for a SaaS's email · `next`
 - **Keyword:** `gmail bulk sender requirements` (level 4), `dmarc` (level 2 head term; HN 690; Wikipedia 16,517/mo).
