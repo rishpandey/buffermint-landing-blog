@@ -17,7 +17,7 @@ Last updated: 2026-11-14 (brand bump to 112428c published, 694 tools, /blog 301s
 - `shas-logo.png` (BM-537) needs no resize: D4 removed it with the testimonials (merged 4feb66c); `tests/home-copy.test.mjs` keeps it out of the build.
 - Open: ops `bin/sync-pull` still fast-forwards without updating submodules (a Later row, not this repo).
 
-## PLAN 11 copy, owner decision D4 2026-11-03 (lane `lane/t-20261103-landing-copy-d4`, BM-42; not merged or published yet)
+## PLAN 11 copy, owner decision D4 2026-11-03 (lane `lane/t-20261103-landing-copy-d4`, BM-42; merged 4feb66c, live: checked 2026-11-14, /articles/micro-saas-ideas 200, /our-pricing 301, no testimonials on the home page)
 - The `-copy` post is now `source/_posts/micro-saas-ideas.blade.md` (`/articles/micro-saas-ideas`; text, title, date and cover files unchanged). `/our-pricing` (empty) is deleted. Both old paths answer 301 (with and without a trailing slash) from `buffermint-pages/static/_redirects`, on the same lane branch there: **merge the pages lane first**, as with the merged posts. No page linked either old path.
 - The two agency-era testimonials (Zen Mind Maps, Shas Illuminated) are gone from the home page, with their CSS and the 4 images (this also removes the 504 KB `shas-logo.png`). "A launch plan of about 45 days" stays.
 - Tests: `tests/redirects.test.mjs` (moved pages gone from build, sitemap, feed and index.json; new path built; no page links an old path; pages rules present), `tests/home-copy.test.mjs`, `buffermint-pages/test/redirects.test.mjs`.
@@ -27,7 +27,7 @@ Last updated: 2026-11-14 (brand bump to 112428c published, 694 tools, /blog 301s
 - These covers carry the headline, so no page may crop them: the post page's parallax band is gone (the whole cover sits under the title block, clear of the `h1`), the featured card shows the whole image without the curved overlay, and article and home cards use the 40:21 frame.
 - Tests: `tests/covers.test.mjs` (sizes, WebP copies, no band) and `tests/e2e/covers.e2e.mjs` (desktop and phone, through `bin/one-chrome`: every cover on every post, the list and the home page shows its full frame).
 
-## Blog post 2026-11-03 (lanes `lane/t-20261102-blog-post`, finished on `lane/t-20261103-blog-post-finish`, BM-506)
+## Blog post 2026-11-03 (lanes `lane/t-20261102-blog-post`, finished on `lane/t-20261103-blog-post-finish`, BM-506; merged a5ca3dd, live: /articles/webp-avif-real-site-lcp 200, checked 2026-11-14)
 - Dated 2026-11-03. Logo figures from the same-session rerun (5 runs per mode): simulated 4.60 to 2.16 s, DevTools 2.56 to 2.41 s; 95 Lighthouse runs in all. Bench medians now average the two middle values for even counts (median WebP saving 31.5%). Stages 5-7 (factcheck.md, approval.md) are the review lane's.
 - `source/_posts/webp-avif-real-site-lcp.blade.md`, topic 13, keyword `convert images to webp`; files and benchmark data in `editorial/webp-avif-real-site-lcp/`.
 - Measured: q90 WebP is larger than our JPEGs in total; format change moves post LCP 0.3-0.6 s and home LCP not at all. The old "10.3 to 7.0 s" figure did not reproduce, so don't reuse it.
