@@ -15,7 +15,7 @@ Separate pass on 2026-11-15, after the draft was committed (commit efe0e49 on la
 - **Checked:** one idea per paragraph; headings say what each section finds; no hype words or exclamation marks; "as of November 2026" and "read on 15 November 2026" for the rules; no product that isn't public named; American spelling ("honor", "recognizable", "authorizes"). Our survey names no domain in the post.
 
 ## Content studio check
-Last run (committed): SEO 97, 0 failed; one warning left, "4 paragraphs are over 120 words": no prose paragraph in the post is over 100 words, so it counts the two tables and bullet lists as paragraphs. Fact-check 6 blockers, 2 warnings. They stay because:
+Last run (committed, after the code-review fixes and the cover): SEO 94, 0 failed. Warnings: "21 words per sentence on average; aim for 20": the average is pulled up by the two tables and the record-table rows, which it reads as sentences; prose sentences were already shortened in the edit. The other warning, "4 paragraphs are over 120 words": no prose paragraph in the post is over 100 words, so it counts the two tables and bullet lists as paragraphs. Fact-check 6 blockers, 2 warnings. They stay because:
 - 35%, 54% and the survey table's percentages are our own DNS survey (claims rows 30–40, `ours:` with the scripts in `survey/`), which the tool can't read.
 - The rules table's 5,000 and 0.3% have their four source links in the sentence right above the table; the tool wants a link in the same block.
 - "0.3% … 0.1%" (Google) and "Yahoo also says 0.3%" are marked unverified because the tool's fetch didn't find the figures; I read them on both pages on 15 November 2026 (Google writes "0.30%" and "0.10%" in places; claims rows 6, 7, 14). Each sentence links its page.

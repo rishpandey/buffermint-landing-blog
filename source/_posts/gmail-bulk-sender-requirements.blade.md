@@ -1,4 +1,6 @@
 ---
+featured_image: assets/img/uploads/gmail-bulk-sender-requirements-cover-8e8457-1200.jpeg
+featured_thumbnail: assets/img/uploads/gmail-bulk-sender-requirements-cover-8e8457-600.jpeg
 title: "Gmail bulk sender requirements, plus Yahoo and Outlook rules"
 seo_description: "Gmail bulk sender requirements next to Yahoo's and Outlook's, from their own pages: the DNS records a small SaaS needs, and what 165 product domains publish."
 keyword: gmail bulk sender requirements
