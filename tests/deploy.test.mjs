@@ -125,4 +125,18 @@ test('release guard: runs before any build; passes main or a detached checkout a
   writeFileSync(join(work, 'a'), '2');
   git(work, 'commit', '-qam', 'local');
   assert.match(guard(work), /^refused: HEAD \w{10} isn't origin\/main \w{10}/);
+  // main moved on while autopublish waited for a slot: its detached worktree at the older main commit still passes,
+  // but a detached commit that isn't in origin/main doesn't
+  git(work, 'push', '-q', 'origin', 'main');
+  git(work, 'checkout', '-q', '--detach', 'HEAD~1');
+  assert.equal(guard(work), 'passed');
+  writeFileSync(join(work, 'a'), '3');
+  git(work, 'commit', '-qam', 'detached work');
+  assert.match(guard(work), /^refused: HEAD \w{10} isn't origin\/main/);
+});
+
+test('deploy.sh asks publish.sh (CHECK_ONLY=1) before the build, and only a publish.sh that knows CHECK_ONLY', () => {
+  const ask = at(/^CHECK_ONLY=1 \.\.\/buffermint-pages\/publish\.sh/);
+  assert.ok(ask > 0 && at(/grep -q 'CHECK_ONLY'/) < ask, 'version check first');
+  for (const re of [/^composer install/, /^yarn run prod/, /bm-www landing/]) assert.ok(ask < at(re), `before ${re}`);
 });
