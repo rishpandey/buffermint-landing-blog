@@ -203,7 +203,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** one checklist reconciled from the three providers' own pages. Check the much-quoted 0.3% spam-rate figure at its source: search found it only in vendor blogs. Add the DNS records a typical small SaaS needs, with transactional and marketing mail on separate subdomains.
 - **Sources:** Google's sender guidelines (support.google.com/a/answer/81126), Yahoo Sender Hub (senders.yahooinc.com), the Microsoft Defender/Outlook announcement for high-volume senders (techcommunity.microsoft.com), RFC 8058 and RFC 7489, Red Sift guide (redsift.com/guides/bulk-email-sender-requirements, found 2026-10-29).
 - **Internal links:** /tools/privacy/email-header-analyzer/, /tools/business/cold-email-template/, /tools/seo/email-subject-tester/.
-- **Status:** todo
+- **Status:** writing (lane t-20261115-blog-post, 2026-11-15)
 
 ### 17. E-invoicing in 2026–27: what a small SaaS selling into the EU must do · `next`
 - **Keyword:** `e invoicing france` (level 4), `e invoicing belgium` (level 3), `peppol` (level 2; HN 50; Wikipedia 1,135/mo).
