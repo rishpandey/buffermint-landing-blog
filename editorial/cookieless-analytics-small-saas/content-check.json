@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: cookieless analytics",
-  "created_at": "2026-11-14T09:58:19.959Z",
+  "created_at": "2026-11-14T10:11:14.763Z",
   "data": {
     "score": 97,
     "items": [
@@ -80,14 +80,14 @@
         "group": "keyword",
         "label": "Keyword use",
         "status": "pass",
-        "detail": "4 times in 1726 words."
+        "detail": "4 times in 1795 words."
       },
       {
         "id": "keyword.length",
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "1726 words."
+        "detail": "1795 words."
       },
       {
         "id": "links.internal",
@@ -122,12 +122,12 @@
         "group": "readability",
         "label": "Paragraph length",
         "status": "warn",
-        "detail": "2 paragraphs are over 120 words; split them."
+        "detail": "3 paragraphs are over 120 words; split them."
       }
     ],
     "stats": {
-      "words": 1726,
-      "sentences": 88,
+      "words": 1795,
+      "sentences": 89,
       "reading_ease": 65,
       "reading_minutes": 8,
       "h1": 1,

@@ -14,7 +14,7 @@ extends: _layouts.post
 
 Cookieless analytics tools count your visitors without storing anything in their browser, and the three open-source ones most small sites look at, GoatCounter, Plausible and Umami, all do that. What they don't do is make the consent question go away in the EU: the regulators' guidance is about reading information from a visitor's device, not only cookies. Pick by how you want to run the tool and how you want "a visitor" counted, then check the consent conditions that apply where your readers are.
 
-We've run GoatCounter on our own server since 24 October 2026. Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 milliseconds. Below are those numbers, how each tool decides who counts as one visitor, what each costs at small-site traffic, and where the law stood in November 2026.
+We've run GoatCounter on our own server since 23 October 2026. Since its last restart 20 days ago it has used about 0.1% of one CPU core and sits at 33 MB of memory (83 MB at its peak), and over 23 days of logs it answered each counted hit in a median of 3 milliseconds. Below are those numbers, how each tool decides who counts as one visitor, what each costs at small-site traffic, and where the law stood in November 2026.
 
 ## How cookieless analytics counts a visitor
 
@@ -35,7 +35,7 @@ The practical result: someone who reads your blog on Monday and again on Thursda
 
 ## What our GoatCounter costs to run
 
-We self-host GoatCounter 2.7.0, the current release, with its built-in SQLite database, on a virtual server with 6 cores and 11.4 GB of RAM that also runs everything else we host. On 14 November 2026, after 20 days and 15 hours of uptime:
+We self-host GoatCounter 2.7.0, the current release, with its built-in SQLite database, on a virtual server with 6 cores and 11.4 GB of RAM that also runs everything else we host. On 14 November 2026, after 20 days and 15 hours since its last restart (the hit counts below cover our whole log, from 23 October):
 
 | Measure | Value |
 |---|---|
@@ -101,9 +101,10 @@ So for a small SaaS with EU or UK visitors, cookieless analytics usually moves y
 2. Say in your privacy policy what you count, with which tool, and where it's hosted. Our [privacy policy generator](/tools/seo/privacy-policy-generator/) gives you a starting draft.
 3. Offer a simple opt-out that works without an account.
 4. Keep the tool to your own domains; don't share one identifier across unrelated sites.
-5. Strip what you don't need before it's sent: query strings, the referring page's full address, form input.
+5. For French visitors, check the CNIL's two technical conditions as well: none of the three tools' pages we read says it truncates the last byte of the IP address before using it, so ask the vendor, or truncate it yourself in a proxy and accept rougher visitor counts.
+6. Strip what you don't need before it's sent: query strings, the referring page's full address, form input.
 
-What we did on our side: our sender drops the query string; our proxy forwards only the counting fields, never the Referer header or cookies; our web server's access log for the stats host strips query strings, Referer and cookies; and anyone can turn counting off in their browser by opening a page with `#bm-nostats`.
+What we strip on our side, for item 6: our sender drops the query string; our proxy forwards only the counting fields, never the Referer header or cookies; and our web server's access log for the stats host removes query strings, Referer and cookies.
 
 ## What these tools can't tell you
 

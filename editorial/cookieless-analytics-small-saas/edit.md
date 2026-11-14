@@ -13,6 +13,12 @@ Separate pass on 2026-11-14, after the draft was committed, reading the whole po
 - **Checked:** one idea per paragraph; headings say what each section finds or answers; no hype words or exclamation marks; dates are "as of November 2026" for prices and "14 November 2026" for our measurements; no product that isn't public is named; American spelling throughout ("recognises", "data-centre" and "licence" changed).
 - **Links:** all external links were opened in research; internal links: /tools/, /tools/seo/privacy-policy-generator/, /tools/seo/utm-builder/ return 200 live; /articles/core-web-vitals-small-site/ is on main (merged in 1815da2) and builds locally, and goes live with the next landing publish.
 
+## Code review pass (2026-11-14)
+- The intro mixed windows: memory and CPU are since the last restart (24 Oct, 20 days), the hits and latency cover the whole log from 23 Oct (23 days); "used 33 MB over 20 days" read as a constant when it is the current value (peak 83.4 MB). Both now say which window they cover, and the start date is 23 Oct (first answered request in the log), not the restart.
+- The checklist told readers cookieless usually means "tell and allow opt-out" but left out the CNIL's IP-truncation condition, which none of the three tools documents meeting. Added item 5 (claims row 51).
+- "What we did on our side" listed an opt-out (`#bm-nostats`) that exists to keep our own visits out and isn't offered on a public page, and implied we meet the whole checklist. Now it lists only what we strip (item 6). A public privacy notice for buffermint.com is a Later item for the coordinator.
+- claims.md rows 1, 2 and 4 quote the post's current wording.
+
 ## Content studio check
 First run: SEO 88 (title length, keyword not in description or a `##` heading, 3 long paragraphs), fact-check 9 blockers. After the fixes, last run (committed): SEO 97, 0 failed; fact-check 5 blockers, 1 warning. They stay because:
 - The 0.1%, 2,261/2,292, 3,000, and the script sizes are our own measurements. Their sources are `ours:` rows 3, 15, 16 and 29 in claims.md, which the tool can't read.

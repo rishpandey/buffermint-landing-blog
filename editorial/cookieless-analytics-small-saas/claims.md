@@ -4,10 +4,10 @@ Our own measurements were taken on buffermint-vps on 2026-11-14 by lane t-202611
 
 | # | Claim (as written in the post) | Source | What the source says |
 |---|---|---|---|
-| 1 | We've run GoatCounter on our own server since 24 October 2026 | ours: `systemctl status goatcounter` | "active (running) since Sat 2026-10-24 23:35:08 IST" |
-| 2 | Over 20 days it used 33 MB of memory | ours: `systemctl status goatcounter` | "Memory: 33.3M (max: 150M, available: 116.6M, peak: 83.4M …)"; uptime 20 days 15 h |
+| 1 | We've run GoatCounter on our own server since 23 October 2026; last restart 20 days ago | ours: first GoatCounter-answered request in /var/log/caddy/stats.log (2026-10-23 09:26 UTC, a 303 from stats.buffermint.com); `systemctl status goatcounter` | log starts 2026-10-23; "active (running) since Sat 2026-10-24 23:35:08 IST" |
+| 2 | sits at 33 MB of memory (83 MB at its peak) since its last restart | ours: `systemctl status goatcounter` | "Memory: 33.3M (max: 150M, available: 116.6M, peak: 83.4M …)"; uptime 20 days 15 h |
 | 3 | about 0.1% of one CPU core | ours: systemd "CPU: 29min 45.271s" over ps etime 20-15:42:33 | 1,785 s / 1,784,553 s = 0.10% |
-| 4 | answered each page view in a median of 3 milliseconds; 95th percentile 8.0 ms | ours: stats.log `duration` of 2xx /count requests | p50 3.11 ms, p95 7.98 ms, p99 16.72 ms |
+| 4 | over 23 days of logs it answered each counted hit in a median of 3 milliseconds; 95th percentile 8.0 ms | ours: stats.log `duration` of 2xx /count requests | p50 3.11 ms, p95 7.98 ms, p99 16.72 ms |
 | 5 | GoatCounter key = site + browser string + IP; 8 hours; in memory mapped to random ID; IP/UA never reach the database | https://www.goatcounter.com/help/sessions | "concat(siteID, User-Agent, IP)"; mapping kept 8 hours; IP and User-Agent "never stored to the database or disk" |
 | 6 | Plausible = hash(daily salt + domain + IP + UA); salt rotated and deleted every 24 hours; raw IP not stored | https://plausible.io/data-policy | "hash(daily_salt + website_domain + ip_address + user_agent)"; "rotated and deleted every 24 hours"; "Raw IP addresses and User-Agent data are never stored" |
 | 7 | Umami session ID = hash of site, IP, browser string, salt; salt changes at the start of each month unless SALT_ROTATION is set; derived from month start date and server secret | https://github.com/umami-software/umami `src/lib/collection-session.ts` line 111, `src/lib/crypto.ts` getSalt/uuid | `uuid(sourceId, ip, userAgent, sessionSalt, distinctId)`; getSalt: unset → `hash(startOfMonth(createdAt).toUTCString())`; uuid mixes in `secret()` (hash of the app secret) |
@@ -50,10 +50,11 @@ Our own measurements were taken on buffermint-vps on 2026-11-14 by lane t-202611
 | 44 | ICO conditions: sole purpose to improve service; clear info; simple and free objection; third parties only as processors; aggregate | https://ico.org.uk/for-organisations/direct-marketing-and-privacy-and-electronic-communications/guidance-on-the-use-of-storage-and-access-technologies/what-are-the-exceptions/ | "sole purpose"; "with a view to making improvements"; "clear and comprehensive information"; "simple and free" means to object; processor not joint controller; aggregate statistics |
 | 45 | our proxy forwards only counting fields, never Referer or cookies | ours: buffermint-pages/functions/stats/count.js `forward()` | forwards p,t,r,e,s,b,rnd and UA/Accept/Accept-Language/IP only |
 | 46 | stats access log strips query strings, Referer and cookies | ours: /etc/caddy/sites/buffermint.caddy, stats.buffermint.com `log { format filter … }` | uri query regexp-removed; Referer, Cookie, Set-Cookie deleted |
-| 47 | `#bm-nostats` turns counting off in that browser | ours: buffermint-brand/assets/js/analytics.js optOut() | saves localStorage bm-nostats; send() returns when set |
+| 47 | (removed in the code-review pass: the `#bm-nostats` sentence is gone from the post) | ours: edit.md | — |
 | 48 | we drop our server's IP and Lighthouse, headless Chrome, Playwright, Puppeteer UAs before GoatCounter | ours: count.js OUR_TRAFFIC | ips list; userAgents Lighthouse, Chrome-Lighthouse, HeadlessChrome, PTST, Playwright, Puppeteer |
 | 49 | Prices "as of November 2026" | https://plausible.io/#pricing, https://umami.is/pricing, https://www.goatcounter.com/ (read 2026-11-14) | prices as listed on that date |
 | 50 | Plausible CE v3.2.1; Umami v3.5.0 (Sources) | https://api.github.com/repos/plausible/analytics/releases/latest and https://api.github.com/repos/umami-software/umami/releases/latest (read 2026-11-14) | plausible/analytics v3.2.1 published 2026-05-15; umami v3.5.0 published 2026-11-12 |
+| 51 | none of the three tools' pages we read says it truncates the last IP byte before use | ours: reading of https://www.goatcounter.com/help/sessions, https://plausible.io/data-policy, https://umami.is/pricing and Umami's collection-session.ts (2026-11-14) | GoatCounter uses the IP in its in-memory key; Plausible hashes the full ip_address; Umami hashes ip; none mentions truncation |
 
 ## Log count script (rows 4, 15, 16)
 ```

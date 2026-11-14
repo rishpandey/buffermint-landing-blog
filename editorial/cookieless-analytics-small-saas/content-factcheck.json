@@ -1,14 +1,14 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: Cookieless analytics compared: GoatCounter, Plausible, Umami (5 to fix)",
-  "created_at": "2026-11-14T09:58:22.003Z",
+  "created_at": "2026-11-14T10:11:16.820Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "b7d79109e5d2bd4b07ff3e0c9f39612d",
-    "checked_at": "2026-11-14T09:58:22.003Z",
+    "content_md5": "69c2f2a9bf16dce2a5d00bbc999868b0",
+    "checked_at": "2026-11-14T10:11:16.818Z",
     "blockers": [
-      "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 millise\"",
+      "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"Since its last restart 20 days ago it has used about 0.1% of one CPU core and sits at 33 MB of memory (83 MB at its peak\"",
       "Unsupported claim (0.1%, 2,261, 2,292): add a source link or put it in the facts sheet: \"| Measure | Value | |---|---| | Memory now (systemd) | 33.3 MB | | Memory peak | 83.4 MB, under a 150 MB limit we set | \"",
       "Unsupported claim (3,000): add a source link or put it in the facts sheet: \"The busiest day was 464 hits and the median day 48, so this is small-site traffic: about 3,000 hits a month at that rate\"",
       "Unsupported claim (100K, $9, 10k, $20, 1M): add a source link or put it in the facts sheet: \"| | GoatCounter | Plausible | Umami | |---|---|---|---| | Free hosted option | yes, \"for reasonable public usage\" | no (\"",
@@ -174,7 +174,7 @@
     "claims": [
       {
         "kind": "number",
-        "text": "Over 20 days it used 33 MB of memory, about 0.1% of one CPU core, and answered each counted hit in a median of 3 milliseconds.",
+        "text": "Since its last restart 20 days ago it has used about 0.1% of one CPU core and sits at 33 MB of memory (83 MB at its peak), and over 23 days of logs it answered each counted hit in a median of 3 milliseconds.",
         "numbers": [
           "0.1%"
         ],
