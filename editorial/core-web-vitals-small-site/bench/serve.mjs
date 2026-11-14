@@ -1,4 +1,4 @@
-// Static server for a build folder with Brotli on text and long caching, close to what Cloudflare Pages sends (Brotli only when the client accepts it; quality 5 is our pick, not a measured match). node serve.mjs <dir> <port>
+// Static server for a build folder with Brotli on text (only when the client accepts it; quality 5 is our pick, not a measured match to Cloudflare Pages) and max-age=3600 caching. Lighthouse starts each run with an empty cache, so the cache header doesn't affect these runs. node serve.mjs <dir> <port>
 import http from 'node:http'; import fs from 'node:fs'; import path from 'node:path'; import zlib from 'node:zlib';
 const [root, port] = process.argv.slice(2);
 const T = { '.html': 'text/html; charset=utf-8', '.css': 'text/css', '.js': 'text/javascript', '.svg': 'image/svg+xml', '.json': 'application/json', '.xml': 'application/xml', '.jpeg': 'image/jpeg', '.jpg': 'image/jpeg', '.png': 'image/png', '.webp': 'image/webp', '.avif': 'image/avif', '.woff': 'font/woff', '.woff2': 'font/woff2', '.ico': 'image/x-icon', '.gif': 'image/gif' };

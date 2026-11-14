@@ -40,7 +40,7 @@ Lab data has known gaps. A Lighthouse run is one device, one network and one loc
 
 ## What we tested
 
-We rebuilt the site at seven commits, from 24 October 2026 to today's version, each from a clean checkout with the same build tools. We served each build from our own server with Brotli compression and ran Lighthouse 13.5.0 (Chrome 156) on its mobile settings: three pages, five runs each, 105 runs, taking the median as [Lighthouse's variability guide](https://github.com/GoogleChrome/lighthouse/blob/main/docs/variability.md) recommends. The pages were the home page, the About page and one blog post whose text didn't change in that period.
+We rebuilt the site at seven commits, from 24 October to 4 November 2026, each from a clean checkout with the same build tools. We served each build from our own server with Brotli compression and ran Lighthouse 13.5.0 (Chrome 156) on its mobile settings: seven builds, three pages, five runs each, 105 runs, taking the median as [Lighthouse's variability guide](https://github.com/GoogleChrome/lighthouse/blob/main/docs/variability.md) recommends. The pages were the home page, the About page and one blog post whose text didn't change in that period.
 
 | Build | What changed |
 |---|---|
@@ -50,7 +50,7 @@ We rebuilt the site at seven commits, from 24 October 2026 to today's version, e
 | 4. Vendor trim (25 Oct) | unused libraries dropped: `vendor.js` 479 KB → 104 KB |
 | 5. WebP covers (27 Oct) | post cover backgrounds offered as WebP |
 | 6. No Vue (28 Oct) | Vue 2 removed: `main.js` 123 KB → 19 KB |
-| 7. Today (4 Nov) | new lightweight post covers; an old testimonial section removed from the home page |
+| 7. Latest (4 Nov) | new lightweight post covers; an old testimonial section removed from the home page |
 
 Those 105 runs used Lighthouse's default, simulated throttling: it loads the page on a fast connection and estimates how long it would take on a slow phone. We then ran four of the builds again, three runs each, with DevTools throttling, which slows the connection and CPU during the load itself. Builds 3 and 7 each bundled several changes, so for those we name the part we think moved the numbers, and why.
 
@@ -66,7 +66,7 @@ Simulated throttling, median of five runs. Weight is what the page transferred d
 | 4. Vendor trim | 79, 4.73 s, 210 ms | 96, 2.66 s, 83 ms | 88, 3.15 s, 241 ms | 718 KB |
 | 5. WebP covers | 79, 4.73 s, 220 ms | 96, 2.66 s, 81 ms | 92, 2.85 s, 196 ms | 718 KB |
 | 6. No Vue | 84, 4.58 s, 2 ms | 97, 2.48 s, 7 ms | 96, 2.70 s, 3 ms | 682 KB |
-| 7. Today | 99, 1.86 s, 0 ms | 97, 2.41 s, 7 ms | 99, 2.16 s, 8 ms | 144 KB |
+| 7. Latest | 99, 1.86 s, 0 ms | 97, 2.41 s, 7 ms | 99, 2.16 s, 8 ms | 144 KB |
 
 DevTools throttling, median of three runs:
 
@@ -75,7 +75,7 @@ DevTools throttling, median of three runs:
 | 1. Start | 81, 2.49 s, 493 ms | 85, 2.20 s, 456 ms | 63, 6.36 s, 521 ms |
 | 4. Vendor trim | 88, 2.53 s, 270 ms | 92, 2.21 s, 229 ms | 78, 4.14 s, 305 ms |
 | 6. No Vue | 94, 2.50 s, 62 ms | 96, 2.21 s, 71 ms | 86, 3.82 s, 53 ms |
-| 7. Today | 95, 2.37 s, 53 ms | 96, 2.24 s, 53 ms | 92, 3.12 s, 49 ms |
+| 7. Latest | 95, 2.37 s, 53 ms | 96, 2.24 s, 53 ms | 92, 3.12 s, 49 ms |
 
 Median CLS was 0 to 0.003 everywhere, in both modes, and no single run went above 0.01.
 
@@ -91,7 +91,7 @@ Deleting that section was still worth doing: it took the home page from 682 KB t
 
 The blog post's LCP element was a photo, and both modes say it improved a lot: 5.48 to 2.16 s simulated, 6.36 to 3.12 s with DevTools throttling. In DevTools mode that's still above the 2.5-second line, so we can't call it good yet.
 
-That photo was a parallax background. A script set it after the page loaded, so the browser couldn't start fetching it early. It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP. In simulated mode the cap took 1.26 s off (it also shrank a second image on the page) and WebP 0.30 s. Today the cover is an ordinary image element of 21 KB.
+That photo was a parallax background. A script set it after the page loaded, so the browser couldn't start fetching it early. It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP. In simulated mode the cap took 1.26 s off (it also shrank a second image on the page), and the switch to a WebP cover in build 5 took 0.30 s. Today the cover is an ordinary image element of 21 KB.
 
 The WebP build also took 0.47 s off the post without touching that photo, which was still a JPEG then. Three card images further down stopped loading during the test, about 180 KB that the photo no longer had to share the connection with.
 
