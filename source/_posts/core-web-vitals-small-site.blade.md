@@ -81,7 +81,7 @@ Median CLS was 0 to 0.003 everywhere, in both modes, and no single run went abov
 
 ## Where the two modes disagree: text LCP
 
-On the home page and the About page, the largest element is text. With DevTools throttling, that text appeared with the first paint, at 2.2 to 2.5 seconds, in every build. Nothing we changed moved it.
+On the home page and the About page, the largest element is text. With DevTools throttling, that text appeared with the first paint or within about a tenth of a second of it, at 2.2 to 2.5 seconds, in all four builds we tested that way. Nothing we changed moved it.
 
 Simulated throttling put the home page's LCP at 4.6 to 6.1 seconds for six builds, and then 1.86 s once build 7 deleted an old testimonial section. In [our WebP test](/articles/webp-avif-real-site-lcp/) we traced that to one 504 KB PNG in the section, a logo beside a testimonial shown 32 pixels tall, and saw the two modes disagree about it then too. The simulation estimates a slow load from a fast one, and [Lighthouse's throttling docs](https://github.com/GoogleChrome/lighthouse/blob/main/docs/throttling.md) say it can be inaccurate. We didn't trace its reasoning. What we can say is that a large file on the page moved the simulated LCP of a paragraph by seconds, and the applied-throttling LCP of the same paragraph by almost nothing.
 
@@ -93,13 +93,13 @@ The blog post's LCP element was a photo, and both modes say it improved a lot: 5
 
 That photo was a parallax background. A script set it after the page loaded, so the browser couldn't start fetching it early. It weighed 380 KB at the start, 209 KB after the 1,600-pixel cap, and 146 KB as WebP. In simulated mode the cap took 1.26 s off (it also shrank a second image on the page) and WebP 0.30 s. Today the cover is an ordinary image element of 21 KB.
 
-The WebP build also took 0.47 s off the post without touching that photo, which was still a JPEG then. Two card images further down stopped loading during the test, about 180 KB that the photo no longer had to share the connection with.
+The WebP build also took 0.47 s off the post without touching that photo, which was still a JPEG then. Three card images further down stopped loading during the test, about 180 KB that the photo no longer had to share the connection with.
 
-Both already had `loading="lazy"`; the only change to their tags was the `width` and `height` we added. [web.dev explains why that matters](https://web.dev/articles/browser-level-image-lazy-loading): an image with no dimensions starts out as 0×0 pixels, so a whole row of them can look as if it fits on screen, and the browser may load them all. With real dimensions, the cards took up their space and fell outside the range Chrome loads ahead. Lazy loading without dimensions can quietly do nothing.
+All three already had `loading="lazy"`. The only change to their image tags was the `width` and `height` we added; they also gained a WebP alternative, which changes the format, not whether they load. [web.dev explains why that matters](https://web.dev/articles/browser-level-image-lazy-loading): an image with no dimensions starts out as 0×0 pixels, so a whole row of them can look as if it fits on screen, and the browser may load them all. With real dimensions, the cards took up their space and fell outside the range Chrome loads ahead. Lazy loading without dimensions can quietly do nothing.
 
 ## TBT: the gain both modes saw
 
-Between the start and build 6, TBT fell from 456 to 521 ms to about 50 ms in DevTools mode on all three pages, and from 146 to 361 ms to under 10 ms simulated. The simulated runs show where it happened. In the image builds TBT bounced around without a trend (175 to 361 ms on the post); it fell for good when we dropped 374 KB of unused libraries (build 4) and then Vue (build 6).
+Between the start and build 6, TBT fell from 456 to 521 ms to 53 to 71 ms in DevTools mode on all three pages, and from 146 to 361 ms to under 10 ms simulated. The simulated runs show where it happened. In the image builds TBT bounced around without a trend (175 to 361 ms on the post); it fell when we dropped 374 KB of unused libraries (build 4) and almost vanished when we removed Vue (build 6).
 
 The full Vue build had been compiling every page in the browser on each load, though only the blog search box used it. In DevTools mode, main-thread work on the post fell from 2.59 s at the start to 1.83 s at build 6.
 
