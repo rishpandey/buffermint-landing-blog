@@ -55,6 +55,8 @@ Our own measurements were taken on buffermint-vps on 2026-11-14 by lane t-202611
 | 49 | Prices "as of November 2026" | https://plausible.io/#pricing, https://umami.is/pricing, https://www.goatcounter.com/ (read 2026-11-14) | prices as listed on that date |
 | 50 | Plausible CE v3.2.1; Umami v3.5.0 (Sources) | https://api.github.com/repos/plausible/analytics/releases/latest and https://api.github.com/repos/umami-software/umami/releases/latest (read 2026-11-14) | plausible/analytics v3.2.1 published 2026-05-15; umami v3.5.0 published 2026-11-12 |
 | 51 | none of the three tools' pages we read says it truncates the last IP byte before use | ours: reading of https://www.goatcounter.com/help/sessions, https://plausible.io/data-policy, https://umami.is/pricing and Umami's collection-session.ts (2026-11-14) | GoatCounter uses the IP in its in-memory key; Plausible hashes the full ip_address; Umami hashes ip; none mentions truncation |
+| 52 | Umami self-hosted license: MIT | https://github.com/umami-software/umami/blob/master/LICENSE | GitHub license API: spdx_id MIT (added by review lane t-20261106-blog-post-review, 2026-11-14) |
+| 53 | Plausible's page calls CE "infrastructure you maintain, not software you install once." (now quoted and linked) | https://plausible.io/self-hosted-web-analytics | same words (added by the review lane, 2026-11-14) |
 
 ## Log count script (rows 4, 15, 16)
 ```

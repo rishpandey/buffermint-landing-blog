@@ -60,13 +60,13 @@ Prices as of November 2026, from each tool's own page:
 | Free hosted option | yes, "for reasonable public usage" | no (30-day trial) | Hobby: 100K events a month, 1 site, 6 months of data |
 | First paid plan | none listed | Starter $9 a month, up to 10k pageviews, 1 site | Pro $20 a month, 1M events, 20 sites, 2 years of data |
 | What counts toward the limit | not stated | pageviews and custom events | pageviews, events and each saved event property |
-| Self-hosted license | open source, any purpose | AGPLv3, releases twice a year | open source (self-host with Postgres) |
+| Self-hosted license | open source, any purpose | AGPLv3, releases twice a year | MIT (self-host with Postgres) |
 
 Sources: [GoatCounter](https://www.goatcounter.com/), [Plausible pricing](https://plausible.io/#pricing) and [plan docs](https://plausible.io/docs/subscription-plans), [Umami pricing](https://umami.is/pricing), [Plausible's self-hosting page](https://plausible.io/self-hosted-web-analytics).
 
 At our traffic (about 3,000 hits a month), GoatCounter's hosted service and [Umami's Hobby plan](https://umami.is/pricing) cost nothing, and [Plausible](https://plausible.io/#pricing) costs $9 a month, or $108 a year before the yearly discount of two months free. Watch the meter on the paid plans: Plausible counts every custom event, such as an outbound click or a download, against the same limit as pageviews, and Umami counts each saved event property as an event too. A site that tracks five events per page view uses its allowance six times as fast.
 
-Self-hosting Plausible also costs features. Its Community Edition has no funnels, user journeys, ecommerce revenue goals, SSO or sites API, gets only basic bot filtering, and ships twice a year. Plausible's own page calls it infrastructure you maintain, not software you install once.
+Self-hosting Plausible also costs features. Its Community Edition has no funnels, user journeys, ecommerce revenue goals, SSO or sites API, gets only basic bot filtering, and ships twice a year. [Plausible's own page](https://plausible.io/self-hosted-web-analytics) calls it "infrastructure you maintain, not software you install once."
 
 ## Script weight, measured the same day
 
