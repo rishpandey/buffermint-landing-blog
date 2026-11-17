@@ -11,7 +11,7 @@ Separate pass on 2026-11-15, after the draft was committed (commit efe0e49 on la
 - **Send. subdomain sentence.** Said "19 domains had that `send.` record", implying all were Resend: now "an MX record on a `send.` subdomain, 11 of them pointing at SES".
 - **SEO (Content studio first run, score 91):** title cut from 64 to 60 characters ("Gmail bulk sender requirements, plus Yahoo and Outlook rules"); slug renamed to the keyword (`gmail-bulk-sender-requirements`, the post is new so nothing links to the old one); description cut to 153 characters (the post test caught 161). Second run: 97, 0 failed.
 - **Links next to the numbers** for the opening requirements, Yahoo's list, Google's subdomain counting, its FAQ example and the 0.3%/Yahoo figures.
-- **Date.** The task says today's date (2026-11-15), but `tests/posts.test.mjs` requires 2+ days after the previous post (cookieless analytics, dated 2026-11-14) and no future date. No date passes both today, so the post is dated 2026-11-16, the first date that keeps the owner's spacing rule; it goes live only after its review, which is no earlier. The check passes from 16 November (local time).
+- **Date.** The task said 2026-11-15, but `tests/posts.test.mjs` requires 2+ days after the previous post (cookieless analytics, dated 2026-11-14) and no future date, so no date passed on 2026-11-15. The lane asked the owner; the owner's answer (2026-11-17): "date it today (2026-11-17)". The post is dated 2026-11-17.
 - **Checked:** one idea per paragraph; headings say what each section finds; no hype words or exclamation marks; "as of November 2026" and "read on 15 November 2026" for the rules; no product that isn't public named; American spelling ("honor", "recognizable", "authorizes"). Our survey names no domain in the post.
 
 ## Content studio check
@@ -29,4 +29,4 @@ Last run (committed, after the code-review fixes and the cover): SEO 94, 0 faile
 - **Description.** "165 new domains" became "165 product domains" (the body says a few are established companies).
 - **Reproducibility.** Added `survey/sample.py` (the sample filter, reproduces `domains.txt` exactly), `survey/extra.py` (rows 36, 37, 40, 45) and the raw results (`survey.json`, `dkim.json`, `dkim.json.wild.json`). Checked that none of the 26 subdomain hosts has its own `_dmarc` record, so mixing host DMARC with org MX/SPF changes nothing.
 - **BLOG-PLAN.** The "still unchecked: topic 16's 0.3%" note now records where it was found.
-- **Stays:** the date (2026-11-16): no date passes the post test on 2026-11-15 (see above). BLOG-PLAN says "published 2026-11-16 … goes live after its review merges", as the task's step 6 and earlier lanes do.
+- **Settled:** the date, 2026-11-17 by the owner's answer (see above). BLOG-PLAN says "published 2026-11-17 … goes live after its review merges", as the task's step 6 and earlier lanes do.
