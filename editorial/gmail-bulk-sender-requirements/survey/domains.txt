@@ -121,7 +121,6 @@ rivendell.dmitrybrant.com
 rouler.io
 rstation.ai
 scimigo.com
-scottbezek.blogspot.com
 sindresorhus.com
 sketch.wakeshift.ai
 slidebyside.com
@@ -147,7 +146,6 @@ tng.episodle.com
 trypalomino.com
 typebook.lol
 typeui.sh
-uberblok.storagebits.workers.dev
 uji.sh
 unfenced.land
 urpiano.com

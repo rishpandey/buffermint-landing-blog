@@ -51,3 +51,6 @@ Our own data (2026-11-15, buffermint-vps, scripts in this folder's claims.md):
 - How to check: Postmaster Tools compliance dashboard, send a test to Gmail and read the headers (our email header analyzer), dig.
 - Checklist.
 - Sources.
+
+## Review corrections (t-20261115-blog-post-review, 2026-11-17)
+The numbers above are the writing lane's. The review dropped two free-hosting hosts from the sample (scottbezek.blogspot.com and uberblok.storagebits.workers.dev, whose apex DNS is Google's and Cloudflare's), counted only live DKIM keys (`survey/recheck.py`: six hits held no key) and counted the SES tests on wildcard-DKIM domains too. Current figures: 163 domains, 117 mail domains, DMARC 75 (p=none 40, quarantine 16, reject 19), none 42 (36%), rua 42, `-all` 13, live DKIM key on 56 of 112, sending service on 30 (2 without DMARC, 19 of 28 at p=none), 22 forward-only (15 without DMARC). Microsoft: the 29 April 2025 update rejects (550 5.7.515) from 5 May 2025; the Junk sentence is struck through on the page. See claims.md and factcheck.md.

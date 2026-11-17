@@ -550,25 +550,6 @@
   ],
   "send_mx": []
  },
- "blogspot.com": {
-  "dkim": [
-   "google",
-   "resend",
-   "selector1",
-   "s1",
-   "k1",
-   "default",
-   "mail",
-   "dkim",
-   "sig1",
-   "protonmail",
-   "fm1",
-   "zmail"
-  ],
-  "send_mx": [
-   "blogspot.l.googleusercontent.com."
-  ]
- },
  "sindresorhus.com": {
   "dkim": [
    "google",
@@ -690,10 +671,6 @@
   "send_mx": [
    "10 feedback-smtp.us-east-1.amazonses.com."
   ]
- },
- "workers.dev": {
-  "dkim": [],
-  "send_mx": []
  },
  "uji.sh": {
   "dkim": [],

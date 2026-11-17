@@ -1,5 +1,5 @@
 # Probe common DKIM selectors + send.<domain> for mail-capable orgs. python3 -I dkim.py survey.json out.json
-import json, subprocess, sys
+import json, re, subprocess, sys
 s = json.load(open(sys.argv[1])); seen = {}
 for r in s: seen.setdefault(r['org'], r)
 SEL = ['google', 'resend', 'selector1', 's1', 'k1', 'default', 'mail', 'dkim', 'sig1', 'protonmail', 'fm1', 'zmail']
@@ -8,7 +8,8 @@ def dig(n, t):
 out = {}
 for o, r in seen.items():
     if not ([m for m in r['mx'] if not m.strip().endswith(' .')] or r['spf']): continue
-    hit = [sel for sel in SEL if any('p=' in l or 'k=rsa' in l.lower() or l.endswith('.') for l in dig(f'{sel}._domainkey.{o}', 'TXT') + dig(f'{sel}._domainkey.{o}', 'CNAME'))]
+    # a live key only: non-empty p= in the TXT (dig follows CNAMEs); review 2026-11-17, the first run also counted bare CNAMEs and empty p=
+    hit = [sel for sel in SEL if re.search(r'(?:^|;)\s*p=[^;\s]', ''.join(''.join(l.split('"')[1::2]) for l in dig(f'{sel}._domainkey.{o}', 'TXT')))]
     send = dig('send.' + o, 'MX')
     out[o] = {'dkim': hit, 'send_mx': send}
 json.dump(out, open(sys.argv[2], 'w'), indent=1)

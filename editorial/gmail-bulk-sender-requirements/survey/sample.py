@@ -5,7 +5,8 @@ SKIP = ('github.com', 'gitlab.com', 'youtube.com', 'apps.apple.com', 'play.googl
         'codeberg.org', 'npmjs.com', 'pypi.org', 'chromewebstore.google.com', 'chrome.google.com', 'news.ycombinator.com',
         'twitter.com', 'x.com', 'medium.com', 'substack.com', 'vercel.app', 'netlify.app', 'github.io', 'pages.dev',
         'itch.io', 'producthunt.com', 'reddit.com', 'addons.mozilla.org', 'crates.io', 'docs.google.com',
-        'marketplace.visualstudio.com', 'fly.dev', 'onrender.com', 'replit.app', 'lovable.app', 'streamlit.app')
+        'marketplace.visualstudio.com', 'fly.dev', 'onrender.com', 'replit.app', 'lovable.app', 'streamlit.app',
+        'blogspot.com', 'workers.dev')  # last two added in review 2026-11-17: free hosting, their apex DNS is the platform's
 hits = json.load(open(sys.argv[1]))['hits']
 doms = set()
 for h in hits:

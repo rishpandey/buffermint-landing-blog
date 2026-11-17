@@ -16,7 +16,7 @@ By t-20261115-blog-post-review on 2026-11-17. Every row of claims.md checked: ea
 | 10 | verified | Google FAQ 14229414 (opened 2026-11-17): exact quote present |
 | 11 | verified | Google 81126 (opened 2026-11-17): all-sender list: SPF or DKIM, forward and reverse DNS (PTR), TLS, RFC 5322 |
 | 12 | verified | Google FAQ 14229414 (opened 2026-11-17): "Starting November 2025, Gmail is ramping up its enforcement… temporary and permanent rejections"; 81126: spam or 5.7.26 rejection |
-| 13 | verified | Yahoo Sender Hub (opened 2026-11-17): bulk requirements listed; no volume number anywhere on the page |
+| 13 | fixed | Yahoo page gives no volume threshold, but it does give 0.3%, so "without giving a number" could be read as no spam-rate figure; now "without giving a volume threshold" |
 | 14 | verified | Yahoo Sender Hub (opened 2026-11-17): "Implement SPF or DKIM at a minimum", "below 0.3%", forward and reverse DNS, "RFCs 5321 and 5322" |
 | 15 | verified | Yahoo Sender Hub (opened 2026-11-17): "Implement both SPF & DKIM", "at least p=none - DMARC must pass" |
 | 16 | verified | Yahoo Sender Hub (opened 2026-11-17): "Relaxed alignment is acceptable"; From aligned with SPF or DKIM domain |
@@ -33,21 +33,21 @@ By t-20261115-blog-post-review on 2026-11-17. Every row of claims.md checked: ea
 | 27 | verified | Google FAQ 14229414 (opened 2026-11-17): "we recommend that you fulfill unsubscribe requests within 48 hours"; table row "Unsubscribe requests aren't honored within 48 hours" |
 | 28 | verified | Google 81126 (opened 2026-11-17): both headers, List-Unsubscribe example with an https URL; RFC 8058 requires the HTTPS URI |
 | 29 | verified | BLOG-PLAN.md lines 203 and 460 say search found 0.3% only on vendor sites |
-| 30 | verified | reran the curl in sample.py header on 2026-11-17: nbHits 300; sample.py → 165 domains, identical to domains.txt |
-| 31 | verified | reran `analyze.py survey.json` on 2026-11-17: mail_capable 119, null_mx 2 |
-| 32 | verified | reran `analyze.py survey.json` on 2026-11-17: dmarc_none 42; 42/119 = 35.3% |
-| 33 | verified | reran `analyze.py survey.json` on 2026-11-17: p=none 40, quarantine 16, reject 21, rua 44; 64.7/33.6/13.4/17.6/37.0% |
-| 34 | verified | reran `analyze.py survey.json` on 2026-11-17: spf_none 8 (6.7%), spf_multiple 1 (0.8%) |
-| 35 | verified | reran `analyze.py survey.json` on 2026-11-17: ~all 87, -all 15, ?all 7 (73.1/12.6/5.9%) |
-| 36 | verified | reran `extra.py survey.json dkim.json` on 2026-11-17: sending service seen 29, no DMARC 2, p=none 19 |
-| 37 | verified | reran `extra.py survey.json dkim.json` on 2026-11-17: cloudflare MX 20, namecheap SPF 14, forwarder only 13, overlap 0 |
+| 30 | fixed | HN query reran 2026-11-17: nbHits 300. The sample kept scottbezek.blogspot.com and uberblok.storagebits.workers.dev, scored as Google's and Cloudflare's apex DNS though the post says free-hosting subdomains were dropped; added to SKIP in sample.py, now 163 domains (post, heading, description, Sources updated) |
+| 31 | fixed | reran `analyze.py survey.json` on 2026-11-17 after the sample fix: mail_capable 117 (was 119; both dropped hosts were counted as mail domains with `v=spf1 -all`) |
+| 32 | fixed | reran `analyze.py survey.json` on 2026-11-17 after the sample fix: 42/117 = 35.9%, post now 36% |
+| 33 | fixed | reran `analyze.py survey.json` on 2026-11-17 after the sample fix: 75 / 40 / 16 / 19 / rua 42 = 64/34/14/16/36% |
+| 34 | fixed | reran `analyze.py survey.json` on 2026-11-17 after the sample fix: 8 (6.8%), 1 (0.9%); rounded shares unchanged |
+| 35 | fixed | reran `analyze.py survey.json` on 2026-11-17 after the sample fix: 87 / 13 / 7 = 74/11/6% |
+| 36 | fixed | reran `extra.py survey.json dkim.json` on 2026-11-17 after the fixes: 30 (pug.sh has an SES bounce MX but wildcard DKIM, and was dropped before the SES test), 2 without DMARC, 19 of 28 at p=none |
+| 37 | fixed | The post said "many domains only forward mail" and counted all 20 Cloudflare Email Routing domains, but 7 of them have a Resend DKIM key; reran `extra.py survey.json dkim.json` on 2026-11-17 after the fixes (`fwd_only`): 22 forward-only (11 Cloudflare, 11 Namecheap), 15 without DMARC; post rewritten to those numbers |
 | 38 | verified | RFC 7208 §4.5: "more than one record, check_host() produces the \"permerror\" result" |
 | 39 | verified | RFC 7208 §2.6.2 neutral "not asserting"; §2.6.5 softfail "weak statement"; §8.5 "SHOULD NOT reject the message based solely on this result" |
-| 40 | verified | reran `extra.py survey.json dkim.json` on 2026-11-17: 113 without wildcard, 62 with a key (54.9%), google 29, resend 20 |
+| 40 | fixed | `recheck.py` re-dug the 62 hits on 2026-11-17: 6 held no key (Fastmail `fm1` published with `p=` empty "Intentionally_Left_Blank_As_Per_DKIM_Rotation_BCP"; ulda.io Proton CNAME to a name with no TXT); dkim.py now needs a non-empty p=; reran `extra.py survey.json dkim.json` on 2026-11-17 after the fixes: 56 of 112 (50%), google 29, resend 20 |
 | 41 | verified | Resend add-a-domain (opened 2026-11-17): "We strongly recommend sending emails from a subdomain" |
 | 42 | verified | FAQ: primary-domain count; Postmaster 14668346 (opened 2026-11-17): "Compliance status dashboard data applies to primary domains only" |
 | 43 | verified | SES mail-from guide (opened 2026-11-17): default "subdomain of amazonses.com"; MX "10 feedback-smtp.region.amazonses.com", TXT "v=spf1 include:amazonses.com ~all" |
-| 44 | verified | Resend: "Return-Path defaults to send.example.com" |
+| 44 | fixed | Resend: Return-Path "defaults to send.example.com" for the added domain; the post's setup adds mail.example.com, so the default is send.mail.example.com; post now says "a send. subdomain of the domain you add" |
 | 45 | verified | reran `extra.py survey.json dkim.json` on 2026-11-17: send. MX 19, to amazonses 11 |
 | 46 | verified | RFC 9989: adkim/aspf "default is \"r\""; relaxed = "same Organizational Domain" |
 | 47 | verified | RFC 9989 header: May 2026, "Obsoletes: 7489, 9091" |
@@ -73,4 +73,6 @@ Read as a small-SaaS founder deciding what to put in DNS before the first sign-u
 - **Reader value:** concrete records, commands, a checklist and the RFC 9989 changes. No filler intro; the answer is in the first paragraph.
 - **Public copy:** neutral. It links only live public tools (header analyzer, subject tester) where they genuinely help, names no unreleased product and describes no funnel. Survey domains aren't named.
 - **Dates:** dated 2026-11-17 (owner's answer); rules marked "as of November 2026" and "read on 15 November 2026", which stays true; I re-read every source on 17 November and only the Microsoft cell had to change.
+- **Survey corrected (from the code-review pass):** two free-hosting hosts out of the sample, only live DKIM keys counted, the SES tests run on wildcard-DKIM domains too, and the forwarder paragraph counts only forward-only domains. The headline moved from 35% to 36% without DMARC; the post's argument doesn't change. Raw 2026-11-15 results were filtered, not re-dug; the DKIM recheck is dated 17 November in the Sources.
+- **Clarified:** Yahoo "no volume threshold" (it does give 0.3%); Resend's default bounce subdomain follows the domain you add; the H2 and intro no longer call the sample "new" products (it includes established companies).
 - **Not changed:** the length (about 2,300 words) is in range. The tables are dense but that is what the reader came for.

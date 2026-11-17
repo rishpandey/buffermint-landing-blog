@@ -1488,17 +1488,6 @@
   ]
  },
  {
-  "host": "scottbezek.blogspot.com",
-  "org": "blogspot.com",
-  "mx": [],
-  "spf": [
-   "v=spf1 -all"
-  ],
-  "dmarc": [
-   "v=DMARC1; p=reject; rua=mailto:mailauth-reports@google.com"
-  ]
- },
- {
   "host": "sindresorhus.com",
   "org": "sindresorhus.com",
   "mx": [
@@ -1792,17 +1781,6 @@
   "spf": [],
   "dmarc": [
    "v=DMARC1; p=none;"
-  ]
- },
- {
-  "host": "uberblok.storagebits.workers.dev",
-  "org": "workers.dev",
-  "mx": [],
-  "spf": [
-   "v=spf1 -all"
-  ],
-  "dmarc": [
-   "v=DMARC1; p=reject; pct=100; rua=mailto:cloudflare@dmarc.area1reports.com; ruf=mailto:cloudflare@dmarc.area1reports.com; adkim=s; aspf=s;"
   ]
  },
  {
