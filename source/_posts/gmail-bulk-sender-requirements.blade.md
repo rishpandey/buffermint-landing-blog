@@ -33,7 +33,7 @@ All three providers split their rules into a floor for everyone and a stricter s
 | Bulk: DMARC | Required, `p=none` allowed | Required, at least `p=none`, must pass | At least `p=none` |
 | Bulk: alignment | From aligned with SPF or DKIM domain | From aligned with SPF or DKIM domain (relaxed is fine) | Aligned with SPF or DKIM, both preferred |
 | Bulk: unsubscribe | One-click (RFC 8058) plus a visible link, on marketing and subscribed mail | One-click List-Unsubscribe plus a visible link; honor within 2 days | A working unsubscribe link (recommended) |
-| What happens if you miss | Spam folder, temporary or permanent rejection; enforcement stepped up from November 2025 | Not spelled out; rolled out from February 2024 | Junk folder since 5 May 2025; rejection announced for a later date |
+| What happens if you miss | Spam folder, temporary or permanent rejection; enforcement stepped up from November 2025 | Not spelled out; enforced from February 2024 | Rejected with error `550 5.7.515` since 5 May 2025 (first announced as the Junk folder) |
 
 The authentication rules apply to every message, password resets included. The unsubscribe rules apply only to marketing and subscribed mail, so a receipt doesn't need a `List-Unsubscribe` header, while a product newsletter does.
 

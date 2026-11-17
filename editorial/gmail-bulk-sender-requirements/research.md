@@ -33,7 +33,7 @@ Our own data (2026-11-15, buffermint-vps, scripts in this folder's claims.md):
 - **Unsubscribe speed.** Yahoo: within 2 days. Google: "recommend" within 48 hours in prose, but its table lists missing 48 hours as a non-compliance. Microsoft: a working link, no deadline.
 - **Mailto unsubscribe.** Yahoo accepts mailto; Google's guidelines want the RFC 8058 POST headers (HTTPS). So implement RFC 8058.
 - **DMARC p=none.** All three accept p=none as the minimum. Vendors (and Microsoft's own FAQ) push towards quarantine/reject; not required.
-- **Outlook enforcement.** The Microsoft post says Junk from 5 May 2025 and rejection "at a future date", while also quoting a rejection code: ambiguous; say Junk now, rejection announced but not dated in the post.
+- **Outlook enforcement.** The Microsoft post says Junk from 5 May 2025 and rejection "at a future date", while also quoting a rejection code: ambiguous; say Junk now, rejection announced but not dated in the post. *(Resolved in review, 2026-11-17: in the page's HTML the Junk sentence and the "future date" note are struck through; the 29 April update rejects with 550 5.7.515 from 5 May 2025. The post says so.)*
 - **Transactional vs marketing.** Unsubscribe rules apply to marketing and subscribed messages (Google, Yahoo); authentication applies to everything. A password reset needs SPF/DKIM/DMARC alignment but no unsubscribe header.
 
 ## New angle
