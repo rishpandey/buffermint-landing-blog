@@ -20,5 +20,8 @@ for d in open(sys.argv[1]).read().split():
         dm = [t for t in txt('_dmarc.' + o) if t.lower().startswith('v=dmarc1')]
     rec['dmarc'] = dm
     out.append(rec)
+# report addresses (rua/ruf mailto:) are redacted before saving: this repo is public (review 2026-11-17)
+import re
+for r in out: r['dmarc'] = [re.sub(r'mailto:[^,;\s]+', 'mailto:<redacted>', x) for x in r['dmarc']]
 json.dump(out, open(sys.argv[2], 'w'), indent=1)
 print(len(out))

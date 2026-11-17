@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: gmail bulk sender requirements",
-  "created_at": "2026-11-14T19:26:25.563Z",
+  "created_at": "2026-11-17T14:17:48.267Z",
   "data": {
     "score": 94,
     "items": [
@@ -80,14 +80,14 @@
         "group": "keyword",
         "label": "Keyword use",
         "status": "pass",
-        "detail": "2 times in 1913 words."
+        "detail": "2 times in 2016 words."
       },
       {
         "id": "keyword.length",
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "1913 words."
+        "detail": "2016 words."
       },
       {
         "id": "links.internal",
@@ -122,14 +122,14 @@
         "group": "readability",
         "label": "Paragraph length",
         "status": "warn",
-        "detail": "4 paragraphs are over 120 words; split them."
+        "detail": "5 paragraphs are over 120 words; split them."
       }
     ],
     "stats": {
-      "words": 1913,
-      "sentences": 92,
+      "words": 2016,
+      "sentences": 94,
       "reading_ease": 69,
-      "reading_minutes": 8,
+      "reading_minutes": 9,
       "h1": 1,
       "h2": 8,
       "h3": 0,

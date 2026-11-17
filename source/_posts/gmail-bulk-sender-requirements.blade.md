@@ -16,7 +16,7 @@ extends: _layouts.post
 
 A small SaaS is usually far below 5,000 a day, but [Google counts](https://support.google.com/a/answer/14229414) every subdomain under your main domain together and never lets a domain drop back out, so the cheap move is to meet the bulk rules from your first email.
 
-To see how products launched on Hacker News actually do, we looked up the DNS of the 163 product domains that reached 10 points on Show HN in October 2026. Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from outside.
+To see how products launched on Hacker News actually do, we looked up the DNS of the 163 product domains behind Show HN posts from October 2026 with 10 or more points. Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from outside.
 
 Below: the rules side by side as of November 2026, where the three providers disagree, what we found in those domains, the DNS records to publish, and how to check yours.
 
@@ -47,7 +47,7 @@ The authentication rules apply to every message, password resets included. The u
 
 ## What 163 product domains publish
 
-On 15 November 2026 we took every Show HN story from October 2026 with at least 10 points from the [Hacker News search API](https://hn.algolia.com/api) (300 stories), dropped links to code hosts, app stores, social sites and free hosting subdomains, and kept 163 distinct domains. For each we looked up the MX, SPF and DMARC records with `dig`, then probed 12 common DKIM selector names. Domains that answer for a made-up name (wildcard DNS) were left out of the DKIM count, as were selectors that hold no key (an empty `p=`, as a rotated-out key is published), and two domains whose only MX record is the "null MX" that declares no mail were left out of the mail count. The list includes a few established companies as well as new projects.
+On 15 November 2026 we took every Show HN story posted in October 2026 that had at least 10 points by then from the [Hacker News search API](https://hn.algolia.com/api) (300 stories), dropped links to code hosts, app stores, social sites and free hosting subdomains, and kept 163 distinct domains. For each we looked up the MX, SPF and DMARC records with `dig`, then probed 12 common DKIM selector names. Domains that answer for a made-up name (wildcard DNS) were left out of the DKIM count, as were selectors that hold no key (an empty `p=`, as a rotated-out key is published), and two domains whose only MX record is the "null MX" that declares no mail were left out of the mail count. The list includes a few established companies as well as new projects.
 
 | Of the 117 domains with an MX or SPF record | Count | Share |
 |---|---|---|
@@ -67,7 +67,7 @@ Three things stood out.
 
 **Many domains only forward mail.** 22 look forward-only: their SPF record names nothing but a forwarding service (Cloudflare Email Routing for 11, Namecheap's forwarding for 11), and we found no DKIM key or bounce subdomain. That's a fine way to get replies to a personal inbox, but an SPF record like that authorizes only the forwarder, and 15 of the 22 publish no DMARC record either. The day the product starts sending sign-up emails from that domain, the sending service's records have to be added, and DMARC published. Of the 9 other domains that receive through Cloudflare, 7 already have a Resend DKIM key.
 
-**A few SPF records are broken or toothless.** One domain publishes two SPF records, which [RFC 7208](https://www.rfc-editor.org/rfc/rfc7208.html) treats as a permanent error: neither counts. Seven end in `?all` (neutral), which says nothing about servers not listed. Most use `~all` (softfail), and RFC 7208 advises receivers not to reject mail on a softfail alone: with DMARC published, it is DMARC that decides what happens to mail that fails.
+**A few SPF records are broken or toothless.** One domain publishes two SPF records, which [RFC 7208](https://www.rfc-editor.org/rfc/rfc7208.html) treats as a permanent error: neither counts. Seven end in `?all` (neutral), which says nothing about servers not listed, and one has no `all` term, which RFC 7208 also treats as neutral. Most use `~all` (softfail), and RFC 7208 advises receivers not to reject mail on a softfail alone: with DMARC published, it is DMARC that decides what happens to mail that fails.
 
 DKIM is harder to count from outside, because you need the selector name to find the key. At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most often `google` (29) and `resend` (20). The real share is higher.
 
@@ -87,7 +87,7 @@ Here is a typical setup: staff mail on Google Workspace or another mailbox host,
 
 Two notes on that table:
 
-- **The bounce subdomain is what makes SPF count.** Amazon SES, for example, uses a subdomain of `amazonses.com` as the bounce address unless you set your own, and [its guide](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html) has you publish an MX record (`10 feedback-smtp.<region>.amazonses.com`) and `v=spf1 include:amazonses.com ~all` on a subdomain of yours. Resend does the same by default with a `send.` subdomain of the domain you add (`send.mail.example.com` in the table's setup). In our sample, 19 domains had an MX record on a `send.` subdomain, 11 of them pointing at SES. With relaxed alignment, the default, `bounce.mail.example.com` aligns with `@mail.example.com` because both sit under `example.com`.
+- **The bounce subdomain is what makes SPF count.** Amazon SES, for example, uses a subdomain of `amazonses.com` as the bounce address unless you set your own, and [its guide](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html) has you publish an MX record (`10 feedback-smtp.<region>.amazonses.com`) and `v=spf1 include:amazonses.com ~all` on a subdomain of yours. Resend does the same by default with a `send.` subdomain of the domain you add (`send.mail.example.com` in the table's setup). In our sample, 19 domains had an MX record on a `send.` subdomain, and all 19 also had a Resend DKIM key: that's Resend's default (its bounce host is on Amazon SES for 11 of them). With relaxed alignment, the default, `bounce.mail.example.com` aligns with `@mail.example.com` because both sit under `example.com`.
 - **DMARC got a new RFC in May 2026.** [RFC 9989](https://www.rfc-editor.org/rfc/rfc9989.html) replaces RFC 7489. For a small sender, two changes matter: the `pct` tag is gone (use `t=y` for a test-mode policy), and receivers now find your organizational domain by walking up the DNS tree instead of using the Public Suffix List. The `p=none` policy itself is unchanged. Start at `p=none` with `rua` reports, read them for a few weeks, and move to `quarantine` once every service you use shows up as passing.
 
 Keep the root SPF record to the services that really send as `example.com`. SPF allows at most 10 DNS lookups per check, and past that the result is a permanent error (RFC 7208, section 4.6.4). That's easy to reach if every tool you ever tried is still `include:`d.

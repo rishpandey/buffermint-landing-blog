@@ -1,3 +1,5 @@
+# dkim.json was written on 2026-11-15 by the earlier hit rule (any TXT/CNAME answer); recheck.py records the hits without a live key
+# (dkim.json.revoked.json) and extra.py drops them. This rule, live keys only, gives the same result in one step on a new run.
 # Probe common DKIM selectors + send.<domain> for mail-capable orgs. python3 -I dkim.py survey.json out.json
 import json, re, subprocess, sys
 s = json.load(open(sys.argv[1])); seen = {}

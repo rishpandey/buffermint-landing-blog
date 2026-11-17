@@ -16,7 +16,8 @@ print('mail domains', len(mail), 'probed', len(d), 'without wildcard DKIM', len(
 print('with a key at a common selector', sum(1 for v in okd.values() if v['dkim']),
       {k: sum(1 for v in okd.values() if k in v['dkim']) for k in ('google', 'resend', 's1', 'k1')})
 sendmx = [o for o, v in d.items() if v['send_mx'] and o + '#mx' not in w]
-print('send. MX', len(sendmx), 'to amazonses', sum(1 for o in sendmx if any('amazonses' in m for m in d[o]['send_mx'])))
+print('send. MX', len(sendmx), 'to amazonses', sum(1 for o in sendmx if any('amazonses' in m for m in d[o]['send_mx'])),
+      'with a Resend key', sum(1 for o in sendmx if 'resend' in d[o]['dkim']))
 # selector hits count only without wildcard DKIM; the SES bounce MX and SPF tests don't depend on DKIM (review 2026-11-17)
 tx = [o for o, v in d.items() if (o in okd and set(v['dkim']) & {'resend', 's1', 'k1'})
       or (o in sendmx and any('amazonses' in m for m in v['send_mx']))
@@ -37,5 +38,6 @@ def fwd_only(o):
     return fwd[terms[0]]
 fo = [fwd_only(o) for o in d]
 print('forward only', sum(1 for x in fo if x), {k: fo.count(k) for k in ('cloudflare', 'namecheap')},
-      'cloudflare MX with a sending service', sum(1 for o in cf if o in tx))
+      'cloudflare MX with a sending service', sum(1 for o in cf if o in tx),
+      'with a Resend key', sum(1 for o in cf if o in okd and 'resend' in d[o]['dkim']))
 print('forward only without DMARC', sum(1 for o, x in zip(d, fo) if x and not s[o]['dmarc']))

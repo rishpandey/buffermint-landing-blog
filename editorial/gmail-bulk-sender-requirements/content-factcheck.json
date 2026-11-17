@@ -1,18 +1,18 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: Gmail bulk sender requirements, plus Yahoo and Outlook rules (6 to fix)",
-  "created_at": "2026-11-14T19:26:27.615Z",
+  "created_at": "2026-11-17T14:18:14.399Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "a541f88d60b72307a413cc146fabd738",
-    "checked_at": "2026-11-14T19:26:27.615Z",
+    "content_md5": "6da87a2804f3edeec45ab7502895137f",
+    "checked_at": "2026-11-17T14:18:14.397Z",
     "blockers": [
-      "Unsupported claim (35%): add a source link or put it in the facts sheet: \"Of the 119 that handle email at all, 42 (35%) publish no DMARC record, the bulk-only requirement anyone can check from o\"",
+      "Unsupported claim (36%): add a source link or put it in the facts sheet: \"Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from o\"",
       "Unsupported claim (5,000, 5,000, 5,000, 0.3%, 0.3%): add a source link or put it in the facts sheet: \"| Rule | Gmail | Yahoo | Outlook.com | |---|---|---|---| | Who counts as bulk | About 5,000+ a day to personal Gmail acc\"",
       "Unsupported claim (0.3%): add a source link or put it in the facts sheet: \"Yahoo never gives a number, which is the practical argument for meeting the bulk rules at any volume. - The spam rate. O\"",
-      "Unsupported claim (65%, 34%, 13%, 18%, 37%, 35%, 7%, 1%, 73%, 13%, 6%): add a source link or put it in the facts sheet: \"| Of the 119 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 77 | 65% | | ↳ p=none |\"",
-      "Unsupported claim (55%): add a source link or put it in the facts sheet: \"At least 62 of the 113 mail domains without wildcard DNS (55%) have a key at one of the 12 names we tried, most often go\"",
+      "Unsupported claim (64%, 34%, 14%, 16%, 36%, 36%, 7%, 1%, 74%, 11%, 6%): add a source link or put it in the facts sheet: \"| Of the 117 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 75 | 64% | | ↳ p=none |\"",
+      "Unsupported claim (50%): add a source link or put it in the facts sheet: \"At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most oft\"",
       "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"- [ ] SPF on the root domain for staff mail and on each bounce (MAIL FROM) subdomain, one record per name, under 10 look\""
     ],
     "warnings": [
@@ -167,9 +167,9 @@
       },
       {
         "kind": "number",
-        "text": "Of the 119 that handle email at all, 42 (35%) publish no DMARC record, the bulk-only requirement anyone can check from outside.",
+        "text": "Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from outside.",
         "numbers": [
-          "35%"
+          "36%"
         ],
         "cues": [],
         "links": [],
@@ -272,18 +272,18 @@
       },
       {
         "kind": "number",
-        "text": "| Of the 119 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 77 | 65% | | ↳ p=none | 40 | 34% | | ↳ p=quarantine | 16 | 13% | | ↳ p=reject | 21 | 18% | | ↳ asks for aggregate reports (rua) | 44 | 37% | | No DMARC record | 42 | 35% | | No SPF record | 8 | 7% | | Two SPF records (invalid) | 1 | 1% | | SPF ending in ~all / -all / ?all | 87 / 15 / 7 | 73% / 13% / 6%",
+        "text": "| Of the 117 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 75 | 64% | | ↳ p=none | 40 | 34% | | ↳ p=quarantine | 16 | 14% | | ↳ p=reject | 19 | 16% | | ↳ asks for aggregate reports (rua) | 42 | 36% | | No DMARC record | 42 | 36% | | No SPF record | 8 | 7% | | Two SPF records (invalid) | 1 | 1% | | SPF ending in ~all / -all / ?all | 87 / 13 / 7 | 74% / 11% / 6%",
         "numbers": [
-          "65%",
+          "64%",
           "34%",
-          "13%",
-          "18%",
-          "37%",
-          "35%",
+          "14%",
+          "16%",
+          "36%",
+          "36%",
           "7%",
           "1%",
-          "73%",
-          "13%",
+          "74%",
+          "11%",
           "6%"
         ],
         "cues": [],
@@ -295,9 +295,9 @@
       },
       {
         "kind": "number",
-        "text": "At least 62 of the 113 mail domains without wildcard DNS (55%) have a key at one of the 12 names we tried, most often google (29) and resend (20).",
+        "text": "At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most often google (29) and resend (20).",
         "numbers": [
-          "55%"
+          "50%"
         ],
         "cues": [],
         "links": [],
