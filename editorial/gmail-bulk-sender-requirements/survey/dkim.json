@@ -1,0 +1,753 @@
+{
+ "100toolkit.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "3anddoneapp.com": {
+  "dkim": [
+   "google",
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "adrs.systems": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "adyen.com": {
+  "dkim": [
+   "google",
+   "mail"
+  ],
+  "send_mx": []
+ },
+ "againstallodds.games": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "agentability.org": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "ailegal.legal": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "arsaze.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "artfrompixels.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "astrohelm.app": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "betterwispr.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "bigwords.page": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "billmender.com": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "bloffy.co": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": []
+ },
+ "blumify.io": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.ap-northeast-1.amazonses.com."
+  ]
+ },
+ "humanexperiences.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "brickbrag.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "butterbean.farm": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "certainthings.studio": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "clova.email": {
+  "dkim": [],
+  "send_mx": [
+   "1 mx.clova.email."
+  ]
+ },
+ "eon.io": {
+  "dkim": [
+   "google",
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "ulda.io": {
+  "dkim": [
+   "protonmail"
+  ],
+  "send_mx": []
+ },
+ "hypermass.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "apposters.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "evans.bike": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "fakeipedia.org": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "fframes.studio": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "flexchords.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "freehire.me": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "ultimidi.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "genesisdb.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "georadios.com": {
+  "dkim": [
+   "default"
+  ],
+  "send_mx": []
+ },
+ "getopposable.com": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "gmapscrawl.com": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": []
+ },
+ "greenvitriol.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "gtlds.fyi": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "guitoro.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "danieljanus.pl": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": [
+   "danieljanus.pl.",
+   "10 data.home.pl."
+  ]
+ },
+ "hatamoto.dev": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "hellojomp.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "helohq.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "hypernuclear.com": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "ilia.page": {
+  "dkim": [
+   "sig1"
+  ],
+  "send_mx": []
+ },
+ "innerloop.works": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "boondoggle.studio": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "jointter.com": {
+  "dkim": [
+   "zmail"
+  ],
+  "send_mx": []
+ },
+ "jotbus.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "kapwing.com": {
+  "dkim": [
+   "google",
+   "s1",
+   "mail"
+  ],
+  "send_mx": []
+ },
+ "kevs3d.co.uk": {
+  "dkim": [
+   "default"
+  ],
+  "send_mx": []
+ },
+ "legendofhyrule.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "hervalicio.us": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "mailaccess.pro": {
+  "dkim": [
+   "resend",
+   "zmail"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "mana.space": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "memorysync.io": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.ap-northeast-1.amazonses.com."
+  ]
+ },
+ "mira.tours": {
+  "dkim": [
+   "resend",
+   "fm1"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "museumofages.org": {
+  "dkim": [
+   "protonmail"
+  ],
+  "send_mx": []
+ },
+ "xy.dev": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "mymirrormd.com": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "nasscad.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "ycombinator.lol": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "niklasroy.com": {
+  "dkim": [],
+  "send_mx": [
+   "5 smtpin.rzone.de."
+  ]
+ },
+ "offrun.dev": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "oldroll.io": {
+  "dkim": [
+   "default"
+  ],
+  "send_mx": []
+ },
+ "openhand.health": {
+  "dkim": [
+   "google",
+   "s1"
+  ],
+  "send_mx": []
+ },
+ "openlume.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "opensidian.org": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "opper.ai": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "lsantos.dev": {
+  "dkim": [
+   "protonmail"
+  ],
+  "send_mx": []
+ },
+ "outerweb.org": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "parseable.com": {
+  "dkim": [
+   "google",
+   "mail"
+  ],
+  "send_mx": []
+ },
+ "patchwave.ai": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "pdftomp3.com": {
+  "dkim": [
+   "s1"
+  ],
+  "send_mx": []
+ },
+ "petercai.com": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "petal.live": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "pidgeon.ai": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "pipod.dev": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "pivotlake.io": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "endothermic.ai": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "playgroundarcade.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "pocketty.app": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "pressaudit.org": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "proa.so": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "proc-cli.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "pug.sh": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "pulseos.finance": {
+  "dkim": [
+   "google",
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "rainbowsay.ai": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "ranet3.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "readrare.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "rhun.app": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "dmitrybrant.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "rouler.io": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "scimigo.com": {
+  "dkim": [
+   "selector1"
+  ],
+  "send_mx": []
+ },
+ "sindresorhus.com": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": []
+ },
+ "wakeshift.ai": {
+  "dkim": [
+   "google",
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "slidebyside.com": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "alphaventure.com": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "sparkjs.dev": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "stealmybitcoin.com": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": [
+   "uixie.porkbun.com."
+  ]
+ },
+ "stelabouras.com": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "stoke.money": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "sygal.app": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "tenderportal.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "thingstodoapi.com": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "send.forge.rmta.net.",
+   "10 feedback.forge.rmta.net."
+  ]
+ },
+ "thisandthat.chat": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "thoreaubasic.com": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "dvy.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "typebook.lol": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "typeui.sh": {
+  "dkim": [
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "uji.sh": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "unfenced.land": {
+  "dkim": [
+   "zmail"
+  ],
+  "send_mx": []
+ },
+ "usejog.com": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "usenua.com": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "wherewhen.cc": {
+  "dkim": [
+   "fm1"
+  ],
+  "send_mx": []
+ },
+ "withnative.ai": {
+  "dkim": [
+   "google",
+   "resend"
+  ],
+  "send_mx": [
+   "10 feedback-smtp.us-east-1.amazonses.com."
+  ]
+ },
+ "wonderhop.io": {
+  "dkim": [],
+  "send_mx": []
+ },
+ "wordpress.org": {
+  "dkim": [
+   "s1"
+  ],
+  "send_mx": [
+   "wordpress.org.",
+   "10 smtp2-dca.wordpress.org.",
+   "10 smtp1-dca.wordpress.org."
+  ]
+ },
+ "wraps.dev": {
+  "dkim": [
+   "google"
+  ],
+  "send_mx": []
+ },
+ "yeahnah.lol": {
+  "dkim": [
+   "google",
+   "resend",
+   "selector1",
+   "s1",
+   "k1",
+   "default",
+   "mail",
+   "dkim",
+   "sig1",
+   "protonmail",
+   "fm1",
+   "zmail"
+  ],
+  "send_mx": []
+ },
+ "zebra.rodeo": {
+  "dkim": [],
+  "send_mx": []
+ }
+}

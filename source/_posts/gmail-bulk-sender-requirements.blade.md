@@ -1,0 +1,137 @@
+---
+featured_image: assets/img/uploads/gmail-bulk-sender-requirements-cover-8e8457-1200.jpeg
+featured_thumbnail: assets/img/uploads/gmail-bulk-sender-requirements-cover-8e8457-600.jpeg
+title: "Gmail bulk sender requirements, plus Yahoo and Outlook rules"
+seo_description: "Gmail bulk sender requirements next to Yahoo's and Outlook's, from their own pages: the DNS records a small SaaS needs, and what 163 product domains publish."
+keyword: gmail bulk sender requirements
+author: Rishabh Pandey
+show_meta: true
+section: postContent
+published: true
+date: 2026-11-17
+extends: _layouts.post
+---
+
+[Gmail's bulk sender requirements](https://support.google.com/a/answer/81126) apply once a domain sends about 5,000 messages a day to personal Gmail accounts: SPF and DKIM, a DMARC record (a policy of `none` is enough), a From domain that aligns with one of them, one-click unsubscribe on marketing mail, and a spam rate under 0.3%. [Yahoo](https://senders.yahooinc.com/best-practices/) asks for nearly the same list without giving a volume threshold, and Outlook.com has asked for the authentication half since May 2025.
+
+A small SaaS is usually far below 5,000 a day, but [Google counts](https://support.google.com/a/answer/14229414) every subdomain under your main domain together and never lets a domain drop back out, so the cheap move is to meet the bulk rules from your first email.
+
+To see how products launched on Hacker News actually do, we looked up the DNS of the 163 product domains behind Show HN posts from October 2026 with 10 or more points. Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from outside.
+
+Below: the rules side by side as of November 2026, where the three providers disagree, what we found in those domains, the DNS records to publish, and how to check yours.
+
+## Gmail bulk sender requirements next to Yahoo's and Outlook's
+
+All three providers split their rules into a floor for everyone and a stricter set for high-volume senders. This table is built from each provider's own page, read on 15 November 2026: [Google's sender guidelines](https://support.google.com/a/answer/81126) and [FAQ](https://support.google.com/a/answer/14229414), [Yahoo's Sender Hub](https://senders.yahooinc.com/best-practices/) and [Microsoft's announcement for Outlook.com](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730).
+
+| Rule | Gmail | Yahoo | Outlook.com |
+|---|---|---|---|
+| Who counts as bulk | About 5,000+ a day to personal Gmail accounts, per primary domain; permanent once reached | No number given | Over 5,000 a day to outlook.com, hotmail.com and live.com |
+| Everyone: authentication | SPF or DKIM | SPF or DKIM | No rule below 5,000 |
+| Everyone: other | Forward and reverse DNS, TLS, RFC 5322 format, spam rate under 0.3% | Forward and reverse DNS, RFC 5321/5322, spam rate under 0.3% | — |
+| Bulk: authentication | SPF and DKIM | SPF and DKIM | SPF and DKIM must pass |
+| Bulk: DMARC | Required, `p=none` allowed | Required, at least `p=none`, must pass | At least `p=none` |
+| Bulk: alignment | From aligned with SPF or DKIM domain | From aligned with SPF or DKIM domain (relaxed is fine) | Aligned with SPF or DKIM, both preferred |
+| Bulk: unsubscribe | One-click (RFC 8058) plus a visible link, on marketing and subscribed mail | One-click List-Unsubscribe plus a visible link; honor within 2 days | A working unsubscribe link (recommended) |
+| What happens if you miss | Spam folder, temporary or permanent rejection; enforcement stepped up from November 2025 | Not spelled out; enforced from February 2024 | Rejected with error `550 5.7.515` since 5 May 2025 (first announced as the Junk folder) |
+
+The authentication rules apply to every message, password resets included. The unsubscribe rules apply only to marketing and subscribed mail, so a receipt doesn't need a `List-Unsubscribe` header, while a product newsletter does.
+
+## Where the three providers disagree
+
+- **The bulk threshold.** Google and Microsoft both say 5,000 a day, but Google counts per primary domain: [its FAQ's](https://support.google.com/a/answer/14229414) example adds `promotions.solarmora.com` to `solarmora.com`. Senders that reach it once "are permanently considered bulk senders", so one busy launch day changes the rules for good. Yahoo never gives a number, which is the practical argument for meeting the bulk rules at any volume.
+- **The spam rate.** Our plan for this post noted that the "0.3%" figure kept turning up only on email vendors' blogs. It is in Google's own pages: 0.3% is the limit in [the requirements](https://support.google.com/a/answer/81126), and the guidelines add that you should stay below 0.1% and never reach 0.3%. Above 0.3%, the [FAQ](https://support.google.com/a/answer/14229414) says Google offers no mitigation until the rate has stayed under it for seven days in a row. [Yahoo](https://senders.yahooinc.com/best-practices/) also says 0.3% and computes it on mail that reached the inbox. Microsoft gives no figure.
+- **Unsubscribe speed.** Yahoo says honor unsubscribes within 2 days. Google's FAQ says "we recommend" 48 hours, but its own requirements table lists missing that window as a compliance problem. Microsoft asks for a working link and sets no deadline. Treat 48 hours as the rule.
+- **Mailto or HTTPS.** Yahoo accepts a `mailto:` unsubscribe and calls the RFC 8058 POST "highly recommended". Google asks for the one-click headers with an HTTPS URL. One implementation of [RFC 8058](https://www.rfc-editor.org/rfc/rfc8058.html) satisfies both.
+- **How hard DMARC must be.** All three accept `p=none`. Microsoft's own FAQ suggests moving on to `quarantine` and then `reject`, and DMARC vendors push the same way, but none of the three requires it.
+
+## What 163 product domains publish
+
+On 15 November 2026 we took every Show HN story posted in October 2026 that had at least 10 points by then from the [Hacker News search API](https://hn.algolia.com/api) (300 stories), dropped links to code hosts, app stores, social sites and free hosting subdomains, and kept 163 distinct domains. For each we looked up the MX, SPF and DMARC records with `dig`, then probed 12 common DKIM selector names. Domains that answer for a made-up name (wildcard DNS) were left out of the DKIM count, as were selectors that hold no key (an empty `p=`, as a rotated-out key is published), and two domains whose only MX record is the "null MX" that declares no mail were left out of the mail count. The list includes a few established companies as well as new projects.
+
+| Of the 117 domains with an MX or SPF record | Count | Share |
+|---|---|---|
+| A DMARC record | 75 | 64% |
+| ↳ `p=none` | 40 | 34% |
+| ↳ `p=quarantine` | 16 | 14% |
+| ↳ `p=reject` | 19 | 16% |
+| ↳ asks for aggregate reports (`rua`) | 42 | 36% |
+| No DMARC record | 42 | 36% |
+| No SPF record | 8 | 7% |
+| Two SPF records (invalid) | 1 | 1% |
+| SPF ending in `~all` / `-all` / `?all` | 87 / 13 / 7 | 74% / 11% / 6% |
+
+Three things stood out.
+
+**The domains visibly set up to send app mail mostly do publish DMARC.** 30 domains showed a sending service in their DNS: a DKIM key at the `resend`, `s1` or `k1` selector, an Amazon SES bounce subdomain, or SES in their SPF. Only 2 of them had no DMARC record, and 19 of the 28 that had one sat at `p=none`. Sending providers walk you through these records when you add a domain, and it shows.
+
+**Many domains only forward mail.** 22 look forward-only: their SPF record names nothing but a forwarding service (Cloudflare Email Routing for 11, Namecheap's forwarding for 11), and we found no DKIM key or bounce subdomain. That's a fine way to get replies to a personal inbox, but an SPF record like that authorizes only the forwarder, and 15 of the 22 publish no DMARC record either. The day the product starts sending sign-up emails from that domain, the sending service's records have to be added, and DMARC published. Of the 9 other domains that receive through Cloudflare, 7 already have a Resend DKIM key.
+
+**A few SPF records are broken or toothless.** One domain publishes two SPF records, which [RFC 7208](https://www.rfc-editor.org/rfc/rfc7208.html) treats as a permanent error: neither counts. Seven end in `?all` (neutral), which says nothing about servers not listed, and one has no `all` term, which RFC 7208 also treats as neutral. Most use `~all` (softfail), and RFC 7208 advises receivers not to reject mail on a softfail alone: with DMARC published, it is DMARC that decides what happens to mail that fails.
+
+DKIM is harder to count from outside, because you need the selector name to find the key. At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most often `google` (29) and `resend` (20). The real share is higher.
+
+## The DNS records a small SaaS needs
+
+Here is a typical setup: staff mail on Google Workspace or another mailbox host, app mail (sign-ups, resets, receipts) through a transactional service, and a newsletter through a marketing tool. Each sending stream gets its own subdomain, as [Resend's docs](https://resend.com/docs/add-a-domain) recommend. Subdomains don't escape Gmail's bulk count or its compliance view, both of which roll up to `example.com`. What you gain is separate DKIM keys and bounce handling for each stream, and you can switch one off without touching the other.
+
+| Name | Type | Value | Why |
+|---|---|---|---|
+| `example.com` | MX | your mailbox host's servers | receive replies |
+| `example.com` | TXT | `v=spf1 include:<mailbox host> ~all` | staff mail passes SPF |
+| `<selector>._domainkey.example.com` | TXT or CNAME | key from your mailbox host | staff mail passes DKIM |
+| `<selector>._domainkey.mail.example.com` | TXT or CNAME | key from your transactional service | app mail from `@mail.example.com` passes DKIM, aligned |
+| `bounce.mail.example.com` | MX + TXT | the service's bounce host and `v=spf1 include:<service> ~all` | custom bounce (MAIL FROM) domain, so SPF aligns too; add `bounce.news.example.com` the same way if your newsletter tool offers one |
+| `<selector>._domainkey.news.example.com` | TXT or CNAME | key from your newsletter tool | newsletter passes DKIM, aligned |
+| `_dmarc.example.com` | TXT | `v=DMARC1; p=none; rua=mailto:dmarc@example.com` | one policy for the domain and its subdomains, plus reports |
+
+Two notes on that table:
+
+- **The bounce subdomain is what makes SPF count.** Amazon SES, for example, uses a subdomain of `amazonses.com` as the bounce address unless you set your own, and [its guide](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html) has you publish an MX record (`10 feedback-smtp.<region>.amazonses.com`) and `v=spf1 include:amazonses.com ~all` on a subdomain of yours. Resend does the same by default with a `send.` subdomain of the domain you add (`send.mail.example.com` in the table's setup). In our sample, 19 domains had an MX record on a `send.` subdomain, and all 19 also had a Resend DKIM key: that's Resend's default (its bounce host is on Amazon SES for 11 of them). With relaxed alignment, the default, `bounce.mail.example.com` aligns with `@mail.example.com` because both sit under `example.com`.
+- **DMARC got a new RFC in May 2026.** [RFC 9989](https://www.rfc-editor.org/rfc/rfc9989.html) replaces RFC 7489. For a small sender, two changes matter: the `pct` tag is gone (use `t=y` for a test-mode policy), and receivers now find your organizational domain by walking up the DNS tree instead of using the Public Suffix List. The `p=none` policy itself is unchanged. Start at `p=none` with `rua` reports, read them for a few weeks, and move to `quarantine` once every service you use shows up as passing.
+
+Keep the root SPF record to the services that really send as `example.com`. SPF allows at most 10 DNS lookups per check, and past that the result is a permanent error (RFC 7208, section 4.6.4). That's easy to reach if every tool you ever tried is still `include:`d.
+
+## One-click unsubscribe, done right
+
+For a newsletter or any subscribed mail, [RFC 8058](https://www.rfc-editor.org/rfc/rfc8058.html) asks for two headers:
+
+```
+List-Unsubscribe: <https://example.com/u/7f3c9a>, <mailto:unsub@example.com?subject=7f3c9a>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+```
+
+- The URL must be HTTPS and must work on a plain `POST` with no cookie, login or confirmation page. The mailbox provider sends the POST for the user, with a body of `List-Unsubscribe=One-Click`.
+- The message's DKIM signature must cover both headers. If it doesn't, the RFC says the receiver shouldn't offer one-click at all. If you add the headers yourself, check that your sending service's signature includes them (they're listed in the `h=` tag of the `DKIM-Signature` header).
+- Put a visible unsubscribe link in the body too. Google and Yahoo both ask for it, and it can lead to a preferences page.
+- Process the request at once, or well within the 48 hours above.
+
+## How to check your own domain
+
+1. **Look up your records.** `dig +short TXT example.com`, `dig +short TXT _dmarc.example.com` and `dig +short MX example.com` show what receivers see. One SPF record per name, one DMARC record, and an MX at the root only if you receive mail there (a custom bounce subdomain needs its own MX).
+2. **Send a real message to a Gmail address and read the headers.** In Gmail, open it and choose ["Show original"](https://support.google.com/mail/answer/29436) to see the full header, then copy it. Paste it into our [email header analyzer](/tools/privacy/email-header-analyzer/), which runs in your browser, to see the SPF, DKIM and DMARC results, any mismatch between the sender domains, and the delivery hops. You want `dmarc=pass`, and a DKIM `d=` on your own domain.
+3. **Add the domain to Google Postmaster Tools.** Its [Compliance status dashboard](https://support.google.com/mail/answer/14668346) checks SPF and DKIM, DNS, formatting, encryption and spam rate for every sender, plus DMARC and unsubscribe for bulk senders. It reports on primary domains only, and a fix can take up to 7 days to show.
+4. **Watch complaints, not just authentication.** The spam rate is the requirement you can't fix in DNS. Send only to people who asked, keep the From name recognizable, and make subject lines say what's inside. Our [subject line tester](/tools/seo/email-subject-tester/) flags spam-trigger words, capitals and length, and shows phone and desktop inbox previews.
+
+## The checklist
+
+- [ ] SPF on the root domain for staff mail and on each bounce (MAIL FROM) subdomain, one record per name, under 10 lookups
+- [ ] DKIM keys from every service that sends as you, on the subdomain it sends from
+- [ ] A custom bounce (MAIL FROM) subdomain on your transactional service
+- [ ] `_dmarc` record at `p=none` with `rua` reports; tighten after reading them
+- [ ] One-click unsubscribe (RFC 8058) and a visible link on marketing mail, handled within 48 hours
+- [ ] TLS and forward and reverse DNS for the sending servers: confirm them with your sending service, or set them up if you run your own mail server
+- [ ] Domain added to Google Postmaster Tools; spam rate under 0.1%
+
+## Sources
+
+- Google, [Email sender guidelines](https://support.google.com/a/answer/81126), [Email sender guidelines FAQ](https://support.google.com/a/answer/14229414), [Postmaster Tools dashboards](https://support.google.com/mail/answer/14668346) and [Trace an email with its full headers](https://support.google.com/mail/answer/29436) (read 15 November 2026)
+- Yahoo, [Sender best practices](https://senders.yahooinc.com/best-practices/) (read 15 November 2026)
+- Microsoft, [Strengthening the email ecosystem: Outlook's new requirements for high-volume senders](https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730), 2 April 2025, updated later that month
+- IETF, [RFC 8058: Signaling one-click functionality for list email headers](https://www.rfc-editor.org/rfc/rfc8058.html), January 2017
+- IETF, [RFC 9989: Domain-based Message Authentication, Reporting, and Conformance (DMARC)](https://www.rfc-editor.org/rfc/rfc9989.html), May 2026
+- IETF, [RFC 7208: Sender Policy Framework (SPF)](https://www.rfc-editor.org/rfc/rfc7208.html), April 2014
+- Amazon Web Services, [Using a custom MAIL FROM domain](https://docs.aws.amazon.com/ses/latest/dg/mail-from.html) (Amazon SES developer guide)
+- Resend, [Add a domain](https://resend.com/docs/add-a-domain) (read 15 November 2026)
+- Hacker News, [search API](https://hn.algolia.com/api) (Show HN stories, October 2026)
+- Ours: DNS lookups with `dig` on 15 November 2026 for 163 domains from that list (DKIM keys rechecked on 17 November 2026), with the scripts kept alongside this post's research notes

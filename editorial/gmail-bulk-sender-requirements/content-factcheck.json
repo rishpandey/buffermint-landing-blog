@@ -1,0 +1,325 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: Gmail bulk sender requirements, plus Yahoo and Outlook rules (6 to fix)",
+  "created_at": "2026-11-17T14:18:14.399Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "6da87a2804f3edeec45ab7502895137f",
+    "checked_at": "2026-11-17T14:18:14.397Z",
+    "blockers": [
+      "Unsupported claim (36%): add a source link or put it in the facts sheet: \"Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from o\"",
+      "Unsupported claim (5,000, 5,000, 5,000, 0.3%, 0.3%): add a source link or put it in the facts sheet: \"| Rule | Gmail | Yahoo | Outlook.com | |---|---|---|---| | Who counts as bulk | About 5,000+ a day to personal Gmail acc\"",
+      "Unsupported claim (0.3%): add a source link or put it in the facts sheet: \"Yahoo never gives a number, which is the practical argument for meeting the bulk rules at any volume. - The spam rate. O\"",
+      "Unsupported claim (64%, 34%, 14%, 16%, 36%, 36%, 7%, 1%, 74%, 11%, 6%): add a source link or put it in the facts sheet: \"| Of the 117 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 75 | 64% | | ↳ p=none |\"",
+      "Unsupported claim (50%): add a source link or put it in the facts sheet: \"At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most oft\"",
+      "Unsupported claim (0.1%): add a source link or put it in the facts sheet: \"- [ ] SPF on the root domain for staff mail and on each bounce (MAIL FROM) subdomain, one record per name, under 10 look\""
+    ],
+    "warnings": [
+      "The cited page doesn't show 0.3%, 0.1%, 0.3%: \"It is in Google's own pages: 0.3% is the limit in the requirements, and the guidelines add that you should stay below 0.\"",
+      "The cited page doesn't show 0.3%: \"Yahoo also says 0.3% and computes it on mail that reached the inbox.\""
+    ],
+    "links": [
+      {
+        "url": "https://support.google.com/a/answer/81126",
+        "text": "Gmail's bulk sender requirements",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://senders.yahooinc.com/best-practices/",
+        "text": "Yahoo",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://support.google.com/a/answer/14229414",
+        "text": "Google counts",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://techcommunity.microsoft.com/blog/microsoftdefenderforoffice365blog/strengthening-email-ecosystem-outlook%E2%80%99s-new-requirements-for-high%E2%80%90volume-senders/4399730",
+        "text": "Microsoft's announcement for Outlook.com",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc8058.html",
+        "text": "RFC 8058",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://hn.algolia.com/api",
+        "text": "Hacker News search API",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc7208.html",
+        "text": "RFC 7208",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://resend.com/docs/add-a-domain",
+        "text": "Resend's docs",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://docs.aws.amazon.com/ses/latest/dg/mail-from.html",
+        "text": "its guide",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.rfc-editor.org/rfc/rfc9989.html",
+        "text": "RFC 9989",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://support.google.com/mail/answer/29436",
+        "text": "\"Show original\"",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/privacy/email-header-analyzer/",
+        "text": "email header analyzer",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://support.google.com/mail/answer/14668346",
+        "text": "Compliance status dashboard",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/seo/email-subject-tester/",
+        "text": "subject line tester",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "Gmail's bulk sender requirements apply once a domain sends about 5,000 messages a day to personal Gmail accounts: SPF and DKIM, a DMARC record (a policy of none is enough), a From domain that aligns with one of them, one-click unsubscribe on marketing mail, and a spam rate under 0.3%.",
+        "numbers": [
+          "5,000",
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [
+          "https://support.google.com/a/answer/81126"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "A small SaaS is usually far below 5,000 a day, but Google counts every subdomain under your main domain together and never lets a domain drop back out, so the cheap move is to meet the bulk rules from your first email.",
+        "numbers": [
+          "5,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://support.google.com/a/answer/14229414"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Of the 117 that handle email at all, 42 (36%) publish no DMARC record, the bulk-only requirement anyone can check from outside.",
+        "numbers": [
+          "36%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "| Rule | Gmail | Yahoo | Outlook.com | |---|---|---|---| | Who counts as bulk | About 5,000+ a day to personal Gmail accounts, per primary domain; permanent once reached | No number given | Over 5,000 a day to outlook.com, hotmail.com and live.com | | Everyone: authentication | SPF or DKIM | SPF or DKIM | No rule below 5,000 | | Everyone: other | Forward and reverse DNS, TLS, RFC 5322 format, spam",
+        "numbers": [
+          "5,000",
+          "5,000",
+          "5,000",
+          "0.3%",
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "- The bulk threshold. Google and Microsoft both say 5,000 a day, but Google counts per primary domain: its FAQ's example adds promotions.solarmora.com to solarmora.com.",
+        "numbers": [
+          "5,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://support.google.com/a/answer/14229414"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Yahoo never gives a number, which is the practical argument for meeting the bulk rules at any volume. - The spam rate. Our plan for this post noted that the \"0.3%\" figure kept turning up only on email vendors' blogs.",
+        "numbers": [
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "It is in Google's own pages: 0.3% is the limit in the requirements, and the guidelines add that you should stay below 0.1% and never reach 0.3%.",
+        "numbers": [
+          "0.3%",
+          "0.1%",
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [
+          "https://support.google.com/a/answer/81126"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Above 0.3%, the FAQ says Google offers no mitigation until the rate has stayed under it for seven days in a row.",
+        "numbers": [
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [
+          "https://support.google.com/a/answer/14229414"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Yahoo also says 0.3% and computes it on mail that reached the inbox.",
+        "numbers": [
+          "0.3%"
+        ],
+        "cues": [],
+        "links": [
+          "https://senders.yahooinc.com/best-practices/"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "| Of the 117 domains with an MX or SPF record | Count | Share | |---|---|---| | A DMARC record | 75 | 64% | | ↳ p=none | 40 | 34% | | ↳ p=quarantine | 16 | 14% | | ↳ p=reject | 19 | 16% | | ↳ asks for aggregate reports (rua) | 42 | 36% | | No DMARC record | 42 | 36% | | No SPF record | 8 | 7% | | Two SPF records (invalid) | 1 | 1% | | SPF ending in ~all / -all / ?all | 87 / 13 / 7 | 74% / 11% / 6%",
+        "numbers": [
+          "64%",
+          "34%",
+          "14%",
+          "16%",
+          "36%",
+          "36%",
+          "7%",
+          "1%",
+          "74%",
+          "11%",
+          "6%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "At least 56 of the 112 mail domains without wildcard DNS (50%) have a live key at one of the 12 names we tried, most often google (29) and resend (20).",
+        "numbers": [
+          "50%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "- [ ] SPF on the root domain for staff mail and on each bounce (MAIL FROM) subdomain, one record per name, under 10 lookups - [ ] DKIM keys from every service that sends as you, on the subdomain it sends from - [ ] A custom bounce (MAIL FROM) subdomain on your transactional service - [ ] dmarc record at p=none with rua reports; tighten after reading them - [ ] One-click unsubscribe (RFC 8058) and ",
+        "numbers": [
+          "0.1%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      }
+    ],
+    "guard": []
+  }
+}

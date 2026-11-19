@@ -1,0 +1,119 @@
+{
+  "type": "content.keywords",
+  "title": "gmail bulk sender requirements: 1 ideas, 1 pieces",
+  "created_at": "2026-11-14T18:57:26.197Z",
+  "data": {
+    "seed": "gmail bulk sender requirements",
+    "topic": "gmail bulk sender requirements",
+    "keywords": [
+      {
+        "keyword": "gmail bulk sender requirements",
+        "engines": [
+          "bing",
+          "google"
+        ],
+        "lists": 13,
+        "best_rank": 1,
+        "score": 100,
+        "band": "high",
+        "intent": "informational",
+        "question": false
+      }
+    ],
+    "topic_interest": {
+      "keyword": "gmail bulk sender requirements",
+      "months": [],
+      "monthly": null,
+      "prev": null,
+      "trend": null,
+      "cached": 0,
+      "requests": 1,
+      "article": null,
+      "note": "best article \"Email\" is off-topic, ignored"
+    },
+    "sources": [
+      {
+        "id": "suggest-google",
+        "label": "Google autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-bing",
+        "label": "Bing autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-youtube",
+        "label": "YouTube autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "not picked for this run",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "suggest-duckduckgo",
+        "label": "DuckDuckGo autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "off by default: its robots.txt disallows /ac/?q= (checked when turned on)",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "wikipedia",
+        "label": "Wikipedia pageviews",
+        "status": "ok",
+        "grade": "V",
+        "what": "monthly views of the matching article (measured topic interest, not searches)",
+        "detail": "0 of 1 topics matched an article",
+        "requests": 1,
+        "cached": 0
+      },
+      {
+        "id": "pagespeed",
+        "label": "PageSpeed Insights",
+        "status": "off",
+        "grade": "V",
+        "what": "Lighthouse lab scores",
+        "detail": "needs a site URL as the seed",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "serp",
+        "label": "Search result pages",
+        "status": "off",
+        "grade": null,
+        "what": "who ranks (not used: robots.txt and the engines' terms)",
+        "detail": "google: www.google.com/robots.txt disallows /search?…; bing: www.bing.com/robots.txt disallows /search?…; duckduckgo: html.duckduckgo.com/robots.txt allows /html/, but the engine's terms bar automated queries: not fetched",
+        "requests": 0,
+        "cached": 0
+      }
+    ],
+    "notes": [
+      "Interest bands come from autosuggest (which engines suggest a phrase, how often and how high), ranked within this run. They show that people type a phrase, not how many: a proxy, not search volume.",
+      "Intent and page types are rules on the words of each phrase (estimate). Wikipedia views measure interest in a topic, not searches."
+    ],
+    "fetched_at": "2026-11-14T18:57:26.160Z",
+    "clusters": [
+      {
+        "key": "head",
+        "band": "high",
+        "wikipedia": null
+      }
+    ]
+  }
+}
