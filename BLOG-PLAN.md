@@ -217,7 +217,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** two worked examples (a non-EU founder selling to EU consumers; the same founder selling B2B with reverse charge). Count the filings, cost and work each way against an MoR's fee from topic 5.
 - **Sources:** European Commission OSS pages (vat-one-stop-shop.ec.europa.eu), Council Directive 2006/112/EC (EUR-Lex), HMRC on digital services (gov.uk), Stripe Tax docs on EU VAT, Paddle's tax docs.
 - **Internal links:** /tools/business/vat-calculator/, /tools/business/vat-calculator-germany/, topic 5.
-- **Status:** writing (lane t-20261118-blog-post, 2026-11-21)
+- **Status:** published 2026-11-23 (lane t-20261118-blog-post; goes live after review)
 
 ### 19. GST on SaaS exports from India: LUT, zero-rating and FIRA · `next`
 - **Keyword:** `gst on export of services` (level 4; Wikipedia "Goods and Services Tax (India)" 16,572/mo).
