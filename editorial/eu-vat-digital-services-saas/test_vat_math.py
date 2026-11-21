@@ -13,6 +13,11 @@ def run():
         vm.main()
     return buf.getvalue()
 
+def test_fees_match_the_post_table():
+    # the post's fee table: Paddle $0.95 / $1.95 / $5.45 at $9 / $29 / $99
+    assert [f"{vm.fees(p)[0]:.2f}" for p in (9, 29, 99)] == ["0.95", "1.95", "5.45"]
+    assert "| Paddle (5% + 50¢) | $0.95 | $1.95 | $5.45 |" in POST
+
 def test_rates_table():
     assert len(vm.RATES) == 27
     assert min(vm.RATES, key=vm.RATES.get) == "LU" and max(vm.RATES, key=vm.RATES.get) == "HU"
@@ -26,16 +31,16 @@ def test_script_output_matches_the_post():
     out = run()
     # (script output, how the post writes it)
     for script, post in [
-        ("simple mean standard rate: 21.91%", "21.91%"),
-        ("population-weighted standard rate: 21.27%", "21.27%"),
+        ("simple mean standard rate: 21.91%", "simple average of the 27 standard rates is 21.91%"),
+        ("population-weighted standard rate: 21.27%", "weighted by population it's 21.27%"),
         ("keeps 24.79", "24.79"),
         ("keeps 22.83", "22.83"),
-        ("(inclusive pricing): 1.95", "1.95"),
-        ("net sales EUR 34,800/yr", "34,800"),
-        ("OSS EUR 7,400/yr", "7,400"),
-        ("per quarterly return EUR 1,850", "1,850"),
-        ("premium vs Tax Basic $31/yr", "$31"),
-        ("vs no Stripe Tax $205/yr", "$205"),
+        ("(inclusive pricing): 1.95", "That's €1.95 a month per customer"),
+        ("net sales $34,800/yr", "Net sales are $34,800 a year"),
+        ("OSS $7,400/yr", "about $7,400 of VAT a year"),
+        ("per quarterly return $1,850", "roughly $1,850 per quarter"),
+        ("premium vs Tax Basic $31/yr", "**$31 a year** more than Stripe with Tax Basic"),
+        ("vs no Stripe Tax $205/yr", "about $205 a year more at $29"),
     ]:
         assert script in out, f"vat-math.py no longer prints {script!r}:\n{out}"
         assert post in POST, f"the post no longer cites {post!r}"

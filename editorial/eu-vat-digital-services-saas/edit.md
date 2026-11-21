@@ -42,3 +42,4 @@ Last run: SEO score 91, 0 failed; fact check 11 blockers, 3 warnings. Why they s
 ## After the poll finished (resumed session, 2026-11-21)
 
 18. The poll ran on to 10:06 UTC (24 checks). Belgium and Finland were Unavailable in every one, so the VIES paragraph now reports the full two hours rather than only the first check (claims row 30 updated).
+19. Code review (2026-11-21): `vat-math.py` labels Example A in dollars like the post (it said EUR), takes the yearly premiums from the same `fees()` as the per-sale table, and asserts the Eurostat JSON layout; `test_vat_math.py` checks each number against the script and the post's full sentence; `poll-vies.sh` writes its header, an ERROR row for a non-JSON reply, and its file next to itself. For the fact-check: the Irish Revenue link at lines 23 and 57 has "goods" in its URL, but the wording quoted in claims row 3 (B2B place of supply, reverse charge for services) is from that page; confirm it still says so.
