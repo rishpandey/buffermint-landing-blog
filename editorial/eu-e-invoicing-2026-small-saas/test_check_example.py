@@ -61,6 +61,40 @@ class CheckExample(unittest.TestCase):
         self.assertIn("BR-S-08", failed(XML.replace('<cbc:TaxableAmount currencyID="EUR">49.00', '<cbc:TaxableAmount currencyID="EUR">48.00')))
         self.assertIn("BR-27", failed(XML.replace('<cbc:PriceAmount currencyID="EUR">49.00', '<cbc:PriceAmount currencyID="EUR">-49.00')))
 
+    def test_non_finite_amounts_fail_instead_of_crashing(self):
+        self.assertIn("BR-27", failed(XML.replace('<cbc:PriceAmount currencyID="EUR">49.00', '<cbc:PriceAmount currencyID="EUR">NaN')))
+        self.assertIn("BR-S-09", failed(XML.replace('<cbc:TaxableAmount currencyID="EUR">49.00', '<cbc:TaxableAmount currencyID="EUR">Infinity')))
+
+    def test_zero_price_is_allowed(self):
+        self.assertNotIn("BR-27", failed(XML.replace('<cbc:PriceAmount currencyID="EUR">49.00', '<cbc:PriceAmount currencyID="EUR">0')))
+
+    def test_same_rate_written_two_ways(self):
+        xml = XML.replace("<cbc:Percent>21</cbc:Percent>", "<cbc:Percent>21.00</cbc:Percent>", 1)
+        self.assertEqual(failed(xml), [])
+
+    def test_non_vat_tax_registration_is_not_a_vat_id(self):
+        loc = ("<cac:PartyTaxScheme><cbc:CompanyID>12345</cbc:CompanyID>"
+               "<cac:TaxScheme><cbc:ID>LOC</cbc:ID></cac:TaxScheme></cac:PartyTaxScheme>")
+        xml = XML.replace("<cac:PartyLegalEntity>\n        <cbc:RegistrationName>Example SaaS BV", loc + "<cac:PartyLegalEntity>\n        <cbc:RegistrationName>Example SaaS BV", 1)
+        self.assertIn(loc, xml)
+        self.assertEqual(failed(xml), [])
+
+    def test_prepaid_invoice_balances(self):
+        xml = XML.replace('<cbc:PayableAmount currencyID="EUR">59.29</cbc:PayableAmount>',
+                          '<cbc:PrepaidAmount currencyID="EUR">59.29</cbc:PrepaidAmount><cbc:PayableAmount currencyID="EUR">0.00</cbc:PayableAmount>')
+        self.assertEqual(failed(xml), [])
+
+    def test_vat_in_accounting_currency_is_exempt_from_r051(self):
+        xml = XML.replace("<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode>",
+                          "<cbc:DocumentCurrencyCode>EUR</cbc:DocumentCurrencyCode><cbc:TaxCurrencyCode>PLN</cbc:TaxCurrencyCode>")
+        xml = xml.replace("<cac:TaxTotal>", '<cac:TaxTotal><cbc:TaxAmount currencyID="PLN">43.60</cbc:TaxAmount></cac:TaxTotal><cac:TaxTotal>', 1)
+        self.assertEqual(failed(xml), [])
+
+    def test_r043_ignores_other_ids_with_scheme_0208(self):
+        xml = XML.replace("<cbc:Name>Pro plan, monthly</cbc:Name>",
+                          '<cbc:Name>Pro plan, monthly</cbc:Name><cac:StandardItemIdentification><cbc:ID schemeID="0208">123</cbc:ID></cac:StandardItemIdentification>')
+        self.assertNotIn("PEPPOL-COMMON-R043", failed(xml))
+
 
 if __name__ == "__main__":
     unittest.main()
