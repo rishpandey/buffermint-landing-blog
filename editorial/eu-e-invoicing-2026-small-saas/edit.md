@@ -23,6 +23,10 @@ Separate pass on 2026-11-21, after the draft, reading the whole post as an edito
 9. Poland row: "tiny invoicers" → "under PLN 10,000 a month".
 10. France order paragraph: "you should already have one" → "it has been required since September", and added e-reporting to the 2027 step.
 
+## Changes after the code review
+15. Worked example: the first script counted 36 "checks" with a duplicate (BR-S-02 = BR-CO-26 in its test) and R043 twice, and failed R043 when the buyer endpoint was missing, which the real rule (context `cbc:EndpointID[@schemeID='0208']`) never does. Rewrote `check-example.py`: 48 distinct fatal rules (added BR-21 to BR-27, BR-CO-04, BR-S-01/05/08/09/10), R043 only on 0208 identifiers, BR-CO-09 per identifier present, missing amounts fail the rule instead of crashing; `test_check_example.py` covers each. The post now says 48 rules, "2 rules failed", and explains R043 as the rule that catches a mistyped enterprise number.
+16. France: the post implied a foreign seller has nothing to do in France. The DGFiP page for companies without a French establishment says they e-report when they charge French VAT themselves (not through the OSS), from 1 Sep 2027 for SMEs. Added a paragraph to the France section, a clause to the table and the outside-EU bullets, and the page to Sources; the B2B case now says the VAT-registered customer reports under the reverse charge.
+
 ## Content studio check
 First run (2026-11-21): SEO score 85, 0 failed; fact check 11 blockers, 1 warning. Fixed:
 11. Linked each country in the mandates table to its government page, and linked the €25,000 and €800,000 sentences to FPS Finance and the BMF FAQ (3 blockers gone).

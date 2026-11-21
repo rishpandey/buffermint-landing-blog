@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: e invoicing france",
-  "created_at": "2026-11-21T03:04:59.351Z",
+  "created_at": "2026-11-21T03:13:39.879Z",
   "data": {
     "score": 88,
     "items": [
@@ -87,7 +87,7 @@
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "2094 words."
+        "detail": "2286 words."
       },
       {
         "id": "links.internal",
@@ -101,7 +101,7 @@
         "group": "links",
         "label": "Sources linked",
         "status": "pass",
-        "detail": "37 outside links; check each one still works."
+        "detail": "40 outside links; check each one still works."
       },
       {
         "id": "readability.ease",
@@ -126,16 +126,16 @@
       }
     ],
     "stats": {
-      "words": 2094,
-      "sentences": 97,
+      "words": 2286,
+      "sentences": 104,
       "reading_ease": 61,
-      "reading_minutes": 9,
+      "reading_minutes": 10,
       "h1": 1,
       "h2": 8,
       "h3": 0,
-      "links": 43,
+      "links": 46,
       "internal_links": 6,
-      "external_links": 37,
+      "external_links": 40,
       "images": 0,
       "images_without_alt": 0
     }

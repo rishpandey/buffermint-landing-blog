@@ -1,12 +1,12 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: E-invoicing in France and the EU: what a small SaaS must do (8 to fix)",
-  "created_at": "2026-11-21T03:05:01.397Z",
+  "created_at": "2026-11-21T03:13:44.713Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "0944d0e540484abd148880998c379181",
-    "checked_at": "2026-11-21T03:05:01.395Z",
+    "content_md5": "e059ec7f7418f616c76dac805b4eacbf",
+    "checked_at": "2026-11-21T03:13:44.712Z",
     "blockers": [
       "Unsupported claim (€49): add a source link or put it in the facts sheet: \"We read each government's own pages on 21 November 2026, counted the rules in the current Peppol invoice standard, looke\"",
       "Unsupported claim (5,923,824, 2,177,076, 121,526, 21,204, 18,174): add a source link or put it in the facts sheet: \"| Country | Directory entries | |---|---| | France | 5,923,824 | | Belgium | 2,177,076 | | Netherlands | 121,526 | | Pol\"",
@@ -59,6 +59,14 @@
       {
         "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
         "text": "EU-wide (ViDA)",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.impots.gouv.fr/internationalenbusiness/e-reporting-requirements-foreign-companies-without-permanent-establishment",
+        "text": "the customer reports it",
         "external": true,
         "verdict": "ok",
         "status": 200,
@@ -201,7 +209,7 @@
       },
       {
         "kind": "number",
-        "text": "| Country | Receive | Send | Format and channel | Seller without an establishment | |---|---|---|---|---| | France | All businesses from 1 Sep 2026 | Large and mid-size from 1 Sep 2026; small and micro from 1 Sep 2027 | UBL, CII or a mixed PDF-plus-data format, through an approved platform | Out of scope; the French customer reports the purchase instead | | Belgium | Since 1 Jan 2026 | Since 1 Jan",
+        "text": "| Country | Receive | Send | Format and channel | Seller without an establishment | |---|---|---|---|---| | France | All businesses from 1 Sep 2026 | Large and mid-size from 1 Sep 2026; small and micro from 1 Sep 2027 | UBL, CII or a mixed PDF-plus-data format, through an approved platform | Out of e-invoicing; a VAT-registered French customer reports the purchase, but you e-report if you charge F",
         "numbers": [
           "€800,000",
           "200 million",
