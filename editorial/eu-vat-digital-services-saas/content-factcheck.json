@@ -1,12 +1,12 @@
 {
   "type": "content.fact_check",
   "title": "Fact check: EU VAT on digital services: OSS, €10,000 and the MoR math (11 to fix)",
-  "created_at": "2026-11-21T08:20:18.577Z",
+  "created_at": "2026-11-21T10:29:44.636Z",
   "data": {
     "ready": false,
     "ok": false,
-    "content_md5": "b01289850117d3c9e313a3371488e31d",
-    "checked_at": "2026-11-21T08:20:18.576Z",
+    "content_md5": "a023a094e59a79e73e0c6546ac1f84b5",
+    "checked_at": "2026-11-21T10:29:44.636Z",
     "blockers": [
       "Unsupported claim (€10,000, €10,000): add a source link or put it in the facts sheet: \"No EU registration for this | | In one EU country, under €10,000 of cross-border consumer sales a year | You may charge \"",
       "Unsupported claim ($29): add a source link or put it in the facts sheet: \"Take a solo founder outside the EU with 100 consumer subscribers in the EU, each paying $29 a month plus VAT.\"",

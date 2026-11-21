@@ -28,7 +28,7 @@ Why topic 18: topic 12 is still blocked (needs logged-in accounts on 8 apps); 13
 ## Our own data (2026-11-21, scripts and raw output in this folder)
 - **`vat-math.py`** (rates from Your Europe, population from Eurostat): simple mean standard rate 21.91%, population-weighted 21.27% (EU27 451,990,314 people on 1 Jan 2026). A VAT-inclusive €29 price keeps €24.79 in Luxembourg and €22.83 in Hungary, €1.95 a month apart per customer. Example A (100 consumers spread like the population, $29 a month, VAT on top): $34,800 net sales a year, about $7,400 of VAT through OSS, about $1,850 per quarterly return (converted to euro at the ECB rate on the quarter's last day).
 - **MoR premium, from our October 2026 fee tables** (topic 5, card issued outside the US, the normal case for EU buyers): Paddle minus Stripe + Billing + Tax Basic is +15¢ at $9, +3¢ at $29 and −39¢ at $99 per sale; at $29 × 1,200 sales a year that's $31. For B2B only (no EU registration, so no Stripe Tax fee), the premium is +17¢ per $29 sale, $205 a year. Stripe Tax Complete adds $1,080 a year at $90 a month.
-- **VIES availability** (`vies-status-2026-11-21.tsv`, the `check-status` endpoint polled every 5 minutes by `poll-vies.sh`): at the first poll Belgium and Finland reported "Unavailable". Results summarised in the post from the file.
+- **VIES availability** (`vies-status-2026-11-21.tsv`, the `check-status` endpoint polled every 5 minutes by `poll-vies.sh`): at the first poll Belgium and Finland reported "Unavailable", and they stayed so in all 24 polls from 08:11 to 10:06 UTC; every other country was Available throughout. Results summarised in the post from the file.
 - **GoatCounter:** not used; our VAT tool pages have too few views to say anything.
 
 ## Disagreements

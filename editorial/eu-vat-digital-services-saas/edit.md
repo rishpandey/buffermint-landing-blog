@@ -38,3 +38,7 @@ Last run: SEO score 91, 0 failed; fact check 11 blockers, 3 warnings. Why they s
 - **Warning 2.9% / 1.5% / 0.7% / 0.5%:** from our October 2026 reading of Stripe's US pricing (the page now geolocates; we were served Canadian prices); the post dates the reading.
 - **Warning $90 / $1,080:** $90 is the October US reading, $1,080 is 12 × $90; the post says so.
 - Readability warnings (21 words a sentence, 2 paragraphs over 120 words: the checklist and the Sources list) stay: both are lists the tool counts as one paragraph.
+
+## After the poll finished (resumed session, 2026-11-21)
+
+18. The poll ran on to 10:06 UTC (24 checks). Belgium and Finland were Unavailable in every one, so the VIES paragraph now reports the full two hours rather than only the first check (claims row 30 updated).

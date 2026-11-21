@@ -1,7 +1,7 @@
 {
   "type": "content.seo_check",
   "title": "SEO check: eu vat digital services",
-  "created_at": "2026-11-21T08:20:16.516Z",
+  "created_at": "2026-11-21T10:29:42.568Z",
   "data": {
     "score": 91,
     "items": [
@@ -87,7 +87,7 @@
         "group": "keyword",
         "label": "Length",
         "status": "pass",
-        "detail": "2215 words."
+        "detail": "2221 words."
       },
       {
         "id": "links.internal",
@@ -126,7 +126,7 @@
       }
     ],
     "stats": {
-      "words": 2215,
+      "words": 2221,
       "sentences": 106,
       "reading_ease": 66,
       "reading_minutes": 10,

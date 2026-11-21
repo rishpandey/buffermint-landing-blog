@@ -60,7 +60,7 @@ What you do need is a valid VAT number for each customer: without one, Stripe pr
 
 The free way to check a number is the Commission's VIES service, which has a public REST API. We tested it on 21 November 2026 with a published Irish VAT number: three calls returned the company's name and address in 0.47 to 0.51 seconds each.
 
-We also polled its status endpoint every five minutes from 08:11 UTC. **At the first check, VIES reported Belgium and Finland as "Unavailable"**: a VAT number from either country couldn't be checked at that moment. VIES is a search engine, not a database: each lookup goes to the issuing country's own VAT database, and the Commission says the system is sometimes unavailable while national databases are backed up ([Your Europe](https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm)). An unavailable country is not the same as an invalid number.
+We also polled its status endpoint every five minutes from 08:11 to 10:06 UTC. **VIES reported Belgium and Finland as "Unavailable" in all 24 checks**: for those two hours, a VAT number from either country couldn't be checked at all. VIES is a search engine, not a database: each lookup goes to the issuing country's own VAT database, and the Commission says the system is sometimes unavailable while national databases are backed up ([Your Europe](https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm)). An unavailable country is not the same as an invalid number.
 
 The practical lesson: don't make checkout fail when VIES can't answer. Accept the number, mark it unverified, check it again later, and only then decide whether to apply the reverse charge on the next invoice.
 
