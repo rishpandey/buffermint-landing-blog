@@ -210,7 +210,7 @@ Rank = demand evidence × how well we can add something new × fit with the read
 - **New angle:** a dated country table from government sources: Belgium B2B since 1 Jan 2026, France receiving from 1 Sep 2026 (now past: confirm at impots.gouv.fr that it started as planned; search on 2026-10-31 found no post-launch source) and SME issuing from Sep 2027, Germany receiving since 2025, Poland KSeF (large taxpayers 1 Feb 2026, others 1 Apr 2026, micro from Jan 2027, per https://vatit.com/?p=90235, found 2026-10-31; confirm at the Ministry of Finance), and ViDA 2030. Most mandates are domestic B2B, so say which ones touch a non-EU SaaS selling cross-border, and which don't.
 - **Sources:** Belgian FPS Finance (einvoice.belgium.be), the French impots.gouv.fr e-invoicing pages, the German BMF letter on E-Rechnung, the European Commission ViDA page, OpenPeppol.
 - **Internal links:** /tools/everyday/invoice-generator/, /tools/business/vat-calculator-belgium/, /tools/business/vat-calculator-france/, topic 18.
-- **Status:** todo
+- **Status:** writing (lane t-20261116-blog-post, 2026-11-21)
 
 ### 18. EU VAT on SaaS: OSS, the €10,000 threshold and when a merchant of record is simpler · `next`
 - **Keyword:** `eu vat digital services` (level 3), `oss vat` (level 2). Note: `vat on saas eu` has no autosuggest trace, so don't target it.
