@@ -1,0 +1,143 @@
+{
+  "type": "content.seo_check",
+  "title": "SEO check: eu vat digital services",
+  "created_at": "2026-11-21T08:20:16.516Z",
+  "data": {
+    "score": 91,
+    "items": [
+      {
+        "id": "title.length",
+        "group": "title",
+        "label": "SEO title length",
+        "status": "pass",
+        "detail": "57 characters."
+      },
+      {
+        "id": "title.keyword",
+        "group": "title",
+        "label": "Keyword in the title",
+        "status": "pass",
+        "detail": "Contains \"eu vat digital services\"."
+      },
+      {
+        "id": "meta.length",
+        "group": "meta",
+        "label": "Meta description length",
+        "status": "pass",
+        "detail": "147 characters."
+      },
+      {
+        "id": "meta.keyword",
+        "group": "meta",
+        "label": "Keyword in the description",
+        "status": "pass",
+        "detail": "Search engines bold it in results."
+      },
+      {
+        "id": "meta.slug",
+        "group": "meta",
+        "label": "URL slug",
+        "status": "pass",
+        "detail": "/eu-vat-digital-services-saas"
+      },
+      {
+        "id": "headings.h1",
+        "group": "headings",
+        "label": "One h1",
+        "status": "pass",
+        "detail": "EU VAT on digital services: OSS, €10,000 and the MoR math"
+      },
+      {
+        "id": "headings.h2",
+        "group": "headings",
+        "label": "Sections (h2)",
+        "status": "pass",
+        "detail": "9 sections."
+      },
+      {
+        "id": "headings.order",
+        "group": "headings",
+        "label": "Heading levels in order",
+        "status": "pass",
+        "detail": "No skipped levels."
+      },
+      {
+        "id": "headings.keyword",
+        "group": "headings",
+        "label": "Keyword in a subheading",
+        "status": "pass",
+        "detail": "Yes."
+      },
+      {
+        "id": "keyword.intro",
+        "group": "keyword",
+        "label": "Keyword in the first paragraph",
+        "status": "pass",
+        "detail": "Readers and search engines see the topic at once."
+      },
+      {
+        "id": "keyword.density",
+        "group": "keyword",
+        "label": "Keyword use",
+        "status": "warn",
+        "detail": "\"eu vat digital services\" never appears as a phrase."
+      },
+      {
+        "id": "keyword.length",
+        "group": "keyword",
+        "label": "Length",
+        "status": "pass",
+        "detail": "2215 words."
+      },
+      {
+        "id": "links.internal",
+        "group": "links",
+        "label": "Internal links",
+        "status": "pass",
+        "detail": "6 to your own pages."
+      },
+      {
+        "id": "links.external",
+        "group": "links",
+        "label": "Sources linked",
+        "status": "pass",
+        "detail": "50 outside links; check each one still works."
+      },
+      {
+        "id": "readability.ease",
+        "group": "readability",
+        "label": "Reading ease",
+        "status": "pass",
+        "detail": "Flesch 66 (60+ is plain English; shorter sentences and words raise it)."
+      },
+      {
+        "id": "readability.sentences",
+        "group": "readability",
+        "label": "Sentence length",
+        "status": "warn",
+        "detail": "21 words per sentence on average; aim for 20 or fewer."
+      },
+      {
+        "id": "readability.paragraphs",
+        "group": "readability",
+        "label": "Paragraph length",
+        "status": "warn",
+        "detail": "2 paragraphs are over 120 words; split them."
+      }
+    ],
+    "stats": {
+      "words": 2215,
+      "sentences": 106,
+      "reading_ease": 66,
+      "reading_minutes": 10,
+      "h1": 1,
+      "h2": 9,
+      "h3": 0,
+      "links": 56,
+      "internal_links": 6,
+      "external_links": 50,
+      "images": 0,
+      "images_without_alt": 0
+    }
+  }
+}

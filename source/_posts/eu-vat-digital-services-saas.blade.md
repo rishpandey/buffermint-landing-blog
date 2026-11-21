@@ -1,4 +1,6 @@
 ---
+featured_image: assets/img/uploads/eu-vat-digital-services-saas-cover-066f97-1200.jpeg
+featured_thumbnail: assets/img/uploads/eu-vat-digital-services-saas-cover-066f97-600.jpeg
 title: "EU VAT on digital services: OSS, €10,000 and the MoR math"
 seo_description: "Who owes EU VAT on digital services from the first sale, who the €10,000 threshold is for, and what OSS or a merchant of record costs a small SaaS."
 keyword: eu vat digital services
@@ -10,13 +12,13 @@ date: 2026-11-23
 extends: _layouts.post
 ---
 
-If your SaaS is based outside the EU and you sell a subscription to a person in Germany, you owe German VAT on that first sale. There is no threshold for you. The €10,000 threshold that most guides lead with is only for sellers established in a single EU country. If your customers are businesses with an EU VAT number, it flips: the customer accounts for the VAT under the reverse charge, and you file nothing in the EU.
+EU VAT on digital services starts earlier than most founders expect. If your SaaS is based outside the EU and you sell a subscription to a person in Germany, you owe German VAT on that first sale. There is no threshold for you. The €10,000 threshold that most guides lead with is only for sellers established in a single EU country ([Irish Revenue](https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx)). If your customers are businesses with an EU VAT number, it flips: the customer accounts for the VAT under the reverse charge, and you file nothing in the EU.
 
 That much is in the official guidance. What we couldn't find anywhere was the arithmetic a founder needs to choose between doing it yourself and paying a merchant of record. So we worked through two examples for the same founder, priced each way from the providers' own fee pages, and measured something the guides leave out: how often the EU's own VAT number checker is down.
 
 Everything below is as of November 2026, and none of it is tax advice for your situation.
 
-## Who owes what, in one table
+## Who owes EU VAT on digital services, in one table
 
 Electronically supplied services, which is what EU VAT law calls software delivered over the internet, are taxed where the customer is. For a consumer, that means the consumer's country and its rate. For a business, the business accounts for it ([Your Europe](https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_en.htm); [Irish Revenue](https://www.revenue.ie/en/vat/foreign-suppliers-doing-business-in-ireland/non-established-traders-supplying-goods.aspx)).
 
@@ -26,9 +28,11 @@ Electronically supplied services, which is what EU VAT law calls software delive
 | In one EU country, under €10,000 of cross-border consumer sales a year | You may charge your home country's VAT | Reverse charge for customers in other EU countries |
 | In one EU country, over €10,000 | Customer's country's VAT, through the Union OSS or local registrations | Reverse charge for customers in other EU countries |
 
+*From [Irish Revenue](https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx), [Your Europe](https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_en.htm) and [Stripe's EU tax docs](https://docs.stripe.com/tax/supported-countries/european-union), read in November 2026.*
+
 ## The €10,000 threshold is not for non-EU sellers
 
-Irish Revenue's guidance sets out the conditions: the supplier is established in only one member state, and its cross-border sales of these services plus distance sales of goods to consumers in other member states stay at or under €10,000 in the current and the previous calendar year. It then says plainly that the threshold does not apply to a supplier not established in the EU ([Irish Revenue](https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx)). Stripe's documentation agrees: its "small seller option" is only for businesses based in the EU, and a business outside the EU "might need to register to collect VAT from your first sale" ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)).
+[Irish Revenue's guidance](https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx) sets out the conditions: the supplier is established in only one member state, and its cross-border sales of these services plus distance sales of goods to consumers in other member states stay at or under €10,000 in the current and the previous calendar year. It then says plainly that the threshold does not apply to a supplier not established in the EU ([Irish Revenue](https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx)). Stripe's documentation agrees: its "small seller option" is only for businesses based in the EU, and a business outside the EU "might need to register to collect VAT from your first sale" ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)).
 
 So a founder in the US, the UK or India selling to EU consumers has two choices: register in every country where a customer lives, or register once under the non-Union One Stop Shop (OSS).
 
@@ -40,21 +44,23 @@ Take a solo founder outside the EU with 100 consumer subscribers in the EU, each
 
 **The money.** Net sales are $34,800 a year. At a population-weighted average standard rate of 21.27%, you collect and pass on about $7,400 of VAT a year, roughly $1,850 per quarter. The return is made out in euro, converted at the European Central Bank rate on the last day of the quarter ([OSS portal](https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/declare-and-pay-oss_en)). If you charge VAT on top of your price it isn't your cost, but it passes through your account and your cash planning.
 
-**The filings.** Four returns a year, each due by the end of the month after the quarter: 30 April, 31 July, 31 October and 31 January. A deadline on a weekend doesn't move, and you can't file before the quarter ends. A quarter with no EU sales still needs a nil return. Payment is due with the return. Late returns get a reminder on day 10, after which each customer's country applies its own penalties, and three quarters of unresolved reminders in a row can get you excluded from the scheme ([OSS portal](https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/declare-and-pay-oss_en)).
+**The filings.** Four returns a year, each due by the end of the month after the quarter: 30 April, 31 July, 31 October and 31 January. A deadline on a weekend doesn't move, and you can't file before the quarter ends. A quarter with no EU sales still needs a nil return. Payment is due with the return. Late returns get a reminder on day 10, after which each customer's country applies its own penalties, and three reminders in a row left unresolved can get you excluded from the scheme ([OSS portal](https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/declare-and-pay-oss_en)).
 
 **The evidence.** For every sale you need to show where the customer lives. The rule is two items of evidence that don't contradict each other, such as the billing address and the customer's bank details or IP address. Sellers established in the EU with under €100,000 of these cross-border sales may rely on one item from a third party, such as the payment provider, but a non-EU seller doesn't get that relief ([Implementing Regulation 2017/2459](https://eur-lex.europa.eu/eli/reg_impl/2017/2459/oj/eng), Art. 24b). Stripe Tax calculates from a single address but stores all the location evidence it saw on the customer record ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)), so check that both items are actually being captured at checkout.
 
 **The records.** Ten years from the end of the year of each sale, even after you leave the scheme, including the country, date, type of supply, VAT and the location evidence. Any customer's country can ask for them, and not producing them within a month of a reminder counts as persistent non-compliance ([OSS portal](https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/record-keeping-and-audits-oss_en)).
 
-Count it up: one registration, four returns a year (nil ones included), two pieces of evidence per customer, ten years of records. Each step is simple; the cost is that it comes due every quarter whether or not you're busy. It doubles if you also sell to UK consumers: HMRC requires a business established outside the UK to register for UK VAT on any taxable supplies "regardless of their value and including supplies of digital services" ([HMRC VAT Notice 700/1](https://www.gov.uk/government/publications/vat-notice-7001-should-i-be-registered-for-vat/vat-notice-7001-should-i-be-registered-for-vat)).
+Count it up: one registration, four returns a year (nil ones included), two pieces of evidence per customer, ten years of records. Each step is simple; the cost is that it comes due every quarter whether or not you're busy. It adds a second registration if you also sell to UK consumers: HMRC requires a business established outside the UK to register for UK VAT on any taxable supplies "regardless of their value and including supplies of digital services" ([HMRC VAT Notice 700/1](https://www.gov.uk/government/publications/vat-notice-7001-should-i-be-registered-for-vat/vat-notice-7001-should-i-be-registered-for-vat)).
 
 ## Example B: the same founder with 100 EU businesses
 
 Now make all 100 customers businesses with valid EU VAT numbers. For services to a business, the place of supply is generally where the customer is established, and the customer self-accounts for the VAT under the reverse charge ([Irish Revenue](https://www.revenue.ie/en/vat/foreign-suppliers-doing-business-in-ireland/non-established-traders-supplying-goods.aspx); [Your Europe](https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_en.htm)). You charge no EU VAT, need no EU registration for these sales, and file no EU returns. Your invoice states that the reverse charge applies instead of showing a tax amount ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)).
 
-What you do need is a valid VAT number for each customer, because a business customer without one is treated as a consumer. Stripe notes that a domestic tax ID that isn't an EU VAT number doesn't trigger the reverse charge, and that some countries add conditions it doesn't model ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)).
+What you do need is a valid VAT number for each customer: without one, Stripe processes the sale as a sale to a consumer. Stripe also notes that a domestic tax ID that isn't an EU VAT number doesn't trigger the reverse charge, and that some countries add conditions it doesn't model ([Stripe docs](https://docs.stripe.com/tax/supported-countries/european-union)).
 
-The free way to check a number is the Commission's VIES service, which has a public REST API. We tested it on 21 November 2026 with a published Irish VAT number: three calls returned the company's name and address in 0.47 to 0.51 seconds each. We also polled its status endpoint every five minutes from 08:11 UTC. **At the first check, VIES reported Belgium and Finland as "Unavailable"**: a VAT number from either country couldn't be checked at that moment. VIES is a search engine, not a database: each lookup goes to the issuing country's own VAT database, and the Commission says the system is sometimes unavailable while national databases are backed up ([Your Europe](https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm)). An unavailable country is not the same as an invalid number.
+The free way to check a number is the Commission's VIES service, which has a public REST API. We tested it on 21 November 2026 with a published Irish VAT number: three calls returned the company's name and address in 0.47 to 0.51 seconds each.
+
+We also polled its status endpoint every five minutes from 08:11 UTC. **At the first check, VIES reported Belgium and Finland as "Unavailable"**: a VAT number from either country couldn't be checked at that moment. VIES is a search engine, not a database: each lookup goes to the issuing country's own VAT database, and the Commission says the system is sometimes unavailable while national databases are backed up ([Your Europe](https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm)). An unavailable country is not the same as an invalid number.
 
 The practical lesson: don't make checkout fail when VIES can't answer. Accept the number, mark it unverified, check it again later, and only then decide whether to apply the reverse charge on the next invoice.
 
@@ -71,7 +77,7 @@ You can show a price and add VAT at checkout, or show one all-in euro price. Wit
 | France | 20% | €24.17 | €34.80 |
 | Hungary | 27% | €22.83 | €36.83 |
 
-That's €1.95 a month per customer between the lowest and highest rate, about 8% of what you keep. For planning, the simple average of the 27 standard rates is 21.91%, and weighted by population it's 21.27%. Check the rates again before you set prices: several moved in 2025, and the table above is the one the Commission's portal showed in November 2026. Our [VAT calculator](/tools/business/vat-calculator/) does the add-or-remove arithmetic for any rate, and there are versions for [Germany](/tools/business/vat-calculator-germany/), [France](/tools/business/vat-calculator-france/) and other countries.
+That's €1.95 a month per customer between the lowest and highest rate, about 8% of what you keep. For planning, the simple average of the 27 standard rates is 21.91%, and weighted by population it's 21.27%. Check the rates again before you set prices: they change, and the rates above are the ones the Commission's portal showed in November 2026. Our [VAT calculator](/tools/business/vat-calculator/) does the add-or-remove arithmetic for any rate, and there are versions for [Germany](/tools/business/vat-calculator-germany/), [France](/tools/business/vat-calculator-france/) and other countries.
 
 ## Doing it yourself vs a merchant of record
 
@@ -91,7 +97,7 @@ For **Example A**, 1,200 sales a year at $29, the MoR costs about **$31 a year**
 
 For **Example B**, there's nothing to file in the EU, so the MoR saves you little work and costs about $205 a year more at $29. Collecting VAT numbers and printing reverse-charge wording on invoices is a one-time setup in your billing system.
 
-Other merchants of record are cheaper or dearer than Paddle; the [full comparison](/articles/merchant-of-record-fees/) has the numbers. The pattern holds: once you add the international-card surcharge that EU buyers trigger, the headline gap between 5% + 50¢ and 2.9% + 30¢ mostly disappears.
+Other merchants of record are cheaper or dearer than Paddle; the [full comparison](/articles/merchant-of-record-fees/) has the numbers. The pattern holds: once you add the international-card surcharge that EU buyers trigger, plus Billing and Tax Basic, the headline gap between [Paddle's 5% + 50¢](https://www.paddle.com/pricing) and [Stripe's 2.9% + 30¢](https://stripe.com/us/pricing) mostly disappears for consumer sales.
 
 ## What changes next
 

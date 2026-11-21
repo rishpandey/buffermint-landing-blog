@@ -1,0 +1,541 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: EU VAT on digital services: OSS, €10,000 and the MoR math (11 to fix)",
+  "created_at": "2026-11-21T08:20:18.577Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "b01289850117d3c9e313a3371488e31d",
+    "checked_at": "2026-11-21T08:20:18.576Z",
+    "blockers": [
+      "Unsupported claim (€10,000, €10,000): add a source link or put it in the facts sheet: \"No EU registration for this | | In one EU country, under €10,000 of cross-border consumer sales a year | You may charge \"",
+      "Unsupported claim ($29): add a source link or put it in the facts sheet: \"Take a solo founder outside the EU with 100 consumer subscribers in the EU, each paying $29 a month plus VAT.\"",
+      "Unsupported claim ($34,800): add a source link or put it in the facts sheet: \"The money. Net sales are $34,800 a year.\"",
+      "Unsupported claim (21.27%, $7,400, $1,850): add a source link or put it in the facts sheet: \"At a population-weighted average standard rate of 21.27%, you collect and pass on about $7,400 of VAT a year, roughly $1\"",
+      "Unsupported claim (€29, €29, 17%, €24.79, €33.93, 19%, €24.37, €34.51, 20%, €24.17, €34.80, 27%, €22.83, €36.83): add a source link or put it in the facts sheet: \"| Country | Standard rate | You keep from €29 VAT-inclusive | Customer pays if VAT is added to €29 | |---|---|---|---| |\"",
+      "Unsupported claim (€1.95, 8%): add a source link or put it in the facts sheet: \"That's €1.95 a month per customer between the lowest and highest rate, about 8% of what you keep.\"",
+      "Unsupported claim (21.91%, 21.27%): add a source link or put it in the facts sheet: \"For planning, the simple average of the 27 standard rates is 21.91%, and weighted by population it's 21.27%.\"",
+      "Unsupported claim ($9, $29, $99, 5%, $0.95, $1.95, $5.45, $0.80, $1.92, $5.84, $0.76, $1.78, $5.35): add a source link or put it in the facts sheet: \"| Per sale, card issued outside the US | $9 | $29 | $99 | |---|---|---|---| | Paddle (5% + 50¢) | $0.95 | $1.95 | $5.45 \"",
+      "Unsupported claim (1,200, $29,, $31, $99): add a source link or put it in the facts sheet: \"For Example A, 1,200 sales a year at $29, the MoR costs about $31 a year more than Stripe with Tax Basic, and at $99 it'\"",
+      "Unsupported claim ($205, $29.): add a source link or put it in the facts sheet: \"For Example B, there's nothing to file in the EU, so the MoR saves you little work and costs about $205 a year more at $\"",
+      "Unsupported claim ($29, 22%, 27%): add a source link or put it in the facts sheet: \"At $29 and up on EU cards, the price gap is small. 3. Capture two pieces of location evidence per consumer, such as bill\""
+    ],
+    "warnings": [
+      "The cited page doesn't show €100,000: \"Sellers established in the EU with under €100,000 of these cross-border sales may rely on one item from a third party, s\"",
+      "The cited page doesn't show 2.9%, 1.5%, 0.7%, 0.5%: \"Stripe at 2.9% + 30¢, +1.5% for international cards, +0.7% Billing and +0.5% Tax Basic, from our October 2026 reading of\"",
+      "The cited page doesn't show $90, $1,080: \"If you want Stripe to file for you, its Tax Complete plan files non-Union OSS returns directly (Stripe Tax pricing), but\""
+    ],
+    "links": [
+      {
+        "url": "https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx",
+        "text": "Irish Revenue",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_en.htm",
+        "text": "Your Europe",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.revenue.ie/en/vat/foreign-suppliers-doing-business-in-ireland/non-established-traders-supplying-goods.aspx",
+        "text": "Irish Revenue",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://docs.stripe.com/tax/supported-countries/european-union",
+        "text": "Stripe's EU tax docs",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table",
+        "text": "Eurostat",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://europa.eu/youreurope/business/taxation/vat/vat-rules-rates/index_en.htm",
+        "text": "Your Europe rate table",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/register-oss_en",
+        "text": "OSS portal",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/declare-and-pay-oss_en",
+        "text": "OSS portal",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://eur-lex.europa.eu/eli/reg_impl/2017/2459/oj/eng",
+        "text": "Implementing Regulation 2017/2459",
+        "external": true,
+        "verdict": "ok",
+        "status": 202,
+        "detail": "202"
+      },
+      {
+        "url": "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/record-keeping-and-audits-oss_en",
+        "text": "OSS portal",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.gov.uk/government/publications/vat-notice-7001-should-i-be-registered-for-vat/vat-notice-7001-should-i-be-registered-for-vat",
+        "text": "HMRC VAT Notice 700/1",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm",
+        "text": "Your Europe",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/business/vat-calculator/",
+        "text": "VAT calculator",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/business/vat-calculator-germany/",
+        "text": "Germany",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/business/vat-calculator-france/",
+        "text": "France",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://www.paddle.com/help/sell/tax/how-paddle-handles-vat-on-your-behalf",
+        "text": "Paddle help",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/articles/merchant-of-record-fees/",
+        "text": "merchant of record fee comparison",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://stripe.com/us/pricing",
+        "text": "Stripe's US pricing",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://stripe.com/tax/pricing",
+        "text": "Stripe Tax pricing",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.paddle.com/pricing",
+        "text": "Paddle's 5% + 50¢",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
+        "text": "European Commission",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/articles/eu-e-invoicing-2026-small-saas/",
+        "text": "e-invoicing in France and the EU",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://ec.europa.eu/taxation_customs/vies/",
+        "text": "VIES",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "The €10,000 threshold that most guides lead with is only for sellers established in a single EU country (Irish Revenue).",
+        "numbers": [
+          "€10,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "No EU registration for this | | In one EU country, under €10,000 of cross-border consumer sales a year | You may charge your home country's VAT | Reverse charge for customers in other EU countries | | In one EU country, over €10,000 | Customer's country's VAT, through the Union OSS or local registrations | Reverse charge for customers in other EU countries |",
+        "numbers": [
+          "€10,000",
+          "€10,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Irish Revenue's guidance sets out the conditions: the supplier is established in only one member state, and its cross-border sales of these services plus distance sales of goods to consumers in other member states stay at or under €10,000 in the current and the previous calendar year.",
+        "numbers": [
+          "€10,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Take a solo founder outside the EU with 100 consumer subscribers in the EU, each paying $29 a month plus VAT.",
+        "numbers": [
+          "$29"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The money. Net sales are $34,800 a year.",
+        "numbers": [
+          "$34,800"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "At a population-weighted average standard rate of 21.27%, you collect and pass on about $7,400 of VAT a year, roughly $1,850 per quarter.",
+        "numbers": [
+          "21.27%",
+          "$7,400",
+          "$1,850"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Sellers established in the EU with under €100,000 of these cross-border sales may rely on one item from a third party, such as the payment provider, but a non-EU seller doesn't get that relief (Implementing Regulation 2017/2459, Art. 24b).",
+        "numbers": [
+          "€100,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://eur-lex.europa.eu/eli/reg_impl/2017/2459/oj/eng"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Standard rates run from 17% in Luxembourg to 27% in Hungary (Your Europe).",
+        "numbers": [
+          "17%",
+          "27%"
+        ],
+        "cues": [],
+        "links": [
+          "https://europa.eu/youreurope/business/taxation/vat/vat-rules-rates/index_en.htm"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "| Country | Standard rate | You keep from €29 VAT-inclusive | Customer pays if VAT is added to €29 | |---|---|---|---| | Luxembourg | 17% | €24.79 | €33.93 | | Germany | 19% | €24.37 | €34.51 | | France | 20% | €24.17 | €34.80 | | Hungary | 27% | €22.83 | €36.83 |",
+        "numbers": [
+          "€29",
+          "€29",
+          "17%",
+          "€24.79",
+          "€33.93",
+          "19%",
+          "€24.37",
+          "€34.51",
+          "20%",
+          "€24.17",
+          "€34.80",
+          "27%",
+          "€22.83",
+          "€36.83"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "That's €1.95 a month per customer between the lowest and highest rate, about 8% of what you keep.",
+        "numbers": [
+          "€1.95",
+          "8%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "For planning, the simple average of the 27 standard rates is 21.91%, and weighted by population it's 21.27%.",
+        "numbers": [
+          "21.91%",
+          "21.27%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "| Per sale, card issued outside the US | $9 | $29 | $99 | |---|---|---|---| | Paddle (5% + 50¢) | $0.95 | $1.95 | $5.45 | | Stripe + Billing + Tax Basic (you file) | $0.80 | $1.92 | $5.84 | | MoR premium | +15¢ | +3¢ | −39¢ | | Stripe + Billing, no Stripe Tax (B2B only) | $0.76 | $1.78 | $5.35 | | MoR premium for a B2B-only seller | +19¢ | +17¢ | +10¢ |",
+        "numbers": [
+          "$9",
+          "$29",
+          "$99",
+          "5%",
+          "$0.95",
+          "$1.95",
+          "$5.45",
+          "$0.80",
+          "$1.92",
+          "$5.84",
+          "$0.76",
+          "$1.78",
+          "$5.35"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Stripe at 2.9% + 30¢, +1.5% for international cards, +0.7% Billing and +0.5% Tax Basic, from our October 2026 reading of Stripe's US pricing; fees taken on the pre-tax price for comparison.",
+        "numbers": [
+          "2.9%",
+          "1.5%",
+          "0.7%",
+          "0.5%"
+        ],
+        "cues": [],
+        "links": [
+          "https://stripe.com/us/pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "For Example A, 1,200 sales a year at $29, the MoR costs about $31 a year more than Stripe with Tax Basic, and at $99 it's cheaper.",
+        "numbers": [
+          "1,200",
+          "$29,",
+          "$31",
+          "$99"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "If you want Stripe to file for you, its Tax Complete plan files non-Union OSS returns directly (Stripe Tax pricing), but at the $90 a month we read in October that's $1,080 a year, and the entry tier Stripe showed us in November includes 200 transactions a month and four filings a year.",
+        "numbers": [
+          "$90",
+          "$1,080"
+        ],
+        "cues": [],
+        "links": [
+          "https://stripe.com/tax/pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "For Example B, there's nothing to file in the EU, so the MoR saves you little work and costs about $205 a year more at $29.",
+        "numbers": [
+          "$205",
+          "$29."
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "The pattern holds: once you add the international-card surcharge that EU buyers trigger, plus Billing and Tax Basic, the headline gap between Paddle's 5% + 50¢ and Stripe's 2.9% + 30¢ mostly disappears for consumer sales.",
+        "numbers": [
+          "5%",
+          "2.9%"
+        ],
+        "cues": [],
+        "links": [
+          "https://www.paddle.com/pricing",
+          "https://stripe.com/us/pricing"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "At $29 and up on EU cards, the price gap is small. 3. Capture two pieces of location evidence per consumer, such as billing address and bank or IP country, and keep them for ten years. 4. Put the four OSS deadlines in your calendar, and file nil returns for empty quarters. 5. For business customers, collect the VAT number at checkout, check it with VIES, and don't block checkout when VIES is down.",
+        "numbers": [
+          "$29",
+          "22%",
+          "27%"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "- European Commission, OSS portal: Register, Declare and pay and Record keeping and audits (read 21 November 2026). - Your Europe (European Commission): Cross-border VAT and VAT rules and rates (last checked by the Commission 13 July 2026; read 21 November 2026). - European Commission: VAT in the Digital Age (read 21 November 2026). - Commission Implementing Regulation (EU) 2017/2459, new Article ",
+        "numbers": [
+          "€29"
+        ],
+        "cues": [],
+        "links": [
+          "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/register-oss_en",
+          "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/declare-and-pay-oss_en",
+          "https://vat-one-stop-shop.ec.europa.eu/one-stop-shop/record-keeping-and-audits-oss_en",
+          "https://europa.eu/youreurope/business/taxation/vat/cross-border-vat/index_en.htm",
+          "https://europa.eu/youreurope/business/taxation/vat/vat-rules-rates/index_en.htm",
+          "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
+          "https://eur-lex.europa.eu/eli/reg_impl/2017/2459/oj/eng",
+          "https://www.revenue.ie/en/vat/vat-on-services/electronic-services/vat-and-electronically-supplied-services/index.aspx",
+          "https://www.revenue.ie/en/vat/foreign-suppliers-doing-business-in-ireland/non-established-traders-supplying-goods.aspx",
+          "https://www.gov.uk/government/publications/vat-notice-7001-should-i-be-registered-for-vat/vat-notice-7001-should-i-be-registered-for-vat",
+          "https://docs.stripe.com/tax/supported-countries/european-union",
+          "https://stripe.com/tax/pricing",
+          "https://stripe.com/us/pricing",
+          "https://www.paddle.com/help/sell/tax/how-paddle-handles-vat-on-your-behalf",
+          "https://www.paddle.com/pricing",
+          "https://ec.europa.eu/eurostat/databrowser/view/tps00001/default/table",
+          "https://ec.europa.eu/taxation_customs/vies/",
+          "https://europa.eu/youreurope/business/taxation/vat/check-vat-number-vies/index_en.htm"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      }
+    ],
+    "guard": []
+  }
+}
