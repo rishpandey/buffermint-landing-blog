@@ -11,3 +11,6 @@ npm-debug.log
 /build_production/
 /source/assets/build/
 .indexnow-state.json
+
+# Python bytecode from editorial scripts
+__pycache__/

@@ -1,0 +1,396 @@
+{
+  "type": "content.fact_check",
+  "title": "Fact check: E-invoicing in France and the EU: what a small SaaS must do (8 to fix)",
+  "created_at": "2026-11-21T03:13:44.713Z",
+  "data": {
+    "ready": false,
+    "ok": false,
+    "content_md5": "e059ec7f7418f616c76dac805b4eacbf",
+    "checked_at": "2026-11-21T03:13:44.712Z",
+    "blockers": [
+      "Unsupported claim (€49): add a source link or put it in the facts sheet: \"We read each government's own pages on 21 November 2026, counted the rules in the current Peppol invoice standard, looke\"",
+      "Unsupported claim (5,923,824, 2,177,076, 121,526, 21,204, 18,174): add a source link or put it in the facts sheet: \"| Country | Directory entries | |---|---| | France | 5,923,824 | | Belgium | 2,177,076 | | Netherlands | 121,526 | | Pol\"",
+      "Unsupported claim (1,000): add a source link or put it in the facts sheet: \"In the first 1,000 Belgian results, 599 were listed by enterprise number and 400 by VAT number, with only 650 distinct n\"",
+      "Unsupported claim (18,174): add a source link or put it in the facts sheet: \"Belgium requires Peppol, so its businesses registered by the million; Germany accepts email, so it has 18,174 entries fo\"",
+      "Unsupported claim (1,000): add a source link or put it in the facts sheet: \"Nearly all of the French results we sampled (990 of the first 1,000) use a France-specific identifier scheme rather than\"",
+      "Unsupported claim (€49, 21%, €10.29,, €59.29): add a source link or put it in the facts sheet: \"We wrote a minimal e-invoice for a fictional Belgian SaaS billing a Belgian business for one month of a €49 plan (21% VA\"",
+      "Unsupported claim (1,000): add a source link or put it in the facts sheet: \"Its VAT number and, in Belgium, its enterprise number, the usual Peppol address there (scheme 0208, used by 599 of the f\"",
+      "Unsupported claim (€800,000, 10,000): add a source link or put it in the facts sheet: \"- France: a receiving platform chosen (required since 1 Sep 2026); sending and e-reporting live before 1 Sep 2027 if you\""
+    ],
+    "warnings": [
+      "The cited page doesn't show €800,000, 200 million, 10,000: \"| Country | Receive | Send | Format and channel | Seller without an establishment | |---|---|---|---|---| | France | All\"",
+      "The cited page doesn't show €25,000: \"The small-business exemption (turnover up to €25,000) doesn't take you out of it.\"",
+      "The cited page doesn't show €1,500, €3,000, €5,000,: \"Fines under the Royal Decree start at €1,500 for a first offense, rising to €3,000 and then €5,000, as KPMG Belgium summ\"",
+      "The cited page doesn't show €800,000.: \"Sending stays optional until the end of 2026, or the end of 2027 for issuers with prior-year turnover up to €800,000.\""
+    ],
+    "links": [
+      {
+        "url": "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+        "text": "French tax administration",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://efactuur.belgium.be/nl/article/voor-wie-wordt-e-facturatie-verplicht",
+        "text": "Belgium",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html",
+        "text": "Germany",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef",
+        "text": "Poland",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en",
+        "text": "EU-wide (ViDA)",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.impots.gouv.fr/internationalenbusiness/e-reporting-requirements-foreign-companies-without-permanent-establishment",
+        "text": "the customer reports it",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.impots.gouv.fr/professionnel/je-passe-la-facturation-electronique",
+        "text": "list is on impots.gouv.fr",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://www.impots.gouv.fr/sites/default/files/media/1_metier/2_professionnel/EV/2_gestion/290_facturation_electronique/guide_pratique_facturation_electronique.pdf",
+        "text": "start-up guide",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://einvoice.belgium.be/en/article/structured-electronic-invoices-between-companies-are-compulsory-2026",
+        "text": "FPS Finance",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://einvoice.belgium.be/en/news/period-tolerance-during-first-three-months-2026",
+        "text": "tolerance period",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://kpmg.com/be/en/insights/my-tax-compass/indirect-tax-insights/belgium-new-royal-decree-on-structured-electronic-invoicing.html",
+        "text": "KPMG Belgium summarizes",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://directory.peppol.eu/",
+        "text": "Peppol Directory",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://directory.peppol.eu/public/locale-en_US/menuitem-docs-rest-api",
+        "text": "search API",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "https://github.com/OpenPeppol/peppol-bis-invoice-3",
+        "text": "rule files",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/dev/xml-formatter/",
+        "text": "XML formatter",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/podstawy-prawne-oraz-kluczowe-terminy",
+        "text": "Council derogation",
+        "external": true,
+        "verdict": "ok",
+        "status": 200,
+        "detail": "200"
+      },
+      {
+        "url": "/tools/business/vat-calculator-belgium/",
+        "text": "Belgium",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/business/vat-calculator-france/",
+        "text": "France",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/business/vat-calculator-germany/",
+        "text": "Germany",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/tools/everyday/invoice-generator/",
+        "text": "invoice generator",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      },
+      {
+        "url": "/articles/merchant-of-record-fees",
+        "text": "merchant of record fees",
+        "external": false,
+        "verdict": "internal",
+        "status": null,
+        "detail": "internal link: not fetched"
+      }
+    ],
+    "claims": [
+      {
+        "kind": "number",
+        "text": "We read each government's own pages on 21 November 2026, counted the rules in the current Peppol invoice standard, looked up how many businesses each country has in the public Peppol Directory, and wrote a real e-invoice for a €49 subscription, then checked it rule by rule.",
+        "numbers": [
+          "€49"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "| Country | Receive | Send | Format and channel | Seller without an establishment | |---|---|---|---|---| | France | All businesses from 1 Sep 2026 | Large and mid-size from 1 Sep 2026; small and micro from 1 Sep 2027 | UBL, CII or a mixed PDF-plus-data format, through an approved platform | Out of e-invoicing; a VAT-registered French customer reports the purchase, but you e-report if you charge F",
+        "numbers": [
+          "€800,000",
+          "200 million",
+          "10,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique",
+          "https://efactuur.belgium.be/nl/article/voor-wie-wordt-e-facturatie-verplicht",
+          "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html",
+          "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef",
+          "https://taxation-customs.ec.europa.eu/taxation/vat/vat-digital-age-vida_en"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "The small-business exemption (turnover up to €25,000) doesn't take you out of it.",
+        "numbers": [
+          "€25,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://efactuur.belgium.be/nl/article/voor-wie-wordt-e-facturatie-verplicht"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Fines under the Royal Decree start at €1,500 for a first offense, rising to €3,000 and then €5,000, as KPMG Belgium summarizes.",
+        "numbers": [
+          "€1,500",
+          "€3,000",
+          "€5,000,"
+        ],
+        "cues": [],
+        "links": [
+          "https://kpmg.com/be/en/insights/my-tax-compass/indirect-tax-insights/belgium-new-royal-decree-on-structured-electronic-invoicing.html"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "Sending stays optional until the end of 2026, or the end of 2027 for issuers with prior-year turnover up to €800,000.",
+        "numbers": [
+          "€800,000."
+        ],
+        "cues": [],
+        "links": [
+          "https://www.bundesfinanzministerium.de/Content/DE/FAQ/e-rechnung.html"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": false,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "According to the Ministry of Finance, issuing invoices in KSeF became mandatory on 1 February 2026 for businesses whose 2024 sales exceeded PLN 200 million and on 1 April 2026 for everyone else, except those invoicing no more than PLN 10,000 gross a month, who have until the end of 2026.",
+        "numbers": [
+          "200 million",
+          "10,000"
+        ],
+        "cues": [],
+        "links": [
+          "https://ksef.podatki.gov.pl/informacje-ogolne-ksef-20/zakres-obowiazkowego-ksef"
+        ],
+        "supported": "link",
+        "source_needed": false,
+        "verified": true,
+        "blocking": false
+      },
+      {
+        "kind": "number",
+        "text": "| Country | Directory entries | |---|---| | France | 5,923,824 | | Belgium | 2,177,076 | | Netherlands | 121,526 | | Poland | 21,204 | | Germany | 18,174 |",
+        "numbers": [
+          "5,923,824",
+          "2,177,076",
+          "121,526",
+          "21,204",
+          "18,174"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "In the first 1,000 Belgian results, 599 were listed by enterprise number and 400 by VAT number, with only 650 distinct names, so many firms appear twice.",
+        "numbers": [
+          "1,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Belgium requires Peppol, so its businesses registered by the million; Germany accepts email, so it has 18,174 entries for a much larger economy.",
+        "numbers": [
+          "18,174"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Nearly all of the French results we sampled (990 of the first 1,000) use a France-specific identifier scheme rather than the company or VAT number.",
+        "numbers": [
+          "1,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "We wrote a minimal e-invoice for a fictional Belgian SaaS billing a Belgian business for one month of a €49 plan (21% VAT, €10.29, total €59.29).",
+        "numbers": [
+          "€49",
+          "21%",
+          "€10.29,",
+          "€59.29"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "Its VAT number and, in Belgium, its enterprise number, the usual Peppol address there (scheme 0208, used by 599 of the first 1,000 Belgian directory entries). 3.",
+        "numbers": [
+          "1,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      },
+      {
+        "kind": "number",
+        "text": "- France: a receiving platform chosen (required since 1 Sep 2026); sending and e-reporting live before 1 Sep 2027 if you're a small business. - Belgium: sending and receiving over Peppol since 1 Jan 2026; customers' enterprise numbers stored; buyer reference collected. - Germany: an inbox that can receive e-invoices (since 2025); sending ready for 2027, or 2028 below €800,000 turnover. - Poland: i",
+        "numbers": [
+          "€800,000",
+          "10,000"
+        ],
+        "cues": [],
+        "links": [],
+        "supported": null,
+        "source_needed": false,
+        "verified": null,
+        "blocking": true
+      }
+    ],
+    "guard": []
+  }
+}
