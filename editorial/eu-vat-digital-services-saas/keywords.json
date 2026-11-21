@@ -1,0 +1,182 @@
+{
+  "type": "content.keywords",
+  "title": "eu vat digital services: 2 ideas, 1 pieces",
+  "created_at": "2026-11-21T08:07:10.356Z",
+  "data": {
+    "seed": "eu vat digital services",
+    "topic": "eu vat digital services",
+    "keywords": [
+      {
+        "keyword": "digital services eu vat",
+        "engines": [
+          "bing"
+        ],
+        "lists": 6,
+        "best_rank": 1,
+        "score": 65,
+        "band": "high",
+        "intent": "transactional",
+        "question": false
+      },
+      {
+        "keyword": "eu vat digital services",
+        "engines": [
+          "google"
+        ],
+        "lists": 6,
+        "best_rank": 1,
+        "score": 65,
+        "band": "high",
+        "intent": "transactional",
+        "question": false
+      }
+    ],
+    "topic_interest": {
+      "keyword": "eu vat digital services",
+      "article": "VAT in the Digital Age",
+      "months": [
+        {
+          "month": "202511",
+          "views": 130
+        },
+        {
+          "month": "202512",
+          "views": 160
+        },
+        {
+          "month": "202601",
+          "views": 178
+        },
+        {
+          "month": "202602",
+          "views": 269
+        },
+        {
+          "month": "202603",
+          "views": 297
+        },
+        {
+          "month": "202604",
+          "views": 355
+        },
+        {
+          "month": "202605",
+          "views": 422
+        },
+        {
+          "month": "202606",
+          "views": 329
+        },
+        {
+          "month": "202607",
+          "views": 186
+        },
+        {
+          "month": "202608",
+          "views": 127
+        },
+        {
+          "month": "202609",
+          "views": 167
+        },
+        {
+          "month": "202610",
+          "views": 135
+        }
+      ],
+      "monthly": 143,
+      "prev": 312,
+      "trend": -0.54,
+      "cached": 0,
+      "requests": 2
+    },
+    "sources": [
+      {
+        "id": "suggest-google",
+        "label": "Google autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-bing",
+        "label": "Bing autosuggest",
+        "status": "ok",
+        "grade": "E",
+        "what": "phrases people type (proxy: shows a phrase is searched, never how often)",
+        "detail": "9 queries (0 from cache)",
+        "requests": 9,
+        "cached": 0
+      },
+      {
+        "id": "suggest-youtube",
+        "label": "YouTube autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "not picked for this run",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "suggest-duckduckgo",
+        "label": "DuckDuckGo autosuggest",
+        "status": "off",
+        "grade": "E",
+        "what": "phrases people type",
+        "detail": "off by default: its robots.txt disallows /ac/?q= (checked when turned on)",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "wikipedia",
+        "label": "Wikipedia pageviews",
+        "status": "ok",
+        "grade": "V",
+        "what": "monthly views of the matching article (measured topic interest, not searches)",
+        "detail": "1 of 1 topics matched an article",
+        "requests": 2,
+        "cached": 0
+      },
+      {
+        "id": "pagespeed",
+        "label": "PageSpeed Insights",
+        "status": "off",
+        "grade": "V",
+        "what": "Lighthouse lab scores",
+        "detail": "needs a site URL as the seed",
+        "requests": 0,
+        "cached": 0
+      },
+      {
+        "id": "serp",
+        "label": "Search result pages",
+        "status": "off",
+        "grade": null,
+        "what": "who ranks (not used: robots.txt and the engines' terms)",
+        "detail": "google: www.google.com/robots.txt disallows /search?…; bing: www.bing.com/robots.txt disallows /search?…; duckduckgo: html.duckduckgo.com/robots.txt allows /html/, but the engine's terms bar automated queries: not fetched",
+        "requests": 0,
+        "cached": 0
+      }
+    ],
+    "notes": [
+      "Interest bands come from autosuggest (which engines suggest a phrase, how often and how high), ranked within this run. They show that people type a phrase, not how many: a proxy, not search volume.",
+      "Intent and page types are rules on the words of each phrase (estimate). Wikipedia views measure interest in a topic, not searches."
+    ],
+    "fetched_at": "2026-11-21T08:07:10.338Z",
+    "clusters": [
+      {
+        "key": "head",
+        "band": "high",
+        "wikipedia": {
+          "article": "VAT in the Digital Age",
+          "monthly": 143,
+          "trend": -0.54
+        }
+      }
+    ]
+  }
+}
