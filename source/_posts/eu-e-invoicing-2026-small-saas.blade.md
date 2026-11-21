@@ -52,7 +52,7 @@ For a small French SaaS the order is: a receiving platform now (it has been requ
 
 **Belgium** went furthest, fastest. Since 1 January 2026, Belgian VAT-registered businesses have had to exchange structured invoices with each other over Peppol, in the Peppol BIS format, and [FPS Finance](https://einvoice.belgium.be/en/article/structured-electronic-invoices-between-companies-are-compulsory-2026) says a PDF by email or through a portal is no longer enough. The [small-business exemption](https://efactuur.belgium.be/nl/article/voor-wie-wordt-e-facturatie-verplicht) (turnover up to €25,000) doesn't take you out of it.
 
-FPS Finance gave a [tolerance period](https://einvoice.belgium.be/en/news/period-tolerance-during-first-three-months-2026) for January to March 2026 and ruled out any general postponement. Fines under the Royal Decree start at €1,500 for a first offense, rising to €3,000 and then €5,000, as [KPMG Belgium summarizes](https://kpmg.com/be/en/insights/my-tax-compass/indirect-tax-insights/belgium-new-royal-decree-on-structured-electronic-invoicing.html).
+FPS Finance gave a [tolerance period](https://einvoice.belgium.be/en/news/period-tolerance-during-first-three-months-2026) for January to March 2026 and ruled out any general postponement. Fines under the Royal Decree for not having the means to send or receive e-invoices start at €1,500 for a first offense, rising to €3,000 and then €5,000, as [KPMG Belgium summarizes](https://kpmg.com/be/en/insights/my-tax-compass/indirect-tax-insights/belgium-new-royal-decree-on-structured-electronic-invoicing.html).
 
 One detail for foreign sellers: FPS Finance says the non-established company must tell its Belgian customers itself that it has no fixed establishment there, because the customer can't easily tell.
 
@@ -84,7 +84,7 @@ The practical point for a seller: before you invoice a Belgian business, you can
 
 An e-invoice isn't a PDF with more fields. It's a data file, usually XML, that follows the European standard EN 16931. Peppol's version, Peppol BIS Billing 3.0, is maintained by OpenPeppol, and its [rule files](https://github.com/OpenPeppol/peppol-bis-invoice-3) are public. We counted the rules in release 3.0.22 (4 November 2026):
 
-- 979 checks from the European standard, 281 of them fatal. Of the 698 warnings, 678 flag UBL elements an invoice "should not include".
+- 979 checks from the European standard, 281 of them fatal. Of the 698 warnings, 676 flag UBL elements an invoice should not include.
 - 165 Peppol checks, 139 of them fatal, including country rules for Germany, Denmark, Sweden, Iceland, the Netherlands, Greece, Italy and Norway. None are specific to Belgium or France.
 
 That's 420 fatal checks, but a one-line subscription invoice touches only a few dozen of them, because most VAT cases have their own block of 10 to 14 rules (standard-rated, zero-rated, exempt, reverse charge and so on) and you only meet the block for the case you invoice.
