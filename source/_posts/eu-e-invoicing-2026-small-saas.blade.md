@@ -12,7 +12,7 @@ date: 2026-11-21
 extends: _layouts.post
 ---
 
-E-invoicing in France started on 1 September 2026, as planned. Every VAT-registered business established in France must now be able to receive structured e-invoices through an approved platform, large and mid-size companies must also send them, and small and micro businesses must send them from 1 September 2027, according to the [French tax administration](https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique). Belgium made structured B2B invoices compulsory on 1 January 2026, Poland on 1 February and 1 April 2026, and Germany has required businesses to be able to receive them since 2025.
+E-invoicing in France started on 1 September 2026, as planned. Every business established in France and liable to French VAT, including those under the small-business VAT exemption, must now be able to receive structured e-invoices through an approved platform, large and mid-size companies must also send them, and small and micro businesses must send them from 1 September 2027, according to the [French tax administration](https://www.impots.gouv.fr/professionnel/je-decouvre-la-facturation-electronique). Belgium made structured B2B invoices compulsory on 1 January 2026, Poland on 1 February and 1 April 2026, and Germany has required businesses to be able to receive them since 2025.
 
 The part most guides skip: each of these mandates covers businesses established in that country. A SaaS company in the US, the UK or India that bills a French or Belgian customer, with no office there, is not required to send e-invoices in any of the four. If you are established in one of them, you are in scope and the dates below are yours.
 
@@ -89,7 +89,7 @@ An e-invoice isn't a PDF with more fields. It's a data file, usually XML, that f
 
 That's 420 fatal checks, but a one-line subscription invoice touches only a few dozen of them, because most VAT cases have their own block of 10 to 14 rules (standard-rated, zero-rated, exempt, reverse charge and so on) and you only meet the block for the case you invoice.
 
-We wrote a minimal e-invoice for a fictional Belgian SaaS billing a Belgian business for one month of a €49 plan (21% VAT, €10.29, total €59.29). Then we wrote a script that re-implements 48 of the fatal rules such an invoice can trip, from the rule texts in those files: the header, both parties, the line, the standard-rate VAT rules and every sum. It passed all 48. We then removed two things a typical SaaS invoice doesn't have, and 2 rules failed:
+We wrote a minimal e-invoice for a fictional Belgian SaaS billing a Belgian business for one month of a €49 plan (21% VAT, €10.29, total €59.29). Then we wrote a script that re-implements 54 of the fatal rules such an invoice can trip, from the rule texts in those files: the header, both parties, the line and its price, the payment details, the standard-rate VAT rules and every total. It passed all 54. We then removed two things a typical SaaS invoice doesn't have, and 2 rules failed:
 
 | Rule | What it requires | Why a normal SaaS invoice fails it |
 |---|---|---|
@@ -106,7 +106,7 @@ The useful result is the field list. To send a valid Belgian e-invoice, your bil
 2. Its VAT number and, in Belgium, its enterprise number, the usual Peppol address there (scheme 0208, used by 599 of the first 1,000 Belgian directory entries).
 3. A buyer reference or PO number. Let the customer type it at checkout or in billing settings, and fall back to something stable such as your subscription ID.
 4. Your own Peppol address, VAT number and bank details.
-5. Line, VAT and total amounts that add up exactly to the cent, since several fatal rules check the sums.
+5. Totals that add up exactly to the cent: several fatal rules check the invoice totals against the lines and the VAT breakdown. Only the VAT per rate gets a margin, of 1 euro, against taxable amount × rate.
 
 You don't have to build the file yourself. Belgian accounting and invoicing software that's connected to Peppol produces it, and [FPS Finance keeps a list](https://einvoice.belgium.be/en/article/structured-electronic-invoices-between-companies-are-compulsory-2026) that includes free and low-cost options. If you do get an XML invoice and want to read it, our [XML formatter](/tools/dev/xml-formatter/) lays it out in your browser.
 

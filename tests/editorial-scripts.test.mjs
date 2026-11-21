@@ -21,9 +21,9 @@ test('the eu-e-invoicing post has its script tests', () => {
 
 for (const suite of suites) {
   test(`editorial script tests pass: ${suite.slice(root.length + 1)}`, () => {
-    const run = spawnSync('python3', ['-I', suite], {
-      cwd: dirname(suite), encoding: 'utf8', env: { ...process.env, PYTHONDONTWRITEBYTECODE: '1' },
-    });
+    // -I ignores PYTHON* variables, so -B (not PYTHONDONTWRITEBYTECODE) keeps __pycache__ out of editorial/.
+    const run = spawnSync('python3', ['-I', '-B', suite], { cwd: dirname(suite), encoding: 'utf8', timeout: 60_000 });
+    assert.ifError(run.error);
     assert.equal(run.status, 0, `${run.stdout}\n${run.stderr}`);
   });
 }

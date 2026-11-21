@@ -1,5 +1,5 @@
 """Check example-invoice.xml against a subset of the Peppol BIS 3.0.22 fatal rules that a
-one-line, single-rate (category S) invoice with no allowances or charges can trip.
+one-line, single-rate (category S) invoice with no document-level allowances or charges can trip.
 Each check names the rule it re-implements; the rule texts come from CEN-EN16931-UBL.sch and
 PEPPOL-EN16931-UBL.sch in https://github.com/OpenPeppol/peppol-bis-invoice-3 (tag 3.0.22,
 4 Nov 2026). This is our own reading of those rules, not the official validator: it doesn't
@@ -8,7 +8,7 @@ Run: python3 -I check-example.py example-invoice.xml
 """
 import re
 import sys
-from decimal import Decimal, InvalidOperation, ROUND_HALF_UP
+from decimal import Decimal, InvalidOperation, ROUND_FLOOR, ROUND_HALF_UP
 import xml.etree.ElementTree as ET
 
 NS = {
@@ -36,6 +36,27 @@ def mod97_0208(v):
 
 def r2(x):
     return x.quantize(Decimal("0.01"), rounding=ROUND_HALF_UP)
+
+
+def xround(x):
+    """XPath round(): to the nearest integer, halves up."""
+    return (x + Decimal("0.5")).to_integral_value(rounding=ROUND_FLOOR)
+
+
+def within_one(tax, base, rate):
+    """BR-S-09 / BR-CO-17: |tax| - 1 < round(|base| x rate / 100, 2) < |tax| + 1 (a margin of 1, not the cent)."""
+    expected = r2(abs(base) * rate / 100)
+    return abs(tax) - 1 < expected < abs(tax) + 1
+
+
+# BR-CO-09's prefix list, copied from CEN-EN16931-UBL.sch 3.0.22.
+VAT_PREFIXES = set("""1A AD AE AF AG AI AL AM AO AQ AR AS AT AU AW AX AZ BA BB BD BE BF BG BH BI BJ BL BM BN BO BQ BR BS
+BT BV BW BY BZ CA CC CD CF CG CH CI CK CL CM CN CO CR CU CV CW CX CY CZ DE DJ DK DM DO DZ EC EE EG EH EL ER ES ET FI FJ
+FK FM FO FR GA GB GD GE GF GG GH GI GL GM GN GP GQ GR GS GT GU GW GY HK HM HN HR HT HU ID IE IL IM IN IO IQ IR IS IT JE
+JM JO JP KE KG KH KI KM KN KP KR KW KY KZ LA LB LC LI LK LR LS LT LU LV LY MA MC MD ME MF MG MH MK ML MM MN MO MP MQ MR
+MS MT MU MV MW MX MY MZ NA NC NE NF NG NI NL NO NP NR NU NZ OM PA PE PF PG PH PK PL PM PN PR PS PT PW PY QA RE RO RS RU
+RW SA SB SC SD SE SG SH SI SJ SK SL SM SN SO SR SS ST SV SX SY SZ TC TD TF TG TH TJ TK TL TM TN TO TR TT TV TW TZ UA UG
+UM US UY UZ VA VC VE VG VI VN VU WF WS XI YE YT ZA ZM ZW""".split())
 
 
 def checks_for(root):
@@ -75,9 +96,9 @@ def checks_for(root):
         return a is not None and b is not None and a == b
 
     def vat_prefixes_ok():
-        # BR-CO-09: every VAT identifier that is present starts with a 2-letter country prefix (or EL).
+        # BR-CO-09: every VAT identifier that is present starts with a prefix from the rule's list.
         ids = vat_ids(sup) + vat_ids(cus) + vat_ids(rep)
-        return all(re.match(r"[A-Z]{2}", i) for i in ids)
+        return all(i[:2] in VAT_PREFIXES for i in ids)
 
     def r043_ok():
         # PEPPOL-COMMON-R043 applies only to identifiers that exist with schemeID 0208, in its contexts:
@@ -97,14 +118,68 @@ def checks_for(root):
                 return False
         return True
 
-    def s_tax_ok():
-        # BR-S-09 / BR-CO-17: tax amount = taxable amount x rate, to the cent.
+    def br_s_09_ok():
+        # BR-S-09: per S subtotal, the tax amount is within 1 of taxable amount x rate.
         for s in s_subs:
             base = num(s.findtext("cbc:TaxableAmount", namespaces=NS))
             rate = num(s.findtext("cac:TaxCategory/cbc:Percent", namespaces=NS))
-            if base is None or rate is None or not eq(num(s.findtext("cbc:TaxAmount", namespaces=NS)), r2(base * rate / 100)):
+            tax = num(s.findtext("cbc:TaxAmount", namespaces=NS))
+            if None in (base, rate, tax) or not within_one(tax, base, rate):
                 return False
         return True
+
+    def br_co_17_ok():
+        # BR-CO-17: every subtotal, any category. A VAT rate that rounds to 0 (or none) needs a tax that rounds
+        # to 0; any other rate, a tax within 1 of taxable amount x rate.
+        for s in subs:
+            tax = num(s.findtext("cbc:TaxAmount", namespaces=NS))
+            if tax is None:
+                return False
+            cats = [c for c in s.findall("cac:TaxCategory", NS)
+                    if (c.findtext("cac:TaxScheme/cbc:ID", namespaces=NS) or "").strip().upper() == "VAT"]
+            rate = num(cats[0].findtext("cbc:Percent", namespaces=NS)) if cats else None
+            if rate is None or xround(rate) == 0:
+                if xround(tax) != 0:
+                    return False
+                continue
+            base = num(s.findtext("cbc:TaxableAmount", namespaces=NS))
+            if base is None or not within_one(tax, base, rate):
+                return False
+        return True
+
+    def r120_ok():
+        # PEPPOL-EN16931-R120: line net = quantity x (price / base quantity) + charges - allowances, within 0.02.
+        for l in lines:
+            def amt(xp, default):
+                return num(t(xp, l)) if has(xp, l) else default
+            net, qty, price = amt("cbc:LineExtensionAmount", Decimal(0)), amt("cbc:InvoicedQuantity", Decimal(1)), amt("cac:Price/cbc:PriceAmount", Decimal(0))
+            base = amt("cac:Price/cbc:BaseQuantity", Decimal(1))
+            if base == 0:
+                base = Decimal(1)
+            ac = {"true": [], "false": []}
+            for a in l.findall("cac:AllowanceCharge", NS):
+                ac.setdefault((a.findtext("cbc:ChargeIndicator", namespaces=NS) or "").strip(), []).append(
+                    num(a.findtext("cbc:Amount", namespaces=NS)))
+            if None in (net, qty, price, base) or None in ac["true"] + ac["false"]:
+                return False
+            expected = qty * (price / base) + r2(sum(ac["true"], Decimal(0))) - r2(sum(ac["false"], Decimal(0)))
+            if not (net - Decimal("0.02") <= expected <= net + Decimal("0.02")):
+                return False
+        return True
+
+    def r130_ok():
+        # PEPPOL-EN16931-R130: a base quantity with a unit code uses the line quantity's unit code.
+        for l in lines:
+            bq, q = l.find("cac:Price/cbc:BaseQuantity", NS), l.find("cbc:InvoicedQuantity", NS)
+            if bq is not None and bq.get("unitCode") is not None and q is not None and bq.get("unitCode") != q.get("unitCode"):
+                return False
+        return True
+
+    def present_amount_ok(name):
+        # An optional amount may be absent; if it is there it must be a number.
+        return not has(f"cac:LegalMonetaryTotal/cbc:{name}") or total(name) is not None
+
+    means = root.findall("cac:PaymentMeans", NS)
 
     return [
         ("BR-01", t("cbc:CustomizationID") != ""),
@@ -140,17 +215,26 @@ def checks_for(root):
         ("BR-25", all(t("cac:Item/cbc:Name", l) for l in lines)),
         ("BR-26", all(num(t("cac:Price/cbc:PriceAmount", l)) is not None for l in lines)),
         ("BR-27", all((p := num(t("cac:Price/cbc:PriceAmount", l))) is not None and p >= 0 for l in lines)),
+        ("PEPPOL-EN16931-R120", r120_ok()),
+        ("PEPPOL-EN16931-R121", all(not has("cac:Price/cbc:BaseQuantity", l)
+                                    or ((b := num(t("cac:Price/cbc:BaseQuantity", l))) is not None and b > 0) for l in lines)),
+        ("PEPPOL-EN16931-R130", r130_ok()),
+        ("BR-49", all(t("cbc:PaymentMeansCode", m) != "" for m in means)),
+        ("BR-61", all(t("cbc:PaymentMeansCode", m) not in ("30", "58") or t("cac:PayeeFinancialAccount/cbc:ID", m) != ""
+                      for m in means)),
         ("BR-CO-04", all(t("cac:Item/cac:ClassifiedTaxCategory/cbc:ID", l) for l in lines)),
         ("BR-CO-18", len(subs) >= 1),
+        ("PEPPOL-EN16931-R053", len(main_tt) == 1),
         ("BR-CO-10", eq(total("LineExtensionAmount"), line_sum)),
         ("BR-CO-13", eq(total("TaxExclusiveAmount"), line_sum)),
         ("BR-CO-14", None not in sub_tax and eq(tax_total, sum(sub_tax))),
         ("BR-CO-15", total("TaxExclusiveAmount") is not None and tax_total is not None
                      and eq(total("TaxInclusiveAmount"), total("TaxExclusiveAmount") + tax_total)),
-        ("BR-CO-16", total("TaxInclusiveAmount") is not None and eq(
+        ("BR-CO-16", total("TaxInclusiveAmount") is not None and present_amount_ok("PrepaidAmount")
+                     and present_amount_ok("PayableRoundingAmount") and eq(
             total("PayableAmount"),
             total("TaxInclusiveAmount") - (total("PrepaidAmount") or 0) + (total("PayableRoundingAmount") or 0))),
-        ("BR-CO-17", s_tax_ok()),
+        ("BR-CO-17", br_co_17_ok()),
         ("BR-CO-19", (not has("cac:InvoicePeriod"))
                      or has("cac:InvoicePeriod/cbc:StartDate") or has("cac:InvoicePeriod/cbc:EndDate")),
         ("BR-S-01", not s_lines or bool(s_subs)),
@@ -158,7 +242,7 @@ def checks_for(root):
         ("BR-S-05", all((p := num(t("cac:Item/cac:ClassifiedTaxCategory/cbc:Percent", l))) is not None and p > 0
                         for l in s_lines)),
         ("BR-S-08", s_breakdown_ok()),
-        ("BR-S-09", s_tax_ok()),
+        ("BR-S-09", br_s_09_ok()),
         ("BR-S-10", all(not has("cac:TaxCategory/cbc:TaxExemptionReason", s)
                         and not has("cac:TaxCategory/cbc:TaxExemptionReasonCode", s) for s in s_subs)),
         ("PEPPOL-EN16931-R051", all(

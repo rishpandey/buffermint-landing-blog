@@ -17,7 +17,7 @@ def failed(xml):
 
 
 def drop(xml, pattern):
-    out, n = re.subn(pattern, "", xml, count=1)
+    out, n = re.subn(pattern, "", xml, count=1, flags=re.S)
     assert n == 1, pattern
     return out
 
@@ -94,6 +94,68 @@ class CheckExample(unittest.TestCase):
         xml = XML.replace("<cbc:Name>Pro plan, monthly</cbc:Name>",
                           '<cbc:Name>Pro plan, monthly</cbc:Name><cac:StandardItemIdentification><cbc:ID schemeID="0208">123</cbc:ID></cac:StandardItemIdentification>')
         self.assertNotIn("PEPPOL-COMMON-R043", failed(xml))
+
+    def test_vat_has_a_margin_of_one_not_the_cent(self):
+        # BR-S-09 / BR-CO-17 accept a subtotal VAT within 1 of taxable x rate; the totals rules still need exact sums.
+        sub = XML.replace('<cbc:TaxAmount currencyID="EUR">10.29</cbc:TaxAmount>\n      <cac:TaxCategory>',
+                          '<cbc:TaxAmount currencyID="EUR">10.30</cbc:TaxAmount>\n      <cac:TaxCategory>')
+        self.assertNotEqual(sub, XML)
+        f = failed(sub)
+        self.assertNotIn("BR-S-09", f)
+        self.assertNotIn("BR-CO-17", f)
+        self.assertIn("BR-CO-14", f)  # the subtotal no longer adds up to the VAT total
+        off = sub.replace(">10.30<", ">11.29<")
+        self.assertIn("BR-S-09", failed(off))
+        self.assertIn("BR-CO-17", failed(off))
+
+    def test_br_co_17_covers_zero_rated_subtotals(self):
+        zero = ('<cac:TaxSubtotal><cbc:TaxableAmount currencyID="EUR">0.00</cbc:TaxableAmount>'
+                '<cbc:TaxAmount currencyID="EUR">{}</cbc:TaxAmount><cac:TaxCategory><cbc:ID>Z</cbc:ID>'
+                '<cbc:Percent>0</cbc:Percent><cac:TaxScheme><cbc:ID>VAT</cbc:ID></cac:TaxScheme></cac:TaxCategory></cac:TaxSubtotal>')
+        ok = XML.replace("</cac:TaxSubtotal>", "</cac:TaxSubtotal>" + zero.format("0.00"), 1)
+        self.assertNotIn("BR-CO-17", failed(ok))
+        bad = XML.replace("</cac:TaxSubtotal>", "</cac:TaxSubtotal>" + zero.format("1.00"), 1)
+        self.assertIn("BR-CO-17", failed(bad))
+        self.assertNotIn("BR-S-09", failed(bad))  # BR-S-09 is for category S only
+
+    def test_r120_line_net_matches_quantity_times_price(self):
+        two = XML.replace('<cbc:InvoicedQuantity unitCode="MON">1</cbc:InvoicedQuantity>',
+                          '<cbc:InvoicedQuantity unitCode="MON">2</cbc:InvoicedQuantity>')
+        self.assertEqual(failed(two), ["PEPPOL-EN16931-R120"])
+        base = XML.replace('<cbc:PriceAmount currencyID="EUR">49.00</cbc:PriceAmount>',
+                           '<cbc:PriceAmount currencyID="EUR">98.00</cbc:PriceAmount><cbc:BaseQuantity unitCode="MON">2</cbc:BaseQuantity>')
+        self.assertEqual(failed(base), [])
+        self.assertEqual(failed(base.replace('<cbc:BaseQuantity unitCode="MON">2', '<cbc:BaseQuantity unitCode="DAY">2')),
+                         ["PEPPOL-EN16931-R130"])
+        self.assertIn("PEPPOL-EN16931-R121", failed(base.replace('unitCode="MON">2</cbc:BaseQuantity>', 'unitCode="MON">-2</cbc:BaseQuantity>')))
+        slack = XML.replace('<cbc:PriceAmount currencyID="EUR">49.00', '<cbc:PriceAmount currencyID="EUR">49.02')
+        self.assertNotIn("PEPPOL-EN16931-R120", failed(slack))
+        self.assertIn("PEPPOL-EN16931-R120", failed(slack.replace(">49.02<", ">49.03<")))
+
+    def test_payment_means_rules(self):
+        self.assertEqual(failed(drop(XML, r"<cac:PayeeFinancialAccount>.*?</cac:PayeeFinancialAccount>")), ["BR-61"])
+        card = drop(XML.replace("<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>", "<cbc:PaymentMeansCode>48</cbc:PaymentMeansCode>"),
+                    r"<cac:PayeeFinancialAccount>.*?</cac:PayeeFinancialAccount>")
+        self.assertEqual(failed(card), [])
+        self.assertIn("BR-49", failed(drop(XML, r"<cbc:PaymentMeansCode>30</cbc:PaymentMeansCode>")))
+
+    def test_r053_one_tax_total_with_subtotals(self):
+        start, end = XML.index("<cac:TaxTotal>"), XML.index("</cac:TaxTotal>") + len("</cac:TaxTotal>")
+        twice = XML[:end] + XML[start:end] + XML[end:]
+        self.assertIn("PEPPOL-EN16931-R053", failed(twice))
+
+    def test_br_co_09_uses_the_rule_prefix_list(self):
+        self.assertIn("BR-CO-09", failed(XML.replace("BE0506070873", "ZZ0506070873")))
+        self.assertNotIn("BR-CO-09", failed(XML.replace("BE0506070873", "XI0506070873")))
+
+    def test_br_co_16_fails_a_present_but_broken_prepaid_amount(self):
+        xml = XML.replace('<cbc:PayableAmount currencyID="EUR">59.29</cbc:PayableAmount>',
+                          '<cbc:PrepaidAmount currencyID="EUR">abc</cbc:PrepaidAmount><cbc:PayableAmount currencyID="EUR">59.29</cbc:PayableAmount>')
+        self.assertIn("BR-CO-16", failed(xml))
+
+    def test_xpath_round_halves_up(self):
+        from decimal import Decimal as D
+        self.assertEqual([ce.xround(D(x)) for x in ("2.5", "-2.5", "0.49", "-0.51")], [3, -2, 0, -1])
 
 
 if __name__ == "__main__":
